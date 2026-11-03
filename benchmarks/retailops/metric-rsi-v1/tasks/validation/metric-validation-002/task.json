@@ -1,0 +1,10 @@
+{
+  "instruction": "给出售后事件流的 replay ratio，按唯一事件引用判断，输出整数基点和计数证据。",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "split": "transfer",
+  "passed": 40,
+  "task_count": 40,
+  "rows": [
+    {
+      "task": "cap-transfer-001",
+      "ok": true,
+      "case_kind": "capability_expansion",
+      "matched_rule_id": "learned-g01",
+      "action": "equal_category_allocation"
+    },
+    {
+      "task": "cap-transfer-002",
+      "ok": true,
+      "case_kind": "capability_expansion",
+      "matched_rule_id": "learned-g02",
+      "action": "quantity_category_allocation"
+    },
+    {
+      "task": "cap-transfer-003",
+      "ok": true,
+      "case_kind": "capability_expansion",
+      "matched_rule_id": "learned-g03",
+      "action": "deduplicate_refunds"
+    },
+    {
+      "task": "cap-transfer-004",
+      "ok": true,
+      "case_kind": "capability_expansion",
+      "matched_rule_id": "learned-g04",
+      "action": "hybrid_refund_time"
+    },
+    {
+      "task": "cap-transfer-005",
+      "ok": true,
+      "case_kind": "capability_expansion",
+      "matched_rule_id": "learned-g01",
+      "action": "equal_category_allocation"
+    },
+    {
+      "task": "cap-transfer-006",
+      "ok": true,
+      "case_kind": "capability_expansion",
+      "matched_rule_id": "learned-g02",
+      "action": "quantity_category_allocation"
+    },
+    {
+      "task": "cap-transfer-007",
+      "ok": true,
+      "case_kind": "capability_expansion",
+      "matched_rule_id": "learned-g03",
+      "action": "deduplicate_refunds"
+    },
+    {
+      "task": "cap-transfer-008",
+      "ok": true,
+      "case_kind": "capability_expansion",
+      "matched_rule_id": "learned-g04",
+      "action": "hybrid_refund_time"
+    },
+    {
+      "task": "cap-transfer-009",
+      "ok": true,
+      "case_kind": "capability_expansion",
+      "matched_rule_id": "learned-g01",
+      "action": "equal_category_allocation"
+    },
+    {
+      "task": "cap-transfer-010",
+      "ok": true,
+      "case_kind": "capability_expansion",
+      "matched_rule_id": "learned-g02",
+      "action": "quantity_category_allocation"
+    },
+    {
+      "task": "cap-transfer-011",
+      "ok": true,
+      "case_kind": "capability_expansion",
+      "matched_rule_id": "learned-g03",
+      "action": "deduplicate_refunds"
+    },
+    {
+      "task": "cap-transfer-012",
+      "ok": true,
+      "case_kind": "capability_expansion",
+      "matched_rule_id": "learned-g04",
+      "action": "hybrid_refund_time"
+    },
+    {
+      "task": "cap-transfer-013",
+      "ok": true,
+      "case_kind": "capability_expansion",
+      "matched_rule_id": "learned-g01",
+      "action": "equal_category_allocation"
+    },
+    {
+      "task": "cap-transfer-014",
+      "ok": true,
+      "case_kind": "capability_expansion",
+      "matched_rule_id": "learned-g02",
+      "action": "quantity_category_allocation"
+    },
+    {
+      "task": "cap-transfer-015",
+      "ok": true,
+      "case_kind": "capability_expansion",
+      "matched_rule_id": "learned-g03",
+      "action": "deduplicate_refunds"
+    },
+    {
+      "task": "cap-transfer-016",
+      "ok": true,
+      "case_kind": "capability_expansion",
+      "matched_rule_id": "learned-g04",
+      "action": "hybrid_refund_time"
+    },
+    {
+      "task": "transfer-001-refund_rate",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-002-category",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-003-daily",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-004-all_metrics",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-005-refund_rate",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-006-category",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-007-daily",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-008-all_metrics",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-009-refund_rate",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-010-category",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-011-daily",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-012-all_metrics",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-013-refund_rate",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-014-category",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-015-daily",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-016-all_metrics",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-017-refund_rate",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-018-category",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-019-daily",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-020-all_metrics",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-021-refund_rate",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-022-category",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-023-daily",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    },
+    {
+      "task": "transfer-024-all_metrics",
+      "ok": true,
+      "case_kind": "contract_selection",
+      "matched_rule_id": null,
+      "action": null
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "case_id": "validation-021-refund_rate",
+  "split": "validation",
+  "scenario": "refund_rate",
+  "metric_contract": {
+    "refund_rate_denominator": "order_lines",
+    "category_refund_allocation": "proportional",
+    "refund_time_attribution": "order_date"
+  },
+  "relevant_contract_fields": [
+    "refund_rate_denominator"
+  ],
+  "results": {
+    "refund_rate": {
+      "total_orders": 26,
+      "refunded_orders": 3,
+      "refund_rate": "0.1153846153846153846153846154"
+    }
+  }
+}

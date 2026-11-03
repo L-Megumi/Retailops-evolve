@@ -1,0 +1,10 @@
+{
+  "instruction": "核算退款流水重放占比；业务事件号第二次及以后出现都计入重复行，分母不去重。",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

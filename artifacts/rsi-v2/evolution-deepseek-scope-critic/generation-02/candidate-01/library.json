@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "rule_id": "learned-g01",
+      "cue": "同一退款订单涉及 N 个品类时",
+      "action": "equal_category_allocation",
+      "reason": "When a single refund order spans multiple categories, split the refund equally across those distinct categories rather than by transaction amount, so category net sales reflect per-category refund shares.",
+      "source_task": "cap-evolution-001"
+    },
+    {
+      "rule_id": "learned-g02",
+      "cue": "跨品类退款按该订单中各品类商品数量之和加权分摊",
+      "action": "quantity_category_allocation",
+      "reason": "When a refund spans multiple categories, allocate it by summed item quantity per category in the order rather than equally or by sales share, so category net sales reflect quantity-weighted refund shares.",
+      "source_task": "cap-evolution-002"
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "entries": {
+    "561044e91739a98eb75b0abfb470ae1237cb51eeb17d5baf3679a79d8f847a13": {
+      "use_plugin": false,
+      "reason": "任务要求统计重复退款事件比例，按唯一事件编号识别重复，并以退款流水总行数为分母；该插件正是只读计算 replay rate，且不删除或修改事件。"
+    },
+    "b50189cbc8cee662eaae516e3f0ed9505552850fefbeacbaf4286849bebeabbb": {
+      "use_plugin": false,
+      "reason": "任务要求统计重复退款事件比例，按唯一事件编号识别重复，并以退款流水总行数为分母；该插件正是只读计算 replay rate，且不删除或修改事件。"
+    },
+    "6ded979d06c5825b623b79cb87d29050e4e04d88cbb89f40850c6afffc7f4374": {
+      "use_plugin": true,
+      "reason": "任务要求统计重复退款事件比例，按唯一事件编号识别重复，并以退款流水总行数为分母；该插件正是只读计算 replay rate，且不删除或修改事件。"
+    },
+    "e21134e19b0ec4f2dbb11cd9dee4407405e9fba5d5bc9019d68aaa0d9014b9cf": {
+      "use_plugin": false,
+      "reason": "任务明确要求计算 refund replay rate，并基于唯一退款事件键将首次出现排除在重复计数之外；该插件正是按此口径统计 replay 行数并计算比率。其他插件分别涉及删除重复事件或按订单累计限额，任务未要求。"
+    },
+    "dd92c58dc281994e80095d9939589b983a1f7814c43a0363c121e9d645292645": {
+      "use_plugin": false,
+      "reason": "任务明确要求计算 refund replay rate，并基于唯一退款事件键将首次出现排除在重复计数之外；该插件正是按此口径统计 replay 行数并计算比率。其他插件分别涉及删除重复事件或按订单累计限额，任务未要求。"
+    },
+    "f4060202eb7b137fe3bb178ea79a8e738ad4f7e95026b86475480bda8582968a": {
+      "use_plugin": true,
+      "reason": "任务明确要求计算 refund replay rate，并基于唯一退款事件键将首次出现排除在重复计数之外；该插件正是按此口径统计 replay 行数并计算比率。其他插件分别涉及删除重复事件或按订单累计限额，任务未要求。"
+    },
+    "d724bf96bb9e3b4e6d80818120ad4c96af4d6a11ebf6ed21eff1944e07e1f03a": {
+      "use_plugin": false,
+      "reason": "The task explicitly requires counting later repeated refund numbers as replay rows and computing their proportion of all refund rows, which is exactly the replay-rate metric; it does not require deduplication or cumulative refund capping."
+    },
+    "578a1deed19fbf4a3a2da51ba5cfffcb469627d926ac3a71c9d0555d305e6be6": {
+      "use_plugin": false,
+      "reason": "The task explicitly requires counting later repeated refund numbers as replay rows and computing their proportion of all refund rows, which is exactly the replay-rate metric; it does not require deduplication or cumulative refund capping."
+    },
+    "d5734f7977d066910649c66d47f5a9e18d4701bd2fc0677c8c58f5128bec85ee": {
+      "use_plugin": true,
+      "reason": "The task explicitly requires counting later repeated refund numbers as replay rows and computing their proportion of all refund rows, which is exactly the replay-rate metric; it does not require deduplication or cumulative refund capping."
+    },
+    "d62f88fd18610f1f8c663e36c204e298dafd6441aff1b1f823d014abeeeddb42": {
+      "use_plugin": false,
+      "reason": "Computes a read-only duplicate/replay rate by unique refund event ID and counts replay rows against total rows, without deduplicating or capping refunds."
+    },
+    "be95796d698b39aaf342e8d05ec83cc3423284494047b933ce34ac51a71c39cb": {
+      "use_plugin": false,
+      "reason": "Computes a read-only duplicate/replay rate by unique refund event ID and counts replay rows against total rows, without deduplicating or capping refunds."
+    },
+    "459ac00cb441cffc720acb66e721c8dbd758dc161b295e5d5fe339efdd458d8a": {
+      "use_plugin": true,
+      "reason": "Computes a read-only duplicate/replay rate by unique refund event ID and counts replay rows against total rows, without deduplicating or capping refunds."
+    },
+    "a9034f2df183f5ade11fc1bb6d847a7941f92cc0c94010bd1b98b70dce64afcb": {
+      "use_plugin": false,
+      "reason": "任务要求只读的退款消息重放率监控指标：按唯一退款事件身份统计首条之后重复出现的行并计算比例。该插件正是只读计算 replay row count / total rows 并输出 refund_replay_rate，且不删除或修改事件。"
+    },
+    "7c44e70758130569a4f40f994c1b61e3de305754f9948443ea1ae7cd22403d0f": {
+      "use_plugin": false,
+      "reason": "任务要求只读的退款消息重放率监控指标：按唯一退款事件身份统计首条之后重复出现的行并计算比例。该插件正是只读计算 replay row count / total rows 并输出 refund_replay_rate，且不删除或修改事件。"
+    },
+    "b4976f00c6d85cfb19808786cb1f201c3ab4bde3098fa7cc7033dcd508760327": {
+      "use_plugin": true,
+      "reason": "任务要求只读的退款消息重放率监控指标：按唯一退款事件身份统计首条之后重复出现的行并计算比例。该插件正是只读计算 replay row count / total rows 并输出 refund_replay_rate，且不删除或修改事件。"
+    },
+    "dbb59d95b587a79b2efa471cf4c83f6cb0eddcdac139fcb80345316b939fd493": {
+      "use_plugin": false,
+      "reason": "The task requires a report-only replay-rate metric based on replayed rows versus total refund rows. refund-replay-rate-metric-v1 computes exactly that scalar replay rate without removing, capping, or modifying events. Deduplication would mutate the row set, and cumulative refund capping is unrelated"
+    },
+    "19fa36462a4fad5463efdd1d1899c16f16400007eafa668880e55916f81899ab": {
+      "use_plugin": false,
+      "reason": "The task requires a report-only replay-rate metric based on replayed rows versus total refund rows. refund-replay-rate-metric-v1 computes exactly that scalar replay rate without removing, capping, or modifying events. Deduplication would mutate the row set, and cumulative refund capping is unrelated"
+    },
+    "237fdf1e5fe56c560a6d4f06e168ec062e85c8b5dd14189357be357d43a6a742": {
+      "use_plugin": true,
+      "reason": "The task requires a report-only replay-rate metric based on replayed rows versus total refund rows. refund-replay-rate-metric-v1 computes exactly that scalar replay rate without removing, capping, or modifying events. Deduplication would mutate the row set, and cumulative refund capping is unrelated"
+    },
+    "fd697512d0cf690797e59923bc42ab783a9985138fb1815247c11094f0c3891d": {
+      "use_plugin": false,
+      "reason": "The task asks only to compute the proportion of repeated refund-event rows using event-number occurrences after the first as duplicates, with total rows as the non-deduplicated denominator; this exactly matches the replay-rate metric plugin, while deduplication and cumulative caps are not requested."
+    },
+    "4311cc1d291c758266a7982b5555f8991aa264ac110e3d74f7ed3106cc2daa2a": {
+      "use_plugin": false,
+      "reason": "The task asks only to compute the proportion of repeated refund-event rows using event-number occurrences after the first as duplicates, with total rows as the non-deduplicated denominator; this exactly matches the replay-rate metric plugin, while deduplication and cumulative caps are not requested."
+    },
+    "581aab772d3895dc1c47fa541961133ded6580209a572dfd8ebe7194d59978cc": {
+      "use_plugin": true,
+      "reason": "The task asks only to compute the proportion of repeated refund-event rows using event-number occurrences after the first as duplicates, with total rows as the non-deduplicated denominator; this exactly matches the replay-rate metric plugin, while deduplication and cumulative caps are not requested."
+    },
+    "5034c74ea5dfce68734e38c2b7406ad9701995175d74c8fb8a49c677b0a7116b": {
+      "use_plugin": false,
+      "reason": "The task asks only to compute the refund replay ratio using duplicate unique event references, with counts and basis-point output, without removing or capping events. This matches the read-only replay-rate metric plugin."
+    },
+    "51b004d07743af9fcff5911e4ef3ecfe8f9a636d5941866d9b4e23321e8d9d3a": {
+      "use_plugin": false,
+      "reason": "The task asks only to compute the refund replay ratio using duplicate unique event references, with counts and basis-point output, without removing or capping events. This matches the read-only replay-rate metric plugin."
+    },
+    "38daf8aa05e5ac73b10504fca1675c82673c8e679b00a1d63252222b4f39806b": {
+      "use_plugin": true,
+      "reason": "The task asks only to compute the refund replay ratio using duplicate unique event references, with counts and basis-point output, without removing or capping events. This matches the read-only replay-rate metric plugin."
+    },
+    "533204163d8929b55bf5ce3f1b139da78d56b18b1f6cafef8c457a0b91db7613": {
+      "use_plugin": false,
+      "reason": "The task requires computing the proportion of refund replay rows in the original stream, counting later occurrences of the same refund ID as replays without removing or modifying events, which matches the replay rate metric plugin."
+    },
+    "5629ffdb4aceef444359cc3bf7cf57e6772dde9522db16b99c5333e4b1de281b": {
+      "use_plugin": false,
+      "reason": "The task requires computing the proportion of refund replay rows in the original stream, counting later occurrences of the same refund ID as replays without removing or modifying events, which matches the replay rate metric plugin."
+    },
+    "15d7d21f6bcece104713a3372ba03f8b8b205d684ed0d8cabe419419b39a09c9": {
+      "use_plugin": true,
+      "reason": "The task requires computing the proportion of refund replay rows in the original stream, counting later occurrences of the same refund ID as replays without removing or modifying events, which matches the replay rate metric plugin."
+    },
+    "db2402082cd83db7530a74fd396e3915e49b8cd224b856741d2de1bfbe7c543b": {
+      "use_plugin": false,
+      "reason": "任务要求按退款事件唯一标识统计重复事件行数及总行数并报告幂等性比例；该插件只读计数重复 refund_id 行并除以总行数，不修改或删除事件，完全匹配。其他插件分别涉及累计退款上限或实际去重，不符合报告计数需求。"
+    },
+    "04aa2a5e40166e5eb451a45c8d2e19c8faa0c215fd3226bc59a31373402be578": {
+      "use_plugin": false,
+      "reason": "任务要求按退款事件唯一标识统计重复事件行数及总行数并报告幂等性比例；该插件只读计数重复 refund_id 行并除以总行数，不修改或删除事件，完全匹配。其他插件分别涉及累计退款上限或实际去重，不符合报告计数需求。"
+    },
+    "60fbe8889310df4e310cc9d5ead1ec2d40e57fcb1f6ba2149a9a3dcda0b8ad21": {
+      "use_plugin": true,
+      "reason": "任务要求按退款事件唯一标识统计重复事件行数及总行数并报告幂等性比例；该插件只读计数重复 refund_id 行并除以总行数，不修改或删除事件，完全匹配。其他插件分别涉及累计退款上限或实际去重，不符合报告计数需求。"
+    },
+    "65c681c397a5e3ac80e47552404a60f90700c4b4f4d05ea2f4d2ac85112ff0ea": {
+      "use_plugin": false,
+      "reason": "The task asks to compute a refund event replay metric by identifying later duplicate refund events via unique refund-event identity, without order aggregation or deduplication. This matches the replay rate metric plugin, which counts already-seen refund IDs and computes a scalar rate while leaving e"
+    },
+    "3b4ccd0efd7249add55878677f768c81f5ba2af1afde8959296ae5f717186f35": {
+      "use_plugin": false,
+      "reason": "The task asks to compute a refund event replay metric by identifying later duplicate refund events via unique refund-event identity, without order aggregation or deduplication. This matches the replay rate metric plugin, which counts already-seen refund IDs and computes a scalar rate while leaving e"
+    },
+    "353e7bfd0f2d7070f6a5874b47a8cc31d94bb29cbce0d8828fba610564dcf5ee": {
+      "use_plugin": true,
+      "reason": "The task asks to compute a refund event replay metric by identifying later duplicate refund events via unique refund-event identity, without order aggregation or deduplication. This matches the replay rate metric plugin, which counts already-seen refund IDs and computes a scalar rate while leaving e"
+    },
+    "5761dccd542d9a55431c9b98791db68d59f25b29b5e29f813b4eca93571a6470": {
+      "use_plugin": false,
+      "reason": "The task asks only to compute the share/rate of refund rows that replay a previously observed event reference, matching the replay-rate metric plugin; it does not require removing duplicates or capping refunds."
+    },
+    "568eb5d9959ef2365c096e113a1fd8582d1a787dd74eb6786bdedda2aa8a2167": {
+      "use_plugin": false,
+      "reason": "The task asks only to compute the share/rate of refund rows that replay a previously observed event reference, matching the replay-rate metric plugin; it does not require removing duplicates or capping refunds."
+    },
+    "02ee9aaed7b3aa21ceae8a8c31537042aa69132c1907e9481793c29a6307ce68": {
+      "use_plugin": true,
+      "reason": "The task asks only to compute the share/rate of refund rows that replay a previously observed event reference, matching the replay-rate metric plugin; it does not require removing duplicates or capping refunds."
+    },
+    "4b7c215b42ef83a700efb49bd80691fd07e2a3fc71cbd858d758c51a401c370c": {
+      "use_plugin": false,
+      "reason": "The task asks for an idempotency/replay metric counting refund-key occurrences after the first; this plugin computes the refund replay rate without removing or modifying events."
+    },
+    "8908ed3ae79e7d7a5aef0497cc09817f005a5b8be63f951abd6aa04341d03ddd": {
+      "use_plugin": false,
+      "reason": "The task asks for an idempotency/replay metric counting refund-key occurrences after the first; this plugin computes the refund replay rate without removing or modifying events."
+    },
+    "1a7b5c4523c947367b45057238e235c3d8d12b770eef1b24e978fb0faf145838": {
+      "use_plugin": true,
+      "reason": "The task asks for an idempotency/replay metric counting refund-key occurrences after the first; this plugin computes the refund replay rate without removing or modifying events."
+    },
+    "3a04916386b274a3f674797a0f72cee3f69bee7e970fbc5bb9b0942d95ea9576": {
+      "use_plugin": false,
+      "reason": "The task requires computing replayed refund rows divided by total raw refund rows; this plugin explicitly computes that replay-rate metric by counting repeated refund_id occurrences and dividing by total refund rows, without deduplicating or capping events."
+    },
+    "98fe26e245844e2222e4a710aa1ac4f26637493483cc7df6c7b9be3711e4c53a": {
+      "use_plugin": false,
+      "reason": "The task requires computing replayed refund rows divided by total raw refund rows; this plugin explicitly computes that replay-rate metric by counting repeated refund_id occurrences and dividing by total refund rows, without deduplicating or capping events."
+    },
+    "102f1358d76174209bfc78ca0b900466e9d4f404bcae31b5486007bdae2cda84": {
+      "use_plugin": true,
+      "reason": "The task requires computing replayed refund rows divided by total raw refund rows; this plugin explicitly computes that replay-rate metric by counting repeated refund_id occurrences and dividing by total refund rows, without deduplicating or capping events."
+    },
+    "ee47a0dd7fbb7d110ed4c9b7f4357d2aa9d2b584464b9308883c4ad40dc2aa46": {
+      "use_plugin": false,
+      "reason": "The task requires reporting a refund replay/redelivery rate using exact refund-event identity, which matches the read-only replay-rate metric plugin. It does not require deduplicating events or applying cumulative refund caps."
+    },
+    "8ef6bc3caf2f58ab9ebea89e559347b7287ad634eb69f2d15a089a7cad82b940": {
+      "use_plugin": false,
+      "reason": "The task requires reporting a refund replay/redelivery rate using exact refund-event identity, which matches the read-only replay-rate metric plugin. It does not require deduplicating events or applying cumulative refund caps."
+    },
+    "6dfd7d73966ee0e8dce1759a78207c174faf4ab1054c55f76f46cd14ad6a26c6": {
+      "use_plugin": true,
+      "reason": "The task requires reporting a refund replay/redelivery rate using exact refund-event identity, which matches the read-only replay-rate metric plugin. It does not require deduplicating events or applying cumulative refund caps."
+    },
+    "2c852da27b658dbbd7cf29171acd923af135cc8060371b9cec6ae132e4f0ac19": {
+      "use_plugin": false,
+      "reason": "The task asks to quantify repeated refund-event deliveries while explicitly not deduplicating first, which matches the replay-rate metric that counts duplicate refund_id occurrences over total refund rows without altering or removing events."
+    },
+    "bc797e7df0463510c1f154366e74cfe8cecb94689eae0546b82d5f39ec29ce73": {
+      "use_plugin": false,
+      "reason": "The task asks to quantify repeated refund-event deliveries while explicitly not deduplicating first, which matches the replay-rate metric that counts duplicate refund_id occurrences over total refund rows without altering or removing events."
+    },
+    "59533f09aced4c960d79c432b13984538bcbd5dc9419c6f76eba4fdf19d76ba3": {
+      "use_plugin": true,
+      "reason": "The task asks to quantify repeated refund-event deliveries while explicitly not deduplicating first, which matches the replay-rate metric that counts duplicate refund_id occurrences over total refund rows without altering or removing events."
+    }
+  }
+}

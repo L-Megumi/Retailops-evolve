@@ -1,0 +1,9 @@
+{
+  "name": "multi-plugin-route-audit-v2",
+  "count": 24,
+  "cap_positive": 8,
+  "dedup_positive": 8,
+  "near_negative": 8,
+  "cases_sha256": "05fc7f89529baa5170c06788ea6508fc576beb1c4fb50bc63c59d49b2adc8c47",
+  "purpose": "post-repair multi-plugin semantic selection audit"
+}

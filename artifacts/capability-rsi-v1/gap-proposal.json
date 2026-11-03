@@ -1,0 +1,21 @@
+{
+  "plugin_id": "refund-replay-rate-metric-v1",
+  "cues": [
+    "退款事件重放率",
+    "refund_id",
+    "首次出现后",
+    "重放行数",
+    "全部退款行数",
+    "refund_replay_rate"
+  ],
+  "positive_definition": "Computes a single scalar metric over the refunds input: rows whose refund_id (or equivalent unique refund-event identity) has already appeared at an earlier position in input order are counted as replay rows; the replay row count is divided by the total number of refund rows to yield the replay rate. Computation only reads and counts rows; it does not alter, drop, or cap any event. Exposed as metric_tool with compute_metric(orders, refunds) and output_name refund_replay_rate.",
+  "exclusions": [
+    "Does not remove or deduplicate replay rows or return a filtered event list (that is refund-event-dedup-v1).",
+    "Does not accumulate or cap refund value per order against original gross merchandise value (that is cumulative-refund-cap-v1).",
+    "Does not compute ordinary refund rate or refund-to-sales ratio (that is refund_rate).",
+    "Does not rank categories or produce per-group breakdowns (that is category_ranking).",
+    "Does not modify input rows, amounts, or field values in any way."
+  ],
+  "output_name": "refund_replay_rate",
+  "reason": "The task requires a replay-rate scalar keyed to repeated refund_id occurrences, but existing tools only expose daily_net_sales, refund_rate, and category_ranking, and existing plugins only deduplicate or cap refund events. Neither deduplication nor capping reports a replay proportion, so the expected result refund_replay_rate is unavailable; a minimal metric_tool computing replay rows over total refund rows fills exactly this gap."
+}

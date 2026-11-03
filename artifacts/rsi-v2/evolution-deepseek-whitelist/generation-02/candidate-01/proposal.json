@@ -1,0 +1,5 @@
+{
+  "cue": "跨品类退款按该订单中各品类商品数量之和加权分摊",
+  "action": "quantity_category_allocation",
+  "reason": "When a refund spans multiple categories, allocate it across those categories in proportion to the summed item quantity per category in the order, not by sales amount or equal split."
+}

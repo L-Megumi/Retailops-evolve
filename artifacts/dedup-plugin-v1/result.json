@@ -1,0 +1,334 @@
+{
+  "accepted": true,
+  "capability": "Remove duplicate refund events by refund_id. Process input order from first to last and keep only the first occurrence of each refund_id. Preserve every retained row without changing refund_id, order_id, refund_date, or refund_cents. Do not cap amounts or group by order_id.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "development": {
+        "passed": 20,
+        "count": 20,
+        "rows": [
+          {
+            "case_id": "dedup-001",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-002",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-003",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-004",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-005",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-006",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-007",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-008",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-009",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-010",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-011",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-012",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-013",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-014",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-015",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-016",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-017",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-018",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-019",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-020",
+            "ok": true,
+            "error": ""
+          }
+        ]
+      },
+      "audit": {
+        "passed": 20,
+        "count": 20,
+        "rows": [
+          {
+            "case_id": "dedup-001",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-002",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-003",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-004",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-005",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-006",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-007",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-008",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-009",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-010",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-011",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-012",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-013",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-014",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-015",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-016",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-017",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-018",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-019",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "dedup-020",
+            "ok": true,
+            "error": ""
+          }
+        ]
+      }
+    }
+  ],
+  "final_audit": {
+    "passed": 20,
+    "count": 20,
+    "rows": [
+      {
+        "case_id": "dedup-001",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-002",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-003",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-004",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-005",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-006",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-007",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-008",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-009",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-010",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-011",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-012",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-013",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-014",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-015",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-016",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-017",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-018",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-019",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-020",
+        "ok": true,
+        "error": ""
+      }
+    ]
+  },
+  "candidate_sha256": "4edbd375e9e55641165fc8c5346cf4ab4a9f73241416d01d209cd1d834d52467",
+  "model_calls": 1,
+  "model_usage": {
+    "prompt_tokens": 217,
+    "completion_tokens": 156,
+    "total_tokens": 373
+  }
+}

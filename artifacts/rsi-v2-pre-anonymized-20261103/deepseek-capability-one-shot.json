@@ -1,0 +1,905 @@
+{
+  "benchmark": "rsi-v2",
+  "splits": [
+    "evolution",
+    "validation",
+    "transfer"
+  ],
+  "repeats": 1,
+  "runs": 48,
+  "oracle_passed": 0,
+  "policy_exact": 31,
+  "errors": 0,
+  "model_calls": 48,
+  "model_usage": {
+    "prompt_tokens": 11578,
+    "completion_tokens": 1573,
+    "total_tokens": 13151
+  },
+  "by_split": {
+    "evolution": {
+      "runs": 16,
+      "oracle_passed": 0,
+      "policy_exact": 10,
+      "errors": 0
+    },
+    "validation": {
+      "runs": 16,
+      "oracle_passed": 0,
+      "policy_exact": 10,
+      "errors": 0
+    },
+    "transfer": {
+      "runs": 16,
+      "oracle_passed": 0,
+      "policy_exact": 11,
+      "errors": 0
+    }
+  },
+  "rows": [
+    {
+      "repeat": 1,
+      "task": "cap-evolution-001-equal_allocation",
+      "split": "evolution",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "direct",
+      "data_profile": "dense",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-evolution-002-quantity_allocation",
+      "split": "evolution",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "ops_memo",
+      "data_profile": "multi_refund",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-evolution-003-deduplicate_refunds",
+      "split": "evolution",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "worked_example",
+      "data_profile": "cross_period",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-evolution-004-conditional_time",
+      "split": "evolution",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "negated_override",
+      "data_profile": "shuffled",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-evolution-005-equal_allocation",
+      "split": "evolution",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "ops_memo",
+      "data_profile": "cross_period",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-evolution-006-quantity_allocation",
+      "split": "evolution",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "worked_example",
+      "data_profile": "shuffled",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-evolution-007-deduplicate_refunds",
+      "split": "evolution",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "negated_override",
+      "data_profile": "dense",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-evolution-008-conditional_time",
+      "split": "evolution",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "direct",
+      "data_profile": "multi_refund",
+      "oracle_ok": false,
+      "policy_exact": false,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-evolution-009-equal_allocation",
+      "split": "evolution",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "worked_example",
+      "data_profile": "dense",
+      "oracle_ok": false,
+      "policy_exact": false,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-evolution-010-quantity_allocation",
+      "split": "evolution",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "negated_override",
+      "data_profile": "multi_refund",
+      "oracle_ok": false,
+      "policy_exact": false,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-evolution-011-deduplicate_refunds",
+      "split": "evolution",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "direct",
+      "data_profile": "cross_period",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-evolution-012-conditional_time",
+      "split": "evolution",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "ops_memo",
+      "data_profile": "shuffled",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-evolution-013-equal_allocation",
+      "split": "evolution",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "negated_override",
+      "data_profile": "cross_period",
+      "oracle_ok": false,
+      "policy_exact": false,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-evolution-014-quantity_allocation",
+      "split": "evolution",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "direct",
+      "data_profile": "shuffled",
+      "oracle_ok": false,
+      "policy_exact": false,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-evolution-015-deduplicate_refunds",
+      "split": "evolution",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "ops_memo",
+      "data_profile": "dense",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-evolution-016-conditional_time",
+      "split": "evolution",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "worked_example",
+      "data_profile": "multi_refund",
+      "oracle_ok": false,
+      "policy_exact": false,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-validation-001-equal_allocation",
+      "split": "validation",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "worked_example",
+      "data_profile": "dense",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-validation-002-quantity_allocation",
+      "split": "validation",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "negated_override",
+      "data_profile": "multi_refund",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-validation-003-deduplicate_refunds",
+      "split": "validation",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "formula",
+      "data_profile": "cross_period",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-validation-004-conditional_time",
+      "split": "validation",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "policy_ticket",
+      "data_profile": "shuffled",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-validation-005-equal_allocation",
+      "split": "validation",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "negated_override",
+      "data_profile": "cross_period",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-validation-006-quantity_allocation",
+      "split": "validation",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "formula",
+      "data_profile": "shuffled",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-validation-007-deduplicate_refunds",
+      "split": "validation",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "policy_ticket",
+      "data_profile": "dense",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-validation-008-conditional_time",
+      "split": "validation",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "worked_example",
+      "data_profile": "multi_refund",
+      "oracle_ok": false,
+      "policy_exact": false,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-validation-009-equal_allocation",
+      "split": "validation",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "formula",
+      "data_profile": "dense",
+      "oracle_ok": false,
+      "policy_exact": false,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-validation-010-quantity_allocation",
+      "split": "validation",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "policy_ticket",
+      "data_profile": "multi_refund",
+      "oracle_ok": false,
+      "policy_exact": false,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-validation-011-deduplicate_refunds",
+      "split": "validation",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "worked_example",
+      "data_profile": "cross_period",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-validation-012-conditional_time",
+      "split": "validation",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "negated_override",
+      "data_profile": "shuffled",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-validation-013-equal_allocation",
+      "split": "validation",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "policy_ticket",
+      "data_profile": "cross_period",
+      "oracle_ok": false,
+      "policy_exact": false,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-validation-014-quantity_allocation",
+      "split": "validation",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "worked_example",
+      "data_profile": "shuffled",
+      "oracle_ok": false,
+      "policy_exact": false,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-validation-015-deduplicate_refunds",
+      "split": "validation",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "negated_override",
+      "data_profile": "dense",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-validation-016-conditional_time",
+      "split": "validation",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "formula",
+      "data_profile": "multi_refund",
+      "oracle_ok": false,
+      "policy_exact": false,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-transfer-001-equal_allocation",
+      "split": "transfer",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "bilingual",
+      "data_profile": "dense",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-transfer-002-quantity_allocation",
+      "split": "transfer",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "formula",
+      "data_profile": "multi_refund",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-transfer-003-deduplicate_refunds",
+      "split": "transfer",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "compact_alias",
+      "data_profile": "cross_period",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-transfer-004-conditional_time",
+      "split": "transfer",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "policy_ticket",
+      "data_profile": "shuffled",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-transfer-005-equal_allocation",
+      "split": "transfer",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "formula",
+      "data_profile": "cross_period",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-transfer-006-quantity_allocation",
+      "split": "transfer",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "compact_alias",
+      "data_profile": "shuffled",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-transfer-007-deduplicate_refunds",
+      "split": "transfer",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "policy_ticket",
+      "data_profile": "dense",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-transfer-008-conditional_time",
+      "split": "transfer",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "bilingual",
+      "data_profile": "multi_refund",
+      "oracle_ok": false,
+      "policy_exact": false,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-transfer-009-equal_allocation",
+      "split": "transfer",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "compact_alias",
+      "data_profile": "dense",
+      "oracle_ok": false,
+      "policy_exact": false,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-transfer-010-quantity_allocation",
+      "split": "transfer",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "policy_ticket",
+      "data_profile": "multi_refund",
+      "oracle_ok": false,
+      "policy_exact": false,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-transfer-011-deduplicate_refunds",
+      "split": "transfer",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "bilingual",
+      "data_profile": "cross_period",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-transfer-012-conditional_time",
+      "split": "transfer",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "formula",
+      "data_profile": "shuffled",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-transfer-013-equal_allocation",
+      "split": "transfer",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "policy_ticket",
+      "data_profile": "cross_period",
+      "oracle_ok": false,
+      "policy_exact": false,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-transfer-014-quantity_allocation",
+      "split": "transfer",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "bilingual",
+      "data_profile": "shuffled",
+      "oracle_ok": false,
+      "policy_exact": false,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-transfer-015-deduplicate_refunds",
+      "split": "transfer",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "formula",
+      "data_profile": "dense",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "cap-transfer-016-conditional_time",
+      "split": "transfer",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "compact_alias",
+      "data_profile": "multi_refund",
+      "oracle_ok": false,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    }
+  ]
+}

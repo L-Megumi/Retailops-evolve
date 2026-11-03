@@ -1,0 +1,12 @@
+{
+  "instruction": "输出每日成交额、退款额与净销售额。注意：旧模板中的“退款计入退款实际发生日期”已经作废，禁止沿用。本任务唯一生效的口径是：“退款回溯计入原订单日期”。",
+  "tools": [
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "difficulty": "challenge",
+    "instruction_style": "negated_override",
+    "data_profile": "dense"
+  }
+}

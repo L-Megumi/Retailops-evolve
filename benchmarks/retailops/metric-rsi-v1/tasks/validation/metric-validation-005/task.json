@@ -1,0 +1,10 @@
+{
+  "instruction": "计算 refund event replay 指标，不按订单聚合，只按退款事件标识识别后续副本。",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

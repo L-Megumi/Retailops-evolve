@@ -1,0 +1,447 @@
+{
+  "runs": 48,
+  "oracle_passed": 48,
+  "action_exact": 48,
+  "errors": 0,
+  "model_calls": 48,
+  "model_usage": {
+    "prompt_tokens": 11386,
+    "completion_tokens": 2505,
+    "total_tokens": 13891
+  },
+  "persistent_memory": false,
+  "rows": [
+    {
+      "task": "cap-evolution-001",
+      "split": "evolution",
+      "action": "equal_category_allocation",
+      "expected_action": "equal_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-evolution-002",
+      "split": "evolution",
+      "action": "quantity_category_allocation",
+      "expected_action": "quantity_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-evolution-003",
+      "split": "evolution",
+      "action": "deduplicate_refunds",
+      "expected_action": "deduplicate_refunds",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-evolution-004",
+      "split": "evolution",
+      "action": "hybrid_refund_time",
+      "expected_action": "hybrid_refund_time",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-evolution-005",
+      "split": "evolution",
+      "action": "equal_category_allocation",
+      "expected_action": "equal_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-evolution-006",
+      "split": "evolution",
+      "action": "quantity_category_allocation",
+      "expected_action": "quantity_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-evolution-007",
+      "split": "evolution",
+      "action": "deduplicate_refunds",
+      "expected_action": "deduplicate_refunds",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-evolution-008",
+      "split": "evolution",
+      "action": "hybrid_refund_time",
+      "expected_action": "hybrid_refund_time",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-evolution-009",
+      "split": "evolution",
+      "action": "equal_category_allocation",
+      "expected_action": "equal_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-evolution-010",
+      "split": "evolution",
+      "action": "quantity_category_allocation",
+      "expected_action": "quantity_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-evolution-011",
+      "split": "evolution",
+      "action": "deduplicate_refunds",
+      "expected_action": "deduplicate_refunds",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-evolution-012",
+      "split": "evolution",
+      "action": "hybrid_refund_time",
+      "expected_action": "hybrid_refund_time",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-evolution-013",
+      "split": "evolution",
+      "action": "equal_category_allocation",
+      "expected_action": "equal_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-evolution-014",
+      "split": "evolution",
+      "action": "quantity_category_allocation",
+      "expected_action": "quantity_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-evolution-015",
+      "split": "evolution",
+      "action": "deduplicate_refunds",
+      "expected_action": "deduplicate_refunds",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-evolution-016",
+      "split": "evolution",
+      "action": "hybrid_refund_time",
+      "expected_action": "hybrid_refund_time",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-validation-001",
+      "split": "validation",
+      "action": "equal_category_allocation",
+      "expected_action": "equal_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-validation-002",
+      "split": "validation",
+      "action": "quantity_category_allocation",
+      "expected_action": "quantity_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-validation-003",
+      "split": "validation",
+      "action": "deduplicate_refunds",
+      "expected_action": "deduplicate_refunds",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-validation-004",
+      "split": "validation",
+      "action": "hybrid_refund_time",
+      "expected_action": "hybrid_refund_time",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-validation-005",
+      "split": "validation",
+      "action": "equal_category_allocation",
+      "expected_action": "equal_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-validation-006",
+      "split": "validation",
+      "action": "quantity_category_allocation",
+      "expected_action": "quantity_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-validation-007",
+      "split": "validation",
+      "action": "deduplicate_refunds",
+      "expected_action": "deduplicate_refunds",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-validation-008",
+      "split": "validation",
+      "action": "hybrid_refund_time",
+      "expected_action": "hybrid_refund_time",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-validation-009",
+      "split": "validation",
+      "action": "equal_category_allocation",
+      "expected_action": "equal_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-validation-010",
+      "split": "validation",
+      "action": "quantity_category_allocation",
+      "expected_action": "quantity_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-validation-011",
+      "split": "validation",
+      "action": "deduplicate_refunds",
+      "expected_action": "deduplicate_refunds",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-validation-012",
+      "split": "validation",
+      "action": "hybrid_refund_time",
+      "expected_action": "hybrid_refund_time",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-validation-013",
+      "split": "validation",
+      "action": "equal_category_allocation",
+      "expected_action": "equal_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-validation-014",
+      "split": "validation",
+      "action": "quantity_category_allocation",
+      "expected_action": "quantity_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-validation-015",
+      "split": "validation",
+      "action": "deduplicate_refunds",
+      "expected_action": "deduplicate_refunds",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-validation-016",
+      "split": "validation",
+      "action": "hybrid_refund_time",
+      "expected_action": "hybrid_refund_time",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-transfer-001",
+      "split": "transfer",
+      "action": "equal_category_allocation",
+      "expected_action": "equal_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-transfer-002",
+      "split": "transfer",
+      "action": "quantity_category_allocation",
+      "expected_action": "quantity_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-transfer-003",
+      "split": "transfer",
+      "action": "deduplicate_refunds",
+      "expected_action": "deduplicate_refunds",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-transfer-004",
+      "split": "transfer",
+      "action": "hybrid_refund_time",
+      "expected_action": "hybrid_refund_time",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-transfer-005",
+      "split": "transfer",
+      "action": "equal_category_allocation",
+      "expected_action": "equal_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-transfer-006",
+      "split": "transfer",
+      "action": "quantity_category_allocation",
+      "expected_action": "quantity_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-transfer-007",
+      "split": "transfer",
+      "action": "deduplicate_refunds",
+      "expected_action": "deduplicate_refunds",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-transfer-008",
+      "split": "transfer",
+      "action": "hybrid_refund_time",
+      "expected_action": "hybrid_refund_time",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-transfer-009",
+      "split": "transfer",
+      "action": "equal_category_allocation",
+      "expected_action": "equal_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-transfer-010",
+      "split": "transfer",
+      "action": "quantity_category_allocation",
+      "expected_action": "quantity_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-transfer-011",
+      "split": "transfer",
+      "action": "deduplicate_refunds",
+      "expected_action": "deduplicate_refunds",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-transfer-012",
+      "split": "transfer",
+      "action": "hybrid_refund_time",
+      "expected_action": "hybrid_refund_time",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-transfer-013",
+      "split": "transfer",
+      "action": "equal_category_allocation",
+      "expected_action": "equal_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-transfer-014",
+      "split": "transfer",
+      "action": "quantity_category_allocation",
+      "expected_action": "quantity_category_allocation",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-transfer-015",
+      "split": "transfer",
+      "action": "deduplicate_refunds",
+      "expected_action": "deduplicate_refunds",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    },
+    {
+      "task": "cap-transfer-016",
+      "split": "transfer",
+      "action": "hybrid_refund_time",
+      "expected_action": "hybrid_refund_time",
+      "action_exact": true,
+      "oracle_ok": true,
+      "error": ""
+    }
+  ]
+}

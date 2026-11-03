@@ -1,0 +1,10 @@
+{
+  "instruction": "Measure duplicate-delivery share in the refund event stream using exact event identifiers and all rows as denominator.",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

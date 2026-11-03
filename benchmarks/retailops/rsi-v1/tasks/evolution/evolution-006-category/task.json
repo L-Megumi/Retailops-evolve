@@ -1,0 +1,12 @@
+{
+  "instruction": "生成品类净销售额排行。例如同单 A/B 成交额为 3:1，则退款也按 3:1 拆分。以上示例定义本次统计口径。",
+  "tools": [
+    "category_ranking"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "difficulty": "challenge",
+    "instruction_style": "worked_example",
+    "data_profile": "shuffled"
+  }
+}

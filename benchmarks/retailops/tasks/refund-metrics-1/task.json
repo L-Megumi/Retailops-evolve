@@ -1,0 +1,4 @@
+{
+  "instruction": "计算订单退款率，并按品类生成扣除退款后的销售额排行。退款率以去重订单数为分母；跨品类订单退款按订单行销售额比例分摊。",
+  "tools": ["refund_rate", "category_ranking"]
+}

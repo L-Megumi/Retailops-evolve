@@ -1,0 +1,10 @@
+{
+  "instruction": "生成退款消息重放监控指标，重复次数按首条之后的每一行累计，比例用基点表示。",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

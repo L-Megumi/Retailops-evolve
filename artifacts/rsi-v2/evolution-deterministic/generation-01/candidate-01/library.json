@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "rule_id": "learned-g01",
+      "cue": "等额拆分",
+      "action": "equal_category_allocation",
+      "reason": "deterministic test proposal inferred from the task rule",
+      "source_task": "cap-evolution-001"
+    }
+  ]
+}

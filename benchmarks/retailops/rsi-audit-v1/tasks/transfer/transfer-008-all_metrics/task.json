@@ -1,0 +1,15 @@
+{
+  "instruction": "Build the retail report for 退款订单率、品类净销售额排行以及每日经营汇总. Binding rules: deduplicate order_id for the refund-rate denominator (unique orders); prorate each cross-category refund by category gross contribution inside that order; backdate refunds to the original order date. Do not infer the deprecated default policy.",
+  "tools": [
+    "refund_rate",
+    "category_ranking",
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "transfer",
+    "difficulty": "challenge",
+    "case_kind": "contract_selection",
+    "instruction_style": "bilingual",
+    "data_profile": "multi_refund"
+  }
+}

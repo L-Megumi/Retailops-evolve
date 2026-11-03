@@ -1,0 +1,12 @@
+{
+  "instruction": "比较 category ranking；一笔退款涉及多个品类时全部归入订单中首个记录的品类。",
+  "tools": [
+    "category_ranking"
+  ],
+  "benchmark_metadata": {
+    "split": "regression",
+    "difficulty": "legacy",
+    "instruction_style": "legacy_dynamic",
+    "data_profile": "legacy"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "keyword_groups": [
+    [
+      "订单",
+      "退款",
+      "天花板",
+      "成交额"
+    ],
+    [
+      "订单",
+      "退款",
+      "不得",
+      "负数"
+    ],
+    [
+      "订单",
+      "退款",
+      "不能",
+      "负数"
+    ],
+    [
+      "退款",
+      "顺序",
+      "截断",
+      "超额"
+    ],
+    [
+      "退款",
+      "流水",
+      "尚未",
+      "金额"
+    ],
+    [
+      "order",
+      "refund",
+      "ceiling",
+      "sales"
+    ],
+    [
+      "order",
+      "refund",
+      "must",
+      "not",
+      "negative"
+    ],
+    [
+      "refund",
+      "sequential",
+      "truncate",
+      "excess"
+    ]
+  ],
+  "reason": "Replaced overly exact modal phrasing with equivalent Chinese terms (天花板/不得/不能) and added order-level ceiling, non-negative net, sequential truncation, and remaining-amount conjunctions; English groups mirror the same semantics without task ids or broad single tokens."
+}

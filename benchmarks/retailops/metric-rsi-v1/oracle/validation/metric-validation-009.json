@@ -1,0 +1,8 @@
+{
+  "case_id": "metric-validation-009",
+  "expected": {
+    "total_refund_rows": 11,
+    "duplicate_rows": 5,
+    "replay_rate_bps": 4545
+  }
+}

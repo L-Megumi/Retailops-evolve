@@ -1,0 +1,12 @@
+{
+  "instruction": "Build the retail report for 每日成交额、退款额与净销售额. Binding rules: recognize refunds on the actual refund date. Do not infer the deprecated default policy.",
+  "tools": [
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "transfer",
+    "difficulty": "challenge",
+    "instruction_style": "bilingual",
+    "data_profile": "cross_period"
+  }
+}

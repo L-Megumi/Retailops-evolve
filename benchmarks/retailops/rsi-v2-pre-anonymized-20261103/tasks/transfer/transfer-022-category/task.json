@@ -1,0 +1,14 @@
+{
+  "instruction": "生成品类净销售额排行；本工单参数 REFUND_SPLIT=GROSS_WEIGHT。",
+  "tools": [
+    "category_ranking"
+  ],
+  "benchmark_metadata": {
+    "split": "transfer",
+    "difficulty": "challenge",
+    "case_kind": "contract_selection",
+    "capability_family": "none",
+    "instruction_style": "compact_alias",
+    "data_profile": "shuffled"
+  }
+}

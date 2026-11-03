@@ -1,0 +1,5 @@
+{
+  "cue": "间隔不超过 4 天的退款回写订单日",
+  "action": "hybrid_refund_time",
+  "reason": "The instruction requires a per-refund day threshold: refunds within 4 days use the order date while longer-lag refunds use the actual refund date, which matches hybrid_refund_time."
+}

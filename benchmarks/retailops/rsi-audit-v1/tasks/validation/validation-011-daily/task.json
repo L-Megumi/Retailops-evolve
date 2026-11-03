@@ -1,0 +1,13 @@
+{
+  "instruction": "生成每日成交额、退款额与净销售额。例如 9 月下单、10 月退款，退款出现在 10 月的日期。以上示例定义本次统计口径。",
+  "tools": [
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "difficulty": "challenge",
+    "case_kind": "contract_selection",
+    "instruction_style": "worked_example",
+    "data_profile": "cross_period"
+  }
+}

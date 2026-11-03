@@ -1,0 +1,52 @@
+{
+  "name": "code-route-audit-v1",
+  "seed": 2026110337,
+  "count": 4,
+  "count_per_split": 4,
+  "cases": [
+    {
+      "case_id": "code-transfer-001",
+      "split": "transfer",
+      "order_lines": 67,
+      "refund_rows": 3
+    },
+    {
+      "case_id": "code-transfer-002",
+      "split": "transfer",
+      "order_lines": 26,
+      "refund_rows": 3
+    },
+    {
+      "case_id": "code-transfer-003",
+      "split": "transfer",
+      "order_lines": 35,
+      "refund_rows": 3
+    },
+    {
+      "case_id": "code-transfer-004",
+      "split": "transfer",
+      "order_lines": 31,
+      "refund_rows": 3
+    }
+  ],
+  "public_sha256": {
+    "tasks/transfer/code-transfer-001/orders.csv": "d7edbbc7c72f3c90902eae59b0bf6d435cbf31220a1aed7c87cea1d98eff1d6c",
+    "tasks/transfer/code-transfer-001/refunds.csv": "5edcd14f1ddb03ceb9ae3f0797819d56cc3b45c29a9af7debd7aae566766108b",
+    "tasks/transfer/code-transfer-001/task.json": "c3b172750d7c29fad506a4327739d71f80d774e80abcb437ac1a7d63261a9d21",
+    "tasks/transfer/code-transfer-002/orders.csv": "19dace0bc6a2d747c51b2fbbef8d17788cfd3929ff22d2a33a518c4f8c4cd6f6",
+    "tasks/transfer/code-transfer-002/refunds.csv": "2d0918b986614207bab699b0aed1353a88dc703d73fb697ed26a318c572c998a",
+    "tasks/transfer/code-transfer-002/task.json": "5ae80c0caea4d8f5896e257812c004b99cdb289eb2c07d2869c2606458106d6c",
+    "tasks/transfer/code-transfer-003/orders.csv": "c374f8b8db13df1a1fce300980610179b515c7e4174181c02e784f005de75f52",
+    "tasks/transfer/code-transfer-003/refunds.csv": "81f82c56b8e5c9b8e95205d2649b00601c6a6a982995a0c3edbdd6e3a1928535",
+    "tasks/transfer/code-transfer-003/task.json": "89ef6af84d1a42639391d9413a2e9e2d3f04d7eda363293ffc52794a44a63a8c",
+    "tasks/transfer/code-transfer-004/orders.csv": "bb17eb7fdab03438c7fc8954157b53cee59d242dd88b535e8f3267d679271e2d",
+    "tasks/transfer/code-transfer-004/refunds.csv": "1786336f0eda20f793a81375fd9080937e88aa3f2f6c4a94db9d66c292d75702",
+    "tasks/transfer/code-transfer-004/task.json": "8b96bde7d45b2d03d88bdc185076103339b009bfa527339ea15833aa3b6618c0"
+  },
+  "oracle_sha256": {
+    "oracle/transfer/code-transfer-001.json": "a5f1e685fd428210a118208d9edd21a488294a64782f779bc20dd69a7f2f0186",
+    "oracle/transfer/code-transfer-002.json": "78cf0f715effe65214741c4589c573ea139d788873a0f27301259ab523f7584f",
+    "oracle/transfer/code-transfer-003.json": "57f68a9f4a249c3731eaade9428e5b7ecb481590e6a360fcee68cf0d55a1df75",
+    "oracle/transfer/code-transfer-004.json": "53a684dd14db32c14f9431da85b1aa9cb78021ce337b03d662e7b82d24dd7c9d"
+  }
+}

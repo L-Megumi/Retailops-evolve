@@ -1,0 +1,11 @@
+{
+  "instruction": "订单退款余额从成交额开始，退款行依次消耗余额，确认金额取申报额与剩余额度的较小值；余额为零后跳过。输出品类和每日净额。",
+  "tools": [
+    "category_ranking",
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "case_kind": "code_capability"
+  }
+}

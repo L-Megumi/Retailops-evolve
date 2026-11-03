@@ -1,0 +1,47 @@
+{
+  "task": "核算退款率和品类净销售额。一个订单可能包含多个品类；退款必须按各品类在订单中的销售额占比分配。",
+  "ok": false,
+  "policy": {
+    "refund_rate_denominator": "order_lines",
+    "category_refund_allocation": "first_category"
+  },
+  "issues": [
+    {
+      "code": "category_refund_allocation",
+      "message": "跨品类订单的退款必须按订单行销售额比例分摊",
+      "repairable": true
+    },
+    {
+      "code": "refund_rate_definition",
+      "message": "退款率必须按去重订单数计算，不能使用订单明细行数作为分母",
+      "repairable": true
+    }
+  ],
+  "results": {
+    "refund_rate": {
+      "total_orders": 5,
+      "refunded_orders": 1,
+      "refund_rate": "0.2"
+    },
+    "category_ranking": [
+      {
+        "category": "办公家具",
+        "gross_sales": "1200.00",
+        "refund_amount": "0",
+        "net_sales": "1200.00"
+      },
+      {
+        "category": "电子产品",
+        "gross_sales": "1100.00",
+        "refund_amount": "250.00",
+        "net_sales": "850.00"
+      },
+      {
+        "category": "办公耗材",
+        "gross_sales": "300.00",
+        "refund_amount": "0",
+        "net_sales": "300.00"
+      }
+    ]
+  }
+}

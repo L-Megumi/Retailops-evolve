@@ -1,0 +1,105 @@
+{
+  "suite": "code-audit-v1",
+  "plugin": "artifacts/code-evolution-v1/attempt-2/candidate.py",
+  "plugin_sha256": "906f3b16020aa6760c07a0556daa19b17587406bef3e423a1e83e3ca3e23bd5c",
+  "model_calls": 0,
+  "plugin_mutated": false,
+  "evaluations": {
+    "evolution": {
+      "split": "evolution",
+      "passed": 4,
+      "task_count": 4,
+      "errors": 0,
+      "rows": [
+        {
+          "task": "code-evolution-001",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-evolution-002",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-evolution-003",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-evolution-004",
+          "ok": true,
+          "error": "",
+          "actual": null
+        }
+      ]
+    },
+    "validation": {
+      "split": "validation",
+      "passed": 4,
+      "task_count": 4,
+      "errors": 0,
+      "rows": [
+        {
+          "task": "code-validation-001",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-validation-002",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-validation-003",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-validation-004",
+          "ok": true,
+          "error": "",
+          "actual": null
+        }
+      ]
+    },
+    "transfer": {
+      "split": "transfer",
+      "passed": 4,
+      "task_count": 4,
+      "errors": 0,
+      "rows": [
+        {
+          "task": "code-transfer-001",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-transfer-002",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-transfer-003",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-transfer-004",
+          "ok": true,
+          "error": "",
+          "actual": null
+        }
+      ]
+    }
+  }
+}

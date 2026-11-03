@@ -1,0 +1,87 @@
+{
+  "case_id": "cap-evolution-016-conditional_time",
+  "split": "evolution",
+  "scenario": "conditional_time",
+  "metric_contract": {
+    "refund_rate_denominator": "distinct_orders",
+    "category_refund_allocation": "first_category",
+    "refund_time_attribution": "order_date"
+  },
+  "capability_contract": {
+    "refund_time_rule": "hybrid_lag",
+    "threshold_days": 3
+  },
+  "relevant_contract_fields": [
+    "refund_time_attribution"
+  ],
+  "results": {
+    "daily_net_sales": [
+      {
+        "date": "2026-09-20",
+        "gross_sales": "6984.13",
+        "refund_amount": "0",
+        "net_sales": "6984.13"
+      },
+      {
+        "date": "2026-09-21",
+        "gross_sales": "2559.55",
+        "refund_amount": "426.59",
+        "net_sales": "2132.96"
+      },
+      {
+        "date": "2026-09-22",
+        "gross_sales": "7755.58",
+        "refund_amount": "0",
+        "net_sales": "7755.58"
+      },
+      {
+        "date": "2026-09-23",
+        "gross_sales": "6500.70",
+        "refund_amount": "0",
+        "net_sales": "6500.70"
+      },
+      {
+        "date": "2026-09-24",
+        "gross_sales": "3731.64",
+        "refund_amount": "0",
+        "net_sales": "3731.64"
+      },
+      {
+        "date": "2026-09-25",
+        "gross_sales": "7458.25",
+        "refund_amount": "348.06",
+        "net_sales": "7110.19"
+      },
+      {
+        "date": "2026-09-26",
+        "gross_sales": "14266.19",
+        "refund_amount": "1593.83",
+        "net_sales": "12672.36"
+      },
+      {
+        "date": "2026-09-27",
+        "gross_sales": "0",
+        "refund_amount": "371.04",
+        "net_sales": "-371.04"
+      },
+      {
+        "date": "2026-09-30",
+        "gross_sales": "0",
+        "refund_amount": "174.02",
+        "net_sales": "-174.02"
+      },
+      {
+        "date": "2026-10-01",
+        "gross_sales": "0",
+        "refund_amount": "532.11",
+        "net_sales": "-532.11"
+      },
+      {
+        "date": "2026-10-02",
+        "gross_sales": "0",
+        "refund_amount": "160.54",
+        "net_sales": "-160.54"
+      }
+    ]
+  }
+}

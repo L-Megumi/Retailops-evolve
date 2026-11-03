@@ -1,0 +1,11 @@
+{
+  "instruction": "对 refunds 做顺序裁剪：每个 order_id 的总退款最多等于其 gross sales；将裁剪后的退款用于 category ranking 与 daily net sales。",
+  "tools": [
+    "category_ranking",
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "case_kind": "code_capability"
+  }
+}

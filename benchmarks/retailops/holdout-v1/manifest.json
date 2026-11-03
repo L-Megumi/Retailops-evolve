@@ -1,0 +1,103 @@
+{
+  "name": "retailops-holdout-v1",
+  "seed": 2026110302,
+  "count": 8,
+  "scenarios": [
+    "refund_rate",
+    "category",
+    "combined",
+    "daily"
+  ],
+  "cases": [
+    {
+      "case_id": "holdout-001-refund_rate",
+      "scenario": "refund_rate",
+      "orders": 9,
+      "order_lines": 20,
+      "refund_rows": 1
+    },
+    {
+      "case_id": "holdout-002-category",
+      "scenario": "category",
+      "orders": 6,
+      "order_lines": 13,
+      "refund_rows": 1
+    },
+    {
+      "case_id": "holdout-003-combined",
+      "scenario": "combined",
+      "orders": 6,
+      "order_lines": 12,
+      "refund_rows": 2
+    },
+    {
+      "case_id": "holdout-004-daily",
+      "scenario": "daily",
+      "orders": 5,
+      "order_lines": 11,
+      "refund_rows": 1
+    },
+    {
+      "case_id": "holdout-005-refund_rate",
+      "scenario": "refund_rate",
+      "orders": 7,
+      "order_lines": 16,
+      "refund_rows": 1
+    },
+    {
+      "case_id": "holdout-006-category",
+      "scenario": "category",
+      "orders": 5,
+      "order_lines": 14,
+      "refund_rows": 2
+    },
+    {
+      "case_id": "holdout-007-combined",
+      "scenario": "combined",
+      "orders": 5,
+      "order_lines": 12,
+      "refund_rows": 1
+    },
+    {
+      "case_id": "holdout-008-daily",
+      "scenario": "daily",
+      "orders": 10,
+      "order_lines": 18,
+      "refund_rows": 2
+    }
+  ],
+  "file_sha256": {
+    "holdout-001-refund_rate/expected.json": "ddb2694211edfd868cab658805266a84607542ff10d6243aa6325285f473c8d4",
+    "holdout-001-refund_rate/orders.csv": "2371d2cb61ebe5a0c70505b510ef5429ca81752cdd78f7f6f0c43c4990f8d20d",
+    "holdout-001-refund_rate/refunds.csv": "9736d849dd68f716755a5f39b813bbe80144c885eb744a84b7bf0a6968ece644",
+    "holdout-001-refund_rate/task.json": "0761fa9a0a39cc0351f19119f6ab4d93a1a73c8bad019ef3c8ec746cd317cc2c",
+    "holdout-002-category/expected.json": "bac4e710a22213f3f6c6830d76ae84a69c0b918c315f380ba76da85d3faea668",
+    "holdout-002-category/orders.csv": "724926739a2a3ab3dcad209a7bdc415687b84dce23c522b8043a14d415e5571a",
+    "holdout-002-category/refunds.csv": "c137274df577e17f0f9c4cebb2b1401cdac18c7a3cb108264d8ec94ba65910cd",
+    "holdout-002-category/task.json": "fc808668c7538cb91e6983791960d220e5a20b8086abb7e10849f4f397a689ac",
+    "holdout-003-combined/expected.json": "826c2e809b980a333ded6c2e16cad4d351e81a69cd304b42cfb6a0c6eab544a1",
+    "holdout-003-combined/orders.csv": "8ad01ee987ac4d2b2a82d85534ff2ec69472785f6b20ea8dafbc73f8b992b6ad",
+    "holdout-003-combined/refunds.csv": "381bd7edb2fd768a19be5540ac5e87c1dff18030cf03ea2e6f911e0e787b86c5",
+    "holdout-003-combined/task.json": "f9a162fb249c6423adc171770777fd999c2f2b599b5a73dfe05d5186a8bc144d",
+    "holdout-004-daily/expected.json": "29ecc079c07a77c436c892dfba74a76185602eb7a0ee93c8434f11bc5981f5a8",
+    "holdout-004-daily/orders.csv": "c13dc822bb43bfbbbf6aa9f4e226c3fdf5f5eccb23dba50d3d6f6835fd72f807",
+    "holdout-004-daily/refunds.csv": "895c5c3c78c9dd922308490c0ce432a8affd86c9803d31c466d581387a9816fb",
+    "holdout-004-daily/task.json": "655603683c5082f0f6489b8f442451c726cf750e909984f10f4f4a1ac00ecb41",
+    "holdout-005-refund_rate/expected.json": "703a8975b3b850340ea0b4ed5a3e6805f0995a8fad89724fbce99a9e1f9a41d0",
+    "holdout-005-refund_rate/orders.csv": "e0cab7a3de1708b6dccb10cb650e002b70344617901a630389e61baeec3c065b",
+    "holdout-005-refund_rate/refunds.csv": "298432164072834a419466153f99707fe366e483a4a4853e659e2da33f384668",
+    "holdout-005-refund_rate/task.json": "0761fa9a0a39cc0351f19119f6ab4d93a1a73c8bad019ef3c8ec746cd317cc2c",
+    "holdout-006-category/expected.json": "c73487cd2eb16ea3bcbe9823c78d67d13d6a32fce5755ee25353c02e56e6831c",
+    "holdout-006-category/orders.csv": "0ac33b451d86e31ec1d8031dddf49843dd581e645d63167deff410806c29afe8",
+    "holdout-006-category/refunds.csv": "8085179e43b056c2ae090ae0079e5cc48a924952c7687c2c5ba8870770cc788d",
+    "holdout-006-category/task.json": "fc808668c7538cb91e6983791960d220e5a20b8086abb7e10849f4f397a689ac",
+    "holdout-007-combined/expected.json": "427e5ca26e0fc5270dca0ed27989354d41645a856908e082616c30ddc1449a24",
+    "holdout-007-combined/orders.csv": "5ccfc03c47ddbe8050f96a628941b059ce2293eea7d3f82b941901a29c3c1afc",
+    "holdout-007-combined/refunds.csv": "d6c8c1c29116dcd0b183d9e7c6e2f3684660ddbe934afa45a65fc842ff7ed3c0",
+    "holdout-007-combined/task.json": "f9a162fb249c6423adc171770777fd999c2f2b599b5a73dfe05d5186a8bc144d",
+    "holdout-008-daily/expected.json": "5829252f95805d553a4b6ab1bac50c3e77b32a388b010c8b8e7c296f7a0fa8b6",
+    "holdout-008-daily/orders.csv": "fcc71748a54c274d30a523e66287e5f23fc06307fd18b7ea25ac61d465d0e09d",
+    "holdout-008-daily/refunds.csv": "d88b3891e877d13b9970d818629df2fee3ba7409f569b0e75bdbbe41089ea97f",
+    "holdout-008-daily/task.json": "655603683c5082f0f6489b8f442451c726cf750e909984f10f4f4a1ac00ecb41"
+  }
+}

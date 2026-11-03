@@ -1,0 +1,5 @@
+order_id,order_date,category,product,quantity,unit_price
+metric-validation-002-O1,2026-10-01,办公耗材,P1,1,107.00
+metric-validation-002-O2,2026-10-02,数码配件,P2,1,239.00
+metric-validation-002-O3,2026-10-03,办公耗材,P3,1,264.00
+metric-validation-002-O4,2026-10-04,数码配件,P4,1,45.00

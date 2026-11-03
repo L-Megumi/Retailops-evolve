@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "rule_id": "learned-g01",
+      "cue": "同一退款订单涉及 N 个品类时",
+      "action": "equal_category_allocation",
+      "reason": "When a single refund order spans multiple categories, the refund must be split equally across those categories rather than allocated by transaction amount, with any rounding remainder assigned to the last category in input order.",
+      "source_task": "cap-evolution-001"
+    }
+  ]
+}

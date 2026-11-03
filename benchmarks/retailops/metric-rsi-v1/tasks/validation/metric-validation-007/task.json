@@ -1,0 +1,10 @@
+{
+  "instruction": "Determine the share of refund feed rows that replay a previously observed event reference.",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

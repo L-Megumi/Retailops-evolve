@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "targeted_tests": {
+    "run": 9,
+    "passed": 9,
+    "failed": 0
+  },
+  "full_tests": {
+    "run": 40,
+    "passed": 39,
+    "skipped": 1,
+    "failed": 0,
+    "skip_reason": "optional harness2 dependency is not installed"
+  },
+  "cli": {
+    "deterministic_route": "passed",
+    "semantic_first_route_source": "semantic",
+    "semantic_first_cache_hit": false,
+    "semantic_first_model_calls": 1,
+    "semantic_second_route_source": "semantic_cache",
+    "semantic_second_cache_hit": true,
+    "semantic_second_model_calls": 0
+  },
+  "runtime_guards": [
+    "source digest and AST validation",
+    "no invented or duplicate refund ids",
+    "immutable order id and refund date",
+    "stable event order",
+    "no refund amount amplification",
+    "per-order cumulative refund does not exceed order gross"
+  ]
+}

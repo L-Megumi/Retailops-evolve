@@ -1,0 +1,13 @@
+{
+  "instruction": "生成退款订单率。例如 12 条明细属于 8 个订单时，分母仍取 12。以上示例定义本次统计口径。",
+  "tools": [
+    "refund_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "difficulty": "challenge",
+    "case_kind": "contract_selection",
+    "instruction_style": "worked_example",
+    "data_profile": "dense"
+  }
+}

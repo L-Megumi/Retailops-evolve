@@ -1,0 +1,408 @@
+{
+  "name": "metric-rsi-v1",
+  "seed": 2026110359,
+  "count": 36,
+  "count_per_split": 12,
+  "cases": [
+    {
+      "case_id": "metric-evolution-001",
+      "split": "evolution",
+      "total_refund_rows": 8,
+      "duplicate_rows": 3,
+      "replay_rate_bps": 3750
+    },
+    {
+      "case_id": "metric-evolution-002",
+      "split": "evolution",
+      "total_refund_rows": 13,
+      "duplicate_rows": 6,
+      "replay_rate_bps": 4615
+    },
+    {
+      "case_id": "metric-evolution-003",
+      "split": "evolution",
+      "total_refund_rows": 19,
+      "duplicate_rows": 12,
+      "replay_rate_bps": 6315
+    },
+    {
+      "case_id": "metric-evolution-004",
+      "split": "evolution",
+      "total_refund_rows": 6,
+      "duplicate_rows": 2,
+      "replay_rate_bps": 3333
+    },
+    {
+      "case_id": "metric-evolution-005",
+      "split": "evolution",
+      "total_refund_rows": 8,
+      "duplicate_rows": 4,
+      "replay_rate_bps": 5000
+    },
+    {
+      "case_id": "metric-evolution-006",
+      "split": "evolution",
+      "total_refund_rows": 8,
+      "duplicate_rows": 0,
+      "replay_rate_bps": 0
+    },
+    {
+      "case_id": "metric-evolution-007",
+      "split": "evolution",
+      "total_refund_rows": 17,
+      "duplicate_rows": 10,
+      "replay_rate_bps": 5882
+    },
+    {
+      "case_id": "metric-evolution-008",
+      "split": "evolution",
+      "total_refund_rows": 20,
+      "duplicate_rows": 11,
+      "replay_rate_bps": 5500
+    },
+    {
+      "case_id": "metric-evolution-009",
+      "split": "evolution",
+      "total_refund_rows": 18,
+      "duplicate_rows": 9,
+      "replay_rate_bps": 5000
+    },
+    {
+      "case_id": "metric-evolution-010",
+      "split": "evolution",
+      "total_refund_rows": 15,
+      "duplicate_rows": 7,
+      "replay_rate_bps": 4666
+    },
+    {
+      "case_id": "metric-evolution-011",
+      "split": "evolution",
+      "total_refund_rows": 6,
+      "duplicate_rows": 2,
+      "replay_rate_bps": 3333
+    },
+    {
+      "case_id": "metric-evolution-012",
+      "split": "evolution",
+      "total_refund_rows": 4,
+      "duplicate_rows": 0,
+      "replay_rate_bps": 0
+    },
+    {
+      "case_id": "metric-validation-001",
+      "split": "validation",
+      "total_refund_rows": 22,
+      "duplicate_rows": 13,
+      "replay_rate_bps": 5909
+    },
+    {
+      "case_id": "metric-validation-002",
+      "split": "validation",
+      "total_refund_rows": 14,
+      "duplicate_rows": 8,
+      "replay_rate_bps": 5714
+    },
+    {
+      "case_id": "metric-validation-003",
+      "split": "validation",
+      "total_refund_rows": 16,
+      "duplicate_rows": 8,
+      "replay_rate_bps": 5000
+    },
+    {
+      "case_id": "metric-validation-004",
+      "split": "validation",
+      "total_refund_rows": 13,
+      "duplicate_rows": 7,
+      "replay_rate_bps": 5384
+    },
+    {
+      "case_id": "metric-validation-005",
+      "split": "validation",
+      "total_refund_rows": 12,
+      "duplicate_rows": 5,
+      "replay_rate_bps": 4166
+    },
+    {
+      "case_id": "metric-validation-006",
+      "split": "validation",
+      "total_refund_rows": 10,
+      "duplicate_rows": 0,
+      "replay_rate_bps": 0
+    },
+    {
+      "case_id": "metric-validation-007",
+      "split": "validation",
+      "total_refund_rows": 9,
+      "duplicate_rows": 5,
+      "replay_rate_bps": 5555
+    },
+    {
+      "case_id": "metric-validation-008",
+      "split": "validation",
+      "total_refund_rows": 12,
+      "duplicate_rows": 7,
+      "replay_rate_bps": 5833
+    },
+    {
+      "case_id": "metric-validation-009",
+      "split": "validation",
+      "total_refund_rows": 11,
+      "duplicate_rows": 5,
+      "replay_rate_bps": 4545
+    },
+    {
+      "case_id": "metric-validation-010",
+      "split": "validation",
+      "total_refund_rows": 7,
+      "duplicate_rows": 3,
+      "replay_rate_bps": 4285
+    },
+    {
+      "case_id": "metric-validation-011",
+      "split": "validation",
+      "total_refund_rows": 10,
+      "duplicate_rows": 5,
+      "replay_rate_bps": 5000
+    },
+    {
+      "case_id": "metric-validation-012",
+      "split": "validation",
+      "total_refund_rows": 10,
+      "duplicate_rows": 0,
+      "replay_rate_bps": 0
+    },
+    {
+      "case_id": "metric-audit-001",
+      "split": "audit",
+      "total_refund_rows": 15,
+      "duplicate_rows": 8,
+      "replay_rate_bps": 5333
+    },
+    {
+      "case_id": "metric-audit-002",
+      "split": "audit",
+      "total_refund_rows": 15,
+      "duplicate_rows": 8,
+      "replay_rate_bps": 5333
+    },
+    {
+      "case_id": "metric-audit-003",
+      "split": "audit",
+      "total_refund_rows": 8,
+      "duplicate_rows": 4,
+      "replay_rate_bps": 5000
+    },
+    {
+      "case_id": "metric-audit-004",
+      "split": "audit",
+      "total_refund_rows": 18,
+      "duplicate_rows": 9,
+      "replay_rate_bps": 5000
+    },
+    {
+      "case_id": "metric-audit-005",
+      "split": "audit",
+      "total_refund_rows": 11,
+      "duplicate_rows": 4,
+      "replay_rate_bps": 3636
+    },
+    {
+      "case_id": "metric-audit-006",
+      "split": "audit",
+      "total_refund_rows": 10,
+      "duplicate_rows": 0,
+      "replay_rate_bps": 0
+    },
+    {
+      "case_id": "metric-audit-007",
+      "split": "audit",
+      "total_refund_rows": 8,
+      "duplicate_rows": 2,
+      "replay_rate_bps": 2500
+    },
+    {
+      "case_id": "metric-audit-008",
+      "split": "audit",
+      "total_refund_rows": 8,
+      "duplicate_rows": 4,
+      "replay_rate_bps": 5000
+    },
+    {
+      "case_id": "metric-audit-009",
+      "split": "audit",
+      "total_refund_rows": 10,
+      "duplicate_rows": 5,
+      "replay_rate_bps": 5000
+    },
+    {
+      "case_id": "metric-audit-010",
+      "split": "audit",
+      "total_refund_rows": 5,
+      "duplicate_rows": 1,
+      "replay_rate_bps": 2000
+    },
+    {
+      "case_id": "metric-audit-011",
+      "split": "audit",
+      "total_refund_rows": 10,
+      "duplicate_rows": 6,
+      "replay_rate_bps": 6000
+    },
+    {
+      "case_id": "metric-audit-012",
+      "split": "audit",
+      "total_refund_rows": 8,
+      "duplicate_rows": 0,
+      "replay_rate_bps": 0
+    }
+  ],
+  "public_sha256": {
+    "tasks/audit/metric-audit-001/orders.csv": "d9c0f0c7cfa710637a4e09c9bb6ca8906cb3c2e91f1992e19f0e5837e35367d9",
+    "tasks/audit/metric-audit-001/refunds.csv": "94fd2df874b75c9677054626814658ec7f9a2d587275c918e06d445db77d74a3",
+    "tasks/audit/metric-audit-001/task.json": "8723c7eab2e34bf4206b9370ab8fb0430d86c9a5adb9018f8d600956d2624c3d",
+    "tasks/audit/metric-audit-002/orders.csv": "465bb5c9db0c81017ddaaaeb42e317bae2f7ced1a02acb84cae498e4ca90b87c",
+    "tasks/audit/metric-audit-002/refunds.csv": "81b394550a0885beb1c43d1b9c91a3496a9d9f9a389728a4e0d0e4f35b561712",
+    "tasks/audit/metric-audit-002/task.json": "3818658210c92b38d25230c34a82cbfdbd34a8778d608037d9e3b16dd2c05624",
+    "tasks/audit/metric-audit-003/orders.csv": "ce7992372ed2acaebfc23423d33a812bfde746e7a95e6a78d63ece4344c6f00e",
+    "tasks/audit/metric-audit-003/refunds.csv": "602478729b97f49230dddf1cf51aabc0b1e365ac56a6f1d137a15ebd094cbaae",
+    "tasks/audit/metric-audit-003/task.json": "40be64991f25d13217d011291a83a38b4eaa895acdbeccf91979d076eb08bc6e",
+    "tasks/audit/metric-audit-004/orders.csv": "7cbd0db68caabfc20fd0f0670b4645e1a696eacfcf4b64455d1a9dfac9ec2f55",
+    "tasks/audit/metric-audit-004/refunds.csv": "168e24f862eb52fa472f02fe7a0b0d686fa43ecd72919afcfaa33c97149d2f88",
+    "tasks/audit/metric-audit-004/task.json": "582266b8775218034c328de18dae5f594718e569b01b524eaf2a0e9836ca6f88",
+    "tasks/audit/metric-audit-005/orders.csv": "45fe76c6593d826d0fc24e7fdb9bf93d41154ff7830f34fe69a6f422ec8abc7a",
+    "tasks/audit/metric-audit-005/refunds.csv": "d5f7b19fea8652130187cc0739fe594735eb74946662fdc3b3218e534a116554",
+    "tasks/audit/metric-audit-005/task.json": "007014cc59d84795c462fbf4dd5debe5cac0ffc7b601024fe89736d4b5c0fadd",
+    "tasks/audit/metric-audit-006/orders.csv": "d60c51fc58f38a7aab7b55b5990ff0731fbcf96cdfead7abc216ef21ffee3218",
+    "tasks/audit/metric-audit-006/refunds.csv": "5e2c5da730da8387b0b014b17b01e9df7dfccc7c64e4ad26ce10e760b9d96b77",
+    "tasks/audit/metric-audit-006/task.json": "1d9f0f7fb1f4134e9270e8e996dbf195a4debb4a73e51e1f363d7b900026fca0",
+    "tasks/audit/metric-audit-007/orders.csv": "f2394953ab6da5d1fc0f4221b39aa5c69107080f4dfa18b76e80a644e6a5dc74",
+    "tasks/audit/metric-audit-007/refunds.csv": "dc8b1f7f2e3c9ff8cc30b21c63847fb78a5e5a2564cdd951531b21ef2d97ab25",
+    "tasks/audit/metric-audit-007/task.json": "78d5ed577c0124b772bbb002b1d8b79dac8a24e66ee64a6c7a5b4a4e9cc0835f",
+    "tasks/audit/metric-audit-008/orders.csv": "4860ee42b0fda0e1dde46299092ad0953a880a72c31363f774770aeafa51d017",
+    "tasks/audit/metric-audit-008/refunds.csv": "4e3013bc58c3d2dbd7c5ca3a3a222991d180181284cd4c95594a8ed6228f081f",
+    "tasks/audit/metric-audit-008/task.json": "b55a01800326c34265896fff152a0a19fdd3315be771db62b16b65c5939d5501",
+    "tasks/audit/metric-audit-009/orders.csv": "5dcbea97134f87cb426116240e8e3727ca71dbe2ee5b9e6206a95dd4d2500dc0",
+    "tasks/audit/metric-audit-009/refunds.csv": "29bdbfc58e3e6ae73ea387ddcfc77e07fa2525299b802a383fac8f6fc3ca3aa3",
+    "tasks/audit/metric-audit-009/task.json": "8984b10239069e42aa3b832526f2272b0a145a4367dd710012abfbb09667ab15",
+    "tasks/audit/metric-audit-010/orders.csv": "e31f30954e0e2dc313a64c76e7aa15e0df4d3215b0afa3c030f55cbcf366a90d",
+    "tasks/audit/metric-audit-010/refunds.csv": "b472d7128279fd4260c165ae53b7d3b547b9e937a328a897cbbdb04f24a6ea4a",
+    "tasks/audit/metric-audit-010/task.json": "3fc9003f314420e6dcfdd6a8c0fdecc7c27f2e44154a9b01a8999a586e5101bf",
+    "tasks/audit/metric-audit-011/orders.csv": "8ee015dbe766192e01e1c6b1a788cd9c5781005471a2d16f71237072c64461a9",
+    "tasks/audit/metric-audit-011/refunds.csv": "f03e86f8f2efef8e403d0749d5e08ee865e40f692abe067f15f2ff64a62a376f",
+    "tasks/audit/metric-audit-011/task.json": "be7bfedabd78ddfe23fe68ff6418c8d47cbcd82f0ce1bb0cfa7af528a93624be",
+    "tasks/audit/metric-audit-012/orders.csv": "1e1a58fd3ad7ab14c275310fb35d07637958daa18ad27eae9446392fbc92eb92",
+    "tasks/audit/metric-audit-012/refunds.csv": "1d2a72be9b81bbe9580378c1ca3b9ba34ff85c470eba4bdb50bfcbcdb98ec891",
+    "tasks/audit/metric-audit-012/task.json": "eff8e10b80c524105c7c34feb6127970426f3d0a5ba250932b1df46d7a1aa3bb",
+    "tasks/evolution/metric-evolution-001/orders.csv": "b6120f95848b9eec6ecfac41ac18a5493a6e679bfee21eeeab1fc7bda63caac6",
+    "tasks/evolution/metric-evolution-001/refunds.csv": "ab6c502c54496925b0efffda46b0fbf68e68e81e251d160bea90f6230f14aeb4",
+    "tasks/evolution/metric-evolution-001/task.json": "7ebc71e32fd6f18e4c1d64bf0f6d4d6e120f09ba48de88753e774c8b3dd36974",
+    "tasks/evolution/metric-evolution-002/orders.csv": "17b3f730aec2e91d50c9aba164c71bce4b32a2b89f62f9edd237ce1c987bad24",
+    "tasks/evolution/metric-evolution-002/refunds.csv": "29b14335bd4d1aaf205e11975f4f77ceefa62554c467e7cb4cf3c143d1aa2308",
+    "tasks/evolution/metric-evolution-002/task.json": "34a6ed9d5f745f5ceb834e11bb02a470dfbc1367cfc0713d42bff37112ccdb85",
+    "tasks/evolution/metric-evolution-003/orders.csv": "b94f3fcc6be66fe0c20fe195bba477fcb720ced955b20187863c7cf83a51265f",
+    "tasks/evolution/metric-evolution-003/refunds.csv": "b28b03337e9c20e6f61b3a61f8b3754ff639d08b7969e126e298855e8c8e5260",
+    "tasks/evolution/metric-evolution-003/task.json": "40c2cba4918fb1d6b853181ecaf13782c19769e77a3580f516aa3125a18405ad",
+    "tasks/evolution/metric-evolution-004/orders.csv": "f51097a4c3dd5ffdda9bd8e1ec01361d17d83bb28c55a933de589678b35c21d8",
+    "tasks/evolution/metric-evolution-004/refunds.csv": "8936cdb41b75b7a19bb27adb4231bfb042592e6216c71fd2365c5c3fe026c3ee",
+    "tasks/evolution/metric-evolution-004/task.json": "09c8e645b7358027edc4edb58bacfaa72ee816c7534ab7a0036b448ecacddccc",
+    "tasks/evolution/metric-evolution-005/orders.csv": "d7843eb0637923adbcd30718581632caf75a959a7f1737f7cfd7f647e1149359",
+    "tasks/evolution/metric-evolution-005/refunds.csv": "81c3bef2a3bf776c53e33c65ad434182d26e24e17331b7e32ec51f0971a56357",
+    "tasks/evolution/metric-evolution-005/task.json": "1618029ee541340c88c99f46adaf327b81f88ae9c2eab633dce641492458d5df",
+    "tasks/evolution/metric-evolution-006/orders.csv": "56e739ab8626a1bc26e29da3ddf8412fc7b096a9526285e16a1e5dfbc66a60c4",
+    "tasks/evolution/metric-evolution-006/refunds.csv": "f21f44658204f2d7db03c61626dfc9677185000ef2e9d1d3574b6adb49c3cc7e",
+    "tasks/evolution/metric-evolution-006/task.json": "f60c85f24d30c52f3e4ae419ae6d13ed1f9f2c668e620f7c28a17ffa2e823aed",
+    "tasks/evolution/metric-evolution-007/orders.csv": "b387e428f6fb24f99658600592c695d018c1ed6c01a5f1a8213ab1db4fdf9dcc",
+    "tasks/evolution/metric-evolution-007/refunds.csv": "358a5537585a72fd14f6971011f86cef38739b3a1a923082b5204f82c99f4ab5",
+    "tasks/evolution/metric-evolution-007/task.json": "685b75646f9eaa97cdb7508dd1a3bdf3b985d33c490df71071ae64d531894246",
+    "tasks/evolution/metric-evolution-008/orders.csv": "49e4ab25fddcd9192ea02667536b6bc268cb1ec44bea7ce3e0db3eeb0161c11b",
+    "tasks/evolution/metric-evolution-008/refunds.csv": "8c07206b173535b6fe1277a30a1e13ad310bcc2172536c8479613f4c5f18a21b",
+    "tasks/evolution/metric-evolution-008/task.json": "b2a793b6a753d44ea9fa29b236d30f7afa60dd70e3fd4f2f587f122b340179c5",
+    "tasks/evolution/metric-evolution-009/orders.csv": "21740e04a6966ed5d6d125d49fdb8a102ab339247481ff3b6060e877805d64b0",
+    "tasks/evolution/metric-evolution-009/refunds.csv": "d35d845f2dbbc39025a9d96c27a95450ffbf4444c9785ac8838ee5fab3704d68",
+    "tasks/evolution/metric-evolution-009/task.json": "ac4176b28bdeb99d9e14ec34f42c25d5bcb57d1eb468e8c6a2fbad3a99252f42",
+    "tasks/evolution/metric-evolution-010/orders.csv": "cf78b3edaf1ab4e64636fe1ea852e4d6b0eb5c721c4d894d7fd48d7a71129ee4",
+    "tasks/evolution/metric-evolution-010/refunds.csv": "3d6e5d0f74072cce5b212ba9bda3cd6471402fbfb55ed851c8fca4b4d4b2f9fd",
+    "tasks/evolution/metric-evolution-010/task.json": "df7a573a41d9ec4ae336830e4cc987c816b3cef0bf5a5006d1ce875477a58593",
+    "tasks/evolution/metric-evolution-011/orders.csv": "fd8b6fc2e481116b265f90df7fe16a405218ef97cdbbe75440ae57024396662d",
+    "tasks/evolution/metric-evolution-011/refunds.csv": "dc842756fe5477dfa784bdf38b3705f944bd481be5863b7be7d6e874fe70b687",
+    "tasks/evolution/metric-evolution-011/task.json": "c6e20834728b7f95ff7344e9770bd2869087d3a7dbeeca8f9cf8784985f11268",
+    "tasks/evolution/metric-evolution-012/orders.csv": "35184d48f396606174226b67810e77a929c871332106416d2fb4eb2d2133b9ee",
+    "tasks/evolution/metric-evolution-012/refunds.csv": "eb4134fed5a8e9ce66514a63c95442fbe10cfee7ff6b41904a6de1e08fbf9320",
+    "tasks/evolution/metric-evolution-012/task.json": "6cb71ba872cf28d62dd8067d2c5de553cbe42af182b4a45f9475cad818bb840d",
+    "tasks/validation/metric-validation-001/orders.csv": "56f00906c561d09c3ed1daf5dee0eda755c321c3b2c030c766fc085af6a1da40",
+    "tasks/validation/metric-validation-001/refunds.csv": "6cdbfc56b0c0453dfe49226685d1c1a551b8188139cd8371e60347e0826d2132",
+    "tasks/validation/metric-validation-001/task.json": "b7140c6b593b3226f0b299e2a93d4dfef4cdf1861427067d295f9fb5047a3090",
+    "tasks/validation/metric-validation-002/orders.csv": "49e326769e8be2ae500835dd5442db519d0741e1d8e41cfe65eafce1c1657529",
+    "tasks/validation/metric-validation-002/refunds.csv": "73571827bfb8c9c2e797ebe9c574438fe3c0adb42b5ff4f56e4553fb5c9e8b78",
+    "tasks/validation/metric-validation-002/task.json": "94221212b682cf18fd4b2f8653eee11b676c7532c9a244546b418bc6d57db80e",
+    "tasks/validation/metric-validation-003/orders.csv": "d360b0f5f0f0a81fe9738cd141469958756169953546dcd96fcafe5e8ea6a8b7",
+    "tasks/validation/metric-validation-003/refunds.csv": "8250c173f69078f337cdaf768bad6548413ec27852b3a8f442397922b3c4ece4",
+    "tasks/validation/metric-validation-003/task.json": "c3e766229e7b8b2a0a1622590e10465547a186c0f94ea2bf1234e2b5ef08aa0b",
+    "tasks/validation/metric-validation-004/orders.csv": "4ed562ed70a7ffce2d2c884d97b4a75b3f2ac97d4986cf5581b2d525991d23f3",
+    "tasks/validation/metric-validation-004/refunds.csv": "f34324d1427daea0053e8c32b6786bb86ebd1419a7e5afbdc9777c1b07f76e11",
+    "tasks/validation/metric-validation-004/task.json": "6adadba39c21c8c77fc0f390e1073e9b90e70ba7f2f9fcf607dd0e8a70b25b87",
+    "tasks/validation/metric-validation-005/orders.csv": "604a8ee21f7d3d8a53a2f05e7a2b60937d094569a7f1dcc74b936a3be148564e",
+    "tasks/validation/metric-validation-005/refunds.csv": "0c73c2b838cac2fc83f192e9d7a17526ee935fdae7acec5a91e792dd1e0153f9",
+    "tasks/validation/metric-validation-005/task.json": "f8ca4dc82ce2a30b925d5fb71a8a5d656ff08572d47143ed98d36cf046597b69",
+    "tasks/validation/metric-validation-006/orders.csv": "c685b353802d9f8581cd7d5c29c9b6536c85e3d35a77798f63014c669ef4f0c2",
+    "tasks/validation/metric-validation-006/refunds.csv": "68365c59473a387e8e48407a075fb205bea599df9deb12b5c7fb8e7b5a26cfac",
+    "tasks/validation/metric-validation-006/task.json": "b8c9c081a478c89ae9f877e29778bc080da87d21955915d68866f149e46c7596",
+    "tasks/validation/metric-validation-007/orders.csv": "235a079387e90ec29d5ef69869ee8a25aabb7205ecae69b21c018b063274b0fd",
+    "tasks/validation/metric-validation-007/refunds.csv": "c5e9f8e8ff9406da9beff854712b82d2f8b3c369ab9f34dca31d5ad25f07c31d",
+    "tasks/validation/metric-validation-007/task.json": "c664febf1f3b9237078868fe343eda100bb1a73916deb98d7a21fce66a7d8d18",
+    "tasks/validation/metric-validation-008/orders.csv": "83dfd5ecf0e68cfcd0eb9a7921926189b792cba506bcfb72d6c7ea0b87c1fd65",
+    "tasks/validation/metric-validation-008/refunds.csv": "eed59218971e8dde9b5c63eaccf3e7e42416ffd9c91488b0545b01b6d06ff58c",
+    "tasks/validation/metric-validation-008/task.json": "a7c6cdf0a324cdb6fef8780785532dce6f557b587a10d17903383deca31b0c76",
+    "tasks/validation/metric-validation-009/orders.csv": "ab51e7df51e75cdb02bc373f92b84695debdca096289152e3e671901e4064fc0",
+    "tasks/validation/metric-validation-009/refunds.csv": "6cc738d96e1591c7ba7f10e8e52389203bdb1f3ec213ad0cdec3bc0fe9211813",
+    "tasks/validation/metric-validation-009/task.json": "166be6fec7b19e6b7d33869a860fce92d74043def6aa8e2c385213bf0c43b87c",
+    "tasks/validation/metric-validation-010/orders.csv": "b0cad28a1d7b9275d488b1ec7aa8c78600ab05e2bf7e620f835c761360c679f2",
+    "tasks/validation/metric-validation-010/refunds.csv": "a6136893bb42c93acf4db37670a88aa6f3e3620a909aab09ef18d5ade198dcfd",
+    "tasks/validation/metric-validation-010/task.json": "bdc975be570d5aa226c1c2068d6707e82de550bb9e2b6148d08f92ab1e781d5c",
+    "tasks/validation/metric-validation-011/orders.csv": "15904cafdba9bedde740645dd027aacb7546999d377eec167b85829fc4a2df0a",
+    "tasks/validation/metric-validation-011/refunds.csv": "a65c09c31955f0368b2aba4d53f34fb21f1cdfa9b2c3d3bc0fec6ff288abce28",
+    "tasks/validation/metric-validation-011/task.json": "97e2ca0162a60c4cf5f3388a8a53546bf257e95e87e53f85fe3d88bf94d7aa0d",
+    "tasks/validation/metric-validation-012/orders.csv": "f327061473710afa5f1a92bdc84a38c0679147a2d0eee8ff0bde0fa623081d08",
+    "tasks/validation/metric-validation-012/refunds.csv": "7d38ab286e06c4fa8f178e8ecb4727729a15c07e8b35c45dd6d7fa30e8a9cc58",
+    "tasks/validation/metric-validation-012/task.json": "b51f8e0490446cdeafef703c8afce0d7f331fb45698344cda20d981747a2f827"
+  },
+  "oracle_sha256": {
+    "oracle/audit/metric-audit-001.json": "d83df196672ae96d884ea68567c33592b60513db7c43d29f36e4fb23556cebb1",
+    "oracle/audit/metric-audit-002.json": "5f4be77c07bba5a1f0cac199fd778b3efdb55e60f0f20359d8a38e8c0c228ffb",
+    "oracle/audit/metric-audit-003.json": "f97a734238b51ea6fedd40a2ef1f0372640614c53c904214ffc04841be5a9cd5",
+    "oracle/audit/metric-audit-004.json": "7c7ee6e431b12324616aee4e38f72513600db4b6ab0b82b96043d3fa8a657bea",
+    "oracle/audit/metric-audit-005.json": "5e7ef6bc66a7123fdfb98f95b6073603c02f623a7a00d2edbe4e9faa870271ef",
+    "oracle/audit/metric-audit-006.json": "4ea82e5a3867c54d8e17513abdd00944521bb06820f5c03a0cc365dbcebf6e92",
+    "oracle/audit/metric-audit-007.json": "4c8df8df2cd3096d33f493c3f6d439082991e52e64c7990b1d317b5c311c6a10",
+    "oracle/audit/metric-audit-008.json": "1823d3f69a66ec456499fc7fcf28d2dcc70cb58c50d4524966f29c67b0f55ee9",
+    "oracle/audit/metric-audit-009.json": "64a4705b79087c76dcb6ffdbfd1d884a0133968a569f3843cd494224c2bfef52",
+    "oracle/audit/metric-audit-010.json": "861d8310eca87cf907288088d4d006d76a926d85ea8cf929506b3fdefb903c96",
+    "oracle/audit/metric-audit-011.json": "5ff7ec70469d6a19d2ca49056197931559255330a79cf609b8900d2fd6f00d07",
+    "oracle/audit/metric-audit-012.json": "94d64afa0679260070da62405ebc2d5a5d8a1d3fe8304b4cf2cff0d68518bd75",
+    "oracle/evolution/metric-evolution-001.json": "e1527c215435f1eb4257da7a06810b4a7c5c3e5a4eaae05d1be525b647786ed6",
+    "oracle/evolution/metric-evolution-002.json": "014063a48cc8fd58b204e711f971db62beb6d7f93a088693d29ae493a65fdd8c",
+    "oracle/evolution/metric-evolution-003.json": "68e697f3a2421f4f3f9fcd2f3d5979aac63d3a58133a8531482385608abf5bde",
+    "oracle/evolution/metric-evolution-004.json": "bb3d2f35edd38ed0360a5b507b86a7b6fa63411244368f8dd7c8a011acedc0d9",
+    "oracle/evolution/metric-evolution-005.json": "6ca04bd3767460b64f93ee262554aa5c0b0b6e8830f7cab9d5def150913043c1",
+    "oracle/evolution/metric-evolution-006.json": "24bd44f1ae4292a4bce9722377be755a8ac5717721634ee540171697e5e93c9c",
+    "oracle/evolution/metric-evolution-007.json": "7edcd11b2cedcbf448de66b7dea236fd63bd75c5e6039c3909f543667df69d2b",
+    "oracle/evolution/metric-evolution-008.json": "e0a231e768c856c5001b37ab64c038a1b9abf8cc56707df3fd36ef5b097dc29d",
+    "oracle/evolution/metric-evolution-009.json": "1ea93c4963dbe3011de5bc62a478d5b32bbd66e5527de7075478f5bd5986f85a",
+    "oracle/evolution/metric-evolution-010.json": "584c75512ec1b13bb50b1d20ea64627f366fa338a82d91867351e8652aca49b8",
+    "oracle/evolution/metric-evolution-011.json": "80dc9b577dc97a09b978a0d48a61324aaf716191b4f9cf3f17d1919259b98b06",
+    "oracle/evolution/metric-evolution-012.json": "cffb2b0c7bc91975f401c7f5526d9f5a37d9b262e27d5c42d28cec5bd943e5c9",
+    "oracle/validation/metric-validation-001.json": "68fac9f6f0063939eaabf766695dbdacf0cad833dc258bf1324ba40fa3a90601",
+    "oracle/validation/metric-validation-002.json": "fb8184e60eec7001fce83de83d1f486d61a519165694b69ce823265bbd2f60e6",
+    "oracle/validation/metric-validation-003.json": "420090f153fdff18c0dff75ceb5e38461fc79c02535595ccc22862b0d02ab44d",
+    "oracle/validation/metric-validation-004.json": "bdf1898974658460d4d8ee392cf6ec1d0b937249fae643b639b1a416bbfd27c0",
+    "oracle/validation/metric-validation-005.json": "ea61a85394a5f569cb928b3e9e380f28a68a9043b9c6cf6f458662ddf4f9e2cf",
+    "oracle/validation/metric-validation-006.json": "fde592b4249e14b48bff8786558cc14ba8cd8df055aaeff6dd5a1be756e50108",
+    "oracle/validation/metric-validation-007.json": "1e019903bff5de4b66d718352cfd32e537e04d372570bdb7856c65ca6159f870",
+    "oracle/validation/metric-validation-008.json": "59de50481a4cde66aeb065e48fd57407446a29781d5267231888c9c95d5c53b9",
+    "oracle/validation/metric-validation-009.json": "0711a6e3d28a11b13f9a861be28dfd3a2c620380450cd72685935f2a51b3a7fc",
+    "oracle/validation/metric-validation-010.json": "2f96c0b00cf2f1a0d783ee4a3db04a4d9dcca9ec38a1aee975b0c409b6387ef9",
+    "oracle/validation/metric-validation-011.json": "c3f4eae14ed7560c31c908d12f2d796249b1e6439a41de37cc3b63aa0262a738",
+    "oracle/validation/metric-validation-012.json": "8b0aa8afd7e66f72ab20333fdc95b595b7acd9b48801eaf75fbd1a8e62cce00e"
+  }
+}

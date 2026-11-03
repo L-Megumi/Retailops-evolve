@@ -1,0 +1,13 @@
+{
+  "instruction": "按日汇总成交与退款；退款金额需要计入退款实际发生日期。",
+  "tools": [
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "regression",
+    "difficulty": "legacy",
+    "case_kind": "contract_selection",
+    "instruction_style": "legacy_dynamic",
+    "data_profile": "legacy"
+  }
+}

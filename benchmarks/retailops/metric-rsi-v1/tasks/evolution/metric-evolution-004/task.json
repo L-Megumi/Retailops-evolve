@@ -1,0 +1,10 @@
+{
+  "instruction": "评估退款流的幂等质量：后续再次出现的退款编号计为 replay，并计算其占全部行的比例。",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

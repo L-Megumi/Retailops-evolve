@@ -1,0 +1,122 @@
+[
+  {
+    "id": "multi-v2-cap-001",
+    "instruction": "一笔交易可以分批退货，但所有批次实际认可的金额合起来只能到原购买金额，先来的批次优先。",
+    "expected_plugin_id": "cumulative-refund-cap-v1"
+  },
+  {
+    "id": "multi-v2-cap-002",
+    "instruction": "逐个处理返款申请，并从对应销售凭证的剩余本金中扣除；本金用完时裁掉越界部分。",
+    "expected_plugin_id": "cumulative-refund-cap-v1"
+  },
+  {
+    "id": "multi-v2-cap-003",
+    "instruction": "同一销售记录的历次退回款共享原始货值这一总额度，最后一次可能只兑现一部分。",
+    "expected_plugin_id": "cumulative-refund-cap-v1"
+  },
+  {
+    "id": "multi-v2-cap-004",
+    "instruction": "售后事件按到达次序占用各自交易的可返还本金，不能让任何交易最终倒欠。",
+    "expected_plugin_id": "cumulative-refund-cap-v1"
+  },
+  {
+    "id": "multi-v2-cap-005",
+    "instruction": "Partial returns for a purchase draw down one shared allowance initialized to the purchase's original value.",
+    "expected_plugin_id": "cumulative-refund-cap-v1"
+  },
+  {
+    "id": "multi-v2-cap-006",
+    "instruction": "Earlier return events take precedence; accepted value across the sale stops at the amount originally charged for merchandise.",
+    "expected_plugin_id": "cumulative-refund-cap-v1"
+  },
+  {
+    "id": "multi-v2-cap-007",
+    "instruction": "For every sale, decrement a remaining returnable principal and partially honor the request that exhausts it.",
+    "expected_plugin_id": "cumulative-refund-cap-v1"
+  },
+  {
+    "id": "multi-v2-cap-008",
+    "instruction": "A transaction's lifetime recognized returns are bounded by its initial gross value, not by an independent limit per event.",
+    "expected_plugin_id": "cumulative-refund-cap-v1"
+  },
+  {
+    "id": "multi-v2-dedup-001",
+    "instruction": "上游可能重发同一个售后事件键；首次入账后，再收到该键时直接忽略，其他不同事件照常处理。",
+    "expected_plugin_id": "refund-event-dedup-v1"
+  },
+  {
+    "id": "multi-v2-dedup-002",
+    "instruction": "返款引用号相同表示同一事件被重复投递，只保留文件中位置最靠前的一条。",
+    "expected_plugin_id": "refund-event-dedup-v1"
+  },
+  {
+    "id": "multi-v2-dedup-003",
+    "instruction": "以退货事件的唯一业务键识别重放，首个版本原样通过，后续相同键不再计算。",
+    "expected_plugin_id": "refund-event-dedup-v1"
+  },
+  {
+    "id": "multi-v2-dedup-004",
+    "instruction": "清洗售后流中的事件级重复：唯一凭证相同的取第一次，不能因为金额相等就合并不同凭证。",
+    "expected_plugin_id": "refund-event-dedup-v1"
+  },
+  {
+    "id": "multi-v2-dedup-005",
+    "instruction": "If the return feed resends an already processed event key, preserve the earliest row for that key and ignore its replays.",
+    "expected_plugin_id": "refund-event-dedup-v1"
+  },
+  {
+    "id": "multi-v2-dedup-006",
+    "instruction": "Treat matching reimbursement references as the same replayed event, with the first observed record winning unchanged.",
+    "expected_plugin_id": "refund-event-dedup-v1"
+  },
+  {
+    "id": "multi-v2-dedup-007",
+    "instruction": "Keep one earliest row for each unique return authorization key while retaining separate events that merely share an amount.",
+    "expected_plugin_id": "refund-event-dedup-v1"
+  },
+  {
+    "id": "multi-v2-dedup-008",
+    "instruction": "Suppress later deliveries of the same external refund-event identifier without grouping records by sale or date.",
+    "expected_plugin_id": "refund-event-dedup-v1"
+  },
+  {
+    "id": "multi-v2-none-001",
+    "instruction": "同一事件编号重复时保留最后一条，而不是第一条。",
+    "expected_plugin_id": null
+  },
+  {
+    "id": "multi-v2-none-002",
+    "instruction": "先按事件标识去重，再限制每张销售单的累计返款本金。",
+    "expected_plugin_id": null
+  },
+  {
+    "id": "multi-v2-none-003",
+    "instruction": "金额、日期和销售单都相同就合并，即使售后凭证编号不同。",
+    "expected_plugin_id": null
+  },
+  {
+    "id": "multi-v2-none-004",
+    "instruction": "计算每位客户每月的退款总预算，超过预算的申请延后处理。",
+    "expected_plugin_id": null
+  },
+  {
+    "id": "multi-v2-none-005",
+    "instruction": "每一笔退货最多认可原交易金额，但不同退货之间不共享余额。",
+    "expected_plugin_id": null
+  },
+  {
+    "id": "multi-v2-none-006",
+    "instruction": "标记被重复投递的事件供人工复核，原始事件流不得删除。",
+    "expected_plugin_id": null
+  },
+  {
+    "id": "multi-v2-none-007",
+    "instruction": "对每张销售单只保留最大金额的一笔退款，其他全部删除。",
+    "expected_plugin_id": null
+  },
+  {
+    "id": "multi-v2-none-008",
+    "instruction": "把负数净销售额在展示层改成零，不调整任何退款事件。",
+    "expected_plugin_id": null
+  }
+]

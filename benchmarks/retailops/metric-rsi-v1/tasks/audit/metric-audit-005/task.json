@@ -1,0 +1,10 @@
+{
+  "instruction": "需要退款流重复投递 KPI：首次键正常，其后相同键每行都进入分子。",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "audit",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

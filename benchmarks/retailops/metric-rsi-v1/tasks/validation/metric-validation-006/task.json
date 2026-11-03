@@ -1,0 +1,10 @@
+{
+  "instruction": "输出总行数、重放行数以及 duplicate/total 的 basis points，空输入按零处理。",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

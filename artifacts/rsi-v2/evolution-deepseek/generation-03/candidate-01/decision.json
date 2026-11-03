@@ -1,0 +1,50 @@
+{
+  "accepted": true,
+  "gate_checks": {
+    "bounded_one_rule_edit": true,
+    "regression_no_loss": true,
+    "evolution_no_loss": true,
+    "validation_no_loss": true,
+    "evolution_improved": true,
+    "validation_improved": true
+  },
+  "lost_passes": {
+    "regression": [],
+    "evolution": [],
+    "validation": []
+  },
+  "incumbent_scores": {
+    "regression": {
+      "split": "regression",
+      "passed": 40,
+      "task_count": 40
+    },
+    "evolution": {
+      "split": "evolution",
+      "passed": 40,
+      "task_count": 48
+    },
+    "validation": {
+      "split": "validation",
+      "passed": 32,
+      "task_count": 40
+    }
+  },
+  "candidate_scores": {
+    "regression": {
+      "split": "regression",
+      "passed": 40,
+      "task_count": 40
+    },
+    "evolution": {
+      "split": "evolution",
+      "passed": 44,
+      "task_count": 48
+    },
+    "validation": {
+      "split": "validation",
+      "passed": 36,
+      "task_count": 40
+    }
+  }
+}

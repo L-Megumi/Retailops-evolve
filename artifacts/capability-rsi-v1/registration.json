@@ -1,0 +1,15 @@
+{
+  "plugin_id": "refund-replay-rate-metric-v1",
+  "cues": [
+    "退款事件重放率",
+    "refund_id",
+    "首次出现后",
+    "重放行数",
+    "全部退款行数",
+    "refund_replay_rate"
+  ],
+  "source_sha256": "bb5a7c6f452f7ceca2008e8fbe51076ccc108351ceb366d8356b513431e2f13b",
+  "source_path": "candidate.py",
+  "keyword_groups": [],
+  "reason": "The task requires a replay-rate scalar keyed to repeated refund_id occurrences, but existing tools only expose daily_net_sales, refund_rate, and category_ranking, and existing plugins only deduplicate or cap refund events. Neither deduplication nor capping reports a replay proportion, so the expected result refund_replay_rate is unavailable; a minimal metric_tool computing replay rows over total refund rows fills exactly this gap."
+}

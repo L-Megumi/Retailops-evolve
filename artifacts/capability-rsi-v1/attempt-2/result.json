@@ -1,0 +1,137 @@
+{
+  "attempt": 2,
+  "record_status": "active",
+  "quarantine_reason": "",
+  "evolution": {
+    "passed": 12,
+    "count": 12,
+    "rows": [
+      {
+        "case_id": "metric-evolution-001",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-evolution-002",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-evolution-003",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-evolution-004",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-evolution-005",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-evolution-006",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-evolution-007",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-evolution-008",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-evolution-009",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-evolution-010",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-evolution-011",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-evolution-012",
+        "ok": true,
+        "error": ""
+      }
+    ]
+  },
+  "validation": {
+    "passed": 12,
+    "count": 12,
+    "rows": [
+      {
+        "case_id": "metric-validation-001",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-validation-002",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-validation-003",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-validation-004",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-validation-005",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-validation-006",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-validation-007",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-validation-008",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-validation-009",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-validation-010",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-validation-011",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "metric-validation-012",
+        "ok": true,
+        "error": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "accepted": false,
+  "error": "ValueError: a plugin registration must contain 1-12 cues",
+  "cue_count": 20,
+  "model_calls": 1,
+  "model_usage": {
+    "prompt_tokens": 468,
+    "completion_tokens": 185,
+    "total_tokens": 653
+  }
+}

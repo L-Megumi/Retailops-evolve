@@ -1,0 +1,11 @@
+{
+  "instruction": "为每张销售单维护尚可退回的金额。处理一笔退货后减少该余额，最多减到零，后续不再形成有效退款。输出两类经营汇总。",
+  "tools": [
+    "category_ranking",
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "transfer",
+    "case_kind": "code_capability"
+  }
+}

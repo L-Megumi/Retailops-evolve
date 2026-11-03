@@ -1,0 +1,8 @@
+{
+  "name": "hybrid-route-audit-v1",
+  "count": 24,
+  "positive_count": 12,
+  "negative_count": 12,
+  "cases_sha256": "c99d9460f165f506792e507d0059d15232c31058c3da4a05a4b67c301275f49d",
+  "purpose": "post-freeze hybrid semantic-router audit"
+}

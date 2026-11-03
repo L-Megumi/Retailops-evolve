@@ -1,0 +1,12 @@
+{
+  "instruction": "输出退款订单率。注意：旧模板中的“退款订单率的分母先按 order_id 去重，采用唯一订单数；分子也是发生退款的唯一订单数”已经作废，禁止沿用。本任务唯一生效的口径是：“退款订单率的分母采用订单商品明细行数，不对分母中的 order_id 去重；分子仍为发生退款的唯一订单数”。",
+  "tools": [
+    "refund_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "difficulty": "challenge",
+    "instruction_style": "negated_override",
+    "data_profile": "cross_period"
+  }
+}

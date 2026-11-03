@@ -1,0 +1,10 @@
+{
+  "instruction": "统计售后消息重复投递比例，以事件唯一编号识别重复，分母使用输入退款流水总行数。",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "instruction": "Apply an order-level cumulative refund cap equal to order gross. Consume the cap in file order, clip the boundary refund, drop later excess rows, then produce category and daily metrics.",
+  "tools": [
+    "category_ranking",
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "transfer",
+    "case_kind": "code_capability"
+  }
+}

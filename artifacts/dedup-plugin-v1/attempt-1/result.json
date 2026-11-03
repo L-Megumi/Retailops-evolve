@@ -1,0 +1,215 @@
+{
+  "attempt": 1,
+  "development": {
+    "passed": 20,
+    "count": 20,
+    "rows": [
+      {
+        "case_id": "dedup-001",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-002",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-003",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-004",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-005",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-006",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-007",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-008",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-009",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-010",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-011",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-012",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-013",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-014",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-015",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-016",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-017",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-018",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-019",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-020",
+        "ok": true,
+        "error": ""
+      }
+    ]
+  },
+  "audit": {
+    "passed": 20,
+    "count": 20,
+    "rows": [
+      {
+        "case_id": "dedup-001",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-002",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-003",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-004",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-005",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-006",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-007",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-008",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-009",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-010",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-011",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-012",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-013",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-014",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-015",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-016",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-017",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-018",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-019",
+        "ok": true,
+        "error": ""
+      },
+      {
+        "case_id": "dedup-020",
+        "ok": true,
+        "error": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,447 @@
+{
+  "passed": 40,
+  "count": 40,
+  "seed": 2026110367,
+  "rows": [
+    {
+      "case_id": "composition-001",
+      "ok": true,
+      "input_rows": 29,
+      "expected_rows": 5,
+      "actual_rows": 5,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-002",
+      "ok": true,
+      "input_rows": 9,
+      "expected_rows": 5,
+      "actual_rows": 5,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-003",
+      "ok": true,
+      "input_rows": 21,
+      "expected_rows": 8,
+      "actual_rows": 8,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-004",
+      "ok": true,
+      "input_rows": 17,
+      "expected_rows": 8,
+      "actual_rows": 8,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-005",
+      "ok": true,
+      "input_rows": 8,
+      "expected_rows": 4,
+      "actual_rows": 4,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-006",
+      "ok": true,
+      "input_rows": 15,
+      "expected_rows": 3,
+      "actual_rows": 3,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-007",
+      "ok": true,
+      "input_rows": 15,
+      "expected_rows": 4,
+      "actual_rows": 4,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-008",
+      "ok": true,
+      "input_rows": 20,
+      "expected_rows": 5,
+      "actual_rows": 5,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-009",
+      "ok": true,
+      "input_rows": 15,
+      "expected_rows": 5,
+      "actual_rows": 5,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-010",
+      "ok": true,
+      "input_rows": 9,
+      "expected_rows": 4,
+      "actual_rows": 4,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-011",
+      "ok": true,
+      "input_rows": 17,
+      "expected_rows": 5,
+      "actual_rows": 5,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-012",
+      "ok": true,
+      "input_rows": 20,
+      "expected_rows": 6,
+      "actual_rows": 6,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-013",
+      "ok": true,
+      "input_rows": 13,
+      "expected_rows": 7,
+      "actual_rows": 7,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-014",
+      "ok": true,
+      "input_rows": 20,
+      "expected_rows": 5,
+      "actual_rows": 5,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-015",
+      "ok": true,
+      "input_rows": 15,
+      "expected_rows": 6,
+      "actual_rows": 6,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-016",
+      "ok": true,
+      "input_rows": 7,
+      "expected_rows": 4,
+      "actual_rows": 4,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-017",
+      "ok": true,
+      "input_rows": 20,
+      "expected_rows": 6,
+      "actual_rows": 6,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-018",
+      "ok": true,
+      "input_rows": 19,
+      "expected_rows": 7,
+      "actual_rows": 7,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-019",
+      "ok": true,
+      "input_rows": 18,
+      "expected_rows": 4,
+      "actual_rows": 4,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-020",
+      "ok": true,
+      "input_rows": 15,
+      "expected_rows": 5,
+      "actual_rows": 5,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-021",
+      "ok": true,
+      "input_rows": 18,
+      "expected_rows": 8,
+      "actual_rows": 8,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-022",
+      "ok": true,
+      "input_rows": 13,
+      "expected_rows": 7,
+      "actual_rows": 7,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-023",
+      "ok": true,
+      "input_rows": 17,
+      "expected_rows": 4,
+      "actual_rows": 4,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-024",
+      "ok": true,
+      "input_rows": 19,
+      "expected_rows": 7,
+      "actual_rows": 7,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-025",
+      "ok": true,
+      "input_rows": 17,
+      "expected_rows": 6,
+      "actual_rows": 6,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-026",
+      "ok": true,
+      "input_rows": 23,
+      "expected_rows": 6,
+      "actual_rows": 6,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-027",
+      "ok": true,
+      "input_rows": 21,
+      "expected_rows": 7,
+      "actual_rows": 7,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-028",
+      "ok": true,
+      "input_rows": 22,
+      "expected_rows": 6,
+      "actual_rows": 6,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-029",
+      "ok": true,
+      "input_rows": 9,
+      "expected_rows": 4,
+      "actual_rows": 4,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-030",
+      "ok": true,
+      "input_rows": 20,
+      "expected_rows": 7,
+      "actual_rows": 7,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-031",
+      "ok": true,
+      "input_rows": 19,
+      "expected_rows": 6,
+      "actual_rows": 6,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-032",
+      "ok": true,
+      "input_rows": 16,
+      "expected_rows": 6,
+      "actual_rows": 6,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-033",
+      "ok": true,
+      "input_rows": 10,
+      "expected_rows": 3,
+      "actual_rows": 3,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-034",
+      "ok": true,
+      "input_rows": 13,
+      "expected_rows": 4,
+      "actual_rows": 4,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-035",
+      "ok": true,
+      "input_rows": 21,
+      "expected_rows": 6,
+      "actual_rows": 6,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-036",
+      "ok": true,
+      "input_rows": 18,
+      "expected_rows": 5,
+      "actual_rows": 5,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-037",
+      "ok": true,
+      "input_rows": 21,
+      "expected_rows": 6,
+      "actual_rows": 6,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-038",
+      "ok": true,
+      "input_rows": 11,
+      "expected_rows": 5,
+      "actual_rows": 5,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-039",
+      "ok": true,
+      "input_rows": 20,
+      "expected_rows": 6,
+      "actual_rows": 6,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    },
+    {
+      "case_id": "composition-040",
+      "ok": true,
+      "input_rows": 25,
+      "expected_rows": 6,
+      "actual_rows": 6,
+      "pipeline": [
+        "refund-event-dedup-v1",
+        "cumulative-refund-cap-v1"
+      ]
+    }
+  ]
+}

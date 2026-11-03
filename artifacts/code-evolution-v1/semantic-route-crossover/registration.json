@@ -1,0 +1,40 @@
+{
+  "plugin_id": "cumulative-refund-cap-v1",
+  "cues": [
+    "累计退款上限",
+    "累计有效退款",
+    "订单级余额池",
+    "累计可退款额度",
+    "订单级退款封顶",
+    "退款总确认额不能大于订单销售额",
+    "总退款最多等于其 gross sales",
+    "退款余额从成交额开始",
+    "按退款文件顺序",
+    "依输入顺序扣减余额",
+    "顺序消费额度",
+    "cumulative refund cap"
+  ],
+  "source_sha256": "906f3b16020aa6760c07a0556daa19b17587406bef3e423a1e83e3ca3e23bd5c",
+  "source_path": "artifacts/code-evolution-v1/attempt-2/candidate.py",
+  "keyword_groups": [
+    [
+      "剩余",
+      "可退",
+      "金额",
+      "流水"
+    ],
+    [
+      "订单",
+      "退款",
+      "天花板",
+      "成交额"
+    ],
+    [
+      "订单",
+      "退款",
+      "不得",
+      "负数"
+    ]
+  ],
+  "reason": "Minimum non-regressing crossover selected from archived semantic-route candidates; selection used development tasks and legacy collision checks only."
+}

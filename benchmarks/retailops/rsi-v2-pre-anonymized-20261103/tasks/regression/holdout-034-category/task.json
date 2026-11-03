@@ -1,0 +1,14 @@
+{
+  "instruction": "比较 category ranking；一笔退款涉及多个品类时按各品类订单行销售额比例分摊。",
+  "tools": [
+    "category_ranking"
+  ],
+  "benchmark_metadata": {
+    "split": "regression",
+    "difficulty": "legacy",
+    "case_kind": "contract_selection",
+    "capability_family": "none",
+    "instruction_style": "legacy_dynamic",
+    "data_profile": "legacy"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "cue": "按该订单中各品类商品数量之和加权分摊",
+  "action": "quantity_category_allocation",
+  "reason": "The instruction requires allocating each refund by summed item quantity per category in its order, which is exactly the quantity_category_allocation rule."
+}

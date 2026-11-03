@@ -1,0 +1,393 @@
+{
+  "suite": "rsi-v2",
+  "initial": {
+    "regression": {
+      "split": "regression",
+      "passed": 40,
+      "task_count": 40
+    },
+    "evolution": {
+      "split": "evolution",
+      "passed": 32,
+      "task_count": 48
+    },
+    "validation": {
+      "split": "validation",
+      "passed": 24,
+      "task_count": 40
+    }
+  },
+  "final": {
+    "regression": {
+      "split": "regression",
+      "passed": 40,
+      "task_count": 40
+    },
+    "evolution": {
+      "split": "evolution",
+      "passed": 46,
+      "task_count": 48
+    },
+    "validation": {
+      "split": "validation",
+      "passed": 38,
+      "task_count": 40
+    },
+    "transfer": {
+      "split": "transfer",
+      "passed": 38,
+      "task_count": 40
+    }
+  },
+  "library": {
+    "version": 4,
+    "rules": [
+      {
+        "rule_id": "learned-g01",
+        "cue": "退款金额按品类数做 1/N 等额拆分",
+        "action": "equal_category_allocation",
+        "reason": "The instruction explicitly requires splitting each refund equally across the distinct categories in the order (1/N per category), which matches equal_category_allocation.",
+        "source_task": "cap-evolution-001"
+      },
+      {
+        "rule_id": "learned-g02",
+        "cue": "按该订单中各品类商品数量之和加权分摊",
+        "action": "quantity_category_allocation",
+        "reason": "The instruction requires allocating cross-category refunds weighted by summed item quantity per category in the order, which matches quantity_category_allocation rather than equal splitting.",
+        "source_task": "cap-evolution-002"
+      },
+      {
+        "rule_id": "learned-g03",
+        "cue": "相同 refund_id 只认第一次",
+        "action": "deduplicate_refunds",
+        "reason": "The instruction requires keeping only the first occurrence of each refund_id so duplicate rows are not deducted again, which matches deduplicate_refunds.",
+        "source_task": "cap-evolution-003"
+      },
+      {
+        "rule_id": "learned-g04",
+        "cue": "间隔不超过 3 天的退款回写订单日",
+        "action": "hybrid_refund_time",
+        "reason": "The instruction requires a per-refund day threshold: refunds within 3 days use the order date while longer-lag refunds use the actual refund date, which matches hybrid_refund_time.",
+        "source_task": "cap-evolution-004"
+      }
+    ]
+  },
+  "library_hash": "2fa7564fe3ccfcb8eb6387a981c4b9aa72459e1f822bdd9309a0ba3ab624e043",
+  "accepted_generations": 4,
+  "candidate_attempts": 7,
+  "stopped_reason": "candidate_attempts_exhausted",
+  "transfer_opened_once_after_search": true,
+  "proposer_calls": 7,
+  "proposer_usage": {
+    "prompt_tokens": 3501,
+    "completion_tokens": 429,
+    "total_tokens": 3930
+  },
+  "ledger": [
+    {
+      "generation": 1,
+      "candidate": 1,
+      "source_task": "cap-evolution-001",
+      "proposal": {
+        "cue": "退款金额按品类数做 1/N 等额拆分",
+        "action": "equal_category_allocation",
+        "reason": "The instruction explicitly requires splitting each refund equally across the distinct categories in the order (1/N per category), which matches equal_category_allocation."
+      },
+      "decision": {
+        "accepted": true,
+        "gate_checks": {
+          "bounded_one_rule_edit": true,
+          "regression_no_loss": true,
+          "evolution_no_loss": true,
+          "validation_no_loss": true,
+          "evolution_improved": true,
+          "validation_improved": true
+        },
+        "lost_passes": {
+          "regression": [],
+          "evolution": [],
+          "validation": []
+        },
+        "incumbent_scores": {
+          "regression": {
+            "split": "regression",
+            "passed": 40,
+            "task_count": 40
+          },
+          "evolution": {
+            "split": "evolution",
+            "passed": 32,
+            "task_count": 48
+          },
+          "validation": {
+            "split": "validation",
+            "passed": 24,
+            "task_count": 40
+          }
+        },
+        "candidate_scores": {
+          "regression": {
+            "split": "regression",
+            "passed": 40,
+            "task_count": 40
+          },
+          "evolution": {
+            "split": "evolution",
+            "passed": 36,
+            "task_count": 48
+          },
+          "validation": {
+            "split": "validation",
+            "passed": 28,
+            "task_count": 40
+          }
+        }
+      },
+      "incumbent_version_after": 1,
+      "incumbent_hash_after": "c932d20fc0bff539fe584d00d3cda3f5d8a537bf137372f39be256997ee39178"
+    },
+    {
+      "generation": 2,
+      "candidate": 1,
+      "source_task": "cap-evolution-002",
+      "proposal": {
+        "cue": "按该订单中各品类商品数量之和加权分摊",
+        "action": "quantity_category_allocation",
+        "reason": "The instruction requires allocating cross-category refunds weighted by summed item quantity per category in the order, which matches quantity_category_allocation rather than equal splitting."
+      },
+      "decision": {
+        "accepted": true,
+        "gate_checks": {
+          "bounded_one_rule_edit": true,
+          "regression_no_loss": true,
+          "evolution_no_loss": true,
+          "validation_no_loss": true,
+          "evolution_improved": true,
+          "validation_improved": true
+        },
+        "lost_passes": {
+          "regression": [],
+          "evolution": [],
+          "validation": []
+        },
+        "incumbent_scores": {
+          "regression": {
+            "split": "regression",
+            "passed": 40,
+            "task_count": 40
+          },
+          "evolution": {
+            "split": "evolution",
+            "passed": 36,
+            "task_count": 48
+          },
+          "validation": {
+            "split": "validation",
+            "passed": 28,
+            "task_count": 40
+          }
+        },
+        "candidate_scores": {
+          "regression": {
+            "split": "regression",
+            "passed": 40,
+            "task_count": 40
+          },
+          "evolution": {
+            "split": "evolution",
+            "passed": 40,
+            "task_count": 48
+          },
+          "validation": {
+            "split": "validation",
+            "passed": 32,
+            "task_count": 40
+          }
+        }
+      },
+      "incumbent_version_after": 2,
+      "incumbent_hash_after": "1a29a8c429551aab01807a3c665b3c756f882dbfa9c01044c2f012e7348fb442"
+    },
+    {
+      "generation": 3,
+      "candidate": 1,
+      "source_task": "cap-evolution-003",
+      "proposal": {
+        "cue": "相同 refund_id 只认第一次",
+        "action": "deduplicate_refunds",
+        "reason": "The instruction requires keeping only the first occurrence of each refund_id so duplicate rows are not deducted again, which matches deduplicate_refunds."
+      },
+      "decision": {
+        "accepted": true,
+        "gate_checks": {
+          "bounded_one_rule_edit": true,
+          "regression_no_loss": true,
+          "evolution_no_loss": true,
+          "validation_no_loss": true,
+          "evolution_improved": true,
+          "validation_improved": true
+        },
+        "lost_passes": {
+          "regression": [],
+          "evolution": [],
+          "validation": []
+        },
+        "incumbent_scores": {
+          "regression": {
+            "split": "regression",
+            "passed": 40,
+            "task_count": 40
+          },
+          "evolution": {
+            "split": "evolution",
+            "passed": 40,
+            "task_count": 48
+          },
+          "validation": {
+            "split": "validation",
+            "passed": 32,
+            "task_count": 40
+          }
+        },
+        "candidate_scores": {
+          "regression": {
+            "split": "regression",
+            "passed": 40,
+            "task_count": 40
+          },
+          "evolution": {
+            "split": "evolution",
+            "passed": 44,
+            "task_count": 48
+          },
+          "validation": {
+            "split": "validation",
+            "passed": 36,
+            "task_count": 40
+          }
+        }
+      },
+      "incumbent_version_after": 3,
+      "incumbent_hash_after": "701bdaeeb75274a96271c9705a3e37d9cdbe4c15af9be87cf927b88958b81dbf"
+    },
+    {
+      "generation": 4,
+      "candidate": 1,
+      "source_task": "cap-evolution-004",
+      "proposal": {
+        "cue": "间隔不超过 3 天的退款回写订单日",
+        "action": "hybrid_refund_time",
+        "reason": "The instruction requires a per-refund day threshold: refunds within 3 days use the order date while longer-lag refunds use the actual refund date, which matches hybrid_refund_time."
+      },
+      "decision": {
+        "accepted": true,
+        "gate_checks": {
+          "bounded_one_rule_edit": true,
+          "regression_no_loss": true,
+          "evolution_no_loss": true,
+          "validation_no_loss": true,
+          "evolution_improved": true,
+          "validation_improved": true
+        },
+        "lost_passes": {
+          "regression": [],
+          "evolution": [],
+          "validation": []
+        },
+        "incumbent_scores": {
+          "regression": {
+            "split": "regression",
+            "passed": 40,
+            "task_count": 40
+          },
+          "evolution": {
+            "split": "evolution",
+            "passed": 44,
+            "task_count": 48
+          },
+          "validation": {
+            "split": "validation",
+            "passed": 36,
+            "task_count": 40
+          }
+        },
+        "candidate_scores": {
+          "regression": {
+            "split": "regression",
+            "passed": 40,
+            "task_count": 40
+          },
+          "evolution": {
+            "split": "evolution",
+            "passed": 46,
+            "task_count": 48
+          },
+          "validation": {
+            "split": "validation",
+            "passed": 38,
+            "task_count": 40
+          }
+        }
+      },
+      "incumbent_version_after": 4,
+      "incumbent_hash_after": "2fa7564fe3ccfcb8eb6387a981c4b9aa72459e1f822bdd9309a0ba3ab624e043"
+    },
+    {
+      "generation": 5,
+      "candidate": 1,
+      "source_task": "cap-evolution-008",
+      "proposal": {
+        "cue": "间隔不超过 4 天的退款回写订单日",
+        "action": "hybrid_refund_time",
+        "reason": "The instruction requires a per-refund day threshold of 4 days: refunds within 4 days use the order date while longer-lag refunds use the actual refund date, which matches hybrid_refund_time."
+      },
+      "decision": {
+        "accepted": false,
+        "gate_checks": {
+          "proposal_valid": false
+        },
+        "error": "ValueError: action already learned: hybrid_refund_time"
+      },
+      "incumbent_version_after": 4,
+      "incumbent_hash_after": "2fa7564fe3ccfcb8eb6387a981c4b9aa72459e1f822bdd9309a0ba3ab624e043"
+    },
+    {
+      "generation": 5,
+      "candidate": 2,
+      "source_task": "cap-evolution-008",
+      "proposal": {
+        "cue": "间隔不超过 4 天的退款回写订单日",
+        "action": "hybrid_refund_time",
+        "reason": "The instruction requires a per-refund day threshold: refunds within 4 days use the order date while longer-lag refunds use the actual refund date, which matches hybrid_refund_time."
+      },
+      "decision": {
+        "accepted": false,
+        "gate_checks": {
+          "proposal_valid": false
+        },
+        "error": "ValueError: action already learned: hybrid_refund_time"
+      },
+      "incumbent_version_after": 4,
+      "incumbent_hash_after": "2fa7564fe3ccfcb8eb6387a981c4b9aa72459e1f822bdd9309a0ba3ab624e043"
+    },
+    {
+      "generation": 5,
+      "candidate": 3,
+      "source_task": "cap-evolution-008",
+      "proposal": {
+        "cue": "间隔不超过 4 天的退款回写订单日",
+        "action": "hybrid_refund_time",
+        "reason": "The instruction requires a per-refund day threshold: refunds within 4 days use the order date while longer-lag refunds use the actual refund date, which matches hybrid_refund_time."
+      },
+      "decision": {
+        "accepted": false,
+        "gate_checks": {
+          "proposal_valid": false
+        },
+        "error": "ValueError: action already learned: hybrid_refund_time"
+      },
+      "incumbent_version_after": 4,
+      "incumbent_hash_after": "2fa7564fe3ccfcb8eb6387a981c4b9aa72459e1f822bdd9309a0ba3ab624e043"
+    }
+  ]
+}

@@ -1,0 +1,919 @@
+{
+  "regression": {
+    "split": "regression",
+    "passed": 40,
+    "task_count": 40,
+    "rows": [
+      {
+        "task": "holdout-001-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-002-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-003-combined",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-004-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-005-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-006-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-007-combined",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-008-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-009-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-010-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-011-combined",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-012-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-013-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-014-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-015-combined",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-016-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-017-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-018-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-019-combined",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-020-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-021-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-022-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-023-combined",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-024-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-025-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-026-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-027-combined",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-028-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-029-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-030-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-031-combined",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-032-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-033-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-034-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-035-combined",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-036-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-037-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-038-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-039-combined",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "holdout-040-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      }
+    ]
+  },
+  "evolution": {
+    "split": "evolution",
+    "passed": 46,
+    "task_count": 48,
+    "rows": [
+      {
+        "task": "cap-evolution-001",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g01",
+        "action": "equal_category_allocation"
+      },
+      {
+        "task": "cap-evolution-002",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g02",
+        "action": "quantity_category_allocation"
+      },
+      {
+        "task": "cap-evolution-003",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g03",
+        "action": "deduplicate_refunds"
+      },
+      {
+        "task": "cap-evolution-004",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g04",
+        "action": "hybrid_refund_time"
+      },
+      {
+        "task": "cap-evolution-005",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g01",
+        "action": "equal_category_allocation"
+      },
+      {
+        "task": "cap-evolution-006",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g02",
+        "action": "quantity_category_allocation"
+      },
+      {
+        "task": "cap-evolution-007",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g03",
+        "action": "deduplicate_refunds"
+      },
+      {
+        "task": "cap-evolution-008",
+        "ok": false,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "cap-evolution-009",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g01",
+        "action": "equal_category_allocation"
+      },
+      {
+        "task": "cap-evolution-010",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g02",
+        "action": "quantity_category_allocation"
+      },
+      {
+        "task": "cap-evolution-011",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g03",
+        "action": "deduplicate_refunds"
+      },
+      {
+        "task": "cap-evolution-012",
+        "ok": false,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "cap-evolution-013",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g01",
+        "action": "equal_category_allocation"
+      },
+      {
+        "task": "cap-evolution-014",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g02",
+        "action": "quantity_category_allocation"
+      },
+      {
+        "task": "cap-evolution-015",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g03",
+        "action": "deduplicate_refunds"
+      },
+      {
+        "task": "cap-evolution-016",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g04",
+        "action": "hybrid_refund_time"
+      },
+      {
+        "task": "evolution-001-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-002-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-003-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-004-all_metrics",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-005-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-006-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-007-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-008-all_metrics",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-009-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-010-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-011-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-012-all_metrics",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-013-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-014-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-015-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-016-all_metrics",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-017-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-018-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-019-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-020-all_metrics",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-021-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-022-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-023-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-024-all_metrics",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-025-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-026-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-027-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-028-all_metrics",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-029-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-030-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-031-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "evolution-032-all_metrics",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      }
+    ]
+  },
+  "validation": {
+    "split": "validation",
+    "passed": 38,
+    "task_count": 40,
+    "rows": [
+      {
+        "task": "cap-validation-001",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g01",
+        "action": "equal_category_allocation"
+      },
+      {
+        "task": "cap-validation-002",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g02",
+        "action": "quantity_category_allocation"
+      },
+      {
+        "task": "cap-validation-003",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g03",
+        "action": "deduplicate_refunds"
+      },
+      {
+        "task": "cap-validation-004",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g04",
+        "action": "hybrid_refund_time"
+      },
+      {
+        "task": "cap-validation-005",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g01",
+        "action": "equal_category_allocation"
+      },
+      {
+        "task": "cap-validation-006",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g02",
+        "action": "quantity_category_allocation"
+      },
+      {
+        "task": "cap-validation-007",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g03",
+        "action": "deduplicate_refunds"
+      },
+      {
+        "task": "cap-validation-008",
+        "ok": false,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "cap-validation-009",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g01",
+        "action": "equal_category_allocation"
+      },
+      {
+        "task": "cap-validation-010",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g02",
+        "action": "quantity_category_allocation"
+      },
+      {
+        "task": "cap-validation-011",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g03",
+        "action": "deduplicate_refunds"
+      },
+      {
+        "task": "cap-validation-012",
+        "ok": false,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "cap-validation-013",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g01",
+        "action": "equal_category_allocation"
+      },
+      {
+        "task": "cap-validation-014",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g02",
+        "action": "quantity_category_allocation"
+      },
+      {
+        "task": "cap-validation-015",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g03",
+        "action": "deduplicate_refunds"
+      },
+      {
+        "task": "cap-validation-016",
+        "ok": true,
+        "case_kind": "capability_expansion",
+        "matched_rule_id": "learned-g04",
+        "action": "hybrid_refund_time"
+      },
+      {
+        "task": "validation-001-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-002-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-003-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-004-all_metrics",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-005-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-006-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-007-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-008-all_metrics",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-009-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-010-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-011-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-012-all_metrics",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-013-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-014-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-015-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-016-all_metrics",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-017-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-018-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-019-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-020-all_metrics",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-021-refund_rate",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-022-category",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-023-daily",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      },
+      {
+        "task": "validation-024-all_metrics",
+        "ok": true,
+        "case_kind": "contract_selection",
+        "matched_rule_id": null,
+        "action": null
+      }
+    ]
+  }
+}

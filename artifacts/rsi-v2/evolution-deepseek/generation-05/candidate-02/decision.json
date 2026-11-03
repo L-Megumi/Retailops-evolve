@@ -1,0 +1,7 @@
+{
+  "accepted": false,
+  "gate_checks": {
+    "proposal_valid": false
+  },
+  "error": "ValueError: action already learned: hybrid_refund_time"
+}

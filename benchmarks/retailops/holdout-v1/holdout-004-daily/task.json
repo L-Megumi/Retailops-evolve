@@ -1,0 +1,6 @@
+{
+  "instruction": "按订单日期与退款发生日期汇总每日销售额、退款额和净销售额。",
+  "tools": [
+    "daily_net_sales"
+  ]
+}

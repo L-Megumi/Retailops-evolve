@@ -1,0 +1,10 @@
+{
+  "instruction": "退款事件唯一键若已见过，则当前行记为 replay；汇总 replay 数、总数和万分比。",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "audit",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "instruction": "审计优先规则（覆盖历史默认口径）：生成每日经营汇总。逐笔计算退款日与原订单日的自然日间隔：间隔不超过 3 天的退款回写订单日；超过 3 天的退款保留在实际退款日。该规则需要逐笔判断，不能对整张表统一选择一个日期字段。",
+  "tools": [
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "difficulty": "capability_expansion",
+    "case_kind": "capability_expansion",
+    "capability_family": "conditional_time",
+    "instruction_style": "policy_ticket",
+    "data_profile": "shuffled"
+  }
+}

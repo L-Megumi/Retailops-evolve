@@ -1,0 +1,12 @@
+{
+  "instruction": "计算退款率与品类净销售额排行；退款率分母为唯一订单数，跨品类退款按各品类订单行销售额比例分摊。",
+  "tools": [
+    "refund_rate",
+    "category_ranking"
+  ],
+  "metric_contract": {
+    "refund_rate_denominator": "distinct_orders",
+    "category_refund_allocation": "proportional",
+    "refund_time_attribution": "refund_date"
+  }
+}

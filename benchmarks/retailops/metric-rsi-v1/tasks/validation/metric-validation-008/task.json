@@ -1,0 +1,10 @@
+{
+  "instruction": "Produce an idempotency metric where every occurrence after the first matching refund key is a replay.",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

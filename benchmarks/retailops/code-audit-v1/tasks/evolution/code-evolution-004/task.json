@@ -1,0 +1,11 @@
+{
+  "instruction": "审计过量退款：以订单销售额作为累计可退款额度，顺序消费额度并裁剪越界退款，再计算品类排行与每日汇总。",
+  "tools": [
+    "category_ranking",
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "case_kind": "code_capability"
+  }
+}

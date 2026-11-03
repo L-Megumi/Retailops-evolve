@@ -1,0 +1,132 @@
+{
+  "name": "code-evolution-v1",
+  "seed": 2026110321,
+  "count": 12,
+  "count_per_split": 4,
+  "cases": [
+    {
+      "case_id": "code-evolution-001",
+      "split": "evolution",
+      "order_lines": 61,
+      "refund_rows": 3
+    },
+    {
+      "case_id": "code-evolution-002",
+      "split": "evolution",
+      "order_lines": 35,
+      "refund_rows": 3
+    },
+    {
+      "case_id": "code-evolution-003",
+      "split": "evolution",
+      "order_lines": 39,
+      "refund_rows": 3
+    },
+    {
+      "case_id": "code-evolution-004",
+      "split": "evolution",
+      "order_lines": 31,
+      "refund_rows": 3
+    },
+    {
+      "case_id": "code-validation-001",
+      "split": "validation",
+      "order_lines": 47,
+      "refund_rows": 3
+    },
+    {
+      "case_id": "code-validation-002",
+      "split": "validation",
+      "order_lines": 30,
+      "refund_rows": 3
+    },
+    {
+      "case_id": "code-validation-003",
+      "split": "validation",
+      "order_lines": 26,
+      "refund_rows": 3
+    },
+    {
+      "case_id": "code-validation-004",
+      "split": "validation",
+      "order_lines": 34,
+      "refund_rows": 3
+    },
+    {
+      "case_id": "code-transfer-001",
+      "split": "transfer",
+      "order_lines": 65,
+      "refund_rows": 3
+    },
+    {
+      "case_id": "code-transfer-002",
+      "split": "transfer",
+      "order_lines": 21,
+      "refund_rows": 3
+    },
+    {
+      "case_id": "code-transfer-003",
+      "split": "transfer",
+      "order_lines": 43,
+      "refund_rows": 3
+    },
+    {
+      "case_id": "code-transfer-004",
+      "split": "transfer",
+      "order_lines": 27,
+      "refund_rows": 3
+    }
+  ],
+  "public_sha256": {
+    "tasks/evolution/code-evolution-001/orders.csv": "d88b2f6b26e228361578e69cf6f0048d217f3bace8e42e3b99ec32c2736348ad",
+    "tasks/evolution/code-evolution-001/refunds.csv": "4b7e2809998924164af2556a185932769467399c81d7859ec4618add5bcb60c3",
+    "tasks/evolution/code-evolution-001/task.json": "f3ff31b86cfe2696bccd50e3d2a99ada9b1585209478acdc250f794bb380aaff",
+    "tasks/evolution/code-evolution-002/orders.csv": "b9681fd157e6d624123a1314d858a11ad1f4a4629114dd52087b378678b4d19e",
+    "tasks/evolution/code-evolution-002/refunds.csv": "1371731a757bddac4ac26890db8ea1eed4564fba0724c8a75130e67bc776f654",
+    "tasks/evolution/code-evolution-002/task.json": "c94413efdaddf0d600d87a30dfd47ef3279a35daffb68288d89f121ba0c76b3a",
+    "tasks/evolution/code-evolution-003/orders.csv": "6dca23911fdc0f7a1f2ea44cfecb047cff270b44991946744e18ddbf62f174d8",
+    "tasks/evolution/code-evolution-003/refunds.csv": "fafe4a9d6a47938defd4e0cbe9a0eb358e9238daa27c7ccf58b4a8f6d5372a0a",
+    "tasks/evolution/code-evolution-003/task.json": "feab1fe62480757b078081a1a77bb54fa9b9addf93fc63343b1e12c002db139f",
+    "tasks/evolution/code-evolution-004/orders.csv": "4869b37c2be0959ebebad517aed025d561c8bf8ae74c0a28d684c63bdca7f6a5",
+    "tasks/evolution/code-evolution-004/refunds.csv": "e2364f98f25e264b158d4c1c94d712261d25cc479bb4e4093c1661f81e2635a6",
+    "tasks/evolution/code-evolution-004/task.json": "b14c03a584303f3b8a0aec88693c18230753701940b9a5d83304431611f6abd9",
+    "tasks/transfer/code-transfer-001/orders.csv": "e36db7091d544bf60f1fe3bd96d8ed4c12b95f6ab032ebfa68bdc03e39ef0740",
+    "tasks/transfer/code-transfer-001/refunds.csv": "d7e10cf0bee9f3cdcb98210f9391a4cd4009219bd7b39469706e0346d6c1c2d9",
+    "tasks/transfer/code-transfer-001/task.json": "d6e1fe48643563b557b22202c05484b0268a8f424cb8252b9197d385f4c9ba52",
+    "tasks/transfer/code-transfer-002/orders.csv": "971b137cf78b6caef31ac5fc2ec5d78bf5bcfe13e907c7a23144622be173344b",
+    "tasks/transfer/code-transfer-002/refunds.csv": "ca956226894b4a5516bc1659be4d9fe0fdda837ccb186ff83cab619ba984806a",
+    "tasks/transfer/code-transfer-002/task.json": "8334e090b9647de04b5ab28c64c292254205a345e223d017f1dac1847035d5ad",
+    "tasks/transfer/code-transfer-003/orders.csv": "e88cc05ca209ed046faeb40bd0545b5dbc6253d79c31f88a1bd01842269a90b7",
+    "tasks/transfer/code-transfer-003/refunds.csv": "b8a3e18d59f974f6a21a7deaa44044108259d21148a8eb0a0d507c28d29694d2",
+    "tasks/transfer/code-transfer-003/task.json": "1ddd4201fd2b47ac2543dfc1f75c7922905c98fcf8fcedffc86e27a513687036",
+    "tasks/transfer/code-transfer-004/orders.csv": "bfc4cc7ce1469c7966a6ae25ae5efc46b910a4bdba40c878aca214934ca9a311",
+    "tasks/transfer/code-transfer-004/refunds.csv": "e12043ad162aa0c4c3d0c43466ffc1279d6c854c87ad1aa014e1670bc1df5ede",
+    "tasks/transfer/code-transfer-004/task.json": "919b28aa1e10f2e14039896fbd7d7048bfd647950043e20a34634243a42f6b55",
+    "tasks/validation/code-validation-001/orders.csv": "87018201bc1096d2200b8de42e61b6cb1dc78a1ba41446e56db9ac7b2992ebef",
+    "tasks/validation/code-validation-001/refunds.csv": "cc0de2c9c7813ac39550e2710d056eefbfb054efb5fbb7e875db8b7149a045f7",
+    "tasks/validation/code-validation-001/task.json": "a21148f9f16d89d2280a161f56efe0ab42e4ba11572cf4ac86355fbcff34b95b",
+    "tasks/validation/code-validation-002/orders.csv": "5ff900c296cff24755350e28b0f4eeca9e67652151b58b6e0d4f3a0b7c7e87d1",
+    "tasks/validation/code-validation-002/refunds.csv": "5a6a9f2a89d09cbff8f63852461bcacfbcc3e3d2e5dae6bc1c5506c05d0f349a",
+    "tasks/validation/code-validation-002/task.json": "2887ea929687ece367a260bebcde864873db3729830b150fbb694e9df434df2a",
+    "tasks/validation/code-validation-003/orders.csv": "b8b1ac8855d40bdd56928b87fd5f7c60fd4ec0f501f2424da87c4a19d1883868",
+    "tasks/validation/code-validation-003/refunds.csv": "af9ed3b4ab5b9db956bcec38d5b8718b343b3819f16fe208ff22696ba4a7af24",
+    "tasks/validation/code-validation-003/task.json": "c05623561ca7b9d131a875dbcc48fc5bfe8f6ed03ae0a5196c7c03bdbaab2133",
+    "tasks/validation/code-validation-004/orders.csv": "fce9d4b917800656ab491c29adbffb795870e9ea50f9ab3986a77b66c7cc8bab",
+    "tasks/validation/code-validation-004/refunds.csv": "f1fd353fdff3d6677070773e3fc4d2d64d2c50a0d5aef34f7346599ee64f1f54",
+    "tasks/validation/code-validation-004/task.json": "5381e35168a777f1145039907c6abab075ab2158bfa29b94bf20aed01bae482a"
+  },
+  "oracle_sha256": {
+    "oracle/evolution/code-evolution-001.json": "36c70c9187b2d21771fd04af36cba2705ed3f586cd3c883e3369556a15975252",
+    "oracle/evolution/code-evolution-002.json": "85ef7f0f7c00941bb5aaf18ca62d59d906ee65868e87298441be2329de663bc9",
+    "oracle/evolution/code-evolution-003.json": "d97c33fd625d720c95876dd65ab9c10ae882d1aa186648b70989e5a1f35624f1",
+    "oracle/evolution/code-evolution-004.json": "4feac963b9b1ec814ad3dadcb90da09cc5c5e929847d69366fe6dc089c961cc3",
+    "oracle/transfer/code-transfer-001.json": "a10ed05b64aa43342ed1f40aa46be30872cd3e54aba645771c1f76fb6b04774e",
+    "oracle/transfer/code-transfer-002.json": "efd2bb289ff3e5448e76a2113203092b167e6d60f30ad3d14a0467c37ef74c09",
+    "oracle/transfer/code-transfer-003.json": "781f294abba70b00805e47d50830b24c19deffcebd211bd18c285b001c66622c",
+    "oracle/transfer/code-transfer-004.json": "59c2626baaed057f9b365f16d907ebbdb604fd9a3d686e56613364b54bcabb34",
+    "oracle/validation/code-validation-001.json": "16765ad028004e35dceebfdfbe3e6583bb60af25c94aec9dfb2ac6e3000bbfa9",
+    "oracle/validation/code-validation-002.json": "8d82cf48615eec14ccb095b81c71a024fe04236b1141799f7f9016b6b39adf72",
+    "oracle/validation/code-validation-003.json": "b0385a6ec853ca17e75b3bb7371ed735dc5ba6b42a6f4a95283a64985ca7fa36",
+    "oracle/validation/code-validation-004.json": "8411bdf2142692bcdd9812fe1e0f0fce45a06a5247ce0189fbef358e4b150656"
+  }
+}

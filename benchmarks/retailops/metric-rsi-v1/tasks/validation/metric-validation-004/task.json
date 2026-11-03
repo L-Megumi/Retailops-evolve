@@ -1,0 +1,10 @@
+{
+  "instruction": "检查退款接口幂等性：重复事件行数 / 全部输入事件行数，并报告两个计数。",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

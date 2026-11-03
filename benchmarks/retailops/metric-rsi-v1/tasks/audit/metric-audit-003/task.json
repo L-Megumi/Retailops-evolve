@@ -1,0 +1,10 @@
+{
+  "instruction": "计算事件级退款重传率，分母包含重复行本身，不能先清洗再计算。",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "audit",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

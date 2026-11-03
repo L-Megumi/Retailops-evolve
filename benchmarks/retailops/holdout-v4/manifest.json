@@ -1,0 +1,713 @@
+{
+  "name": "retailops-holdout-v4",
+  "seed": 2026110306,
+  "count": 40,
+  "scenarios": [
+    "refund_rate",
+    "category",
+    "combined",
+    "daily"
+  ],
+  "dynamic_contracts": true,
+  "cases": [
+    {
+      "case_id": "holdout-001-refund_rate",
+      "scenario": "refund_rate",
+      "orders": 10,
+      "order_lines": 21,
+      "refund_rows": 1,
+      "instruction": "计算退款订单占比，分母采用唯一订单数。",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-002-category",
+      "scenario": "category",
+      "orders": 5,
+      "order_lines": 8,
+      "refund_rows": 1,
+      "instruction": "比较 category ranking；一笔退款涉及多个品类时按各品类订单行销售额比例分摊。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-003-combined",
+      "scenario": "combined",
+      "orders": 9,
+      "order_lines": 17,
+      "refund_rows": 2,
+      "instruction": "输出 refund rate 和 category ranking，采用唯一订单数，退款按各品类订单行销售额比例分摊。",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-004-daily",
+      "scenario": "daily",
+      "orders": 10,
+      "order_lines": 22,
+      "refund_rows": 2,
+      "instruction": "生成每日净销售额，退款回溯计入原订单日期。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "case_id": "holdout-005-refund_rate",
+      "scenario": "refund_rate",
+      "orders": 8,
+      "order_lines": 18,
+      "refund_rows": 1,
+      "instruction": "输出 refund rate；以订单明细行数作为统计分母。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-006-category",
+      "scenario": "category",
+      "orders": 6,
+      "order_lines": 12,
+      "refund_rows": 2,
+      "instruction": "生成品类净销售额排行，跨品类订单退款全部归入订单中首个记录的品类。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-007-combined",
+      "scenario": "combined",
+      "orders": 6,
+      "order_lines": 13,
+      "refund_rows": 1,
+      "instruction": "输出 refund rate 和 category ranking，采用唯一订单数，退款全部归入订单中首个记录的品类。",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-008-daily",
+      "scenario": "daily",
+      "orders": 6,
+      "order_lines": 14,
+      "refund_rows": 1,
+      "instruction": "生成每日净销售额，退款计入退款实际发生日期。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-009-refund_rate",
+      "scenario": "refund_rate",
+      "orders": 10,
+      "order_lines": 22,
+      "refund_rows": 2,
+      "instruction": "计算退款订单占比，分母采用唯一订单数。",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-010-category",
+      "scenario": "category",
+      "orders": 5,
+      "order_lines": 10,
+      "refund_rows": 1,
+      "instruction": "比较 category ranking；一笔退款涉及多个品类时按各品类订单行销售额比例分摊。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-011-combined",
+      "scenario": "combined",
+      "orders": 5,
+      "order_lines": 9,
+      "refund_rows": 1,
+      "instruction": "计算退款率与品类净销售额排行；退款率分母为订单明细行数，跨品类退款按各品类订单行销售额比例分摊。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-012-daily",
+      "scenario": "daily",
+      "orders": 7,
+      "order_lines": 15,
+      "refund_rows": 3,
+      "instruction": "生成每日净销售额，退款回溯计入原订单日期。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "case_id": "holdout-013-refund_rate",
+      "scenario": "refund_rate",
+      "orders": 10,
+      "order_lines": 22,
+      "refund_rows": 1,
+      "instruction": "计算退款订单占比，分母采用订单明细行数。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-014-category",
+      "scenario": "category",
+      "orders": 6,
+      "order_lines": 11,
+      "refund_rows": 1,
+      "instruction": "生成品类净销售额排行，跨品类订单退款全部归入订单中首个记录的品类。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-015-combined",
+      "scenario": "combined",
+      "orders": 10,
+      "order_lines": 22,
+      "refund_rows": 2,
+      "instruction": "计算退款率与品类净销售额排行；退款率分母为订单明细行数，跨品类退款全部归入订单中首个记录的品类。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-016-daily",
+      "scenario": "daily",
+      "orders": 5,
+      "order_lines": 9,
+      "refund_rows": 1,
+      "instruction": "按日汇总成交与退款；退款金额需要计入退款实际发生日期。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-017-refund_rate",
+      "scenario": "refund_rate",
+      "orders": 10,
+      "order_lines": 15,
+      "refund_rows": 1,
+      "instruction": "输出 refund rate；以唯一订单数作为统计分母。",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-018-category",
+      "scenario": "category",
+      "orders": 10,
+      "order_lines": 21,
+      "refund_rows": 3,
+      "instruction": "生成品类净销售额排行，跨品类订单退款按各品类订单行销售额比例分摊。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-019-combined",
+      "scenario": "combined",
+      "orders": 10,
+      "order_lines": 20,
+      "refund_rows": 1,
+      "instruction": "计算退款率与品类净销售额排行；退款率分母为唯一订单数，跨品类退款按各品类订单行销售额比例分摊。",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-020-daily",
+      "scenario": "daily",
+      "orders": 8,
+      "order_lines": 16,
+      "refund_rows": 2,
+      "instruction": "按日汇总成交与退款；退款金额需要回溯计入原订单日期。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "case_id": "holdout-021-refund_rate",
+      "scenario": "refund_rate",
+      "orders": 10,
+      "order_lines": 21,
+      "refund_rows": 2,
+      "instruction": "输出 refund rate；以订单明细行数作为统计分母。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-022-category",
+      "scenario": "category",
+      "orders": 5,
+      "order_lines": 8,
+      "refund_rows": 1,
+      "instruction": "比较 category ranking；一笔退款涉及多个品类时全部归入订单中首个记录的品类。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-023-combined",
+      "scenario": "combined",
+      "orders": 7,
+      "order_lines": 16,
+      "refund_rows": 1,
+      "instruction": "计算退款率与品类净销售额排行；退款率分母为唯一订单数，跨品类退款全部归入订单中首个记录的品类。",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-024-daily",
+      "scenario": "daily",
+      "orders": 6,
+      "order_lines": 15,
+      "refund_rows": 2,
+      "instruction": "生成每日净销售额，退款计入退款实际发生日期。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-025-refund_rate",
+      "scenario": "refund_rate",
+      "orders": 5,
+      "order_lines": 10,
+      "refund_rows": 1,
+      "instruction": "计算退款订单占比，分母采用唯一订单数。",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-026-category",
+      "scenario": "category",
+      "orders": 6,
+      "order_lines": 13,
+      "refund_rows": 1,
+      "instruction": "生成品类净销售额排行，跨品类订单退款按各品类订单行销售额比例分摊。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-027-combined",
+      "scenario": "combined",
+      "orders": 9,
+      "order_lines": 15,
+      "refund_rows": 2,
+      "instruction": "输出 refund rate 和 category ranking，采用订单明细行数，退款按各品类订单行销售额比例分摊。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-028-daily",
+      "scenario": "daily",
+      "orders": 5,
+      "order_lines": 11,
+      "refund_rows": 1,
+      "instruction": "按日汇总成交与退款；退款金额需要回溯计入原订单日期。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "case_id": "holdout-029-refund_rate",
+      "scenario": "refund_rate",
+      "orders": 10,
+      "order_lines": 22,
+      "refund_rows": 1,
+      "instruction": "计算退款订单占比，分母采用订单明细行数。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-030-category",
+      "scenario": "category",
+      "orders": 10,
+      "order_lines": 20,
+      "refund_rows": 3,
+      "instruction": "生成品类净销售额排行，跨品类订单退款全部归入订单中首个记录的品类。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-031-combined",
+      "scenario": "combined",
+      "orders": 6,
+      "order_lines": 17,
+      "refund_rows": 1,
+      "instruction": "计算退款率与品类净销售额排行；退款率分母为订单明细行数，跨品类退款全部归入订单中首个记录的品类。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-032-daily",
+      "scenario": "daily",
+      "orders": 5,
+      "order_lines": 12,
+      "refund_rows": 1,
+      "instruction": "按日汇总成交与退款；退款金额需要计入退款实际发生日期。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-033-refund_rate",
+      "scenario": "refund_rate",
+      "orders": 10,
+      "order_lines": 16,
+      "refund_rows": 2,
+      "instruction": "计算退款订单占比，分母采用唯一订单数。",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-034-category",
+      "scenario": "category",
+      "orders": 9,
+      "order_lines": 17,
+      "refund_rows": 2,
+      "instruction": "比较 category ranking；一笔退款涉及多个品类时按各品类订单行销售额比例分摊。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-035-combined",
+      "scenario": "combined",
+      "orders": 8,
+      "order_lines": 19,
+      "refund_rows": 1,
+      "instruction": "计算退款率与品类净销售额排行；退款率分母为唯一订单数，跨品类退款按各品类订单行销售额比例分摊。",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-036-daily",
+      "scenario": "daily",
+      "orders": 7,
+      "order_lines": 15,
+      "refund_rows": 3,
+      "instruction": "按日汇总成交与退款；退款金额需要回溯计入原订单日期。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "case_id": "holdout-037-refund_rate",
+      "scenario": "refund_rate",
+      "orders": 9,
+      "order_lines": 20,
+      "refund_rows": 1,
+      "instruction": "输出 refund rate；以订单明细行数作为统计分母。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-038-category",
+      "scenario": "category",
+      "orders": 8,
+      "order_lines": 14,
+      "refund_rows": 2,
+      "instruction": "比较 category ranking；一笔退款涉及多个品类时全部归入订单中首个记录的品类。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-039-combined",
+      "scenario": "combined",
+      "orders": 10,
+      "order_lines": 17,
+      "refund_rows": 2,
+      "instruction": "输出 refund rate 和 category ranking，采用唯一订单数，退款全部归入订单中首个记录的品类。",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "case_id": "holdout-040-daily",
+      "scenario": "daily",
+      "orders": 9,
+      "order_lines": 16,
+      "refund_rows": 2,
+      "instruction": "按日汇总成交与退款；退款金额需要计入退款实际发生日期。",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    }
+  ],
+  "file_sha256": {
+    "holdout-001-refund_rate/expected.json": "6ea15b035eca52f93b423dc53e8e6923d670b2e4a9aded579ab721e530c1d174",
+    "holdout-001-refund_rate/orders.csv": "f65c57a7c0e16ab9c260e754a6a46f5553790ff4d76d02763b255b30aa7da7c0",
+    "holdout-001-refund_rate/refunds.csv": "08aff6c9b6de9abbd3fbbe5b263a7fc93de6f86ef6eae64fca26912ba9af558d",
+    "holdout-001-refund_rate/task.json": "e84e68f6ce5c5ba823633a3788b115cfe453cd960a530854244258045f9909aa",
+    "holdout-002-category/expected.json": "221354b86c5d5963dc6cd69f06e6138a5e31af0edbc122563021df537d7b066a",
+    "holdout-002-category/orders.csv": "d2be837515b304506c2b84c7519b924eb34e8dfa8d73fabca378818767346dcb",
+    "holdout-002-category/refunds.csv": "6dac2780f5347a166de0a6257c2ec8f2bc5a08f6136f84a1c210f34bd525fdf7",
+    "holdout-002-category/task.json": "413db8a1333423f0814a2da015a68f9dc3ffbadada016a14cffff3b172a67046",
+    "holdout-003-combined/expected.json": "c846109d861dfa6eb5c09eea8234515c40e564fe2dd5dcaa750ca9f8ae77cc7a",
+    "holdout-003-combined/orders.csv": "56644731093d3dc27d04fd43c38e3ab03c6823ce6c0824a62ea4662e2cda7fd5",
+    "holdout-003-combined/refunds.csv": "22f7678616349765b619cd6921984e1f5ba07ad24aeba687f0a8888a08432574",
+    "holdout-003-combined/task.json": "96c2413e483c27f7fad5b472e0bfa9f653e3a0d4d801e2e86e1b74309f974751",
+    "holdout-004-daily/expected.json": "c6b5a792b5f72aeabdbe677ec48ce08c96779ba87148fa393eb621c0d56c2bc8",
+    "holdout-004-daily/orders.csv": "83092d4a816b8f6ec3bedc7ad779d6ad4db72f02c847cddbf08ded68a6870577",
+    "holdout-004-daily/refunds.csv": "1ff356fd348cbde929a2aa0826288e6a3e89b41b01d6bc83ec60345c6ac90c96",
+    "holdout-004-daily/task.json": "b21262e98071aee7a1106d20491d64ac3f6a59b4a534d86226913f70ba55ba30",
+    "holdout-005-refund_rate/expected.json": "689bce40aae87b45657808a8b0790029c9dd1de323ce59f7078884a9d784b4ea",
+    "holdout-005-refund_rate/orders.csv": "28359a61c1796610cfa1fac48d2b5ce8f133ddd14fc5971a86753c9a68e45d46",
+    "holdout-005-refund_rate/refunds.csv": "3e3bf71064cea16980f35a9ba2d9e79c2019ec04905d21681734061bdcc9bb56",
+    "holdout-005-refund_rate/task.json": "ad83f9d127e616e0ffbe3c5a529579853ef86aab09aae4f78326e26888fd8d97",
+    "holdout-006-category/expected.json": "7d56f6eaeecf22760d3cf372405ac175dbc6ebedfe5d99a6d92a698d3d9a4a23",
+    "holdout-006-category/orders.csv": "f5ce02d339a02b85ad2a45fe9b8b0ba0f7dc7cad7d811fa2652e2cd9ac396ae8",
+    "holdout-006-category/refunds.csv": "2df3b6f09a18087402160d899eda86b40be9f4b90bd985dd36e98bbe9a3634f9",
+    "holdout-006-category/task.json": "1ec3580c4f593e1439feaa7c8ac377d5690ad1c4ca925ba851ade47e0b89996c",
+    "holdout-007-combined/expected.json": "9cca500d9139a6dab3671bcbaec07b867c28ea206ac0aa41a705e43f6875be85",
+    "holdout-007-combined/orders.csv": "fb60b18101e5ff49bbfae79e65fd807de13ee038bebf7784b3545eef1f983803",
+    "holdout-007-combined/refunds.csv": "793ee5003bd9277f6d0aeb2804185e6000bdb94c7064979478444dbbefc6167d",
+    "holdout-007-combined/task.json": "c8e22914d4d3eabf1aac4e1ae0b5dedf37cbd0d3c1aeb072a315b6f7d3a1f263",
+    "holdout-008-daily/expected.json": "b7bc202944d20a8edd99d5427f820fe9424a9cbeb590543dee6f86b01573aa30",
+    "holdout-008-daily/orders.csv": "014be80b6792cb026b8cbbc80dae2edf78b34d8871ec9b5b80c82d02ba030a76",
+    "holdout-008-daily/refunds.csv": "fe001cd65ccc999cabbf1659444fa72e10c9f30a8412711687eb8e5c526f5f63",
+    "holdout-008-daily/task.json": "2d761fcb181f08e78633991ba4bf3838ca9739dffa5d53f0795d494e5627366d",
+    "holdout-009-refund_rate/expected.json": "9ab75f994901022645fbf346506358b85e6f84cc4240c1a0bb50434bed772c8a",
+    "holdout-009-refund_rate/orders.csv": "fa95bc2cd8d37199b38cad862b4c27c848477786eba0d3a6c4c582d2f0e8b16d",
+    "holdout-009-refund_rate/refunds.csv": "1dfb417dcee5f3ad5534d23bd81d4943eae7d508d8d148eff8fdf261e9fc4265",
+    "holdout-009-refund_rate/task.json": "e84e68f6ce5c5ba823633a3788b115cfe453cd960a530854244258045f9909aa",
+    "holdout-010-category/expected.json": "15416b1c29e059d9f68ba704fe1af0ca272ebd43960745d202f15378542708ce",
+    "holdout-010-category/orders.csv": "3e50e0cdb8728f84561a940f304aaae42343aec0069c59725cc9bbccfdaf227b",
+    "holdout-010-category/refunds.csv": "90d41dce6d033ce8e2afb4136024e8609f1259c265eecebb0d0ae96de40cdd2d",
+    "holdout-010-category/task.json": "413db8a1333423f0814a2da015a68f9dc3ffbadada016a14cffff3b172a67046",
+    "holdout-011-combined/expected.json": "3bc4a0642333eba3a21396ba36e3c6e03ed6f527998ea790eca924dcc0a5c640",
+    "holdout-011-combined/orders.csv": "2bfdf15eb849d31e7fe9810f172e17ff8554723ef702e508e4e428ad2dc70d2c",
+    "holdout-011-combined/refunds.csv": "b3d3fba4a9f21d0f136a0bd28cb3b7e11b97619912d4f8e2a1c25871dd7be9ff",
+    "holdout-011-combined/task.json": "6403a0c54001806f0749598ef4619d0788673cdbc5a0368854598ac25a3d2b76",
+    "holdout-012-daily/expected.json": "dc7bb682fc806122937a8202747174cebcd89c6c298d7395e5c3d9df345f8acf",
+    "holdout-012-daily/orders.csv": "f66a0e5b5f16a37066fc7bb3a611fa59c0f033c22726b5626acf0528614c6be8",
+    "holdout-012-daily/refunds.csv": "5a39374d66558dbea8c38134c29b1b2c33f014e6e191e8a05a3d63bb5d418043",
+    "holdout-012-daily/task.json": "b21262e98071aee7a1106d20491d64ac3f6a59b4a534d86226913f70ba55ba30",
+    "holdout-013-refund_rate/expected.json": "04cd95bf594959a499df036cafa28c90fd57fd7522e6dd504752e9fa6369e342",
+    "holdout-013-refund_rate/orders.csv": "20735f6e3eb6818957b72ecd790cb5aa3a2a7fbc357f952a41dbb0e51c01f83a",
+    "holdout-013-refund_rate/refunds.csv": "943c1c82e28e522624e6d99148becc225b6eb5d755abf7f4cdf247f33b4e09e9",
+    "holdout-013-refund_rate/task.json": "c5d7dbf84a8d9d37d2e9108a32d3082679afb1377acebb060ba921ec3f944ab1",
+    "holdout-014-category/expected.json": "68eb0dc433574c852343f07714abc47b59298f1bcda6908194bc7790243f8148",
+    "holdout-014-category/orders.csv": "0c53056aaf81b7629b766caa3a2d3b1ddf3bcdd0ed5f9f186beec83c1e581978",
+    "holdout-014-category/refunds.csv": "f18d07478400d7817744ff6b6ad36cb62bb25dca5837af8a4a8869333ee1cfab",
+    "holdout-014-category/task.json": "1ec3580c4f593e1439feaa7c8ac377d5690ad1c4ca925ba851ade47e0b89996c",
+    "holdout-015-combined/expected.json": "2c3d824d98b5d48a91f89a0193071bfeae88dc105033fca234b47d10f62e01b7",
+    "holdout-015-combined/orders.csv": "e36690772f738769dd6b5e80453590c084c755dc1373e43e995a8d4174a347fe",
+    "holdout-015-combined/refunds.csv": "e3bac3081d9d541b57b1f3781a142f248a2fbf8f0fe316cc6fceb048fe40719b",
+    "holdout-015-combined/task.json": "2f2eb84b7336e3312cf46d8a9bf25d4f4371a41731bdb70f0875df81c5747e86",
+    "holdout-016-daily/expected.json": "4c9fec2bba550f8ed9a38bb7226f5cea261039760079512f12d8cb4a097d9452",
+    "holdout-016-daily/orders.csv": "2414ea177c4140352016219e4e8d49230516884960c303e6358a345c53d6037f",
+    "holdout-016-daily/refunds.csv": "1d5d4f5204560180e6f4b702d15d199879232b1f8b33e57bec3bf81539c820f4",
+    "holdout-016-daily/task.json": "f5f221b5a266b7fd222d4d3f11ae8c93e1f0187650ba7dd85779265d6351a709",
+    "holdout-017-refund_rate/expected.json": "36fcc205798a6f7e858139ad0e4e0a5d6c92c717662ba0a199c9ca58d4f8f2bd",
+    "holdout-017-refund_rate/orders.csv": "56c5808e24db8514dc85d17e87d9cb77f2b12cd64fb84ccbc676a94044bbb7a2",
+    "holdout-017-refund_rate/refunds.csv": "a2d1b5f479a2969c010484c12d2affc71c5604d70dca2a82b6e8f82345b2e56a",
+    "holdout-017-refund_rate/task.json": "6d69bc563ce069bc96b3b5b92bd855d79d5ee5d81e63d3e4a7a8ed3e66f4a451",
+    "holdout-018-category/expected.json": "87ef40af8e8090328070939b17b95e2424d1c13d876c9b5c033b93a2c1583e5f",
+    "holdout-018-category/orders.csv": "76a463ab529f57b11e2cc47b98cd3f405ae55fbcf8868ba951c7ff799f09fbd5",
+    "holdout-018-category/refunds.csv": "f7c1987aad85f8a1a107912dfe1999c1b197c060b09b2ce40efb6634d4b72af6",
+    "holdout-018-category/task.json": "b89a56c5c28d5918c737318d91da3a6fca6311cd189d7c655fbd5991a25696bd",
+    "holdout-019-combined/expected.json": "3a9cd614585d4fc59ce4f0446fafb7813fc85747710888ad4b32cc092eb8e917",
+    "holdout-019-combined/orders.csv": "61d688beb00a10cb01298d9348ae97e11cddb534ad98bc09fad32df97d387129",
+    "holdout-019-combined/refunds.csv": "eca88c71a011ef90cc8a2e6048bf22cfdb2a8e87d42a893dd3fae7c46a0cc079",
+    "holdout-019-combined/task.json": "780ba4e9b28678f9bbb1d454cfbff80d92c9c89d1a858b4fecde55fdbee1f021",
+    "holdout-020-daily/expected.json": "be88e3728f1dbb8dd6da0674dcd43c5cc174ba24f2e9c9bf5fa260cead6257c4",
+    "holdout-020-daily/orders.csv": "4e335f2eea86ebb6e52888d2746b0e7fe18e54da3bc751723749da7691112e6b",
+    "holdout-020-daily/refunds.csv": "806f6dbd7fa254b846501ab9b5b7d670df82dbdbbb9e0dfc54543f5da93272be",
+    "holdout-020-daily/task.json": "8104c478c003153579f4b3a7d4dc5be6a4f2ff1ad4364cb4d6f07824fcb08877",
+    "holdout-021-refund_rate/expected.json": "4b3412d48db3d3b92e4b653cda1ad4af68b1326e978d787f4ef38b70eb29f274",
+    "holdout-021-refund_rate/orders.csv": "929733fd67400e0b3a31b984ec0be1cba148a61a9a5cd884207ec1407de9cc41",
+    "holdout-021-refund_rate/refunds.csv": "0187d752cb8e4c7be8ba8ae806fd8bd21e8e0d7498d5d851d9e7d37031c3084c",
+    "holdout-021-refund_rate/task.json": "ad83f9d127e616e0ffbe3c5a529579853ef86aab09aae4f78326e26888fd8d97",
+    "holdout-022-category/expected.json": "f454ce72130a2562746a0fad4b4378f9eb84bd326761b065aac730e6af921f87",
+    "holdout-022-category/orders.csv": "dbac6823473e38f14fdb92ab54fce56c841da64cc0e7276fd71dbba49986aa54",
+    "holdout-022-category/refunds.csv": "510fa413501c7e5ce6a1c96034c39e55487a4b4ea8c17886c831cde7222d3342",
+    "holdout-022-category/task.json": "c1263cc26b40961a7e1cbddbc452fa4d65b865acfa5056db27b19532d973a0c3",
+    "holdout-023-combined/expected.json": "fffdfe80a87ade0956b6733cc72f39a8314df320e2db7c1f574a255760affd83",
+    "holdout-023-combined/orders.csv": "52fb0c7fd0034f0e5895edf7fe0f1b4109653901afae13d2329693118123101e",
+    "holdout-023-combined/refunds.csv": "bb45a40ff98bc38fcb1c58a2db9d55c636af1e6eebe473820acbbb092231d08a",
+    "holdout-023-combined/task.json": "a5a94e9f17175dda3e6d02a0c68cf6401b721037d538a449e01d7db73ffab047",
+    "holdout-024-daily/expected.json": "39ed5d78a02324d7f6e69f76c2caad35d0f42808e272d75b879a17d7b56531e7",
+    "holdout-024-daily/orders.csv": "76f28701b651b65c452c4c7d018ca27228e1f37f39d4101cbff5a1b47dc2f040",
+    "holdout-024-daily/refunds.csv": "cb83d998786f934333ed42f30449c504983b0eeabebb4e18682bd09e8f19e364",
+    "holdout-024-daily/task.json": "2d761fcb181f08e78633991ba4bf3838ca9739dffa5d53f0795d494e5627366d",
+    "holdout-025-refund_rate/expected.json": "ec8c2431915e5b08880b2463fc0ca0f378b0cd5c91d32bff247d40aa3b0dcabf",
+    "holdout-025-refund_rate/orders.csv": "7696fdb90924e0b8cfabd98a626f82fdbffd129eb9d2b9069f9c36c7097ffb87",
+    "holdout-025-refund_rate/refunds.csv": "cea634ce216db93a727c0622134eb25f6c904c29e21bc78bb96098f16ec9099e",
+    "holdout-025-refund_rate/task.json": "e84e68f6ce5c5ba823633a3788b115cfe453cd960a530854244258045f9909aa",
+    "holdout-026-category/expected.json": "c1f84517bc617673f00e3aa9b817e1c806d2e7817e7271295a99da0f9c2726f4",
+    "holdout-026-category/orders.csv": "3ca213f38551316dbe98f759de14878e66dd41a499629ad3b36def07a22fb47c",
+    "holdout-026-category/refunds.csv": "5728f7dcb1feadd29e0e6fbb0a594a64eac90476d887d7095d9c4da930b1a8b1",
+    "holdout-026-category/task.json": "b89a56c5c28d5918c737318d91da3a6fca6311cd189d7c655fbd5991a25696bd",
+    "holdout-027-combined/expected.json": "620f2a75c6d1c58629f4a43fdce44b7c6791f75316c381a176d7dc57b1a55219",
+    "holdout-027-combined/orders.csv": "5302b0ec39e00cd8d536688c7d5b417a3bd1bc75f729214039cdc40fe7957f7e",
+    "holdout-027-combined/refunds.csv": "2a54b6ef2b96499fd966d84616d4d216eca72ce032b59b0185f67b062e182683",
+    "holdout-027-combined/task.json": "f35bdc61b350331557695cbae24579425494b7e756df3b46449b371737b23b47",
+    "holdout-028-daily/expected.json": "57b907a0dbf424d4814f13160abbc3960cf5ee82c6b86013e2926458be766550",
+    "holdout-028-daily/orders.csv": "267bf81d284a44d06b658e2b10ac3a21b20763417ab48b4906e1f620b5d40439",
+    "holdout-028-daily/refunds.csv": "2660e970ed976955bd5167873f8919e1fae7cc38a2dd0c0977b97171ec15b564",
+    "holdout-028-daily/task.json": "8104c478c003153579f4b3a7d4dc5be6a4f2ff1ad4364cb4d6f07824fcb08877",
+    "holdout-029-refund_rate/expected.json": "324550c9d6256b7ef018c1830c486d26fdcc0c39a670a6679d03747c8150163a",
+    "holdout-029-refund_rate/orders.csv": "5b0e0c8cef7d7d1c6f56fd3447f9fb09e355798790d3faeb09d37f1040969304",
+    "holdout-029-refund_rate/refunds.csv": "ce811cf6824abb07594d717f64167e7139c938f00a7ebd842e1ef980a69f6d09",
+    "holdout-029-refund_rate/task.json": "c5d7dbf84a8d9d37d2e9108a32d3082679afb1377acebb060ba921ec3f944ab1",
+    "holdout-030-category/expected.json": "eaa6d2625b64ec435dd7edd630680c49b8c5edf55a3f8decac3ba30b5a987739",
+    "holdout-030-category/orders.csv": "d9376d5078a8231da467aabecc3a7b4c04839d40c6c3b3296e8add7cd6016381",
+    "holdout-030-category/refunds.csv": "3d30f158ae1a2c32ae7019c397a040fa1f5996ba07745aa59abaa10bab48dedc",
+    "holdout-030-category/task.json": "1ec3580c4f593e1439feaa7c8ac377d5690ad1c4ca925ba851ade47e0b89996c",
+    "holdout-031-combined/expected.json": "154bf002dd354354fc27759ca59355ae102431351159dab9b1237e54e620cfa0",
+    "holdout-031-combined/orders.csv": "ac9006f2398089e5b697f522e7e28f1dd4b66a5acdbfba81d13bb8eebf98e665",
+    "holdout-031-combined/refunds.csv": "60487088392f5e19d45c79cb0f4d5395aba15ba78c619ba053c17d7e592dfb00",
+    "holdout-031-combined/task.json": "2f2eb84b7336e3312cf46d8a9bf25d4f4371a41731bdb70f0875df81c5747e86",
+    "holdout-032-daily/expected.json": "83a85b785c97f0a04e90e3dc0b05b63fe9ba6321a4f183ea1ee30b0b0de4535b",
+    "holdout-032-daily/orders.csv": "cb44e1a76f8e12f72d2ea0eea6374383276b615f0633f0147bdd6e53b8515ed4",
+    "holdout-032-daily/refunds.csv": "4d8c9dce142b70ae13241581bf066de319d570cbd95250aa6e06e76a35dcd8c5",
+    "holdout-032-daily/task.json": "f5f221b5a266b7fd222d4d3f11ae8c93e1f0187650ba7dd85779265d6351a709",
+    "holdout-033-refund_rate/expected.json": "022792b49aecccd8e28f41c834ba6ef730e6267b600cd844b1bc6d9f42984238",
+    "holdout-033-refund_rate/orders.csv": "954a1cba3cd5e57066b3a50d40b76bf7c5160e49e7ac95ca1ba57cb1931e89fe",
+    "holdout-033-refund_rate/refunds.csv": "3108e335684271f86ebdcb24be0eb97f8ed28fb242220e7791d39e3748b3f520",
+    "holdout-033-refund_rate/task.json": "e84e68f6ce5c5ba823633a3788b115cfe453cd960a530854244258045f9909aa",
+    "holdout-034-category/expected.json": "2ad4b35dc69caef9bf57e60be6cc6a178452004951c4c4198c26e112b97bd821",
+    "holdout-034-category/orders.csv": "7c1eacb40da04a50237daf207cdb2f98086f9a13ee7535f3a67571c50ba01fe1",
+    "holdout-034-category/refunds.csv": "71e12f1e2293b853f23b8857554daf557b97001813524f36118264dca718b6f5",
+    "holdout-034-category/task.json": "413db8a1333423f0814a2da015a68f9dc3ffbadada016a14cffff3b172a67046",
+    "holdout-035-combined/expected.json": "abd61505295d2d57f16aa2d470b1cb9c95d41da003dbeda240e573be2886bf6e",
+    "holdout-035-combined/orders.csv": "1987e777710b14b621486111924aa289bec4b92c75e509ace12344c097d805de",
+    "holdout-035-combined/refunds.csv": "d094eebdec3401c30d9e0239ebf5333399b0399e316de21f5f4d104581e91a5d",
+    "holdout-035-combined/task.json": "780ba4e9b28678f9bbb1d454cfbff80d92c9c89d1a858b4fecde55fdbee1f021",
+    "holdout-036-daily/expected.json": "6e7a91d573b909d318e574fbb485c228584afd65cb4cb7d9a07f0da7fe7215cf",
+    "holdout-036-daily/orders.csv": "d1a5df69deb1e98271e3b62ee01e978fa32f64bdf4acb9c98bfeddea99d9ad92",
+    "holdout-036-daily/refunds.csv": "cebeaefea9a66110fc05f75cf31629797aee0decbe7ef93bf7367b54b335890a",
+    "holdout-036-daily/task.json": "8104c478c003153579f4b3a7d4dc5be6a4f2ff1ad4364cb4d6f07824fcb08877",
+    "holdout-037-refund_rate/expected.json": "0b593bb8a8cbd4598cc60173cae446e327e678013cb3178f9f50247dc56b8d30",
+    "holdout-037-refund_rate/orders.csv": "c577a489760ee9293edb6e13a2f9af9ffe619489553c1787a6d57fa63bb411ac",
+    "holdout-037-refund_rate/refunds.csv": "4ec1e766a3d7f32a5e5b97815cb8411f086542b8d17c8777342a2665e7abc28f",
+    "holdout-037-refund_rate/task.json": "ad83f9d127e616e0ffbe3c5a529579853ef86aab09aae4f78326e26888fd8d97",
+    "holdout-038-category/expected.json": "59368e381cb9e3525de7e3fdb3a3a3823ffadb1b2ec5e540fa83ab0ca661256c",
+    "holdout-038-category/orders.csv": "0b2da625d4aa711b656bdd2ecbbcfc17c0ef0bd0047437e2ce0c444bd4b6a264",
+    "holdout-038-category/refunds.csv": "9f2884539ad725e5b57527279ad55b8a83a58b7920f2732989c4a2f16cd08975",
+    "holdout-038-category/task.json": "c1263cc26b40961a7e1cbddbc452fa4d65b865acfa5056db27b19532d973a0c3",
+    "holdout-039-combined/expected.json": "e362502f353bc6c7412087e18891381ba926fba0c29ec713cc4bc03abaf57027",
+    "holdout-039-combined/orders.csv": "fc353f03af31fc2dd842132e957793e15df2ec3310ec7a926bb1a01d2475904d",
+    "holdout-039-combined/refunds.csv": "121a60335b7b4579ff715b1a4c97a46e8c70f4e19d749b4c9c192c360b72abc5",
+    "holdout-039-combined/task.json": "c8e22914d4d3eabf1aac4e1ae0b5dedf37cbd0d3c1aeb072a315b6f7d3a1f263",
+    "holdout-040-daily/expected.json": "37f5daece4492835990f2e47cf12337e1a70f78f005e145db55090f8af52df12",
+    "holdout-040-daily/orders.csv": "621105b86b598e1506b7927d058bd80aef1128a1c8a8acb3cd059da97556a177",
+    "holdout-040-daily/refunds.csv": "3c0236b0d2eaf6dedc0668f764d60fb6794e077e92c8666e47cea3bb77cc0a23",
+    "holdout-040-daily/task.json": "f5f221b5a266b7fd222d4d3f11ae8c93e1f0187650ba7dd85779265d6351a709"
+  },
+  "frozen_source_sha256": {
+    "src/retailops_agent/__init__.py": "1a7876a698f21b994095ec0e092e51caa5c12d72665ff31fec2e562431df2601",
+    "src/retailops_agent/agent.py": "00b2d9b90914bd6330ccd35f5419961f92f2ca754eaba3b943264bef0230bbe6",
+    "src/retailops_agent/cli.py": "83022fbae3425b29ffbc0a333283b3051c6749b31320e757db68f32dc8e294e9",
+    "src/retailops_agent/contracts.py": "cb30fe04f15b7414f7dfb2c2a775829b9d84ea3bd63b7078568e8c7e0a58930e",
+    "src/retailops_agent/data.py": "6c6e0ed43402aeb1cffc70849793d544034c3c3d21b5dddbe065798a0f04b0bb",
+    "src/retailops_agent/harness2_adapter.py": "701c9f2200b377b97facdf6c1802db921c26cd4b11938b0bacf9c2adbc107719",
+    "src/retailops_agent/harness_runner.py": "d566434f08996abf323c61d4879ea0e7008077f8f2cec45274637376b573b442",
+    "src/retailops_agent/llm.py": "66be86258373cb231c69a787481ef3d5f92c7a0537a1e308e5ad71f32a70a7bb",
+    "src/retailops_agent/models.py": "d43be8b7ee995935fe0d0b00de9e443af308c52288963a729fcad03c6427376c",
+    "src/retailops_agent/planner.py": "00d01cc9385602901e72b5ae69662809b13539d245b16dd55a32c06b1d4dd38d",
+    "src/retailops_agent/repair.py": "f759c730246d81ee0b3dd80f65e4498ed3374a6db1840cff5cf73d5e5f38f3d9",
+    "src/retailops_agent/report.py": "1444462f80a10761e92c42d93e429254190d01e397d14e372a0ea0c691d63858",
+    "src/retailops_agent/tools.py": "f40d4267a2d33c926474f182c80f8b7f947d6dd6621c17cb5d8208bd65d3cf56",
+    "src/retailops_agent/validators.py": "0824340b752188ad4b1f4c0890ee2d78aac79b31fa2f9142cdf43bd65b6a9b25",
+    "experiments/run_harness2_model.py": "2b95cfab14a17962dde08198116ae238d8753cb86414210cfdb9e7a4d3dc0088"
+  }
+}

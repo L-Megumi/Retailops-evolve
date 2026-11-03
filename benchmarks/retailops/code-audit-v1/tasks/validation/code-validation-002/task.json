@@ -1,0 +1,11 @@
+{
+  "instruction": "先执行订单级退款封顶，再做经营分析：退款总确认额不能大于订单销售额，逐笔扣减可用额度，超出部分作废。",
+  "tools": [
+    "category_ranking",
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "case_kind": "code_capability"
+  }
+}

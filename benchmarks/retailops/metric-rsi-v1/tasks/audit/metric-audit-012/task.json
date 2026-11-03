@@ -1,0 +1,10 @@
+{
+  "instruction": "Assess refund source replay frequency using exact event identity, where first delivery never counts as replay.",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "audit",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

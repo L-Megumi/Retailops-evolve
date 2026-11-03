@@ -1,0 +1,3624 @@
+{
+  "benchmark": "rsi-v2",
+  "task_count": 168,
+  "strategies": {
+    "naive_ok": 44,
+    "default_ok": 55,
+    "feedback_repair_ok": 120,
+    "oracle_ceiling_ok": 168
+  },
+  "by_split": {
+    "evolution": {
+      "task_count": 48,
+      "naive_ok": 13,
+      "default_ok": 13,
+      "feedback_repair_ok": 32,
+      "oracle_ceiling_ok": 48
+    },
+    "regression": {
+      "task_count": 40,
+      "naive_ok": 17,
+      "default_ok": 18,
+      "feedback_repair_ok": 40,
+      "oracle_ceiling_ok": 40
+    },
+    "transfer": {
+      "task_count": 40,
+      "naive_ok": 7,
+      "default_ok": 12,
+      "feedback_repair_ok": 24,
+      "oracle_ceiling_ok": 40
+    },
+    "validation": {
+      "task_count": 40,
+      "naive_ok": 7,
+      "default_ok": 12,
+      "feedback_repair_ok": 24,
+      "oracle_ceiling_ok": 40
+    }
+  },
+  "by_axis": {
+    "case_kind": {
+      "capability_expansion": {
+        "task_count": 48,
+        "naive_ok": 0,
+        "default_ok": 0,
+        "feedback_repair_ok": 0,
+        "oracle_ceiling_ok": 48
+      },
+      "contract_selection": {
+        "task_count": 120,
+        "naive_ok": 44,
+        "default_ok": 55,
+        "feedback_repair_ok": 120,
+        "oracle_ceiling_ok": 120
+      }
+    },
+    "capability_family": {
+      "conditional_time": {
+        "task_count": 12,
+        "naive_ok": 0,
+        "default_ok": 0,
+        "feedback_repair_ok": 0,
+        "oracle_ceiling_ok": 12
+      },
+      "deduplicate_refunds": {
+        "task_count": 12,
+        "naive_ok": 0,
+        "default_ok": 0,
+        "feedback_repair_ok": 0,
+        "oracle_ceiling_ok": 12
+      },
+      "equal_allocation": {
+        "task_count": 12,
+        "naive_ok": 0,
+        "default_ok": 0,
+        "feedback_repair_ok": 0,
+        "oracle_ceiling_ok": 12
+      },
+      "none": {
+        "task_count": 120,
+        "naive_ok": 44,
+        "default_ok": 55,
+        "feedback_repair_ok": 120,
+        "oracle_ceiling_ok": 120
+      },
+      "quantity_allocation": {
+        "task_count": 12,
+        "naive_ok": 0,
+        "default_ok": 0,
+        "feedback_repair_ok": 0,
+        "oracle_ceiling_ok": 12
+      }
+    },
+    "scenario": {
+      "all_metrics": {
+        "task_count": 20,
+        "naive_ok": 1,
+        "default_ok": 3,
+        "feedback_repair_ok": 20,
+        "oracle_ceiling_ok": 20
+      },
+      "category": {
+        "task_count": 30,
+        "naive_ok": 13,
+        "default_ok": 17,
+        "feedback_repair_ok": 30,
+        "oracle_ceiling_ok": 30
+      },
+      "combined": {
+        "task_count": 10,
+        "naive_ok": 2,
+        "default_ok": 3,
+        "feedback_repair_ok": 10,
+        "oracle_ceiling_ok": 10
+      },
+      "conditional_time": {
+        "task_count": 12,
+        "naive_ok": 0,
+        "default_ok": 0,
+        "feedback_repair_ok": 0,
+        "oracle_ceiling_ok": 12
+      },
+      "daily": {
+        "task_count": 30,
+        "naive_ok": 15,
+        "default_ok": 15,
+        "feedback_repair_ok": 30,
+        "oracle_ceiling_ok": 30
+      },
+      "deduplicate_refunds": {
+        "task_count": 12,
+        "naive_ok": 0,
+        "default_ok": 0,
+        "feedback_repair_ok": 0,
+        "oracle_ceiling_ok": 12
+      },
+      "equal_allocation": {
+        "task_count": 12,
+        "naive_ok": 0,
+        "default_ok": 0,
+        "feedback_repair_ok": 0,
+        "oracle_ceiling_ok": 12
+      },
+      "quantity_allocation": {
+        "task_count": 12,
+        "naive_ok": 0,
+        "default_ok": 0,
+        "feedback_repair_ok": 0,
+        "oracle_ceiling_ok": 12
+      },
+      "refund_rate": {
+        "task_count": 30,
+        "naive_ok": 13,
+        "default_ok": 17,
+        "feedback_repair_ok": 30,
+        "oracle_ceiling_ok": 30
+      }
+    },
+    "instruction_style": {
+      "bilingual": {
+        "task_count": 10,
+        "naive_ok": 3,
+        "default_ok": 2,
+        "feedback_repair_ok": 6,
+        "oracle_ceiling_ok": 10
+      },
+      "compact_alias": {
+        "task_count": 10,
+        "naive_ok": 2,
+        "default_ok": 5,
+        "feedback_repair_ok": 6,
+        "oracle_ceiling_ok": 10
+      },
+      "direct": {
+        "task_count": 12,
+        "naive_ok": 5,
+        "default_ok": 3,
+        "feedback_repair_ok": 8,
+        "oracle_ceiling_ok": 12
+      },
+      "formula": {
+        "task_count": 20,
+        "naive_ok": 3,
+        "default_ok": 8,
+        "feedback_repair_ok": 12,
+        "oracle_ceiling_ok": 20
+      },
+      "legacy_dynamic": {
+        "task_count": 40,
+        "naive_ok": 17,
+        "default_ok": 18,
+        "feedback_repair_ok": 40,
+        "oracle_ceiling_ok": 40
+      },
+      "negated_override": {
+        "task_count": 22,
+        "naive_ok": 4,
+        "default_ok": 5,
+        "feedback_repair_ok": 14,
+        "oracle_ceiling_ok": 22
+      },
+      "ops_memo": {
+        "task_count": 12,
+        "naive_ok": 2,
+        "default_ok": 3,
+        "feedback_repair_ok": 8,
+        "oracle_ceiling_ok": 12
+      },
+      "policy_ticket": {
+        "task_count": 20,
+        "naive_ok": 2,
+        "default_ok": 4,
+        "feedback_repair_ok": 12,
+        "oracle_ceiling_ok": 20
+      },
+      "worked_example": {
+        "task_count": 22,
+        "naive_ok": 6,
+        "default_ok": 7,
+        "feedback_repair_ok": 14,
+        "oracle_ceiling_ok": 22
+      }
+    },
+    "data_profile": {
+      "cross_period": {
+        "task_count": 32,
+        "naive_ok": 14,
+        "default_ok": 16,
+        "feedback_repair_ok": 20,
+        "oracle_ceiling_ok": 32
+      },
+      "dense": {
+        "task_count": 32,
+        "naive_ok": 4,
+        "default_ok": 6,
+        "feedback_repair_ok": 20,
+        "oracle_ceiling_ok": 32
+      },
+      "legacy": {
+        "task_count": 40,
+        "naive_ok": 17,
+        "default_ok": 18,
+        "feedback_repair_ok": 40,
+        "oracle_ceiling_ok": 40
+      },
+      "multi_refund": {
+        "task_count": 32,
+        "naive_ok": 4,
+        "default_ok": 6,
+        "feedback_repair_ok": 20,
+        "oracle_ceiling_ok": 32
+      },
+      "shuffled": {
+        "task_count": 32,
+        "naive_ok": 5,
+        "default_ok": 9,
+        "feedback_repair_ok": 20,
+        "oracle_ceiling_ok": 32
+      }
+    }
+  },
+  "rows": [
+    {
+      "task": "cap-evolution-001",
+      "split": "evolution",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "direct",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-evolution-002",
+      "split": "evolution",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "ops_memo",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-evolution-003",
+      "split": "evolution",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "worked_example",
+      "data_profile": "cross_period",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-evolution-004",
+      "split": "evolution",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "negated_override",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-evolution-005",
+      "split": "evolution",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "ops_memo",
+      "data_profile": "cross_period",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-evolution-006",
+      "split": "evolution",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "worked_example",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-evolution-007",
+      "split": "evolution",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "negated_override",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "cap-evolution-008",
+      "split": "evolution",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "direct",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "cap-evolution-009",
+      "split": "evolution",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "worked_example",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-evolution-010",
+      "split": "evolution",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "negated_override",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-evolution-011",
+      "split": "evolution",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "direct",
+      "data_profile": "cross_period",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-evolution-012",
+      "split": "evolution",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "ops_memo",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-evolution-013",
+      "split": "evolution",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "negated_override",
+      "data_profile": "cross_period",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-evolution-014",
+      "split": "evolution",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "direct",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-evolution-015",
+      "split": "evolution",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "ops_memo",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "cap-evolution-016",
+      "split": "evolution",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "worked_example",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "evolution-001-refund_rate",
+      "split": "evolution",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "direct",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-002-category",
+      "split": "evolution",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "ops_memo",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-003-daily",
+      "split": "evolution",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "worked_example",
+      "data_profile": "cross_period",
+      "naive_ok": true,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-004-all_metrics",
+      "split": "evolution",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "negated_override",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-005-refund_rate",
+      "split": "evolution",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "ops_memo",
+      "data_profile": "cross_period",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-006-category",
+      "split": "evolution",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "worked_example",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-007-daily",
+      "split": "evolution",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "negated_override",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "evolution-008-all_metrics",
+      "split": "evolution",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "direct",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "evolution-009-refund_rate",
+      "split": "evolution",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "worked_example",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-010-category",
+      "split": "evolution",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "negated_override",
+      "data_profile": "multi_refund",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-011-daily",
+      "split": "evolution",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "direct",
+      "data_profile": "cross_period",
+      "naive_ok": true,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-012-all_metrics",
+      "split": "evolution",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "ops_memo",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-013-refund_rate",
+      "split": "evolution",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "negated_override",
+      "data_profile": "cross_period",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-014-category",
+      "split": "evolution",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "direct",
+      "data_profile": "shuffled",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-015-daily",
+      "split": "evolution",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "ops_memo",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "evolution-016-all_metrics",
+      "split": "evolution",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "worked_example",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "evolution-017-refund_rate",
+      "split": "evolution",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "direct",
+      "data_profile": "dense",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-018-category",
+      "split": "evolution",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "ops_memo",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-019-daily",
+      "split": "evolution",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "worked_example",
+      "data_profile": "cross_period",
+      "naive_ok": true,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-020-all_metrics",
+      "split": "evolution",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "negated_override",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-021-refund_rate",
+      "split": "evolution",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "ops_memo",
+      "data_profile": "cross_period",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-022-category",
+      "split": "evolution",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "worked_example",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-023-daily",
+      "split": "evolution",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "negated_override",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "evolution-024-all_metrics",
+      "split": "evolution",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "direct",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "evolution-025-refund_rate",
+      "split": "evolution",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "worked_example",
+      "data_profile": "dense",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-026-category",
+      "split": "evolution",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "negated_override",
+      "data_profile": "multi_refund",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-027-daily",
+      "split": "evolution",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "direct",
+      "data_profile": "cross_period",
+      "naive_ok": true,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-028-all_metrics",
+      "split": "evolution",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "ops_memo",
+      "data_profile": "shuffled",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-029-refund_rate",
+      "split": "evolution",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "negated_override",
+      "data_profile": "cross_period",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-030-category",
+      "split": "evolution",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "direct",
+      "data_profile": "shuffled",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "evolution-031-daily",
+      "split": "evolution",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "ops_memo",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "evolution-032-all_metrics",
+      "split": "evolution",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "worked_example",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "holdout-001-refund_rate",
+      "split": "regression",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-002-category",
+      "split": "regression",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-003-combined",
+      "split": "regression",
+      "scenario": "combined",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-004-daily",
+      "split": "regression",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "holdout-005-refund_rate",
+      "split": "regression",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-006-category",
+      "split": "regression",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-007-combined",
+      "split": "regression",
+      "scenario": "combined",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-008-daily",
+      "split": "regression",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": true,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-009-refund_rate",
+      "split": "regression",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-010-category",
+      "split": "regression",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-011-combined",
+      "split": "regression",
+      "scenario": "combined",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-012-daily",
+      "split": "regression",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "holdout-013-refund_rate",
+      "split": "regression",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-014-category",
+      "split": "regression",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-015-combined",
+      "split": "regression",
+      "scenario": "combined",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-016-daily",
+      "split": "regression",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": true,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-017-refund_rate",
+      "split": "regression",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-018-category",
+      "split": "regression",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-019-combined",
+      "split": "regression",
+      "scenario": "combined",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-020-daily",
+      "split": "regression",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "holdout-021-refund_rate",
+      "split": "regression",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-022-category",
+      "split": "regression",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-023-combined",
+      "split": "regression",
+      "scenario": "combined",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-024-daily",
+      "split": "regression",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": true,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-025-refund_rate",
+      "split": "regression",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-026-category",
+      "split": "regression",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-027-combined",
+      "split": "regression",
+      "scenario": "combined",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-028-daily",
+      "split": "regression",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "holdout-029-refund_rate",
+      "split": "regression",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-030-category",
+      "split": "regression",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-031-combined",
+      "split": "regression",
+      "scenario": "combined",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-032-daily",
+      "split": "regression",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": true,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-033-refund_rate",
+      "split": "regression",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-034-category",
+      "split": "regression",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-035-combined",
+      "split": "regression",
+      "scenario": "combined",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-036-daily",
+      "split": "regression",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "holdout-037-refund_rate",
+      "split": "regression",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-038-category",
+      "split": "regression",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-039-combined",
+      "split": "regression",
+      "scenario": "combined",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-040-daily",
+      "split": "regression",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "legacy_dynamic",
+      "data_profile": "legacy",
+      "naive_ok": true,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-transfer-001",
+      "split": "transfer",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "bilingual",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-transfer-002",
+      "split": "transfer",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "formula",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-transfer-003",
+      "split": "transfer",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "compact_alias",
+      "data_profile": "cross_period",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-transfer-004",
+      "split": "transfer",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "policy_ticket",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-transfer-005",
+      "split": "transfer",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "formula",
+      "data_profile": "cross_period",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-transfer-006",
+      "split": "transfer",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "compact_alias",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-transfer-007",
+      "split": "transfer",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "policy_ticket",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "cap-transfer-008",
+      "split": "transfer",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "bilingual",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "cap-transfer-009",
+      "split": "transfer",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "compact_alias",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-transfer-010",
+      "split": "transfer",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "policy_ticket",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-transfer-011",
+      "split": "transfer",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "bilingual",
+      "data_profile": "cross_period",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-transfer-012",
+      "split": "transfer",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "formula",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-transfer-013",
+      "split": "transfer",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "policy_ticket",
+      "data_profile": "cross_period",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-transfer-014",
+      "split": "transfer",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "bilingual",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-transfer-015",
+      "split": "transfer",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "formula",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "cap-transfer-016",
+      "split": "transfer",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "compact_alias",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "transfer-001-refund_rate",
+      "split": "transfer",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "bilingual",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "transfer-002-category",
+      "split": "transfer",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "formula",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "transfer-003-daily",
+      "split": "transfer",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "compact_alias",
+      "data_profile": "cross_period",
+      "naive_ok": true,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "transfer-004-all_metrics",
+      "split": "transfer",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "policy_ticket",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "transfer-005-refund_rate",
+      "split": "transfer",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "formula",
+      "data_profile": "cross_period",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "transfer-006-category",
+      "split": "transfer",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "compact_alias",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "transfer-007-daily",
+      "split": "transfer",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "policy_ticket",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "transfer-008-all_metrics",
+      "split": "transfer",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "bilingual",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "transfer-009-refund_rate",
+      "split": "transfer",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "compact_alias",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "transfer-010-category",
+      "split": "transfer",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "policy_ticket",
+      "data_profile": "multi_refund",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "transfer-011-daily",
+      "split": "transfer",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "bilingual",
+      "data_profile": "cross_period",
+      "naive_ok": true,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "transfer-012-all_metrics",
+      "split": "transfer",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "formula",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "transfer-013-refund_rate",
+      "split": "transfer",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "policy_ticket",
+      "data_profile": "cross_period",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "transfer-014-category",
+      "split": "transfer",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "bilingual",
+      "data_profile": "shuffled",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "transfer-015-daily",
+      "split": "transfer",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "formula",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "transfer-016-all_metrics",
+      "split": "transfer",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "compact_alias",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "transfer-017-refund_rate",
+      "split": "transfer",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "bilingual",
+      "data_profile": "dense",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "transfer-018-category",
+      "split": "transfer",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "formula",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "transfer-019-daily",
+      "split": "transfer",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "compact_alias",
+      "data_profile": "cross_period",
+      "naive_ok": true,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "transfer-020-all_metrics",
+      "split": "transfer",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "policy_ticket",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "transfer-021-refund_rate",
+      "split": "transfer",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "formula",
+      "data_profile": "cross_period",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "transfer-022-category",
+      "split": "transfer",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "compact_alias",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "transfer-023-daily",
+      "split": "transfer",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "policy_ticket",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "transfer-024-all_metrics",
+      "split": "transfer",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "bilingual",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "cap-validation-001",
+      "split": "validation",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "worked_example",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-validation-002",
+      "split": "validation",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "negated_override",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-validation-003",
+      "split": "validation",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "formula",
+      "data_profile": "cross_period",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-validation-004",
+      "split": "validation",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "policy_ticket",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-validation-005",
+      "split": "validation",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "negated_override",
+      "data_profile": "cross_period",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-validation-006",
+      "split": "validation",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "formula",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-validation-007",
+      "split": "validation",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "policy_ticket",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "cap-validation-008",
+      "split": "validation",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "worked_example",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "cap-validation-009",
+      "split": "validation",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "formula",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-validation-010",
+      "split": "validation",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "policy_ticket",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-validation-011",
+      "split": "validation",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "worked_example",
+      "data_profile": "cross_period",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-validation-012",
+      "split": "validation",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "negated_override",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-validation-013",
+      "split": "validation",
+      "scenario": "equal_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "equal_allocation",
+      "instruction_style": "policy_ticket",
+      "data_profile": "cross_period",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-validation-014",
+      "split": "validation",
+      "scenario": "quantity_allocation",
+      "case_kind": "capability_expansion",
+      "capability_family": "quantity_allocation",
+      "instruction_style": "worked_example",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "cap-validation-015",
+      "split": "validation",
+      "scenario": "deduplicate_refunds",
+      "case_kind": "capability_expansion",
+      "capability_family": "deduplicate_refunds",
+      "instruction_style": "negated_override",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "cap-validation-016",
+      "split": "validation",
+      "scenario": "conditional_time",
+      "case_kind": "capability_expansion",
+      "capability_family": "conditional_time",
+      "instruction_style": "formula",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": false,
+      "representable_oracle_policy_ok": false,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "validation-001-refund_rate",
+      "split": "validation",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "worked_example",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "validation-002-category",
+      "split": "validation",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "negated_override",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "validation-003-daily",
+      "split": "validation",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "formula",
+      "data_profile": "cross_period",
+      "naive_ok": true,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "validation-004-all_metrics",
+      "split": "validation",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "policy_ticket",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "validation-005-refund_rate",
+      "split": "validation",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "negated_override",
+      "data_profile": "cross_period",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "validation-006-category",
+      "split": "validation",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "formula",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "validation-007-daily",
+      "split": "validation",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "policy_ticket",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "validation-008-all_metrics",
+      "split": "validation",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "worked_example",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "validation-009-refund_rate",
+      "split": "validation",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "formula",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "validation-010-category",
+      "split": "validation",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "policy_ticket",
+      "data_profile": "multi_refund",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "validation-011-daily",
+      "split": "validation",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "worked_example",
+      "data_profile": "cross_period",
+      "naive_ok": true,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "validation-012-all_metrics",
+      "split": "validation",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "negated_override",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "validation-013-refund_rate",
+      "split": "validation",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "policy_ticket",
+      "data_profile": "cross_period",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "validation-014-category",
+      "split": "validation",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "worked_example",
+      "data_profile": "shuffled",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "validation-015-daily",
+      "split": "validation",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "negated_override",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "validation-016-all_metrics",
+      "split": "validation",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "formula",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "validation-017-refund_rate",
+      "split": "validation",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "worked_example",
+      "data_profile": "dense",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "validation-018-category",
+      "split": "validation",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "negated_override",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "validation-019-daily",
+      "split": "validation",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "formula",
+      "data_profile": "cross_period",
+      "naive_ok": true,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "validation-020-all_metrics",
+      "split": "validation",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "policy_ticket",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "validation-021-refund_rate",
+      "split": "validation",
+      "scenario": "refund_rate",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "negated_override",
+      "data_profile": "cross_period",
+      "naive_ok": true,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 1,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "validation-022-category",
+      "split": "validation",
+      "scenario": "category",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "formula",
+      "data_profile": "shuffled",
+      "naive_ok": false,
+      "default_ok": true,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "validation-023-daily",
+      "split": "validation",
+      "scenario": "daily",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "policy_ticket",
+      "data_profile": "dense",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "validation-024-all_metrics",
+      "split": "validation",
+      "scenario": "all_metrics",
+      "case_kind": "contract_selection",
+      "capability_family": "none",
+      "instruction_style": "worked_example",
+      "data_profile": "multi_refund",
+      "naive_ok": false,
+      "default_ok": false,
+      "feedback_repair_ok": true,
+      "representable_oracle_policy_ok": true,
+      "oracle_ceiling_ok": true,
+      "repair_attempts": 2,
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "order_date"
+      }
+    }
+  ]
+}

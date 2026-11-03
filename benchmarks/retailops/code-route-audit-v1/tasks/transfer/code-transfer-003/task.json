@@ -1,0 +1,11 @@
+{
+  "instruction": "Recognized returns for one order must never exceed its original order value. Process return events sequentially, trim the event that reaches the limit, and ignore later excess events.",
+  "tools": [
+    "category_ranking",
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "transfer",
+    "case_kind": "code_capability"
+  }
+}

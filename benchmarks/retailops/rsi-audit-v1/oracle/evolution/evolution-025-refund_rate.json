@@ -1,0 +1,20 @@
+{
+  "case_id": "evolution-025-refund_rate",
+  "split": "evolution",
+  "scenario": "refund_rate",
+  "metric_contract": {
+    "refund_rate_denominator": "order_lines",
+    "category_refund_allocation": "first_category",
+    "refund_time_attribution": "refund_date"
+  },
+  "relevant_contract_fields": [
+    "refund_rate_denominator"
+  ],
+  "results": {
+    "refund_rate": {
+      "total_orders": 52,
+      "refunded_orders": 3,
+      "refund_rate": "0.05769230769230769230769230769"
+    }
+  }
+}

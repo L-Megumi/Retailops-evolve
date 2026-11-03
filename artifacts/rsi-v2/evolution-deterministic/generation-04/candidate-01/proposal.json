@@ -1,0 +1,5 @@
+{
+  "cue": "逐笔计算退款日与原订单日的自然日间隔",
+  "action": "hybrid_refund_time",
+  "reason": "deterministic test proposal inferred from the task rule"
+}

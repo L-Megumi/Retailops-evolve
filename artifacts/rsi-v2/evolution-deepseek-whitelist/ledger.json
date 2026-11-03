@@ -1,0 +1,266 @@
+[
+  {
+    "generation": 1,
+    "candidate": 1,
+    "source_task": "cap-evolution-001",
+    "proposal": {
+      "cue": "同一退款订单涉及 N 个品类时",
+      "action": "equal_category_allocation",
+      "reason": "When a single refund order spans multiple categories, the refund must be split equally across those categories rather than allocated by transaction amount, with any rounding remainder assigned to the last category in input order."
+    },
+    "decision": {
+      "accepted": true,
+      "gate_checks": {
+        "bounded_one_rule_edit": true,
+        "regression_no_loss": true,
+        "evolution_no_loss": true,
+        "validation_no_loss": true,
+        "evolution_improved": true,
+        "validation_improved": true,
+        "evolution_gain_floor": true,
+        "validation_gain_floor": true
+      },
+      "lost_passes": {
+        "regression": [],
+        "evolution": [],
+        "validation": []
+      },
+      "score_gains": {
+        "evolution": 4,
+        "validation": 4,
+        "minimum_required": 4
+      },
+      "incumbent_scores": {
+        "regression": {
+          "split": "regression",
+          "passed": 40,
+          "task_count": 40
+        },
+        "evolution": {
+          "split": "evolution",
+          "passed": 32,
+          "task_count": 48
+        },
+        "validation": {
+          "split": "validation",
+          "passed": 24,
+          "task_count": 40
+        }
+      },
+      "candidate_scores": {
+        "regression": {
+          "split": "regression",
+          "passed": 40,
+          "task_count": 40
+        },
+        "evolution": {
+          "split": "evolution",
+          "passed": 36,
+          "task_count": 48
+        },
+        "validation": {
+          "split": "validation",
+          "passed": 28,
+          "task_count": 40
+        }
+      }
+    },
+    "incumbent_version_after": 1,
+    "incumbent_hash_after": "5ba1af189ad7783db3e23d6e7a8ff4def3092a1bcaf8ba84722ff65b07232a32"
+  },
+  {
+    "generation": 2,
+    "candidate": 1,
+    "source_task": "cap-evolution-002",
+    "proposal": {
+      "cue": "跨品类退款按该订单中各品类商品数量之和加权分摊",
+      "action": "quantity_category_allocation",
+      "reason": "When a refund spans multiple categories, allocate it across those categories in proportion to the summed item quantity per category in the order, not by sales amount or equal split."
+    },
+    "decision": {
+      "accepted": true,
+      "gate_checks": {
+        "bounded_one_rule_edit": true,
+        "regression_no_loss": true,
+        "evolution_no_loss": true,
+        "validation_no_loss": true,
+        "evolution_improved": true,
+        "validation_improved": true,
+        "evolution_gain_floor": true,
+        "validation_gain_floor": true
+      },
+      "lost_passes": {
+        "regression": [],
+        "evolution": [],
+        "validation": []
+      },
+      "score_gains": {
+        "evolution": 4,
+        "validation": 4,
+        "minimum_required": 4
+      },
+      "incumbent_scores": {
+        "regression": {
+          "split": "regression",
+          "passed": 40,
+          "task_count": 40
+        },
+        "evolution": {
+          "split": "evolution",
+          "passed": 36,
+          "task_count": 48
+        },
+        "validation": {
+          "split": "validation",
+          "passed": 28,
+          "task_count": 40
+        }
+      },
+      "candidate_scores": {
+        "regression": {
+          "split": "regression",
+          "passed": 40,
+          "task_count": 40
+        },
+        "evolution": {
+          "split": "evolution",
+          "passed": 40,
+          "task_count": 48
+        },
+        "validation": {
+          "split": "validation",
+          "passed": 32,
+          "task_count": 40
+        }
+      }
+    },
+    "incumbent_version_after": 2,
+    "incumbent_hash_after": "69cbc49e0eae8ce7ebc7150d2276e3877541d9cbaf1d2b6e62eb3c9887818f13"
+  },
+  {
+    "generation": 3,
+    "candidate": 1,
+    "source_task": "cap-evolution-003",
+    "proposal": {
+      "cue": "相同 refund_id 只认第一次",
+      "action": "deduplicate_refunds",
+      "reason": "When the refund file may contain duplicate rows from repeated collection, keep only the first row per refund_id before computing any metrics so later duplicates never deduct again."
+    },
+    "decision": {
+      "accepted": true,
+      "gate_checks": {
+        "bounded_one_rule_edit": true,
+        "regression_no_loss": true,
+        "evolution_no_loss": true,
+        "validation_no_loss": true,
+        "evolution_improved": true,
+        "validation_improved": true,
+        "evolution_gain_floor": true,
+        "validation_gain_floor": true
+      },
+      "lost_passes": {
+        "regression": [],
+        "evolution": [],
+        "validation": []
+      },
+      "score_gains": {
+        "evolution": 4,
+        "validation": 4,
+        "minimum_required": 4
+      },
+      "incumbent_scores": {
+        "regression": {
+          "split": "regression",
+          "passed": 40,
+          "task_count": 40
+        },
+        "evolution": {
+          "split": "evolution",
+          "passed": 40,
+          "task_count": 48
+        },
+        "validation": {
+          "split": "validation",
+          "passed": 32,
+          "task_count": 40
+        }
+      },
+      "candidate_scores": {
+        "regression": {
+          "split": "regression",
+          "passed": 40,
+          "task_count": 40
+        },
+        "evolution": {
+          "split": "evolution",
+          "passed": 44,
+          "task_count": 48
+        },
+        "validation": {
+          "split": "validation",
+          "passed": 36,
+          "task_count": 40
+        }
+      }
+    },
+    "incumbent_version_after": 3,
+    "incumbent_hash_after": "b07aaaec453ab30c5aabc29649bbc51ab662c3128b0484b3917d387d9dbfc643"
+  },
+  {
+    "generation": 4,
+    "candidate": 1,
+    "source_task": "cap-evolution-004",
+    "proposal": {
+      "cue": "审计优先规则（覆盖历史默认口径）",
+      "action": "hybrid_refund_time",
+      "reason": "When an audit-priority rule overrides the historical default, judge each refund row individually: refunds within the short natural-day lag use the original order date, while longer-lag refunds keep the actual refund date, rather than applying one date field to the whole table."
+    },
+    "decision": {
+      "accepted": false,
+      "gate_checks": {
+        "proposal_valid": false
+      },
+      "error": "ValueError: hybrid_refund_time rule matched but no day threshold was found"
+    },
+    "incumbent_version_after": 3,
+    "incumbent_hash_after": "b07aaaec453ab30c5aabc29649bbc51ab662c3128b0484b3917d387d9dbfc643"
+  },
+  {
+    "generation": 4,
+    "candidate": 2,
+    "source_task": "cap-evolution-004",
+    "proposal": {
+      "cue": "审计优先规则（覆盖历史默认口径）",
+      "action": "hybrid_refund_time",
+      "reason": "When an audit-priority rule overrides the historical default, judge each refund individually: refunds whose natural-day lag from the original order date is within the instruction's threshold are written back to the order date, while longer-lag refunds stay on the actual refund date, so no single date field is chosen for the whole table."
+    },
+    "decision": {
+      "accepted": false,
+      "gate_checks": {
+        "proposal_valid": false
+      },
+      "error": "ValueError: hybrid_refund_time rule matched but no day threshold was found"
+    },
+    "incumbent_version_after": 3,
+    "incumbent_hash_after": "b07aaaec453ab30c5aabc29649bbc51ab662c3128b0484b3917d387d9dbfc643"
+  },
+  {
+    "generation": 4,
+    "candidate": 3,
+    "source_task": "cap-evolution-004",
+    "proposal": {
+      "cue": "审计优先规则（覆盖历史默认口径）",
+      "action": "hybrid_refund_time",
+      "reason": "When an audit-priority rule overrides the historical default, judge each refund row individually: refunds whose natural-day lag from the original order date is within the stated threshold are written back to the order date, while longer-lag refunds stay on the actual refund date, so no single date field is chosen for the whole table."
+    },
+    "decision": {
+      "accepted": false,
+      "gate_checks": {
+        "proposal_valid": false
+      },
+      "error": "ValueError: hybrid_refund_time rule matched but no day threshold was found"
+    },
+    "incumbent_version_after": 3,
+    "incumbent_hash_after": "b07aaaec453ab30c5aabc29649bbc51ab662c3128b0484b3917d387d9dbfc643"
+  }
+]

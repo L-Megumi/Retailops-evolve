@@ -1,0 +1,10 @@
+{
+  "instruction": "监控售后消息被上游重复发送的频率：同一事件凭证除首次外都算重发，除以原始流量。",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "audit",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

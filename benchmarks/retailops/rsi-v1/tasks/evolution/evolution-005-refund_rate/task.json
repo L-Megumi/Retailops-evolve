@@ -1,0 +1,12 @@
+{
+  "instruction": "经营分析备忘录｜交付：退款订单率。P0 口径覆盖系统默认值：退款订单率的分母先按 order_id 去重，采用唯一订单数；分子也是发生退款的唯一订单数。币种保持人民币，净额=成交额-退款额。",
+  "tools": [
+    "refund_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "difficulty": "challenge",
+    "instruction_style": "ops_memo",
+    "data_profile": "cross_period"
+  }
+}

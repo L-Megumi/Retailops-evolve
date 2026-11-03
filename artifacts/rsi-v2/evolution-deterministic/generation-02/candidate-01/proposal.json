@@ -1,0 +1,5 @@
+{
+  "cue": "商品数量之和加权分摊",
+  "action": "quantity_category_allocation",
+  "reason": "deterministic test proposal inferred from the task rule"
+}

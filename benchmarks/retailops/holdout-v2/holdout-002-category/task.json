@@ -1,0 +1,6 @@
+{
+  "instruction": "比较各品类净成交额，跨品类订单的退款依据订单行金额比例拆分。",
+  "tools": [
+    "category_ranking"
+  ]
+}

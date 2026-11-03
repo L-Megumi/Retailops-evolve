@@ -1,0 +1,11 @@
+{
+  "instruction": "退款不得把订单净额扣成负数。顺序读取退款流水，每笔只承认尚未退掉的订单金额，然后生成两类经营汇总。",
+  "tools": [
+    "category_ranking",
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "transfer",
+    "case_kind": "code_capability"
+  }
+}

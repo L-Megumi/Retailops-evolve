@@ -1,0 +1,10 @@
+{
+  "instruction": "Compute idempotency replay metrics for refunds; repeated occurrences after the earliest row count as duplicates.",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

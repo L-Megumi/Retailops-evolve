@@ -1,0 +1,5 @@
+{
+  "cue": "间隔不超过若干天的退款回写订单日，超过的保留在实际退款日",
+  "action": "hybrid_refund_time",
+  "reason": "The instruction requires a per-refund day-gap comparison so short-lag refunds use the order date while long-lag refunds use the actual refund date, which is exactly the hybrid_refund_time rule."
+}

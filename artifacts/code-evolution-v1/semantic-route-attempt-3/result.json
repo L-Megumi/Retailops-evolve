@@ -1,0 +1,206 @@
+{
+  "accepted": false,
+  "gate_checks": {
+    "development_code_full": false,
+    "legacy_route_zero_collision": true,
+    "legacy_strategy_full": true
+  },
+  "registration": {
+    "plugin_id": "cumulative-refund-cap-v1",
+    "cues": [
+      "累计退款上限",
+      "累计有效退款",
+      "订单级余额池",
+      "累计可退款额度",
+      "订单级退款封顶",
+      "退款总确认额不能大于订单销售额",
+      "总退款最多等于其 gross sales",
+      "退款余额从成交额开始",
+      "按退款文件顺序",
+      "依输入顺序扣减余额",
+      "顺序消费额度",
+      "cumulative refund cap"
+    ],
+    "source_sha256": "906f3b16020aa6760c07a0556daa19b17587406bef3e423a1e83e3ca3e23bd5c",
+    "source_path": "artifacts/code-evolution-v1/attempt-2/candidate.py",
+    "keyword_groups": [
+      [
+        "订单",
+        "退款",
+        "天花板",
+        "成交额"
+      ],
+      [
+        "订单",
+        "退款",
+        "不得",
+        "负数"
+      ],
+      [
+        "退款",
+        "顺序",
+        "截断",
+        "超额"
+      ],
+      [
+        "退款",
+        "流水",
+        "尚未",
+        "金额"
+      ],
+      [
+        "order",
+        "refund",
+        "ceiling",
+        "sales"
+      ],
+      [
+        "order",
+        "refund",
+        "must",
+        "negative"
+      ],
+      [
+        "refund",
+        "sequential",
+        "truncate",
+        "excess"
+      ],
+      [
+        "refund",
+        "remaining",
+        "balance",
+        "order"
+      ]
+    ],
+    "reason": "Replaced the overlong English negation group with a 4-token form and kept the useful Chinese ceiling/negative/sequential-truncation semantics plus English ceiling, negation, truncation, and remaining-balance conjunctions. All groups have 2-4 literal tokens, avoid task ids and regex, and do not repeat the existing literal cues."
+  },
+  "development_scores": {
+    "evolution": {
+      "split": "evolution",
+      "passed": 4,
+      "task_count": 4,
+      "matched": 4,
+      "rows": [
+        {
+          "task": "code-evolution-001",
+          "matched": true,
+          "ok": true,
+          "plugin_error": ""
+        },
+        {
+          "task": "code-evolution-002",
+          "matched": true,
+          "ok": true,
+          "plugin_error": ""
+        },
+        {
+          "task": "code-evolution-003",
+          "matched": true,
+          "ok": true,
+          "plugin_error": ""
+        },
+        {
+          "task": "code-evolution-004",
+          "matched": true,
+          "ok": true,
+          "plugin_error": ""
+        }
+      ]
+    },
+    "validation": {
+      "split": "validation",
+      "passed": 4,
+      "task_count": 4,
+      "matched": 4,
+      "rows": [
+        {
+          "task": "code-validation-001",
+          "matched": true,
+          "ok": true,
+          "plugin_error": ""
+        },
+        {
+          "task": "code-validation-002",
+          "matched": true,
+          "ok": true,
+          "plugin_error": ""
+        },
+        {
+          "task": "code-validation-003",
+          "matched": true,
+          "ok": true,
+          "plugin_error": ""
+        },
+        {
+          "task": "code-validation-004",
+          "matched": true,
+          "ok": true,
+          "plugin_error": ""
+        }
+      ]
+    },
+    "transfer": {
+      "split": "transfer",
+      "passed": 3,
+      "task_count": 4,
+      "matched": 3,
+      "rows": [
+        {
+          "task": "code-transfer-001",
+          "matched": true,
+          "ok": true,
+          "plugin_error": ""
+        },
+        {
+          "task": "code-transfer-002",
+          "matched": true,
+          "ok": true,
+          "plugin_error": ""
+        },
+        {
+          "task": "code-transfer-003",
+          "matched": true,
+          "ok": true,
+          "plugin_error": ""
+        },
+        {
+          "task": "code-transfer-004",
+          "matched": false,
+          "ok": false,
+          "plugin_error": ""
+        }
+      ]
+    }
+  },
+  "legacy_collisions": [],
+  "legacy_scores": {
+    "regression": {
+      "split": "regression",
+      "passed": 40,
+      "task_count": 40
+    },
+    "evolution": {
+      "split": "evolution",
+      "passed": 48,
+      "task_count": 48
+    },
+    "validation": {
+      "split": "validation",
+      "passed": 40,
+      "task_count": 40
+    },
+    "transfer": {
+      "split": "transfer",
+      "passed": 40,
+      "task_count": 40
+    }
+  },
+  "post_repair_audit": null,
+  "model_calls": 1,
+  "model_usage": {
+    "prompt_tokens": 592,
+    "completion_tokens": 161,
+    "total_tokens": 753
+  }
+}

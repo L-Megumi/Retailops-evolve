@@ -1,0 +1,33 @@
+{
+  "version": 4,
+  "rules": [
+    {
+      "rule_id": "learned-g01",
+      "cue": "等额拆分",
+      "action": "equal_category_allocation",
+      "reason": "deterministic test proposal inferred from the task rule",
+      "source_task": "cap-evolution-001"
+    },
+    {
+      "rule_id": "learned-g02",
+      "cue": "商品数量之和加权分摊",
+      "action": "quantity_category_allocation",
+      "reason": "deterministic test proposal inferred from the task rule",
+      "source_task": "cap-evolution-002"
+    },
+    {
+      "rule_id": "learned-g03",
+      "cue": "相同 refund_id 只认第一次",
+      "action": "deduplicate_refunds",
+      "reason": "deterministic test proposal inferred from the task rule",
+      "source_task": "cap-evolution-003"
+    },
+    {
+      "rule_id": "learned-g04",
+      "cue": "逐笔计算退款日与原订单日的自然日间隔",
+      "action": "hybrid_refund_time",
+      "reason": "deterministic test proposal inferred from the task rule",
+      "source_task": "cap-evolution-004"
+    }
+  ]
+}

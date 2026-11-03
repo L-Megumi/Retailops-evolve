@@ -1,0 +1,8 @@
+{
+  "case_id": "metric-evolution-008",
+  "expected": {
+    "total_refund_rows": 20,
+    "duplicate_rows": 11,
+    "replay_rate_bps": 5500
+  }
+}

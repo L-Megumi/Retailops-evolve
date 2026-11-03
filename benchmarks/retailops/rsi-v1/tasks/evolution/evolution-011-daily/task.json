@@ -1,0 +1,12 @@
+{
+  "instruction": "请输出每日成交额、退款额与净销售额。本批次口径：退款计入退款实际发生日期。",
+  "tools": [
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "difficulty": "challenge",
+    "instruction_style": "direct",
+    "data_profile": "cross_period"
+  }
+}

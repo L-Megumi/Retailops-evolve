@@ -1,0 +1,678 @@
+{
+  "accepted": false,
+  "development": {
+    "passed": 24,
+    "count": 24,
+    "rows": [
+      {
+        "id": "multi-route-cap-001",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "任务要求对同一笔销售的多笔退货按顺序累计认可，并以最初商品货款为上限，越界那笔只取剩余部分，完全符合按订单累计退款上限插件的定义。",
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-002",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "任务要求为每张销售单维护可退本金，售后事件逐条消耗，本金归零后不再确认后续金额，这正是按订单累计退款上限并在额度耗尽后拒绝后续超额的核心逻辑。",
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-003",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "任务要求按每笔交易累计历史与本次退货，并以原始货值为上限，符合按订单累计封顶的插件定义。",
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-004",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "任务明确要求对同一销售凭证的多笔返款按到达顺序累计，并以原销售金额为上限，跨过余额的那笔部分接受、超出部分拒绝，完全符合按订单累计封顶并按输入顺序处理、跨界事件部分接受的插件定义。",
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-005",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task describes a per-sale cumulative allowance equal to original merchandise value, consumed in event order with partial acceptance at the boundary—exactly the cumulative refund cap behavior.",
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-006",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task requires accumulating return events per sale in chronological order and capping at the original sold value, with partial acceptance of the boundary event—exactly the cumulative per-order refund cap behavior.",
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-007",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task requires tracking a per-transaction remaining refundable principal and stopping recognition once it reaches zero, which is a per-order cumulative cap on accepted refund value based on original value.",
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-008",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task requires accumulating return events per sale and capping accepted value at original gross, trimming only the crossing event—exactly the cumulative per-order cap behavior.",
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-001",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "任务要求按售后流水号（唯一事件标识）去重，仅保留最早到达的记录并原样保留其余字段，符合退款事件去重插件的定义。",
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-002",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "任务要求按业务流水标识（唯一事件标识）去重退货事件，仅保留首次出现并保持原文件顺序，完全符合该插件的定义。",
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-003",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "任务要求按返款凭证编号去重，只保留最先出现的一条，后续相同编号跳过，符合按唯一事件标识去重并保留输入顺序的定义。",
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-004",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "任务要求按售后事件唯一标识去重，保留首条且不修改金额、日期和关联销售单，完全符合该插件的定义。",
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-005",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task is to deduplicate replayed reimbursement events by their reference, keeping the earliest occurrence and discarding later duplicates, which matches the refund-event deduplication plugin exactly.",
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-006",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task is to remove duplicate return/refund events by unique event identifier, keeping the first occurrence and preserving order, which matches the deduplication plugin exactly.",
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-007",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task is to deduplicate replayed reimbursement keys, keeping the earliest occurrence unchanged, which matches the refund event deduplication plugin exactly.",
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-008",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task is to filter exact event-identity repetitions while preserving distinct return events, which matches deduplication by unique event identity and preserving input order without changing amounts.",
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-001",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "route_reason": "The task requires two distinct operations: deduplicating refund events and enforcing a per-order cumulative refund cap. No single plugin covers both.",
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-002",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "route_reason": "任务要求对单笔返款超过 500 元转人工，属于单笔金额阈值路由，不是按订单累计封顶，也不是去重；两个插件均不匹配。",
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-003",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "route_reason": "The task only asks to list duplicate refund IDs for audit without deleting or modifying records; it does not require removing duplicate events, which is the core action of refund-event-dedup-v1, and no cumulative per-order cap is involved.",
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-004",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "route_reason": "任务要求按销售单编号合并退货行，属于按订单聚合，而非按唯一事件标识去重或按订单累计退款封顶，两个插件均不匹配。",
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-005",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "route_reason": "The task requires a store-level daily aggregate refund cap (100k/day) that pauses refunds when reached, but the only cap plugin is per-order cumulative capped at original order value; the other plugin is event deduplication. Neither matches, and the task needs a store/day aggregate cap which is expl",
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-006",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "route_reason": "任务要求检测累计退货超过成交金额的交易并告警，同时保留输入金额（不修改金额）。这属于“仅检测/告警而不改变接受金额”的情形，两个插件均明确排除此类任务：cumulative-refund-cap-v1 要求对超额部分进行截断/拒绝，而 refund-event-dedup-v1 处理的是事件去重，与累计金额比较无关。",
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-007",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "route_reason": "The task defines duplicates by matching amount and date (composite attributes), not by a unique event identity, which is explicitly excluded by refund-event-dedup-v1; it also does not involve per-order cumulative caps, so cumulative-refund-cap-v1 does not apply.",
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-008",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "route_reason": "The task is about allocating each refund evenly across line items while preserving event count and amount, which is an allocation task. Neither plugin covers allocation: cumulative-refund-cap-v1 explicitly excludes allocation, and refund-event-dedup-v1 is only for removing duplicate events.",
+        "ok": true
+      }
+    ]
+  },
+  "development_model_calls": 24,
+  "first_pass": {
+    "passed": 23,
+    "count": 24,
+    "rows": [
+      {
+        "id": "multi-v2-cap-001",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task requires accumulating accepted refund amounts across multiple partial-return batches per order, capped at the original purchase amount, with earlier batches prioritized—exactly the per-order cumulative cap behavior described by this plugin.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-cap-002",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task requires processing refund applications one by one, deducting each from the corresponding sales voucher's remaining principal, and trimming the portion that exceeds the remaining principal—this is a per-order cumulative refund cap with partial acceptance of the crossing event.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-cap-003",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "任务描述的是同一销售记录历次退回款累计共享原始货值额度，最后一次可能部分兑现，符合按订单累计退款上限并在超出时部分接受、后续拒绝的规则。",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-cap-004",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task requires per-transaction cumulative refund allocation in arrival order, capped at each transaction's original principal so no transaction ends up over-refunded, which matches the per-order cumulative cap plugin.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-cap-005",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task describes a per-purchase shared allowance initialized to the original value, with partial returns drawing it down and excess rejected—matching cumulative per-order refund capping at original GMV.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-cap-006",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task specifies per-sale cumulative refund/return value capped at the original merchandise amount, with earlier events taking precedence—matching the cumulative per-order cap plugin.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-cap-007",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task requires a per-sale remaining returnable principal that is decremented across events, with the event exhausting it partially honored—matching the cumulative per-order cap with partial acceptance of the crossing event.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-cap-008",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task describes per-order cumulative return value bounded by the order's initial gross value, matching the cumulative refund cap plugin's order-specific allowance and partial acceptance of the crossing event.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-dedup-001",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "任务要求按售后事件键去重，保留首次出现并忽略后续重复，其他事件照常处理，符合按唯一事件标识去重并保留输入顺序的定义。",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-dedup-002",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "任务要求按返款引用号去重并保留位置最靠前的一条，符合按唯一事件标识去重且保留最早出现的定义。",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-dedup-003",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "任务要求按退货事件的唯一业务键去重，保留首个版本、后续相同键不再计算，符合该插件按唯一事件标识去重并保留最早出现的定义。",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-dedup-004",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "任务要求按唯一凭证去重并保留第一次出现，且明确不能因金额相等合并不同凭证，符合按唯一事件标识去重并保留输入顺序的插件定义。",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-dedup-005",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task is to deduplicate replayed events by a unique event key, keeping the earliest occurrence and preserving rows unchanged, which matches refund-event-dedup-v1 exactly.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-dedup-006",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task is to deduplicate replayed reimbursement events by matching references, keeping the first occurrence unchanged, which matches refund-event-dedup-v1's unique event identity deduplication without amount caps.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-dedup-007",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task requires deduplicating by a unique return authorization key, keeping the earliest occurrence, and preserving distinct events that share an amount—matching the refund-event deduplication plugin's unique event identity dedup without amount-based caps.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-dedup-008",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task is to suppress later deliveries of the same external refund-event identifier, which is deduplication by unique event identity while preserving order, and explicitly not grouping by sale or date.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-none-001",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "route_reason": "The task requires deduplication by event number but keeping the last occurrence, whereas refund-event-dedup-v1 keeps the earliest occurrence; no plugin matches the required keep-last semantics.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-none-002",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "route_reason": "任务同时要求按事件标识去重和按销售单累计返款本金封顶，需要两个插件共同完成，单一插件无法覆盖全部条件。",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-none-003",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "route_reason": "The task requires merging rows based on composite attributes (amount, date, sales order) despite differing after-sales voucher numbers, which is deduplication by composite attributes—explicitly excluded by refund-event-dedup-v1—and does not involve cumulative per-order refund caps, so no plugin fits",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-none-004",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "route_reason": "The task requires computing per-customer monthly refund budget totals and deferring applications that exceed the budget. This is a customer-month aggregate cap with deferral logic, which does not match the per-order cumulative cap plugin (order-specific allowance) nor the event deduplication plugin.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-none-005",
+        "expected_plugin_id": null,
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "route_reason": "The task requires each order's accepted refunds to be accumulated and capped at the original transaction amount, with no sharing of allowance across different returns—matching the per-order cumulative cap definition.",
+        "ok": false
+      },
+      {
+        "id": "multi-v2-none-006",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "route_reason": "任务要求标记重复事件供人工复核且保留原始事件流，而 refund-event-dedup-v1 会删除重复事件，不符合保留要求；cumulative-refund-cap-v1 与重复投递无关。",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-none-007",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "route_reason": "The task requires keeping only the maximum-amount refund per sales order and deleting others, which is a per-order selection/aggregation rule. It is neither cumulative capping at original order value (cumulative-refund-cap-v1) nor deduplication by unique refund event identity (refund-event-dedup-v1)",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-none-008",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "route_reason": "任务仅要求在展示层将负数净销售额截断为零，属于展示层非负钳制，明确被 cumulative-refund-cap-v1 排除；也不涉及按唯一事件标识去重，因此无匹配插件。",
+        "ok": true
+      }
+    ]
+  },
+  "cached_repeat": {
+    "passed": 23,
+    "count": 24,
+    "rows": [
+      {
+        "id": "multi-v2-cap-001",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "route_reason": "The task requires accumulating accepted refund amounts across multiple partial-return batches per order, capped at the original purchase amount, with earlier batches prioritized—exactly the per-order cumulative cap behavior described by this plugin.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-cap-002",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "route_reason": "The task requires processing refund applications one by one, deducting each from the corresponding sales voucher's remaining principal, and trimming the portion that exceeds the remaining principal—this is a per-order cumulative refund cap with partial acceptance of the crossing event.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-cap-003",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "route_reason": "任务描述的是同一销售记录历次退回款累计共享原始货值额度，最后一次可能部分兑现，符合按订单累计退款上限并在超出时部分接受、后续拒绝的规则。",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-cap-004",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "route_reason": "The task requires per-transaction cumulative refund allocation in arrival order, capped at each transaction's original principal so no transaction ends up over-refunded, which matches the per-order cumulative cap plugin.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-cap-005",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "route_reason": "The task describes a per-purchase shared allowance initialized to the original value, with partial returns drawing it down and excess rejected—matching cumulative per-order refund capping at original GMV.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-cap-006",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "route_reason": "The task specifies per-sale cumulative refund/return value capped at the original merchandise amount, with earlier events taking precedence—matching the cumulative per-order cap plugin.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-cap-007",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "route_reason": "The task requires a per-sale remaining returnable principal that is decremented across events, with the event exhausting it partially honored—matching the cumulative per-order cap with partial acceptance of the crossing event.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-cap-008",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "route_reason": "The task describes per-order cumulative return value bounded by the order's initial gross value, matching the cumulative refund cap plugin's order-specific allowance and partial acceptance of the crossing event.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-dedup-001",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "route_reason": "任务要求按售后事件键去重，保留首次出现并忽略后续重复，其他事件照常处理，符合按唯一事件标识去重并保留输入顺序的定义。",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-dedup-002",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "route_reason": "任务要求按返款引用号去重并保留位置最靠前的一条，符合按唯一事件标识去重且保留最早出现的定义。",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-dedup-003",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "route_reason": "任务要求按退货事件的唯一业务键去重，保留首个版本、后续相同键不再计算，符合该插件按唯一事件标识去重并保留最早出现的定义。",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-dedup-004",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "route_reason": "任务要求按唯一凭证去重并保留第一次出现，且明确不能因金额相等合并不同凭证，符合按唯一事件标识去重并保留输入顺序的插件定义。",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-dedup-005",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "route_reason": "The task is to deduplicate replayed events by a unique event key, keeping the earliest occurrence and preserving rows unchanged, which matches refund-event-dedup-v1 exactly.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-dedup-006",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "route_reason": "The task is to deduplicate replayed reimbursement events by matching references, keeping the first occurrence unchanged, which matches refund-event-dedup-v1's unique event identity deduplication without amount caps.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-dedup-007",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "route_reason": "The task requires deduplicating by a unique return authorization key, keeping the earliest occurrence, and preserving distinct events that share an amount—matching the refund-event deduplication plugin's unique event identity dedup without amount-based caps.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-dedup-008",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "route_reason": "The task is to suppress later deliveries of the same external refund-event identifier, which is deduplication by unique event identity while preserving order, and explicitly not grouping by sale or date.",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-none-001",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": true,
+        "route_reason": "cached semantic rejection",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-none-002",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": true,
+        "route_reason": "cached semantic rejection",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-none-003",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": true,
+        "route_reason": "cached semantic rejection",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-none-004",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": true,
+        "route_reason": "cached semantic rejection",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-none-005",
+        "expected_plugin_id": null,
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "route_reason": "The task requires each order's accepted refunds to be accumulated and capped at the original transaction amount, with no sharing of allowance across different returns—matching the per-order cumulative cap definition.",
+        "ok": false
+      },
+      {
+        "id": "multi-v2-none-006",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": true,
+        "route_reason": "cached semantic rejection",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-none-007",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": true,
+        "route_reason": "cached semantic rejection",
+        "ok": true
+      },
+      {
+        "id": "multi-v2-none-008",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": true,
+        "route_reason": "cached semantic rejection",
+        "ok": true
+      }
+    ]
+  },
+  "first_pass_model_calls": 24,
+  "cached_repeat_model_calls": 0,
+  "model_usage": {
+    "prompt_tokens": 19686,
+    "completion_tokens": 2650,
+    "total_tokens": 22336
+  },
+  "registry_version": "9e33d8eeb94a6cbf"
+}

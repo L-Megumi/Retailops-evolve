@@ -1,0 +1,10 @@
+{
+  "instruction": "Count later deliveries of each reimbursement event key and divide by the complete incoming feed size.",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "audit",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

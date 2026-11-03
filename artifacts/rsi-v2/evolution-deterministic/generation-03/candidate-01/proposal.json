@@ -1,0 +1,5 @@
+{
+  "cue": "相同 refund_id 只认第一次",
+  "action": "deduplicate_refunds",
+  "reason": "deterministic test proposal inferred from the task rule"
+}

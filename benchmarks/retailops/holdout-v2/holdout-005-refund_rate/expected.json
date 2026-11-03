@@ -1,0 +1,11 @@
+{
+  "case_id": "holdout-005-refund_rate",
+  "scenario": "refund_rate",
+  "results": {
+    "refund_rate": {
+      "total_orders": 10,
+      "refunded_orders": 1,
+      "refund_rate": "0.1"
+    }
+  }
+}

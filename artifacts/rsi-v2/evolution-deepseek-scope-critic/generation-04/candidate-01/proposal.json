@@ -1,0 +1,5 @@
+{
+  "cue": "逐笔计算退款日与原订单日的自然日间隔",
+  "action": "hybrid_refund_time",
+  "reason": "Refund timing must be decided per transaction: refunds within a short natural-day lag of the original order date are attributed back to the order date, while longer-lag refunds stay on the actual refund date, rather than applying one date field uniformly to the whole table."
+}

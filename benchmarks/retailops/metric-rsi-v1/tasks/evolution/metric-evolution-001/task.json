@@ -1,0 +1,10 @@
+{
+  "instruction": "计算退款事件重放率：相同 refund_id 在首次出现后的行属于重放，重放行数除以全部退款行数。",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

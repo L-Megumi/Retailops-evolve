@@ -1,0 +1,14 @@
+{
+  "instruction": "Build the retail report for 退款订单率. Binding rules: deduplicate order_id for the refund-rate denominator (unique orders). Do not infer the deprecated default policy.",
+  "tools": [
+    "refund_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "transfer",
+    "difficulty": "challenge",
+    "case_kind": "contract_selection",
+    "capability_family": "none",
+    "instruction_style": "bilingual",
+    "data_profile": "dense"
+  }
+}

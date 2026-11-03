@@ -1,0 +1,12 @@
+{
+  "instruction": "交付品类净销售额排行。统计规格：category_refund_allocation := refund × category_gross / order_gross。",
+  "tools": [
+    "category_ranking"
+  ],
+  "benchmark_metadata": {
+    "split": "transfer",
+    "difficulty": "challenge",
+    "instruction_style": "formula",
+    "data_profile": "multi_refund"
+  }
+}

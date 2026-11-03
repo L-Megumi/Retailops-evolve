@@ -1,0 +1,7 @@
+{
+  "accepted": false,
+  "gate_checks": {
+    "proposal_valid": false
+  },
+  "error": "ValueError: hybrid_refund_time rule matched but no day threshold was found"
+}

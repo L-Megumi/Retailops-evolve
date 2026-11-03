@@ -1,0 +1,1321 @@
+{
+  "benchmark": "rsi-v1",
+  "splits": [
+    "evolution",
+    "validation",
+    "transfer"
+  ],
+  "repeats": 1,
+  "runs": 80,
+  "oracle_passed": 80,
+  "policy_exact": 80,
+  "errors": 0,
+  "model_calls": 80,
+  "model_usage": {
+    "prompt_tokens": 18672,
+    "completion_tokens": 2604,
+    "total_tokens": 21276
+  },
+  "by_split": {
+    "evolution": {
+      "runs": 32,
+      "oracle_passed": 32,
+      "policy_exact": 32,
+      "errors": 0
+    },
+    "validation": {
+      "runs": 24,
+      "oracle_passed": 24,
+      "policy_exact": 24,
+      "errors": 0
+    },
+    "transfer": {
+      "runs": 24,
+      "oracle_passed": 24,
+      "policy_exact": 24,
+      "errors": 0
+    }
+  },
+  "rows": [
+    {
+      "repeat": 1,
+      "task": "evolution-001-refund_rate",
+      "split": "evolution",
+      "scenario": "refund_rate",
+      "instruction_style": "direct",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-002-category",
+      "split": "evolution",
+      "scenario": "category",
+      "instruction_style": "ops_memo",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-003-daily",
+      "split": "evolution",
+      "scenario": "daily",
+      "instruction_style": "worked_example",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-004-all_metrics",
+      "split": "evolution",
+      "scenario": "all_metrics",
+      "instruction_style": "negated_override",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-005-refund_rate",
+      "split": "evolution",
+      "scenario": "refund_rate",
+      "instruction_style": "ops_memo",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-006-category",
+      "split": "evolution",
+      "scenario": "category",
+      "instruction_style": "worked_example",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-007-daily",
+      "split": "evolution",
+      "scenario": "daily",
+      "instruction_style": "negated_override",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-008-all_metrics",
+      "split": "evolution",
+      "scenario": "all_metrics",
+      "instruction_style": "direct",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-009-refund_rate",
+      "split": "evolution",
+      "scenario": "refund_rate",
+      "instruction_style": "worked_example",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-010-category",
+      "split": "evolution",
+      "scenario": "category",
+      "instruction_style": "negated_override",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-011-daily",
+      "split": "evolution",
+      "scenario": "daily",
+      "instruction_style": "direct",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-012-all_metrics",
+      "split": "evolution",
+      "scenario": "all_metrics",
+      "instruction_style": "ops_memo",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-013-refund_rate",
+      "split": "evolution",
+      "scenario": "refund_rate",
+      "instruction_style": "negated_override",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-014-category",
+      "split": "evolution",
+      "scenario": "category",
+      "instruction_style": "direct",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-015-daily",
+      "split": "evolution",
+      "scenario": "daily",
+      "instruction_style": "ops_memo",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-016-all_metrics",
+      "split": "evolution",
+      "scenario": "all_metrics",
+      "instruction_style": "worked_example",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-017-refund_rate",
+      "split": "evolution",
+      "scenario": "refund_rate",
+      "instruction_style": "direct",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-018-category",
+      "split": "evolution",
+      "scenario": "category",
+      "instruction_style": "ops_memo",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-019-daily",
+      "split": "evolution",
+      "scenario": "daily",
+      "instruction_style": "worked_example",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-020-all_metrics",
+      "split": "evolution",
+      "scenario": "all_metrics",
+      "instruction_style": "negated_override",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-021-refund_rate",
+      "split": "evolution",
+      "scenario": "refund_rate",
+      "instruction_style": "ops_memo",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-022-category",
+      "split": "evolution",
+      "scenario": "category",
+      "instruction_style": "worked_example",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-023-daily",
+      "split": "evolution",
+      "scenario": "daily",
+      "instruction_style": "negated_override",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-024-all_metrics",
+      "split": "evolution",
+      "scenario": "all_metrics",
+      "instruction_style": "direct",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-025-refund_rate",
+      "split": "evolution",
+      "scenario": "refund_rate",
+      "instruction_style": "worked_example",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-026-category",
+      "split": "evolution",
+      "scenario": "category",
+      "instruction_style": "negated_override",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-027-daily",
+      "split": "evolution",
+      "scenario": "daily",
+      "instruction_style": "direct",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-028-all_metrics",
+      "split": "evolution",
+      "scenario": "all_metrics",
+      "instruction_style": "ops_memo",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-029-refund_rate",
+      "split": "evolution",
+      "scenario": "refund_rate",
+      "instruction_style": "negated_override",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-030-category",
+      "split": "evolution",
+      "scenario": "category",
+      "instruction_style": "direct",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-031-daily",
+      "split": "evolution",
+      "scenario": "daily",
+      "instruction_style": "ops_memo",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "evolution-032-all_metrics",
+      "split": "evolution",
+      "scenario": "all_metrics",
+      "instruction_style": "worked_example",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-001-refund_rate",
+      "split": "validation",
+      "scenario": "refund_rate",
+      "instruction_style": "worked_example",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-002-category",
+      "split": "validation",
+      "scenario": "category",
+      "instruction_style": "negated_override",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-003-daily",
+      "split": "validation",
+      "scenario": "daily",
+      "instruction_style": "formula",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-004-all_metrics",
+      "split": "validation",
+      "scenario": "all_metrics",
+      "instruction_style": "policy_ticket",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-005-refund_rate",
+      "split": "validation",
+      "scenario": "refund_rate",
+      "instruction_style": "negated_override",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-006-category",
+      "split": "validation",
+      "scenario": "category",
+      "instruction_style": "formula",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-007-daily",
+      "split": "validation",
+      "scenario": "daily",
+      "instruction_style": "policy_ticket",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-008-all_metrics",
+      "split": "validation",
+      "scenario": "all_metrics",
+      "instruction_style": "worked_example",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-009-refund_rate",
+      "split": "validation",
+      "scenario": "refund_rate",
+      "instruction_style": "formula",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-010-category",
+      "split": "validation",
+      "scenario": "category",
+      "instruction_style": "policy_ticket",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-011-daily",
+      "split": "validation",
+      "scenario": "daily",
+      "instruction_style": "worked_example",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-012-all_metrics",
+      "split": "validation",
+      "scenario": "all_metrics",
+      "instruction_style": "negated_override",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-013-refund_rate",
+      "split": "validation",
+      "scenario": "refund_rate",
+      "instruction_style": "policy_ticket",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-014-category",
+      "split": "validation",
+      "scenario": "category",
+      "instruction_style": "worked_example",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-015-daily",
+      "split": "validation",
+      "scenario": "daily",
+      "instruction_style": "negated_override",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-016-all_metrics",
+      "split": "validation",
+      "scenario": "all_metrics",
+      "instruction_style": "formula",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-017-refund_rate",
+      "split": "validation",
+      "scenario": "refund_rate",
+      "instruction_style": "worked_example",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-018-category",
+      "split": "validation",
+      "scenario": "category",
+      "instruction_style": "negated_override",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-019-daily",
+      "split": "validation",
+      "scenario": "daily",
+      "instruction_style": "formula",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-020-all_metrics",
+      "split": "validation",
+      "scenario": "all_metrics",
+      "instruction_style": "policy_ticket",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-021-refund_rate",
+      "split": "validation",
+      "scenario": "refund_rate",
+      "instruction_style": "negated_override",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-022-category",
+      "split": "validation",
+      "scenario": "category",
+      "instruction_style": "formula",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-023-daily",
+      "split": "validation",
+      "scenario": "daily",
+      "instruction_style": "policy_ticket",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "validation-024-all_metrics",
+      "split": "validation",
+      "scenario": "all_metrics",
+      "instruction_style": "worked_example",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-001-refund_rate",
+      "split": "transfer",
+      "scenario": "refund_rate",
+      "instruction_style": "bilingual",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-002-category",
+      "split": "transfer",
+      "scenario": "category",
+      "instruction_style": "formula",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-003-daily",
+      "split": "transfer",
+      "scenario": "daily",
+      "instruction_style": "compact_alias",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-004-all_metrics",
+      "split": "transfer",
+      "scenario": "all_metrics",
+      "instruction_style": "policy_ticket",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-005-refund_rate",
+      "split": "transfer",
+      "scenario": "refund_rate",
+      "instruction_style": "formula",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-006-category",
+      "split": "transfer",
+      "scenario": "category",
+      "instruction_style": "compact_alias",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-007-daily",
+      "split": "transfer",
+      "scenario": "daily",
+      "instruction_style": "policy_ticket",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-008-all_metrics",
+      "split": "transfer",
+      "scenario": "all_metrics",
+      "instruction_style": "bilingual",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-009-refund_rate",
+      "split": "transfer",
+      "scenario": "refund_rate",
+      "instruction_style": "compact_alias",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-010-category",
+      "split": "transfer",
+      "scenario": "category",
+      "instruction_style": "policy_ticket",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-011-daily",
+      "split": "transfer",
+      "scenario": "daily",
+      "instruction_style": "bilingual",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-012-all_metrics",
+      "split": "transfer",
+      "scenario": "all_metrics",
+      "instruction_style": "formula",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-013-refund_rate",
+      "split": "transfer",
+      "scenario": "refund_rate",
+      "instruction_style": "policy_ticket",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-014-category",
+      "split": "transfer",
+      "scenario": "category",
+      "instruction_style": "bilingual",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-015-daily",
+      "split": "transfer",
+      "scenario": "daily",
+      "instruction_style": "formula",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-016-all_metrics",
+      "split": "transfer",
+      "scenario": "all_metrics",
+      "instruction_style": "compact_alias",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-017-refund_rate",
+      "split": "transfer",
+      "scenario": "refund_rate",
+      "instruction_style": "bilingual",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-018-category",
+      "split": "transfer",
+      "scenario": "category",
+      "instruction_style": "formula",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-019-daily",
+      "split": "transfer",
+      "scenario": "daily",
+      "instruction_style": "compact_alias",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-020-all_metrics",
+      "split": "transfer",
+      "scenario": "all_metrics",
+      "instruction_style": "policy_ticket",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-021-refund_rate",
+      "split": "transfer",
+      "scenario": "refund_rate",
+      "instruction_style": "formula",
+      "data_profile": "cross_period",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-022-category",
+      "split": "transfer",
+      "scenario": "category",
+      "instruction_style": "compact_alias",
+      "data_profile": "shuffled",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-023-daily",
+      "split": "transfer",
+      "scenario": "daily",
+      "instruction_style": "policy_ticket",
+      "data_profile": "dense",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    },
+    {
+      "repeat": 1,
+      "task": "transfer-024-all_metrics",
+      "split": "transfer",
+      "scenario": "all_metrics",
+      "instruction_style": "bilingual",
+      "data_profile": "multi_refund",
+      "oracle_ok": true,
+      "policy_exact": true,
+      "selected_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "order_date"
+      },
+      "error": ""
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "instruction": "输出 refund rate；以唯一订单数作为统计分母。",
+  "tools": [
+    "refund_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "regression",
+    "difficulty": "legacy",
+    "instruction_style": "legacy_dynamic",
+    "data_profile": "legacy"
+  }
+}

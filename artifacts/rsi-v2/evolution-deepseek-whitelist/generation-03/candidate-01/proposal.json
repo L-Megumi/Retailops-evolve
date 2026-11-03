@@ -1,0 +1,5 @@
+{
+  "cue": "相同 refund_id 只认第一次",
+  "action": "deduplicate_refunds",
+  "reason": "When the refund file may contain duplicate rows from repeated collection, keep only the first row per refund_id before computing any metrics so later duplicates never deduct again."
+}

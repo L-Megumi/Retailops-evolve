@@ -1,0 +1,13 @@
+{
+  "instruction": "输出 refund rate 和 category ranking，采用唯一订单数，退款按各品类订单行销售额比例分摊。",
+  "tools": [
+    "refund_rate",
+    "category_ranking"
+  ],
+  "benchmark_metadata": {
+    "split": "regression",
+    "difficulty": "legacy",
+    "instruction_style": "legacy_dynamic",
+    "data_profile": "legacy"
+  }
+}

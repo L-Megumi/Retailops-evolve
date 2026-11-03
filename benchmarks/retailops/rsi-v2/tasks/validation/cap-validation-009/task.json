@@ -1,0 +1,13 @@
+{
+  "instruction": "生成品类净销售额排行。同一退款订单涉及 N 个品类时，不参考成交额，退款金额按品类数做 1/N 等额拆分；尾差放到输入顺序中的最后一个品类。",
+  "tools": [
+    "category_ranking"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "difficulty": "capability_expansion",
+    "case_kind": "capability_expansion",
+    "instruction_style": "formula",
+    "data_profile": "dense"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "benchmark": "holdout-v2",
+  "task_count": 8,
+  "naive_passed": 2,
+  "repaired_passed": 8,
+  "oracle_passed": 8,
+  "rows": [
+    {
+      "task": "holdout-001-refund_rate",
+      "scenario": "refund_rate",
+      "naive_ok": false,
+      "naive_issues": [
+        "refund_rate_definition"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category"
+      }
+    },
+    {
+      "task": "holdout-002-category",
+      "scenario": "category",
+      "naive_ok": false,
+      "naive_issues": [
+        "category_refund_allocation"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional"
+      }
+    },
+    {
+      "task": "holdout-003-combined",
+      "scenario": "combined",
+      "naive_ok": false,
+      "naive_issues": [
+        "category_refund_allocation",
+        "refund_rate_definition"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional"
+      }
+    },
+    {
+      "task": "holdout-004-daily",
+      "scenario": "daily",
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category"
+      }
+    },
+    {
+      "task": "holdout-005-refund_rate",
+      "scenario": "refund_rate",
+      "naive_ok": false,
+      "naive_issues": [
+        "refund_rate_definition"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category"
+      }
+    },
+    {
+      "task": "holdout-006-category",
+      "scenario": "category",
+      "naive_ok": false,
+      "naive_issues": [
+        "category_refund_allocation"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional"
+      }
+    },
+    {
+      "task": "holdout-007-combined",
+      "scenario": "combined",
+      "naive_ok": false,
+      "naive_issues": [
+        "category_refund_allocation",
+        "refund_rate_definition"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional"
+      }
+    },
+    {
+      "task": "holdout-008-daily",
+      "scenario": "daily",
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category"
+      }
+    }
+  ]
+}

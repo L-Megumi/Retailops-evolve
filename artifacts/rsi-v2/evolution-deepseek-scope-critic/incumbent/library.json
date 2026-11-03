@@ -1,0 +1,33 @@
+{
+  "version": 4,
+  "rules": [
+    {
+      "rule_id": "learned-g01",
+      "cue": "同一退款订单涉及 N 个品类时",
+      "action": "equal_category_allocation",
+      "reason": "When a single refund order spans multiple categories, split the refund equally across those distinct categories rather than by transaction amount, so category net sales reflect per-category refund shares.",
+      "source_task": "cap-evolution-001"
+    },
+    {
+      "rule_id": "learned-g02",
+      "cue": "跨品类退款按该订单中各品类商品数量之和加权分摊",
+      "action": "quantity_category_allocation",
+      "reason": "When a refund spans multiple categories, allocate it by summed item quantity per category in the order rather than equally or by sales share, so category net sales reflect quantity-weighted refund shares.",
+      "source_task": "cap-evolution-002"
+    },
+    {
+      "rule_id": "learned-g03",
+      "cue": "相同 refund_id 只认第一次",
+      "action": "deduplicate_refunds",
+      "reason": "When the refund file may contain duplicate rows for the same refund_id due to repeated collection, keep only the first occurrence per refund_id before computing any metrics so later duplicates are not deducted again.",
+      "source_task": "cap-evolution-003"
+    },
+    {
+      "rule_id": "learned-g04",
+      "cue": "逐笔计算退款日与原订单日的自然日间隔",
+      "action": "hybrid_refund_time",
+      "reason": "Refund timing must be decided per transaction: refunds within a short natural-day lag of the original order date are attributed back to the order date, while longer-lag refunds stay on the actual refund date, rather than applying one date field uniformly to the whole table.",
+      "source_task": "cap-evolution-004"
+    }
+  ]
+}

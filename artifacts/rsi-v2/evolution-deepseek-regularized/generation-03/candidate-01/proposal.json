@@ -1,0 +1,5 @@
+{
+  "cue": "相同 refund_id 只认第一次，后续重复行不得再次扣减",
+  "action": "deduplicate_refunds",
+  "reason": "The instruction states duplicate refund_id rows from repeated collection must be counted only once, so deduplicating refunds by keeping the first row per refund_id before computing metrics is required."
+}

@@ -1,0 +1,6 @@
+{
+  "instruction": "calculate daily net sales using order dates and refund dates.",
+  "tools": [
+    "daily_net_sales"
+  ]
+}

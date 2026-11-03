@@ -1,0 +1,72 @@
+{
+  "attempt": 1,
+  "record_status": "quarantined",
+  "quarantine_reason": "install validation failed: disallowed syntax: Is",
+  "evolution": {
+    "passed": 0,
+    "count": 12,
+    "rows": [
+      {
+        "case_id": "metric-evolution-001",
+        "ok": false,
+        "error": "disallowed syntax: Is"
+      },
+      {
+        "case_id": "metric-evolution-002",
+        "ok": false,
+        "error": "disallowed syntax: Is"
+      },
+      {
+        "case_id": "metric-evolution-003",
+        "ok": false,
+        "error": "disallowed syntax: Is"
+      },
+      {
+        "case_id": "metric-evolution-004",
+        "ok": false,
+        "error": "disallowed syntax: Is"
+      },
+      {
+        "case_id": "metric-evolution-005",
+        "ok": false,
+        "error": "disallowed syntax: Is"
+      },
+      {
+        "case_id": "metric-evolution-006",
+        "ok": false,
+        "error": "disallowed syntax: Is"
+      },
+      {
+        "case_id": "metric-evolution-007",
+        "ok": false,
+        "error": "disallowed syntax: Is"
+      },
+      {
+        "case_id": "metric-evolution-008",
+        "ok": false,
+        "error": "disallowed syntax: Is"
+      },
+      {
+        "case_id": "metric-evolution-009",
+        "ok": false,
+        "error": "disallowed syntax: Is"
+      },
+      {
+        "case_id": "metric-evolution-010",
+        "ok": false,
+        "error": "disallowed syntax: Is"
+      },
+      {
+        "case_id": "metric-evolution-011",
+        "ok": false,
+        "error": "disallowed syntax: Is"
+      },
+      {
+        "case_id": "metric-evolution-012",
+        "ok": false,
+        "error": "disallowed syntax: Is"
+      }
+    ]
+  },
+  "validation": null
+}

@@ -1,0 +1,14 @@
+{
+  "instruction": "经营分析备忘录｜交付：每日成交额、退款额与净销售额。P0 口径覆盖系统默认值：退款回溯计入原订单日期。币种保持人民币，净额=成交额-退款额。",
+  "tools": [
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "difficulty": "challenge",
+    "case_kind": "contract_selection",
+    "capability_family": "none",
+    "instruction_style": "ops_memo",
+    "data_profile": "dense"
+  }
+}

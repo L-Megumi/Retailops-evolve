@@ -1,0 +1,51 @@
+{
+  "accepted": true,
+  "second_plugin": {
+    "plugin_id": "refund-event-dedup-v1",
+    "candidate_sha256": "4edbd375e9e55641165fc8c5346cf4ab4a9f73241416d01d209cd1d834d52467",
+    "development": "20/20",
+    "audit": "20/20",
+    "model_calls": 1,
+    "tokens": 373
+  },
+  "route_evolution": [
+    {
+      "version": "v1",
+      "audit": "22/24",
+      "cached_repeat_model_calls": 0
+    },
+    {
+      "version": "v2",
+      "development": "24/24",
+      "audit": "23/24",
+      "cached_repeat_model_calls": 0
+    },
+    {
+      "version": "v3",
+      "development": "48/48",
+      "audit": "24/24",
+      "cached_repeat": "24/24",
+      "development_model_calls": 48,
+      "audit_model_calls": 24,
+      "cached_repeat_model_calls": 0,
+      "tokens": 36802
+    }
+  ],
+  "final_audit_breakdown": {
+    "cumulative_cap": "8/8",
+    "event_deduplication": "8/8",
+    "near_negative_or_multi_capability": "8/8"
+  },
+  "full_tests": {
+    "run": 44,
+    "passed": 43,
+    "skipped": 1,
+    "failed": 0
+  },
+  "cli": {
+    "selected_plugin": "refund-event-dedup-v1@1",
+    "input_refund_total": "70.00",
+    "effective_refund_total": "50.00",
+    "validation": "passed"
+  }
+}

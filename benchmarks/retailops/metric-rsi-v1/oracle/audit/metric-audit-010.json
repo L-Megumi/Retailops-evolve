@@ -1,0 +1,8 @@
+{
+  "case_id": "metric-audit-010",
+  "expected": {
+    "total_refund_rows": 5,
+    "duplicate_rows": 1,
+    "replay_rate_bps": 2000
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "instruction": "Build the retail report for 品类净销售额排行. Binding rules: book the whole cross-category refund to the first category encountered for that order. Do not infer the deprecated default policy.",
+  "tools": [
+    "category_ranking"
+  ],
+  "benchmark_metadata": {
+    "split": "transfer",
+    "difficulty": "challenge",
+    "case_kind": "contract_selection",
+    "instruction_style": "bilingual",
+    "data_profile": "shuffled"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "case_id": "evolution-008-all_metrics",
+  "split": "evolution",
+  "scenario": "all_metrics",
+  "metric_contract": {
+    "refund_rate_denominator": "distinct_orders",
+    "category_refund_allocation": "proportional",
+    "refund_time_attribution": "order_date"
+  },
+  "relevant_contract_fields": [
+    "refund_rate_denominator",
+    "category_refund_allocation",
+    "refund_time_attribution"
+  ],
+  "results": {
+    "refund_rate": {
+      "total_orders": 12,
+      "refunded_orders": 5,
+      "refund_rate": "0.4166666666666666666666666667"
+    },
+    "category_ranking": [
+      {
+        "category": "电子产品",
+        "gross_sales": "20299.02",
+        "refund_amount": "838.0052788200486559724874941",
+        "net_sales": "19461.01472117995134402751251"
+      },
+      {
+        "category": "办公家具",
+        "gross_sales": "12272.41",
+        "refund_amount": "0",
+        "net_sales": "12272.41"
+      },
+      {
+        "category": "网络设备",
+        "gross_sales": "10477.91",
+        "refund_amount": "286.4927611263277773603538124",
+        "net_sales": "10191.41723887367222263964619"
+      },
+      {
+        "category": "清洁用品",
+        "gross_sales": "9388.92",
+        "refund_amount": "1137.977847527355608727313996",
+        "net_sales": "8250.942152472644391272686004"
+      },
+      {
+        "category": "仓储用品",
+        "gross_sales": "7395.23",
+        "refund_amount": "236.6153284691718653257148161",
+        "net_sales": "7158.614671530828134674285184"
+      },
+      {
+        "category": "照明设备",
+        "gross_sales": "5746.51",
+        "refund_amount": "33.80045430718154813908789098",
+        "net_sales": "5712.709545692818451860912109"
+      },
+      {
+        "category": "包装材料",
+        "gross_sales": "2188.32",
+        "refund_amount": "176.2761772772701532023559865",
+        "net_sales": "2012.043822722729846797644014"
+      },
+      {
+        "category": "办公耗材",
+        "gross_sales": "734.93",
+        "refund_amount": "183.7321524726443912726860040",
+        "net_sales": "551.1978475273556087273139960"
+      }
+    ],
+    "daily_net_sales": [
+      {
+        "date": "2026-09-14",
+        "gross_sales": "2832.20",
+        "refund_amount": "0",
+        "net_sales": "2832.20"
+      },
+      {
+        "date": "2026-09-16",
+        "gross_sales": "22109.13",
+        "refund_amount": "0",
+        "net_sales": "22109.13"
+      },
+      {
+        "date": "2026-09-17",
+        "gross_sales": "15316.60",
+        "refund_amount": "720.07",
+        "net_sales": "14596.53"
+      },
+      {
+        "date": "2026-09-18",
+        "gross_sales": "5259.24",
+        "refund_amount": "368.15",
+        "net_sales": "4891.09"
+      },
+      {
+        "date": "2026-09-19",
+        "gross_sales": "6459.30",
+        "refund_amount": "0",
+        "net_sales": "6459.30"
+      },
+      {
+        "date": "2026-09-20",
+        "gross_sales": "6599.78",
+        "refund_amount": "482.97",
+        "net_sales": "6116.81"
+      },
+      {
+        "date": "2026-09-21",
+        "gross_sales": "9927.00",
+        "refund_amount": "1321.71",
+        "net_sales": "8605.29"
+      }
+    ]
+  }
+}

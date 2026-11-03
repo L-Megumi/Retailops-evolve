@@ -1,0 +1,53 @@
+{
+  "keyword_groups": [
+    [
+      "订单",
+      "退款",
+      "不超过",
+      "销售额"
+    ],
+    [
+      "订单",
+      "退款",
+      "上限",
+      "成交额"
+    ],
+    [
+      "剩余",
+      "可退",
+      "金额",
+      "流水"
+    ],
+    [
+      "退款",
+      "净额",
+      "不能",
+      "负数"
+    ],
+    [
+      "order",
+      "refund",
+      "exceed",
+      "sales"
+    ],
+    [
+      "remaining",
+      "refundable",
+      "balance",
+      "order"
+    ],
+    [
+      "refund",
+      "net",
+      "below",
+      "zero"
+    ],
+    [
+      "cumulative",
+      "refund",
+      "cap",
+      "order"
+    ]
+  ],
+  "reason": "Structured conjunctions pair order/refund concepts with cap, remaining-balance, and non-negative-net paraphrases in both Chinese and English, avoiding single broad tokens and the existing literal cues while covering the development instructions' order-level ceiling and sequential truncation semantics."
+}

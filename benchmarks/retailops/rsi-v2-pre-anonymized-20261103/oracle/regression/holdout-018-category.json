@@ -1,0 +1,53 @@
+{
+  "case_id": "holdout-018-category",
+  "split": "regression",
+  "scenario": "category",
+  "metric_contract": {
+    "refund_rate_denominator": "order_lines",
+    "category_refund_allocation": "proportional",
+    "refund_time_attribution": "refund_date"
+  },
+  "relevant_contract_fields": [
+    "category_refund_allocation"
+  ],
+  "results": {
+    "category_ranking": [
+      {
+        "category": "仓储用品",
+        "gross_sales": "3124.60",
+        "refund_amount": "153.20",
+        "net_sales": "2971.40"
+      },
+      {
+        "category": "办公耗材",
+        "gross_sales": "1811.20",
+        "refund_amount": "0",
+        "net_sales": "1811.20"
+      },
+      {
+        "category": "电子产品",
+        "gross_sales": "1959.50",
+        "refund_amount": "148.36",
+        "net_sales": "1811.14"
+      },
+      {
+        "category": "网络设备",
+        "gross_sales": "1858.20",
+        "refund_amount": "280.225",
+        "net_sales": "1577.975"
+      },
+      {
+        "category": "清洁用品",
+        "gross_sales": "1742.30",
+        "refund_amount": "358.125",
+        "net_sales": "1384.175"
+      },
+      {
+        "category": "办公家具",
+        "gross_sales": "1133.50",
+        "refund_amount": "0",
+        "net_sales": "1133.50"
+      }
+    ]
+  }
+}

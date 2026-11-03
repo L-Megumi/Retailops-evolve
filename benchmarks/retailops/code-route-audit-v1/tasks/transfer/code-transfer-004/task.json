@@ -1,0 +1,11 @@
+{
+  "instruction": "防止退款把单笔交易扣到零以下：以该单商品总额作为可冲减本金，按照流水先后确认有效金额，再计算 category 和 daily 指标。",
+  "tools": [
+    "category_ranking",
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "transfer",
+    "case_kind": "code_capability"
+  }
+}

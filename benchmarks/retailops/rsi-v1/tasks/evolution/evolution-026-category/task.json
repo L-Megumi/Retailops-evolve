@@ -1,0 +1,12 @@
+{
+  "instruction": "输出品类净销售额排行。注意：旧模板中的“跨品类订单的退款按各品类在该订单中的成交额占比分摊”已经作废，禁止沿用。本任务唯一生效的口径是：“跨品类订单的整笔退款全部归入该订单在输入文件中首次出现的品类，不做比例拆分”。",
+  "tools": [
+    "category_ranking"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "difficulty": "challenge",
+    "instruction_style": "negated_override",
+    "data_profile": "multi_refund"
+  }
+}

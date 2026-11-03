@@ -1,0 +1,11 @@
+{
+  "instruction": "逐条审核退货流水，任何订单累计冲销金额都不能穿透原成交本金；触及本金边界的流水只确认剩余部分，并据此生成品类与每日净额。",
+  "tools": [
+    "category_ranking",
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "transfer",
+    "case_kind": "code_capability"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "cue": "审计优先规则（覆盖历史默认口径）",
+  "action": "hybrid_refund_time",
+  "reason": "When an audit-priority rule overrides the historical default, judge each refund row individually: refunds within the short natural-day lag use the original order date, while longer-lag refunds keep the actual refund date, rather than applying one date field to the whole table."
+}

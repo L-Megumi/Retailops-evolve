@@ -1,0 +1,68 @@
+{
+  "case_id": "cap-evolution-010-quantity_allocation",
+  "split": "evolution",
+  "scenario": "quantity_allocation",
+  "metric_contract": {
+    "refund_rate_denominator": "distinct_orders",
+    "category_refund_allocation": "first_category",
+    "refund_time_attribution": "refund_date"
+  },
+  "capability_contract": {
+    "category_refund_allocation_v2": "quantity_weighted"
+  },
+  "relevant_contract_fields": [
+    "category_refund_allocation"
+  ],
+  "results": {
+    "category_ranking": [
+      {
+        "category": "照明设备",
+        "gross_sales": "14467.11",
+        "refund_amount": "501.5345454545454545454545455",
+        "net_sales": "13965.57545454545454545454545"
+      },
+      {
+        "category": "电子产品",
+        "gross_sales": "11558.35",
+        "refund_amount": "38.98071428571428571428571429",
+        "net_sales": "11519.36928571428571428571429"
+      },
+      {
+        "category": "办公家具",
+        "gross_sales": "11627.77",
+        "refund_amount": "679.3357142857142857142857142",
+        "net_sales": "10948.43428571428571428571429"
+      },
+      {
+        "category": "仓储用品",
+        "gross_sales": "11038.88",
+        "refund_amount": "326.7670588235294117647058824",
+        "net_sales": "10712.11294117647058823529412"
+      },
+      {
+        "category": "网络设备",
+        "gross_sales": "9832.52",
+        "refund_amount": "116.9421428571428571428571430",
+        "net_sales": "9715.577857142857142857142857"
+      },
+      {
+        "category": "清洁用品",
+        "gross_sales": "7377.87",
+        "refund_amount": "571.8423529411764705882352942",
+        "net_sales": "6806.027647058823529411764706"
+      },
+      {
+        "category": "办公耗材",
+        "gross_sales": "6472.26",
+        "refund_amount": "678.2260427807486631016042780",
+        "net_sales": "5794.033957219251336898395722"
+      },
+      {
+        "category": "包装材料",
+        "gross_sales": "1796.73",
+        "refund_amount": "77.96142857142857142857142858",
+        "net_sales": "1718.768571428571428571428571"
+      }
+    ]
+  }
+}

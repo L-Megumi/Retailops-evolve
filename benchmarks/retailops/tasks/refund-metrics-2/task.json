@@ -1,0 +1,4 @@
+{
+  "instruction": "核算退款率和品类净销售额。一个订单可能包含多个品类；退款必须按各品类在订单中的销售额占比分配。",
+  "tools": ["refund_rate", "category_ranking"]
+}

@@ -1,0 +1,7 @@
+{
+  "instruction": "核算退款订单率和类别净销售额排行。订单率按唯一订单编号统计，跨类别订单的退款按对应订单行成交额比例拆分。",
+  "tools": [
+    "refund_rate",
+    "category_ranking"
+  ]
+}

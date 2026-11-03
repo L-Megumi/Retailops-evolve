@@ -1,0 +1,33 @@
+{
+  "version": 4,
+  "rules": [
+    {
+      "rule_id": "learned-g01",
+      "cue": "退款金额按品类数做 1/N 等额拆分",
+      "action": "equal_category_allocation",
+      "reason": "The instruction requires splitting each refund equally across the distinct categories in its order, which is exactly the equal_category_allocation rule.",
+      "source_task": "cap-evolution-001"
+    },
+    {
+      "rule_id": "learned-g02",
+      "cue": "按该订单中各品类商品数量之和加权分摊",
+      "action": "quantity_category_allocation",
+      "reason": "The instruction requires allocating each refund by summed item quantity per category in its order, which is exactly the quantity_category_allocation rule.",
+      "source_task": "cap-evolution-002"
+    },
+    {
+      "rule_id": "learned-g03",
+      "cue": "相同 refund_id 只认第一次，后续重复行不得再次扣减",
+      "action": "deduplicate_refunds",
+      "reason": "The instruction states duplicate refund_id rows from repeated collection must be counted only once, so deduplicating refunds by keeping the first row per refund_id before computing metrics is required.",
+      "source_task": "cap-evolution-003"
+    },
+    {
+      "rule_id": "learned-g04",
+      "cue": "间隔不超过 3 天的退款回写订单日；超过 3 天的退款保留在实际退款日",
+      "action": "hybrid_refund_time",
+      "reason": "The instruction requires per-refund judgment: refunds within the day threshold use the order date while longer-lag refunds use the actual refund date, which is exactly the hybrid_refund_time rule.",
+      "source_task": "cap-evolution-004"
+    }
+  ]
+}

@@ -1,0 +1,437 @@
+{
+  "schema_version": 1,
+  "entries": {
+    "76f78a41c9f63c1e152f6eefb65b75d562766b6f46e7ed4dd23582ae0338c7df": {
+      "use_plugin": false,
+      "reason": "任务要求 refund_replay_rate 指标；该 metric_tool 按唯一 refund_id 统计首次出现后的重放行并除以总退款行数，且不会删除或去重事件。"
+    },
+    "331aa04e6777e5bbbdfc414922f0a17d9b3099965f5014aedcc6c51c39a104d7": {
+      "use_plugin": false,
+      "reason": "任务要求 refund_replay_rate 指标；该 metric_tool 按唯一 refund_id 统计首次出现后的重放行并除以总退款行数，且不会删除或去重事件。"
+    },
+    "e93eb6a6228d5fac2997c15e63d685b1b3e6f3bf29e8e6fdd4a1dff18f78a513": {
+      "use_plugin": true,
+      "reason": "任务要求 refund_replay_rate 指标；该 metric_tool 按唯一 refund_id 统计首次出现后的重放行并除以总退款行数，且不会删除或去重事件。"
+    },
+    "561044e91739a98eb75b0abfb470ae1237cb51eeb17d5baf3679a79d8f847a13": {
+      "use_plugin": false,
+      "reason": "任务要求用事件唯一编号计算重复投递比例，分母为退款流水总行数；这正是 refund_replay_rate 指标能力。"
+    },
+    "b50189cbc8cee662eaae516e3f0ed9505552850fefbeacbaf4286849bebeabbb": {
+      "use_plugin": false,
+      "reason": "任务要求用事件唯一编号计算重复投递比例，分母为退款流水总行数；这正是 refund_replay_rate 指标能力。"
+    },
+    "6ded979d06c5825b623b79cb87d29050e4e04d88cbb89f40850c6afffc7f4374": {
+      "use_plugin": true,
+      "reason": "任务要求用事件唯一编号计算重复投递比例，分母为退款流水总行数；这正是 refund_replay_rate 指标能力。"
+    },
+    "e21134e19b0ec4f2dbb11cd9dee4407405e9fba5d5bc9019d68aaa0d9014b9cf": {
+      "use_plugin": false,
+      "reason": "任务要求 refund replay rate 以及重复行计数；metric_tool 计算重放率并内部统计重复行，不改变输入事件列表。"
+    },
+    "dd92c58dc281994e80095d9939589b983a1f7814c43a0363c121e9d645292645": {
+      "use_plugin": false,
+      "reason": "任务要求 refund replay rate 以及重复行计数；metric_tool 计算重放率并内部统计重复行，不改变输入事件列表。"
+    },
+    "f4060202eb7b137fe3bb178ea79a8e738ad4f7e95026b86475480bda8582968a": {
+      "use_plugin": true,
+      "reason": "任务要求 refund replay rate 以及重复行计数；metric_tool 计算重放率并内部统计重复行，不改变输入事件列表。"
+    },
+    "d724bf96bb9e3b4e6d80818120ad4c96af4d6a11ebf6ed21eff1944e07e1f03a": {
+      "use_plugin": false,
+      "reason": "任务要求评估退款流幂等质量并计算后续重复 refund_id 占比；需要的是 replay rate 指标，而非去重转换。"
+    },
+    "578a1deed19fbf4a3a2da51ba5cfffcb469627d926ac3a71c9d0555d305e6be6": {
+      "use_plugin": false,
+      "reason": "任务要求评估退款流幂等质量并计算后续重复 refund_id 占比；需要的是 replay rate 指标，而非去重转换。"
+    },
+    "d5734f7977d066910649c66d47f5a9e18d4701bd2fc0677c8c58f5128bec85ee": {
+      "use_plugin": true,
+      "reason": "任务要求评估退款流幂等质量并计算后续重复 refund_id 占比；需要的是 replay rate 指标，而非去重转换。"
+    },
+    "d62f88fd18610f1f8c663e36c204e298dafd6441aff1b1f823d014abeeeddb42": {
+      "use_plugin": false,
+      "reason": "任务按退款事件 ID 计算重复行占比并要求 rate 指标；select metric_tool，非去重插件。"
+    },
+    "be95796d698b39aaf342e8d05ec83cc3423284494047b933ce34ac51a71c39cb": {
+      "use_plugin": false,
+      "reason": "任务按退款事件 ID 计算重复行占比并要求 rate 指标；select metric_tool，非去重插件。"
+    },
+    "459ac00cb441cffc720acb66e721c8dbd758dc161b295e5d5fe339efdd458d8a": {
+      "use_plugin": true,
+      "reason": "任务按退款事件 ID 计算重复行占比并要求 rate 指标；select metric_tool，非去重插件。"
+    },
+    "a9034f2df183f5ade11fc1bb6d847a7941f92cc0c94010bd1b98b70dce64afcb": {
+      "use_plugin": false,
+      "reason": "任务要求生成退款消息重放监控指标，按首条之后的行累计重复并计算比例；对应 refund_replay_rate。"
+    },
+    "7c44e70758130569a4f40f994c1b61e3de305754f9948443ea1ae7cd22403d0f": {
+      "use_plugin": false,
+      "reason": "任务要求生成退款消息重放监控指标，按首条之后的行累计重复并计算比例；对应 refund_replay_rate。"
+    },
+    "b4976f00c6d85cfb19808786cb1f201c3ab4bde3098fa7cc7033dcd508760327": {
+      "use_plugin": true,
+      "reason": "任务要求生成退款消息重放监控指标，按首条之后的行累计重复并计算比例；对应 refund_replay_rate。"
+    },
+    "d4928cda3e013e6d3c55bc9a0d15aaa9973d8af20fd0e5e700bd56e5c630b65c": {
+      "use_plugin": false,
+      "reason": "任务明确要求计算 refund replay rate：已出现 refund_id 的后续行数除以全部退款行数；选择指标插件。"
+    },
+    "de476158933c19be0dfde584dce11866ace99887dc19abf1402d92dffadf9aeb": {
+      "use_plugin": false,
+      "reason": "任务明确要求计算 refund replay rate：已出现 refund_id 的后续行数除以全部退款行数；选择指标插件。"
+    },
+    "1eabfe1caf948591e02175c00fe13a377399eaae484e9833bd94936f64ecfb37": {
+      "use_plugin": true,
+      "reason": "任务明确要求计算 refund replay rate：已出现 refund_id 的后续行数除以全部退款行数；选择指标插件。"
+    },
+    "dbb59d95b587a79b2efa471cf4c83f6cb0eddcdac139fcb80345316b939fd493": {
+      "use_plugin": false,
+      "reason": "任务要求报告重复行及 replay rate；metric_tool 提供该重放率指标且不修改或删除事件。"
+    },
+    "19fa36462a4fad5463efdd1d1899c16f16400007eafa668880e55916f81899ab": {
+      "use_plugin": false,
+      "reason": "任务要求报告重复行及 replay rate；metric_tool 提供该重放率指标且不修改或删除事件。"
+    },
+    "237fdf1e5fe56c560a6d4f06e168ec062e85c8b5dd14189357be357d43a6a742": {
+      "use_plugin": true,
+      "reason": "任务要求报告重复行及 replay rate；metric_tool 提供该重放率指标且不修改或删除事件。"
+    },
+    "b7c250b282d0aa4e596d593c69ec1466b659ffbc6fae26a01766af7ed8d6f2b2": {
+      "use_plugin": false,
+      "reason": "任务要求以精确事件标识衡量退款事件流重复投递占比；这是 refund_replay_rate 指标计算。"
+    },
+    "5a877965acd39c03b3c0b1783f4f614bb1396e502453d083f5ddb0fda6526c2a": {
+      "use_plugin": false,
+      "reason": "任务要求以精确事件标识衡量退款事件流重复投递占比；这是 refund_replay_rate 指标计算。"
+    },
+    "cba6910ccd003e9f021b230bbb981ef40281131f12d264967105d2a759fefe09": {
+      "use_plugin": true,
+      "reason": "任务要求以精确事件标识衡量退款事件流重复投递占比；这是 refund_replay_rate 指标计算。"
+    },
+    "1df21b4cb814136efb23f2d6bc3eea7f216e85f2280dd1d2da83099e70ebe96c": {
+      "use_plugin": false,
+      "reason": "任务要求计算退款幂等重放指标，较早行之后的重复出现计为重复；对应 replay rate metric_tool。"
+    },
+    "e13757d625812d6b4fd4c83d281145ac99dd27ce3beb3d626e3cc42ee7943332": {
+      "use_plugin": false,
+      "reason": "任务要求计算退款幂等重放指标，较早行之后的重复出现计为重复；对应 replay rate metric_tool。"
+    },
+    "dfb766f03a7edd13bd0888454e8dc44746e44756e0054043a6b9398c6cac55c6": {
+      "use_plugin": true,
+      "reason": "任务要求计算退款幂等重放指标，较早行之后的重复出现计为重复；对应 replay rate metric_tool。"
+    },
+    "07153b778a2613a88191b631123e6cc1fbfb2676931cec6d000eaf34dde16fb6": {
+      "use_plugin": false,
+      "reason": "任务询问退款事件重放频率，使用重复 event-id 行除以完整退款流；需要 refund_replay_rate 指标插件。"
+    },
+    "0f77ba8e534458e3d331323913844460ca911187b06484d338d948d32ec377ea": {
+      "use_plugin": false,
+      "reason": "任务询问退款事件重放频率，使用重复 event-id 行除以完整退款流；需要 refund_replay_rate 指标插件。"
+    },
+    "46602c89b828fe66f7eaf4c9e3d40120ae5a65e30d0a5b01a3770d54745ed3bd": {
+      "use_plugin": true,
+      "reason": "任务询问退款事件重放频率，使用重复 event-id 行除以完整退款流；需要 refund_replay_rate 指标插件。"
+    },
+    "21732219cdd0d5a927d9f5a0c25f14b9d585d74ba9fa23123945b5ddfaa11cb9": {
+      "use_plugin": false,
+      "reason": "任务要求返回 refund_replay_rate，并包含总行、重复行和基点比例；该插件是指标产出方，非去重或封顶转换。"
+    },
+    "6cf9788dd5727bf8e1a93bac8caeb14ba87efbbdfa04464b0919a02b4fe58770": {
+      "use_plugin": false,
+      "reason": "任务要求返回 refund_replay_rate，并包含总行、重复行和基点比例；该插件是指标产出方，非去重或封顶转换。"
+    },
+    "2828d9298d1f24d6711e2bf9a15f42fef227eb79651cfa85a343474bc7f028af": {
+      "use_plugin": true,
+      "reason": "任务要求返回 refund_replay_rate，并包含总行、重复行和基点比例；该插件是指标产出方，非去重或封顶转换。"
+    },
+    "fd697512d0cf690797e59923bc42ab783a9985138fb1815247c11094f0c3891d": {
+      "use_plugin": false,
+      "reason": "需要计算退款事件重放占比，分母不去重；应由重放率指标插件计算，而不是去重或封顶变换。"
+    },
+    "4311cc1d291c758266a7982b5555f8991aa264ac110e3d74f7ed3106cc2daa2a": {
+      "use_plugin": false,
+      "reason": "需要计算退款事件重放占比，分母不去重；应由重放率指标插件计算，而不是去重或封顶变换。"
+    },
+    "581aab772d3895dc1c47fa541961133ded6580209a572dfd8ebe7194d59978cc": {
+      "use_plugin": true,
+      "reason": "需要计算退款事件重放占比，分母不去重；应由重放率指标插件计算，而不是去重或封顶变换。"
+    },
+    "5034c74ea5dfce68734e38c2b7406ad9701995175d74c8fb8a49c677b0a7116b": {
+      "use_plugin": false,
+      "reason": "按唯一事件引用计算 replay ratio 并输出指标；选择指标插件，去重插件会删除事件而非度量。"
+    },
+    "51b004d07743af9fcff5911e4ef3ecfe8f9a636d5941866d9b4e23321e8d9d3a": {
+      "use_plugin": false,
+      "reason": "按唯一事件引用计算 replay ratio 并输出指标；选择指标插件，去重插件会删除事件而非度量。"
+    },
+    "38daf8aa05e5ac73b10504fca1675c82673c8e679b00a1d63252222b4f39806b": {
+      "use_plugin": true,
+      "reason": "按唯一事件引用计算 replay ratio 并输出指标；选择指标插件，去重插件会删除事件而非度量。"
+    },
+    "533204163d8929b55bf5ce3f1b139da78d56b18b1f6cafef8c457a0b91db7613": {
+      "use_plugin": false,
+      "reason": "统计重复退款消息在原始流中的比例，首个 ID 正常、后续为重放；这是重放率指标计算。"
+    },
+    "5629ffdb4aceef444359cc3bf7cf57e6772dde9522db16b99c5333e4b1de281b": {
+      "use_plugin": false,
+      "reason": "统计重复退款消息在原始流中的比例，首个 ID 正常、后续为重放；这是重放率指标计算。"
+    },
+    "15d7d21f6bcece104713a3372ba03f8b8b205d684ed0d8cabe419419b39a09c9": {
+      "use_plugin": true,
+      "reason": "统计重复退款消息在原始流中的比例，首个 ID 正常、后续为重放；这是重放率指标计算。"
+    },
+    "db2402082cd83db7530a74fd396e3915e49b8cd224b856741d2de1bfbe7c543b": {
+      "use_plugin": false,
+      "reason": "计算重复事件行数除以全部输入事件行数并报告计数依据；应使用重放率指标插件。"
+    },
+    "04aa2a5e40166e5eb451a45c8d2e19c8faa0c215fd3226bc59a31373402be578": {
+      "use_plugin": false,
+      "reason": "计算重复事件行数除以全部输入事件行数并报告计数依据；应使用重放率指标插件。"
+    },
+    "60fbe8889310df4e310cc9d5ead1ec2d40e57fcb1f6ba2149a9a3dcda0b8ad21": {
+      "use_plugin": true,
+      "reason": "计算重复事件行数除以全部输入事件行数并报告计数依据；应使用重放率指标插件。"
+    },
+    "65c681c397a5e3ac80e47552404a60f90700c4b4f4d05ea2f4d2ac85112ff0ea": {
+      "use_plugin": false,
+      "reason": "计算 refund event replay 指标，按退款事件标识识别后续副本，不按订单聚合；匹配指标插件。"
+    },
+    "3b4ccd0efd7249add55878677f768c81f5ba2af1afde8959296ae5f717186f35": {
+      "use_plugin": false,
+      "reason": "计算 refund event replay 指标，按退款事件标识识别后续副本，不按订单聚合；匹配指标插件。"
+    },
+    "353e7bfd0f2d7070f6a5874b47a8cc31d94bb29cbce0d8828fba610564dcf5ee": {
+      "use_plugin": true,
+      "reason": "计算 refund event replay 指标，按退款事件标识识别后续副本，不按订单聚合；匹配指标插件。"
+    },
+    "2cd45b1ec2dfa3abf3fcff387c5edf40fbb97764e5403f97b0d0eeb9d76c98c0": {
+      "use_plugin": false,
+      "reason": "输出 duplicate/total 的 basis points 及计数证据，空输入按零处理；属于重放率指标计算。"
+    },
+    "55243b2cfc78ab107ebde3a6693232247aa97e51cb938e94b68ed191ba76feeb": {
+      "use_plugin": false,
+      "reason": "输出 duplicate/total 的 basis points 及计数证据，空输入按零处理；属于重放率指标计算。"
+    },
+    "d2331565eb4b3a5d81de434207e73124874f0b195ac214562425d6707bec08ba": {
+      "use_plugin": true,
+      "reason": "输出 duplicate/total 的 basis points 及计数证据，空输入按零处理；属于重放率指标计算。"
+    },
+    "5761dccd542d9a55431c9b98791db68d59f25b29b5e29f813b4eca93571a6470": {
+      "use_plugin": false,
+      "reason": "Determine share of refund feed rows replaying a previously observed event reference; this is the replay-rate metric."
+    },
+    "568eb5d9959ef2365c096e113a1fd8582d1a787dd74eb6786bdedda2aa8a2167": {
+      "use_plugin": false,
+      "reason": "Determine share of refund feed rows replaying a previously observed event reference; this is the replay-rate metric."
+    },
+    "02ee9aaed7b3aa21ceae8a8c31537042aa69132c1907e9481793c29a6307ce68": {
+      "use_plugin": true,
+      "reason": "Determine share of refund feed rows replaying a previously observed event reference; this is the replay-rate metric."
+    },
+    "4b7c215b42ef83a700efb49bd80691fd07e2a3fc71cbd858d758c51a401c370c": {
+      "use_plugin": false,
+      "reason": "Produce an idempotency metric counting occurrences after first matching refund key; metric plugin computes rate without mutating rows."
+    },
+    "8908ed3ae79e7d7a5aef0497cc09817f005a5b8be63f951abd6aa04341d03ddd": {
+      "use_plugin": false,
+      "reason": "Produce an idempotency metric counting occurrences after first matching refund key; metric plugin computes rate without mutating rows."
+    },
+    "1a7b5c4523c947367b45057238e235c3d8d12b770eef1b24e978fb0faf145838": {
+      "use_plugin": true,
+      "reason": "Produce an idempotency metric counting occurrences after first matching refund key; metric plugin computes rate without mutating rows."
+    },
+    "3a04916386b274a3f674797a0f72cee3f69bee7e970fbc5bb9b0942d95ea9576": {
+      "use_plugin": false,
+      "reason": "Calculate replayed refund rows divided by raw refund rows with counts; select replay-rate metric plugin, not deduplication."
+    },
+    "98fe26e245844e2222e4a710aa1ac4f26637493483cc7df6c7b9be3711e4c53a": {
+      "use_plugin": false,
+      "reason": "Calculate replayed refund rows divided by raw refund rows with counts; select replay-rate metric plugin, not deduplication."
+    },
+    "102f1358d76174209bfc78ca0b900466e9d4f404bcae31b5486007bdae2cda84": {
+      "use_plugin": true,
+      "reason": "Calculate replayed refund rows divided by raw refund rows with counts; select replay-rate metric plugin, not deduplication."
+    },
+    "ee47a0dd7fbb7d110ed4c9b7f4357d2aa9d2b584464b9308883c4ad40dc2aa46": {
+      "use_plugin": false,
+      "reason": "Report refund message redelivery rate in integer bps using exact event identity; this is a replay-rate metric."
+    },
+    "8ef6bc3caf2f58ab9ebea89e559347b7287ad634eb69f2d15a089a7cad82b940": {
+      "use_plugin": false,
+      "reason": "Report refund message redelivery rate in integer bps using exact event identity; this is a replay-rate metric."
+    },
+    "6dfd7d73966ee0e8dce1759a78207c174faf4ab1054c55f76f46cd14ad6a26c6": {
+      "use_plugin": true,
+      "reason": "Report refund message redelivery rate in integer bps using exact event identity; this is a replay-rate metric."
+    },
+    "2c852da27b658dbbd7cf29171acd923af135cc8060371b9cec6ae132e4f0ac19": {
+      "use_plugin": false,
+      "reason": "Quantify repeated refund-event deliveries without deduplicating denominator first; metric plugin preserves denominator."
+    },
+    "bc797e7df0463510c1f154366e74cfe8cecb94689eae0546b82d5f39ec29ce73": {
+      "use_plugin": false,
+      "reason": "Quantify repeated refund-event deliveries without deduplicating denominator first; metric plugin preserves denominator."
+    },
+    "59533f09aced4c960d79c432b13984538bcbd5dc9419c6f76eba4fdf19d76ba3": {
+      "use_plugin": true,
+      "reason": "Quantify repeated refund-event deliveries without deduplicating denominator first; metric plugin preserves denominator."
+    },
+    "fb5dfc3da2ffc31e14c53b875451410a98af2d21c9d240829bda56b9ea25a9c5": {
+      "use_plugin": false,
+      "reason": "Create refund_replay_rate evidence from total feed rows and later duplicate-id rows; metric plugin produces refund_replay_rate."
+    },
+    "4be3958c7ddf2cbd2b16ce3b4d390dd5b4a00a84dfe90ed2cf779cbffdb6f0e4": {
+      "use_plugin": false,
+      "reason": "Create refund_replay_rate evidence from total feed rows and later duplicate-id rows; metric plugin produces refund_replay_rate."
+    },
+    "4912223874101e095661d81a5e51ae7e9cf9422153147d5e747bcf3569ba367d": {
+      "use_plugin": true,
+      "reason": "Create refund_replay_rate evidence from total feed rows and later duplicate-id rows; metric plugin produces refund_replay_rate."
+    },
+    "f7006b6ad084b722a0860dfd0832fe74ce5f7720d5657242a5f65aaea24da6bc": {
+      "use_plugin": false,
+      "reason": "Requires refund_replay_rate: counting repeated event credentials and dividing by raw stream, with no deduplication or mutation."
+    },
+    "8fb367995fbe3a6f3c53511c989fef35c5fd71259feaf3a617bc3af28b66d9aa": {
+      "use_plugin": false,
+      "reason": "Requires refund_replay_rate: counting repeated event credentials and dividing by raw stream, with no deduplication or mutation."
+    },
+    "a14e18eb6a2b021b44ac8e770450c1c1980e1fb43bcb51ab43489b86f8071549": {
+      "use_plugin": true,
+      "reason": "Requires refund_replay_rate: counting repeated event credentials and dividing by raw stream, with no deduplication or mutation."
+    },
+    "7b8558a3bcbf596d19ade475051ff595584369983b56891d6bc968a444b6be81": {
+      "use_plugin": false,
+      "reason": "Requires refund_replay_rate: identify later occurrences of a unique refund event key and compute replay rate over the total."
+    },
+    "e2261f6a9f2d15c2ba1d7c453913072902c271e7630c383dfa772d71672b851c": {
+      "use_plugin": false,
+      "reason": "Requires refund_replay_rate: identify later occurrences of a unique refund event key and compute replay rate over the total."
+    },
+    "5a7c4dcc21f01d7415c1f58afd51c2925e0d6161bc0c82f15606354f208955db": {
+      "use_plugin": true,
+      "reason": "Requires refund_replay_rate: identify later occurrences of a unique refund event key and compute replay rate over the total."
+    },
+    "97ae4aee3ecaf9ab4556f630d2efedb05225bde01a12da2467e8a450cc17fdc1": {
+      "use_plugin": false,
+      "reason": "Requires event-level refund replay rate with duplicate rows kept in the denominator; metric computation only, not deduplication."
+    },
+    "b6c65717c863f03aa50f8497fc362f003f64074dd2cfa6a2af7fbe328bd28634": {
+      "use_plugin": false,
+      "reason": "Requires event-level refund replay rate with duplicate rows kept in the denominator; metric computation only, not deduplication."
+    },
+    "5c1cb6f4174c8d1a2f7aa47ce8c82dce104274526fde1e9aaaa2932e74a81c35": {
+      "use_plugin": true,
+      "reason": "Requires event-level refund replay rate with duplicate rows kept in the denominator; metric computation only, not deduplication."
+    },
+    "564da79836554a3167c022855b549f2304bf549ff463f41587201eec050f33f7": {
+      "use_plugin": false,
+      "reason": "Measures refund source idempotent replay by event reference and outputs a rate/basis-point metric without removing events."
+    },
+    "dd114f0d9218e8f1315d48da5c2021911bc2456f720154b2391ded425a791947": {
+      "use_plugin": false,
+      "reason": "Measures refund source idempotent replay by event reference and outputs a rate/basis-point metric without removing events."
+    },
+    "f39d8621058672a58014689fc189e760dbc04d84c1b4bf5dfb7e62ab2bf23766": {
+      "use_plugin": true,
+      "reason": "Measures refund source idempotent replay by event reference and outputs a rate/basis-point metric without removing events."
+    },
+    "1608c8bd8b7f9a631284c7465db7f28e949de76038ef1c6b4af7d95c68abd871": {
+      "use_plugin": false,
+      "reason": "Requires refund replay KPI where later rows with the same key enter the numerator; no deduplication transform requested."
+    },
+    "d3768043c0b98b54b84466b9b912fa820b5425b501af367060715e27e4f3b48c": {
+      "use_plugin": false,
+      "reason": "Requires refund replay KPI where later rows with the same key enter the numerator; no deduplication transform requested."
+    },
+    "9a92d88fab701569a4a4072cd036aefa07f25d55c184b28278f9947f9f1e16f2": {
+      "use_plugin": true,
+      "reason": "Requires refund replay KPI where later rows with the same key enter the numerator; no deduplication transform requested."
+    },
+    "7fa89b37c20b4c38a3667a3073a2bd1a39e23e00d5bf85200e7254a90218c015": {
+      "use_plugin": false,
+      "reason": "Reports the replay proportion in the raw refund messages and supporting counts; the rate-producing metric plugin is required."
+    },
+    "72cb40c82d125460328334c51a9db11f6709fe9700d66821b90cf29dca91f4b5": {
+      "use_plugin": false,
+      "reason": "Reports the replay proportion in the raw refund messages and supporting counts; the rate-producing metric plugin is required."
+    },
+    "7888c969d10cb75bd334e7c55853b2b0f605b036182abf203a65b65cf5be1231": {
+      "use_plugin": true,
+      "reason": "Reports the replay proportion in the raw refund messages and supporting counts; the rate-producing metric plugin is required."
+    },
+    "ad93fac4060b509ba3993f8d8572ce8825b7bf9989089342ef1a9a81ac67b49d": {
+      "use_plugin": false,
+      "reason": "Measures redelivered refund messages by counting every row after the first use of an event key in the numerator."
+    },
+    "b7cdd01df3ffa1f56f77c22f97b3c8541d10b042dec66849462d6afec779aa4c": {
+      "use_plugin": false,
+      "reason": "Measures redelivered refund messages by counting every row after the first use of an event key in the numerator."
+    },
+    "b2e4865feb315c2921d98a37afc81f8bb9dafb67da9a4b30d0e4db64b1db7981": {
+      "use_plugin": true,
+      "reason": "Measures redelivered refund messages by counting every row after the first use of an event key in the numerator."
+    },
+    "aa5b26577fdbfcd9001b6513ba9d1f0d18ffe51cc4d76ac477e2822ecae2c793": {
+      "use_plugin": false,
+      "reason": "Asks for the fraction of raw refund stream rows that replay an earlier unique event reference; this is the replay-rate metric."
+    },
+    "bfd9d1cfecde9151fe496cea9c9dfac1503ccfddf4e23b91941207af36d122ae": {
+      "use_plugin": false,
+      "reason": "Asks for the fraction of raw refund stream rows that replay an earlier unique event reference; this is the replay-rate metric."
+    },
+    "af740a2ac32a1d6a669c3418ae516eb49d1b98dc268c3b9ff144bb79cc87051e": {
+      "use_plugin": true,
+      "reason": "Asks for the fraction of raw refund stream rows that replay an earlier unique event reference; this is the replay-rate metric."
+    },
+    "2dc3df8033fedb24654f86192030db26af9e1fd58bc0bcdb20581609a69d6c28": {
+      "use_plugin": false,
+      "reason": "Computes refund idempotency replay KPI in bps while explicitly keeping duplicate rows in the denominator, so no dedup plugin."
+    },
+    "9dd6923e8646e5cb388832b6123581f4149662e188af5eafe400eff35d199b04": {
+      "use_plugin": false,
+      "reason": "Computes refund idempotency replay KPI in bps while explicitly keeping duplicate rows in the denominator, so no dedup plugin."
+    },
+    "4a259399ac28161c7298057b0285b44ef735f848655849347a0cc85c8087ba54": {
+      "use_plugin": true,
+      "reason": "Computes refund idempotency replay KPI in bps while explicitly keeping duplicate rows in the denominator, so no dedup plugin."
+    },
+    "88a068660be6b55e4f9a6657dec3028c2d9158ae5ced661452169594c06a2af9": {
+      "use_plugin": false,
+      "reason": "Counts later deliveries of reimbursement event keys divided by complete incoming feed size; requires the replay-rate metric."
+    },
+    "d2e610d6a5d238c0557ad6ce889890eab4be75939c9aaa4cbde398b7c46d0ff6": {
+      "use_plugin": false,
+      "reason": "Counts later deliveries of reimbursement event keys divided by complete incoming feed size; requires the replay-rate metric."
+    },
+    "c278f12fc8abcff72325aa1c83c3cee095e95565f51fe94ff1809fc0b2c7e704": {
+      "use_plugin": true,
+      "reason": "Counts later deliveries of reimbursement event keys divided by complete incoming feed size; requires the replay-rate metric."
+    },
+    "3f96b53d665ae54e01e8d74265f5b1e22157635956e56ed86d2830dc4f6b0c33": {
+      "use_plugin": false,
+      "reason": "Returns duplicate-delivery basis-point rate for refund events as a metric; no event removal or per-order refund cap is requested."
+    },
+    "7401fb0f7c63d39816f93c2c289815ab9a4b458b1d8ce47681a94b9f7bd44926": {
+      "use_plugin": false,
+      "reason": "Returns duplicate-delivery basis-point rate for refund events as a metric; no event removal or per-order refund cap is requested."
+    },
+    "e33260ed7ca27d96ec691ba05fa448460c0b6f09967de7733ae19671615966f4": {
+      "use_plugin": true,
+      "reason": "Returns duplicate-delivery basis-point rate for refund events as a metric; no event removal or per-order refund cap is requested."
+    },
+    "837ebca9108547c9ea8a048e26bd733299a153b9096782f7cb4ee4bb56f85060": {
+      "use_plugin": false,
+      "reason": "Assesses refund source replay frequency using exact event identity, where first delivery is not replay; requires the replay-rate metric."
+    },
+    "0667dc1b28aa645586f3b95bfbf0f15a391575f0664be76698f093601abafcf7": {
+      "use_plugin": false,
+      "reason": "Assesses refund source replay frequency using exact event identity, where first delivery is not replay; requires the replay-rate metric."
+    },
+    "af36fe956d934203730294c7588c40ca2a1c39b97fb33b53d7e14845b7036b7a": {
+      "use_plugin": true,
+      "reason": "Assesses refund source replay frequency using exact event identity, where first delivery is not replay; requires the replay-rate metric."
+    }
+  }
+}

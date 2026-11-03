@@ -1,0 +1,36 @@
+{
+  "task": "计算订单退款率，并按品类生成扣除退款后的销售额排行。退款率以去重订单数为分母；跨品类订单退款按订单行销售额比例分摊。",
+  "ok": true,
+  "policy": {
+    "refund_rate_denominator": "distinct_orders",
+    "category_refund_allocation": "proportional"
+  },
+  "issues": [],
+  "results": {
+    "refund_rate": {
+      "total_orders": 7,
+      "refunded_orders": 2,
+      "refund_rate": "0.2857142857142857142857142857"
+    },
+    "category_ranking": [
+      {
+        "category": "办公设备",
+        "gross_sales": "1037.00",
+        "refund_amount": "100.00",
+        "net_sales": "937.00"
+      },
+      {
+        "category": "办公耗材",
+        "gross_sales": "349.00",
+        "refund_amount": "0",
+        "net_sales": "349.00"
+      },
+      {
+        "category": "数码配件",
+        "gross_sales": "988.00",
+        "refund_amount": "649.00",
+        "net_sales": "339.00"
+      }
+    ]
+  }
+}

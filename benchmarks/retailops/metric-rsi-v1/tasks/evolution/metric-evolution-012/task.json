@@ -1,0 +1,10 @@
+{
+  "instruction": "Return refund_replay_rate with total rows, duplicate rows, and integer basis-point rate.",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

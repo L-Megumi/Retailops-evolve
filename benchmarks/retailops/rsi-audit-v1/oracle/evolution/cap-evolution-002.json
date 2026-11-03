@@ -1,0 +1,68 @@
+{
+  "case_id": "cap-evolution-002",
+  "split": "evolution",
+  "scenario": "quantity_allocation",
+  "metric_contract": {
+    "refund_rate_denominator": "distinct_orders",
+    "category_refund_allocation": "proportional",
+    "refund_time_attribution": "refund_date"
+  },
+  "capability_contract": {
+    "category_refund_allocation_v2": "quantity_weighted"
+  },
+  "relevant_contract_fields": [
+    "category_refund_allocation"
+  ],
+  "results": {
+    "category_ranking": [
+      {
+        "category": "网络设备",
+        "gross_sales": "11286.51",
+        "refund_amount": "1339.338",
+        "net_sales": "9947.172"
+      },
+      {
+        "category": "办公家具",
+        "gross_sales": "10181.84",
+        "refund_amount": "798.9146666666666666666666667",
+        "net_sales": "9382.925333333333333333333333"
+      },
+      {
+        "category": "仓储用品",
+        "gross_sales": "5268.96",
+        "refund_amount": "765.1801196581196581196581195",
+        "net_sales": "4503.779880341880341880341880"
+      },
+      {
+        "category": "办公耗材",
+        "gross_sales": "3298.82",
+        "refund_amount": "434.6676923076923076923076924",
+        "net_sales": "2864.152307692307692307692308"
+      },
+      {
+        "category": "包装材料",
+        "gross_sales": "3141.13",
+        "refund_amount": "403.8386666666666666666666667",
+        "net_sales": "2737.291333333333333333333333"
+      },
+      {
+        "category": "清洁用品",
+        "gross_sales": "2290.88",
+        "refund_amount": "362.2230769230769230769230770",
+        "net_sales": "1928.656923076923076923076923"
+      },
+      {
+        "category": "照明设备",
+        "gross_sales": "2184.14",
+        "refund_amount": "603.3277777777777777777777778",
+        "net_sales": "1580.812222222222222222222222"
+      },
+      {
+        "category": "电子产品",
+        "gross_sales": "645.47",
+        "refund_amount": "0",
+        "net_sales": "645.47"
+      }
+    ]
+  }
+}

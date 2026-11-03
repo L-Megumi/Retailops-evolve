@@ -1,0 +1,12 @@
+{
+  "instruction": "计算退款订单占比，分母采用唯一订单数。",
+  "tools": [
+    "refund_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "regression",
+    "difficulty": "legacy",
+    "instruction_style": "legacy_dynamic",
+    "data_profile": "legacy"
+  }
+}

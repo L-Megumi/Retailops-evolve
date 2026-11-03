@@ -1,0 +1,9 @@
+refund_id,order_id,refund_date,refund_amount
+metric-audit-003-R01,metric-audit-003-O2,2026-11-01,17.00
+metric-audit-003-R00,metric-audit-003-O2,2026-11-06,1.00
+metric-audit-003-R01,metric-audit-003-O2,2026-11-01,17.00
+metric-audit-003-R02,metric-audit-003-O2,2026-11-26,8.00
+metric-audit-003-R02,metric-audit-003-O2,2026-11-26,8.00
+metric-audit-003-R03,metric-audit-003-O2,2026-11-03,8.00
+metric-audit-003-R01,metric-audit-003-O2,2026-11-01,17.00
+metric-audit-003-R00,metric-audit-003-O2,2026-11-06,1.00

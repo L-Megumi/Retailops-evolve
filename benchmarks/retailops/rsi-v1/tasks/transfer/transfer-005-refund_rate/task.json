@@ -1,0 +1,12 @@
+{
+  "instruction": "交付退款订单率。统计规格：refund_rate_denominator := COUNT(DISTINCT order_id)。",
+  "tools": [
+    "refund_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "transfer",
+    "difficulty": "challenge",
+    "instruction_style": "formula",
+    "data_profile": "cross_period"
+  }
+}

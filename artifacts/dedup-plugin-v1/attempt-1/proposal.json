@@ -1,0 +1,4 @@
+{
+  "source": "def transform_refunds(order_totals_cents, refunds):\n    seen = {}\n    result = []\n    for row in refunds:\n        refund_id = row.get('refund_id')\n        if refund_id not in seen:\n            seen[refund_id] = True\n            result.append(row.copy())\n    return result",
+  "reason": "Iterates refunds in original order, using a dict to track refund_id values already seen. Only the first occurrence of each refund_id is appended (as a shallow copy), preserving all original fields unchanged. No imports, comprehensions, lambdas, exceptions, helper functions, private names, or set() are used; only allowed calls and methods."
+}

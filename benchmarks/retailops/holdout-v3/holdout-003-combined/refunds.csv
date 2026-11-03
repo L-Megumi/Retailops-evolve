@@ -1,0 +1,3 @@
+refund_id,order_id,refund_date,refund_amount
+HR003-01,H003-01,2026-09-11,119.36
+HR003-02,H003-01,2026-09-10,119.35

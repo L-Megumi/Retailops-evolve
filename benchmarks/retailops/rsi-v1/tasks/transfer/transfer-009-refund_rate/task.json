@@ -1,0 +1,12 @@
+{
+  "instruction": "生成退款订单率；本工单参数 RR_BASE=UNIQUE_ORDER。",
+  "tools": [
+    "refund_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "transfer",
+    "difficulty": "challenge",
+    "instruction_style": "compact_alias",
+    "data_profile": "dense"
+  }
+}

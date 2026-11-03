@@ -1,0 +1,5 @@
+order_id,order_date,category,product,quantity,unit_price
+metric-evolution-010-O1,2026-10-01,办公耗材,P1,1,268.00
+metric-evolution-010-O2,2026-10-02,数码配件,P2,1,44.00
+metric-evolution-010-O3,2026-10-03,办公耗材,P3,1,293.00
+metric-evolution-010-O4,2026-10-04,数码配件,P4,1,201.00

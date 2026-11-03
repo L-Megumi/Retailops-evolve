@@ -1,0 +1,5 @@
+{
+  "cue": "退款金额按品类数做 1/N 等额拆分",
+  "action": "equal_category_allocation",
+  "reason": "The instruction requires splitting each refund equally across the distinct categories in its order, which is exactly the equal_category_allocation rule."
+}

@@ -1,0 +1,11 @@
+{
+  "instruction": "生成品类排行和日汇总。累计退款上限为原订单成交额，按文件顺序确认退款；若某行使累计额越界，只保留恰好达到上限的部分。",
+  "tools": [
+    "category_ranking",
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "case_kind": "code_capability"
+  }
+}

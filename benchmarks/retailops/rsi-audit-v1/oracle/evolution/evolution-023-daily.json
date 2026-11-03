@@ -1,0 +1,65 @@
+{
+  "case_id": "evolution-023-daily",
+  "split": "evolution",
+  "scenario": "daily",
+  "metric_contract": {
+    "refund_rate_denominator": "order_lines",
+    "category_refund_allocation": "proportional",
+    "refund_time_attribution": "order_date"
+  },
+  "relevant_contract_fields": [
+    "refund_time_attribution"
+  ],
+  "results": {
+    "daily_net_sales": [
+      {
+        "date": "2026-09-07",
+        "gross_sales": "14105.70",
+        "refund_amount": "0",
+        "net_sales": "14105.70"
+      },
+      {
+        "date": "2026-09-08",
+        "gross_sales": "4034.66",
+        "refund_amount": "0",
+        "net_sales": "4034.66"
+      },
+      {
+        "date": "2026-09-09",
+        "gross_sales": "28258.34",
+        "refund_amount": "0",
+        "net_sales": "28258.34"
+      },
+      {
+        "date": "2026-09-10",
+        "gross_sales": "8455.84",
+        "refund_amount": "652.07",
+        "net_sales": "7803.77"
+      },
+      {
+        "date": "2026-09-11",
+        "gross_sales": "4967.39",
+        "refund_amount": "0",
+        "net_sales": "4967.39"
+      },
+      {
+        "date": "2026-09-12",
+        "gross_sales": "11579.46",
+        "refund_amount": "433.93",
+        "net_sales": "11145.53"
+      },
+      {
+        "date": "2026-09-13",
+        "gross_sales": "8316.89",
+        "refund_amount": "0",
+        "net_sales": "8316.89"
+      },
+      {
+        "date": "2026-09-14",
+        "gross_sales": "8974.33",
+        "refund_amount": "344.70",
+        "net_sales": "8629.63"
+      }
+    ]
+  }
+}

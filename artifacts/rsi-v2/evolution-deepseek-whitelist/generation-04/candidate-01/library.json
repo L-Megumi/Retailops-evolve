@@ -1,0 +1,33 @@
+{
+  "version": 4,
+  "rules": [
+    {
+      "rule_id": "learned-g01",
+      "cue": "同一退款订单涉及 N 个品类时",
+      "action": "equal_category_allocation",
+      "reason": "When a single refund order spans multiple categories, the refund must be split equally across those categories rather than allocated by transaction amount, with any rounding remainder assigned to the last category in input order.",
+      "source_task": "cap-evolution-001"
+    },
+    {
+      "rule_id": "learned-g02",
+      "cue": "跨品类退款按该订单中各品类商品数量之和加权分摊",
+      "action": "quantity_category_allocation",
+      "reason": "When a refund spans multiple categories, allocate it across those categories in proportion to the summed item quantity per category in the order, not by sales amount or equal split.",
+      "source_task": "cap-evolution-002"
+    },
+    {
+      "rule_id": "learned-g03",
+      "cue": "相同 refund_id 只认第一次",
+      "action": "deduplicate_refunds",
+      "reason": "When the refund file may contain duplicate rows from repeated collection, keep only the first row per refund_id before computing any metrics so later duplicates never deduct again.",
+      "source_task": "cap-evolution-003"
+    },
+    {
+      "rule_id": "learned-g04",
+      "cue": "审计优先规则（覆盖历史默认口径）",
+      "action": "hybrid_refund_time",
+      "reason": "When an audit-priority rule overrides the historical default, judge each refund row individually: refunds within the short natural-day lag use the original order date, while longer-lag refunds keep the actual refund date, rather than applying one date field to the whole table.",
+      "source_task": "cap-evolution-004"
+    }
+  ]
+}

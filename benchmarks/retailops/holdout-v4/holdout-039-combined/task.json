@@ -1,0 +1,12 @@
+{
+  "instruction": "输出 refund rate 和 category ranking，采用唯一订单数，退款全部归入订单中首个记录的品类。",
+  "tools": [
+    "refund_rate",
+    "category_ranking"
+  ],
+  "metric_contract": {
+    "refund_rate_denominator": "distinct_orders",
+    "category_refund_allocation": "first_category",
+    "refund_time_attribution": "refund_date"
+  }
+}

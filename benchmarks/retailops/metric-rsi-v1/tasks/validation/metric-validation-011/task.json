@@ -1,0 +1,10 @@
+{
+  "instruction": "Quantify repeated refund-event deliveries without deduplicating the denominator first.",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "instruction": "计算品类净额和每日净额。对同一订单设置累计可退天花板，天花板就是订单成交额；按输入顺序截断导致超额的退款记录。",
+  "tools": [
+    "category_ranking",
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "transfer",
+    "case_kind": "code_capability"
+  }
+}

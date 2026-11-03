@@ -1,0 +1,11 @@
+{
+  "instruction": "输出 category ranking 和 daily net sales。退款确认采用订单级余额池，初始余额为订单成交额；每行最多确认当前余额，余额耗尽后忽略后续行。",
+  "tools": [
+    "category_ranking",
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "case_kind": "code_capability"
+  }
+}

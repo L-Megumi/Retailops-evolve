@@ -1,0 +1,10 @@
+{
+  "instruction": "衡量退款数据源的幂等重放问题，按事件引用号识别后续副本并输出基点。",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "audit",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "case_id": "holdout-009-refund_rate",
+  "split": "regression",
+  "scenario": "refund_rate",
+  "metric_contract": {
+    "refund_rate_denominator": "distinct_orders",
+    "category_refund_allocation": "first_category",
+    "refund_time_attribution": "refund_date"
+  },
+  "relevant_contract_fields": [
+    "refund_rate_denominator"
+  ],
+  "results": {
+    "refund_rate": {
+      "total_orders": 10,
+      "refunded_orders": 1,
+      "refund_rate": "0.1"
+    }
+  }
+}

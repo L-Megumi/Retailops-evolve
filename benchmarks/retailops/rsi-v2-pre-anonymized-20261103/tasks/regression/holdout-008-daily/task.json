@@ -1,0 +1,14 @@
+{
+  "instruction": "生成每日净销售额，退款计入退款实际发生日期。",
+  "tools": [
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "regression",
+    "difficulty": "legacy",
+    "case_kind": "contract_selection",
+    "capability_family": "none",
+    "instruction_style": "legacy_dynamic",
+    "data_profile": "legacy"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "instruction": "审计优先规则（覆盖历史默认口径）：生成品类净销售额排行。跨品类退款按该订单中各品类商品数量之和加权分摊，权重使用 quantity，不得使用销售额占比。",
+  "tools": [
+    "category_ranking"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "difficulty": "capability_expansion",
+    "case_kind": "capability_expansion",
+    "instruction_style": "negated_override",
+    "data_profile": "multi_refund"
+  }
+}

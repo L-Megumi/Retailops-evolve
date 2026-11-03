@@ -1,0 +1,10 @@
+{
+  "instruction": "报告原始退款消息中重放消息所占比例，以及用于复核的总行数与重放行数。",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "audit",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

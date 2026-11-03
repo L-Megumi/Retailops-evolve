@@ -1,0 +1,11 @@
+refund_id,order_id,refund_date,refund_amount
+metric-validation-012-R06,metric-validation-012-O2,2026-11-09,10.00
+metric-validation-012-R07,metric-validation-012-O2,2026-11-21,3.00
+metric-validation-012-R09,metric-validation-012-O2,2026-11-02,17.00
+metric-validation-012-R04,metric-validation-012-O3,2026-11-27,3.00
+metric-validation-012-R01,metric-validation-012-O2,2026-11-18,16.00
+metric-validation-012-R03,metric-validation-012-O4,2026-11-02,9.00
+metric-validation-012-R02,metric-validation-012-O4,2026-11-05,5.00
+metric-validation-012-R08,metric-validation-012-O2,2026-11-14,18.00
+metric-validation-012-R05,metric-validation-012-O2,2026-11-16,10.00
+metric-validation-012-R00,metric-validation-012-O3,2026-11-10,7.00

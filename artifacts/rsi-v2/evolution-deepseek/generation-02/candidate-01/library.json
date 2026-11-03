@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "rule_id": "learned-g01",
+      "cue": "退款金额按品类数做 1/N 等额拆分",
+      "action": "equal_category_allocation",
+      "reason": "The instruction explicitly requires splitting each refund equally across the distinct categories in the order (1/N per category), which matches equal_category_allocation.",
+      "source_task": "cap-evolution-001"
+    },
+    {
+      "rule_id": "learned-g02",
+      "cue": "按该订单中各品类商品数量之和加权分摊",
+      "action": "quantity_category_allocation",
+      "reason": "The instruction requires allocating cross-category refunds weighted by summed item quantity per category in the order, which matches quantity_category_allocation rather than equal splitting.",
+      "source_task": "cap-evolution-002"
+    }
+  ]
+}

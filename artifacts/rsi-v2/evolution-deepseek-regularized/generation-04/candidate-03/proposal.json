@@ -1,0 +1,5 @@
+{
+  "cue": "逐笔判断退款日与原订单日的间隔，短间隔回写订单日，长间隔保留退款日",
+  "action": "hybrid_refund_time",
+  "reason": "The instruction requires a per-refund decision: refunds within a short natural-day lag are attributed to the order date while longer-lag refunds keep the actual refund date, which is exactly the hybrid_refund_time rule."
+}

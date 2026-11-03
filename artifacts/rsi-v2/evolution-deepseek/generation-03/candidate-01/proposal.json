@@ -1,0 +1,5 @@
+{
+  "cue": "相同 refund_id 只认第一次",
+  "action": "deduplicate_refunds",
+  "reason": "The instruction requires keeping only the first occurrence of each refund_id so duplicate rows are not deducted again, which matches deduplicate_refunds."
+}

@@ -1,0 +1,15 @@
+{
+  "instruction": "计算退款率与品类净销售额排行；退款率分母为订单明细行数，跨品类退款按各品类订单行销售额比例分摊。",
+  "tools": [
+    "refund_rate",
+    "category_ranking"
+  ],
+  "benchmark_metadata": {
+    "split": "regression",
+    "difficulty": "legacy",
+    "case_kind": "contract_selection",
+    "capability_family": "none",
+    "instruction_style": "legacy_dynamic",
+    "data_profile": "legacy"
+  }
+}

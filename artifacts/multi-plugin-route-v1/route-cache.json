@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "entries": {
+    "726d2c5494cdebf9a834c2e09149b7ddab8f6ab6f821bd0af6f0d2fa8a136352": {
+      "use_plugin": true,
+      "reason": "任务要求对同一笔销售的多笔退货按顺序累计认可，并以最初商品货款为上限，越界那笔只取剩余部分，完全符合该插件按订单累计封顶、按顺序处理并对越界事件部分接受的规则。"
+    },
+    "4b5874d8fbf4b3a0a2219f9e97fc100286b26da77727f7d32e049731980bcb92": {
+      "use_plugin": false,
+      "reason": "任务要求对同一笔销售的多笔退货按顺序累计认可，并以最初商品货款为上限，越界那笔只取剩余部分，完全符合该插件按订单累计封顶、按顺序处理并对越界事件部分接受的规则。"
+    },
+    "5c6f6eefe0f69a6012e8554f05768e03307ff4a6dc071dabc54acd0ad198282a": {
+      "use_plugin": true,
+      "reason": "任务要求为每张销售单维护可退本金，按售后事件逐条消耗，本金归零后不再确认后续金额，这正是按订单累计退款上限并在额度耗尽后拒绝超额事件的场景。"
+    },
+    "62f20d24c7dc259d4f0b8f33233130b1af11a384c8ff98a95272b73f9f6317f0": {
+      "use_plugin": false,
+      "reason": "任务要求为每张销售单维护可退本金，按售后事件逐条消耗，本金归零后不再确认后续金额，这正是按订单累计退款上限并在额度耗尽后拒绝超额事件的场景。"
+    },
+    "343d99067d6db6a73fbc7b2cc847ae9e8cb927ab955d7b44ef6718b2704e37c7": {
+      "use_plugin": true,
+      "reason": "The task requires accumulating refunds across historical and current events per transaction and capping the accepted total at the original order value, which matches the cumulative per-order refund cap plugin exactly."
+    },
+    "8f6b84efc9c035ee2a51908de44336bed3ce3633ac71ef7b70a12e879f30271f": {
+      "use_plugin": false,
+      "reason": "The task requires accumulating refunds across historical and current events per transaction and capping the accepted total at the original order value, which matches the cumulative per-order refund cap plugin exactly."
+    },
+    "95eafdba08d4a14ade865865b2bcc9f94c9cc2bcee3b2c5d676a511283ebc4d1": {
+      "use_plugin": true,
+      "reason": "任务要求对同一销售凭证的多笔返款按到达顺序累计，并在超过原销售金额时对跨越的那笔部分接受、后续拒绝，完全符合按订单累计封顶且按顺序处理、跨界事件部分接受的插件定义。"
+    },
+    "366a81e4e8aab792d207b41f143cba44b751dcd0bc49f132a4114d281cdc39d5": {
+      "use_plugin": false,
+      "reason": "任务要求对同一销售凭证的多笔返款按到达顺序累计，并在超过原销售金额时对跨越的那笔部分接受、后续拒绝，完全符合按订单累计封顶且按顺序处理、跨界事件部分接受的插件定义。"
+    },
+    "1c870b672dd6496320696c170d0301ac19b2ba912d7206c6c70adf74386ed00b": {
+      "use_plugin": true,
+      "reason": "The task describes accumulating repeated returns on one sale against a shared allowance equal to original merchandise value, with earlier events consuming it first and later excess rejected—exactly the per-order cumulative cap behavior."
+    },
+    "8bf323fa3dc255363b410586e0ee63909d45d5d16ea31e97f9524b3b0fe43fa9": {
+      "use_plugin": false,
+      "reason": "The task describes accumulating repeated returns on one sale against a shared allowance equal to original merchandise value, with earlier events consuming it first and later excess rejected—exactly the per-order cumulative cap behavior."
+    },
+    "cb3c5dc7823868d4094c2f6f08f34362cd1d4b7e1e435fc2d8e5aca04f60cccc": {
+      "use_plugin": true,
+      "reason": "The task requires accumulating return events per sale in chronological order and capping at the original sold value, partially accepting the boundary event—exactly the cumulative per-order refund cap behavior."
+    },
+    "a8e0db5a9a3dcc3b8d46348cf6938ea30e2000efe2d2614dddbe0d270a1bc561": {
+      "use_plugin": false,
+      "reason": "The task requires accumulating return events per sale in chronological order and capping at the original sold value, partially accepting the boundary event—exactly the cumulative per-order refund cap behavior."
+    },
+    "9a8a522a3fc5d476b80a4d86290b7a238a1eea08d9e251b1d9e3e8855bfa8c3b": {
+      "use_plugin": true,
+      "reason": "The task requires tracking a per-transaction remaining refundable principal and stopping recognition once it reaches zero, which is a per-order cumulative cap on accepted refund value."
+    },
+    "998d2ef68a543e9e540c7b285b5dbe5fcb701be54c8b6ec1115da23e0ad07e54": {
+      "use_plugin": false,
+      "reason": "The task requires tracking a per-transaction remaining refundable principal and stopping recognition once it reaches zero, which is a per-order cumulative cap on accepted refund value."
+    },
+    "4477299193a279a603bac636d1f2d16e29c51ab1012da0cc08b0b7bf52f82c92": {
+      "use_plugin": true,
+      "reason": "The task requires accumulating accepted return value across all events for a sale, capping at original gross, and trimming only the event that crosses the limit—matching the cumulative per-order cap plugin."
+    },
+    "7ccabad7f0d38976ba305c6b71f44859e079615817b91071ef19d2ab5f8c4082": {
+      "use_plugin": false,
+      "reason": "The task requires accumulating accepted return value across all events for a sale, capping at original gross, and trimming only the event that crosses the limit—matching the cumulative per-order cap plugin."
+    },
+    "c543b1f750c71bcd9a9fd86ea7bcd691aa5aa47eb80062af5064c1f10c333795": {
+      "use_plugin": false,
+      "reason": "任务要求按售后流水号去重，仅保留最早到达的记录并原样丢弃其余重复项，符合 refund-event-dedup-v1 的定义。"
+    },
+    "7cf647209e973b34b601358270ab78cbe93334dd6d8575b5ff87bb90059fd12d": {
+      "use_plugin": true,
+      "reason": "任务要求按售后流水号去重，仅保留最早到达的记录并原样丢弃其余重复项，符合 refund-event-dedup-v1 的定义。"
+    },
+    "a64d8488e7eba1860dc3fd79e5269a0cfe510c5f4d753a1f86bda3aa5d9e526a": {
+      "use_plugin": false,
+      "reason": "任务要求按业务流水标识去重退货事件，仅保留首次出现并保持原文件顺序，完全符合该插件的定义。"
+    },
+    "87d29b08c50b4b8baad9178dd87bd3149b02e4a10ad483a23132bb5295922d44": {
+      "use_plugin": true,
+      "reason": "任务要求按业务流水标识去重退货事件，仅保留首次出现并保持原文件顺序，完全符合该插件的定义。"
+    },
+    "83f8a56d775c6440db83037796db8eab7bc912cda1418f6707cb9c9e1241afdf": {
+      "use_plugin": false,
+      "reason": "任务要求按返款凭证编号去重，只保留首次出现、跳过后续相同编号，完全符合 refund-event-dedup-v1 的定义。"
+    },
+    "c43040ddc5f27a0a6b7df3ee7948ac15e1d6aab52b429fcfb5d5456ada579bde": {
+      "use_plugin": true,
+      "reason": "任务要求按返款凭证编号去重，只保留首次出现、跳过后续相同编号，完全符合 refund-event-dedup-v1 的定义。"
+    },
+    "b8c88fea39dfe645c211e849ddf7af4b5e172491a00401ebfe4aee86b2f24a74": {
+      "use_plugin": false,
+      "reason": "任务要求按售后事件唯一标识去重、保留首条且不修改金额/日期/关联销售单，完全符合 refund-event-dedup-v1 的定义。"
+    },
+    "b1784c0d6d023b4590d651117d7f1e32ea39dfa5bf847016d2e14917b412a33e": {
+      "use_plugin": true,
+      "reason": "任务要求按售后事件唯一标识去重、保留首条且不修改金额/日期/关联销售单，完全符合 refund-event-dedup-v1 的定义。"
+    },
+    "1977a9c2c4572fe55f8441e3a5a8582dec11a674c1890a18e2cbc05c88ea0d91": {
+      "use_plugin": false,
+      "reason": "The task requires deduplication by reimbursement reference while retaining the earliest event, but the available dedup plugin keys on refund_id and preserves input order rather than selecting earliest by time; the other plugin concerns cumulative caps. No single plugin matches all essential conditio"
+    },
+    "7d398a210ad7a25fa5793f3c4455d894a4a72fcf48f171f9f9320880d0cc08b5": {
+      "use_plugin": false,
+      "reason": "The task requires deduplication by reimbursement reference while retaining the earliest event, but the available dedup plugin keys on refund_id and preserves input order rather than selecting earliest by time; the other plugin concerns cumulative caps. No single plugin matches all essential conditio"
+    },
+    "345bd49810961816d577865ad74a3c776b1e56c28236d4304be5d12a6017cae5": {
+      "use_plugin": false,
+      "reason": "The task is to remove duplicate return/refund events by unique event identifier, keeping the first occurrence and preserving order, which matches refund-event-dedup-v1's definition of deduplicating by refund_id while preserving input order and retained rows."
+    },
+    "0d5ca8fdc7af2b30f5856c856029498c76de3d3ae28648fcbf909794e7c06c43": {
+      "use_plugin": true,
+      "reason": "The task is to remove duplicate return/refund events by unique event identifier, keeping the first occurrence and preserving order, which matches refund-event-dedup-v1's definition of deduplicating by refund_id while preserving input order and retained rows."
+    },
+    "4af3814a04e4b8a4e40e456ebf58f9c91dda9b067a0559567d1f3e51734a0509": {
+      "use_plugin": false,
+      "reason": "The task is to process a replayed reimbursement key once, keeping the earliest row unchanged—deduplication by key preserving input order, which matches refund-event-dedup-v1; no per-order cumulative cap is involved."
+    },
+    "1aa0fc21af17600eb023b6e22cb860af006a253313e66e9bfdef094ba2e79806": {
+      "use_plugin": true,
+      "reason": "The task is to process a replayed reimbursement key once, keeping the earliest row unchanged—deduplication by key preserving input order, which matches refund-event-dedup-v1; no per-order cumulative cap is involved."
+    },
+    "ea727750ff336fcb35f76b612aecd001fca8399f7c6ecec425a7c1d252210246": {
+      "use_plugin": false,
+      "reason": "The task requires deduplicating exact event-identity repetitions while preserving distinct return events with equal amounts, which involves identity-based deduplication beyond refund_id and conflicts with the refund-event-dedup-v1 exclusion of deduplication by amount or other fields; no single plugi"
+    },
+    "43437a4a3cb2951e533e7a87613f2f4fe05fd6616b9f923bc79a382af4e3fa66": {
+      "use_plugin": false,
+      "reason": "The task requires deduplicating exact event-identity repetitions while preserving distinct return events with equal amounts, which involves identity-based deduplication beyond refund_id and conflicts with the refund-event-dedup-v1 exclusion of deduplication by amount or other fields; no single plugi"
+    },
+    "44118cc411d58653e79169854d15af2c313c2214a01ef3f6e778b957fa7c4187": {
+      "use_plugin": false,
+      "reason": "The task requires two distinct operations—deduplicating refund events and enforcing a per-order cumulative refund cap—so no single plugin covers it."
+    },
+    "f5d65c37a696f1d935de0cbb9105bb331cdabbfd5689737ee645148b7f7bdabe": {
+      "use_plugin": false,
+      "reason": "The task requires two distinct operations—deduplicating refund events and enforcing a per-order cumulative refund cap—so no single plugin covers it."
+    },
+    "d341ea877fe95775abcbdbc1515ff257b02dcca9968536e045f9fef0cae5a10b": {
+      "use_plugin": false,
+      "reason": "该任务是对单笔返款设置 500 元阈值并转人工，属于单笔事件限额，而非按订单累计封顶；也不涉及按 refund_id 去重，因此没有插件完全匹配。"
+    },
+    "58937dd2710f7b9b6e420cd7837da68b8bb199de00372ee0b868c9e70a6f738a": {
+      "use_plugin": false,
+      "reason": "该任务是对单笔返款设置 500 元阈值并转人工，属于单笔事件限额，而非按订单累计封顶；也不涉及按 refund_id 去重，因此没有插件完全匹配。"
+    },
+    "9ae60bbb41d0ac020fbbe634ae76913eb4c9f95286ef16780dae85c363c5de53": {
+      "use_plugin": false,
+      "reason": "任务要求列出重复退款编号供审计，且明确不删除或修改记录；而 refund-event-dedup-v1 会移除重复事件，属于修改数据，其排除项也明确包含不删除重复项的检测报告。cumulative-refund-cap-v1 与重复编号审计无关。"
+    },
+    "1ee4249441c28c1b606cc0a28509f4e61e1997251522b2bdd772c6b59af0c73a": {
+      "use_plugin": false,
+      "reason": "任务要求列出重复退款编号供审计，且明确不删除或修改记录；而 refund-event-dedup-v1 会移除重复事件，属于修改数据，其排除项也明确包含不删除重复项的检测报告。cumulative-refund-cap-v1 与重复编号审计无关。"
+    },
+    "c5b5b0db7a2768e3c094b88c9dbdeb31b91c36cc830721cac4302094e924a375": {
+      "use_plugin": false,
+      "reason": "任务要求按销售单编号合并退货行，属于聚合操作，且明确不考虑售后流水标识；两个插件分别处理累计退款上限和按 refund_id 去重，均不匹配。"
+    },
+    "a73452ca4b2ec83b7172765d98dc61e5ed9e7c5d9f72280191ead9ff56aa00e9": {
+      "use_plugin": false,
+      "reason": "任务要求按销售单编号合并退货行，属于聚合操作，且明确不考虑售后流水标识；两个插件分别处理累计退款上限和按 refund_id 去重，均不匹配。"
+    },
+    "f2da2e9fe29d051993ec4a461d608609e06a63b80b134a0eaeeeedb069bcceda": {
+      "use_plugin": false,
+      "reason": "The task requires a store-level daily aggregate refund cap, which is explicitly excluded by cumulative-refund-cap-v1 (per-order cap only) and unrelated to refund-event-dedup-v1."
+    },
+    "4b271f13bd08b4705e0f64874a2669938142e81c7ce4388344288a96868490ac": {
+      "use_plugin": false,
+      "reason": "The task requires a store-level daily aggregate refund cap, which is explicitly excluded by cumulative-refund-cap-v1 (per-order cap only) and unrelated to refund-event-dedup-v1."
+    },
+    "0e4c743d30c3bfebb3cee753ec53d3fa358b73cb21f0ac3c89621c9ce890eafd": {
+      "use_plugin": false,
+      "reason": "任务要求检测累计退货超过成交金额的交易并告警，同时保留输入金额（不修改金额）。这属于“仅检测/告警而不改变接受金额”的情形，两个插件都明确排除此类任务：cumulative-refund-cap-v1 会按订单上限部分接受/拒绝金额，refund-event-dedup-v1 只做去重，均不符合。"
+    },
+    "6c99c0c4d053cfcccbb0ad3a80e416c032ad0c2ba1879e4b2e8b39cdbadbfd05": {
+      "use_plugin": false,
+      "reason": "任务要求检测累计退货超过成交金额的交易并告警，同时保留输入金额（不修改金额）。这属于“仅检测/告警而不改变接受金额”的情形，两个插件都明确排除此类任务：cumulative-refund-cap-v1 会按订单上限部分接受/拒绝金额，refund-event-dedup-v1 只做去重，均不符合。"
+    },
+    "484683371525eafabe97e5c9e5ef391508e0c3b448b8459c64b4ae3c9110790b": {
+      "use_plugin": false,
+      "reason": "The task defines duplicates by matching amount and date, but the only dedup plugin requires deduplication by refund_id and explicitly excludes deduplication by amount or date; the cumulative cap plugin is unrelated."
+    },
+    "bad685459ba8c49ab8fbead2ed1dab59d4902984ed916b901d39aba294de7f24": {
+      "use_plugin": false,
+      "reason": "The task defines duplicates by matching amount and date, but the only dedup plugin requires deduplication by refund_id and explicitly excludes deduplication by amount or date; the cumulative cap plugin is unrelated."
+    },
+    "e47b98d1afd91539dcc9e4ffe56aab147bc61f7b1c88c2fc1e758310cf3ee54f": {
+      "use_plugin": false,
+      "reason": "The task requires allocating each refund evenly across product line items while preserving refund event count and amount, which is an allocation task; neither plugin covers allocation (cumulative-refund-cap-v1 explicitly excludes allocation, and refund-event-dedup-v1 only removes duplicate refund ev"
+    },
+    "73779a3926f3d81c14672292e1396dcc8266cb7d326c0349b3aa6a0545758445": {
+      "use_plugin": false,
+      "reason": "The task requires allocating each refund evenly across product line items while preserving refund event count and amount, which is an allocation task; neither plugin covers allocation (cumulative-refund-cap-v1 explicitly excludes allocation, and refund-event-dedup-v1 only removes duplicate refund ev"
+    }
+  }
+}

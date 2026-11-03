@@ -1,0 +1,7 @@
+{
+  "accepted": false,
+  "gate_checks": {
+    "proposal_valid": false
+  },
+  "error": "ValueError: candidate cue must be a literal substring of the source instruction"
+}

@@ -1,0 +1,196 @@
+{
+  "benchmark": "holdout-v2",
+  "task_count": 8,
+  "base_passed": 2,
+  "final_passed": 8,
+  "oracle_passed": 8,
+  "improved": 6,
+  "retained_correct_base": 2,
+  "regressed": 0,
+  "execution_count": 32,
+  "model_calls": 30,
+  "model_usage": {
+    "prompt_tokens": 102753,
+    "completion_tokens": 4099,
+    "total_tokens": 106852
+  },
+  "plain_text_fallbacks": 6,
+  "average_model_calls_per_task": 3.75,
+  "average_tokens_per_task": 13356.5,
+  "rows": [
+    {
+      "task": "holdout-001-refund_rate",
+      "scenario": "refund_rate",
+      "base_ok": false,
+      "final_ok": true,
+      "oracle_ok": true,
+      "improved": true,
+      "retained_correct_base": false,
+      "initial_issues": [
+        "refund_rate_definition"
+      ],
+      "final_issues": [],
+      "base_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category"
+      },
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional"
+      },
+      "chosen_tree_is_base": false
+    },
+    {
+      "task": "holdout-002-category",
+      "scenario": "category",
+      "base_ok": false,
+      "final_ok": true,
+      "oracle_ok": true,
+      "improved": true,
+      "retained_correct_base": false,
+      "initial_issues": [
+        "category_refund_allocation"
+      ],
+      "final_issues": [],
+      "base_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category"
+      },
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional"
+      },
+      "chosen_tree_is_base": false
+    },
+    {
+      "task": "holdout-003-combined",
+      "scenario": "combined",
+      "base_ok": false,
+      "final_ok": true,
+      "oracle_ok": true,
+      "improved": true,
+      "retained_correct_base": false,
+      "initial_issues": [
+        "category_refund_allocation",
+        "refund_rate_definition"
+      ],
+      "final_issues": [],
+      "base_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category"
+      },
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional"
+      },
+      "chosen_tree_is_base": false
+    },
+    {
+      "task": "holdout-004-daily",
+      "scenario": "daily",
+      "base_ok": true,
+      "final_ok": true,
+      "oracle_ok": true,
+      "improved": false,
+      "retained_correct_base": true,
+      "initial_issues": [],
+      "final_issues": [],
+      "base_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category"
+      },
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category"
+      },
+      "chosen_tree_is_base": true
+    },
+    {
+      "task": "holdout-005-refund_rate",
+      "scenario": "refund_rate",
+      "base_ok": false,
+      "final_ok": true,
+      "oracle_ok": true,
+      "improved": true,
+      "retained_correct_base": false,
+      "initial_issues": [
+        "refund_rate_definition"
+      ],
+      "final_issues": [],
+      "base_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category"
+      },
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category"
+      },
+      "chosen_tree_is_base": false
+    },
+    {
+      "task": "holdout-006-category",
+      "scenario": "category",
+      "base_ok": false,
+      "final_ok": true,
+      "oracle_ok": true,
+      "improved": true,
+      "retained_correct_base": false,
+      "initial_issues": [
+        "category_refund_allocation"
+      ],
+      "final_issues": [],
+      "base_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category"
+      },
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional"
+      },
+      "chosen_tree_is_base": false
+    },
+    {
+      "task": "holdout-007-combined",
+      "scenario": "combined",
+      "base_ok": false,
+      "final_ok": true,
+      "oracle_ok": true,
+      "improved": true,
+      "retained_correct_base": false,
+      "initial_issues": [
+        "category_refund_allocation",
+        "refund_rate_definition"
+      ],
+      "final_issues": [],
+      "base_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category"
+      },
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional"
+      },
+      "chosen_tree_is_base": false
+    },
+    {
+      "task": "holdout-008-daily",
+      "scenario": "daily",
+      "base_ok": true,
+      "final_ok": true,
+      "oracle_ok": true,
+      "improved": false,
+      "retained_correct_base": true,
+      "initial_issues": [],
+      "final_issues": [],
+      "base_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category"
+      },
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category"
+      },
+      "chosen_tree_is_base": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+runs/
+benchmarks/retailops/generated/
+benchmarks/retailops/dynamic-dev/
+benchmarks/retailops/rsi-smoke/
+dist/
+*.egg-info/
+

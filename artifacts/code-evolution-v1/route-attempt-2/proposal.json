@@ -1,0 +1,17 @@
+{
+  "cues": [
+    "累计退款上限",
+    "累计有效退款",
+    "订单级余额池",
+    "累计可退款额度",
+    "订单级退款封顶",
+    "退款总确认额不能大于订单销售额",
+    "总退款最多等于其 gross sales",
+    "退款余额从成交额开始",
+    "按退款文件顺序",
+    "依输入顺序扣减余额",
+    "顺序消费额度",
+    "cumulative refund cap"
+  ],
+  "reason": "Merged redundant sequential-consumption and clipping phrases into the retained order-level cap cues, keeping coverage of all training variants (累计退款上限, 累计有效退款, 订单级余额池, 累计可退款额度, 订单级退款封顶, 退款总确认额不能大于订单销售额, 总退款最多等于其 gross sales, 退款余额从成交额开始, 按退款文件顺序, 依输入顺序扣减余额, 顺序消费额度) plus the exact English cue cumulative refund cap, for 12 cues total."
+}

@@ -1,0 +1,11 @@
+{
+  "instruction": "生成每日净销售额，退款回溯计入原订单日期。",
+  "tools": [
+    "daily_net_sales"
+  ],
+  "metric_contract": {
+    "refund_rate_denominator": "order_lines",
+    "category_refund_allocation": "first_category",
+    "refund_time_attribution": "order_date"
+  }
+}

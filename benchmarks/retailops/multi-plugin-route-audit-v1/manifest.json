@@ -1,0 +1,8 @@
+{
+  "name": "multi-plugin-route-audit-v1",
+  "count": 24,
+  "cap_positive": 8,
+  "dedup_positive": 8,
+  "near_negative": 8,
+  "cases_sha256": "10d657727fe6b936ef002e4ef4b9d64634858e37f6ac51b68fa0f7cf007ecac4"
+}

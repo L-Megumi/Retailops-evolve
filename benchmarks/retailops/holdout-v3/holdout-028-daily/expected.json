@@ -1,0 +1,43 @@
+{
+  "case_id": "holdout-028-daily",
+  "scenario": "daily",
+  "metric_contract": {
+    "refund_rate_denominator": "order_lines",
+    "category_refund_allocation": "first_category",
+    "refund_time_attribution": "order_date"
+  },
+  "results": {
+    "daily_net_sales": [
+      {
+        "date": "2026-09-14",
+        "gross_sales": "1679.20",
+        "refund_amount": "304.64",
+        "net_sales": "1374.56"
+      },
+      {
+        "date": "2026-09-15",
+        "gross_sales": "1947.50",
+        "refund_amount": "0",
+        "net_sales": "1947.50"
+      },
+      {
+        "date": "2026-09-16",
+        "gross_sales": "2231.00",
+        "refund_amount": "71.40",
+        "net_sales": "2159.60"
+      },
+      {
+        "date": "2026-09-17",
+        "gross_sales": "2070.00",
+        "refund_amount": "0",
+        "net_sales": "2070.00"
+      },
+      {
+        "date": "2026-09-18",
+        "gross_sales": "2849.00",
+        "refund_amount": "0",
+        "net_sales": "2849.00"
+      }
+    ]
+  }
+}

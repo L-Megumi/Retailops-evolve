@@ -1,0 +1,407 @@
+{
+  "accepted": false,
+  "first_pass": {
+    "passed": 22,
+    "count": 24,
+    "rows": [
+      {
+        "id": "multi-route-cap-001",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-002",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-003",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-004",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-005",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-006",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-007",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-008",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-001",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-002",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-003",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-004",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-005",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "ok": false
+      },
+      {
+        "id": "multi-route-dedup-006",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-007",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-008",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "ok": false
+      },
+      {
+        "id": "multi-route-none-001",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-002",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-003",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-004",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-005",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-006",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-007",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-008",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "ok": true
+      }
+    ]
+  },
+  "cached_repeat": {
+    "passed": 22,
+    "count": 24,
+    "rows": [
+      {
+        "id": "multi-route-cap-001",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-002",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-003",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-004",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-005",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-006",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-007",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-cap-008",
+        "expected_plugin_id": "cumulative-refund-cap-v1",
+        "actual_plugin_id": "cumulative-refund-cap-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-001",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-002",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-003",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-004",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-005",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": true,
+        "ok": false
+      },
+      {
+        "id": "multi-route-dedup-006",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-007",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": "refund-event-dedup-v1",
+        "route_source": "semantic_cache",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-dedup-008",
+        "expected_plugin_id": "refund-event-dedup-v1",
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": true,
+        "ok": false
+      },
+      {
+        "id": "multi-route-none-001",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-002",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-003",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-004",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-005",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-006",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-007",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": true,
+        "ok": true
+      },
+      {
+        "id": "multi-route-none-008",
+        "expected_plugin_id": null,
+        "actual_plugin_id": null,
+        "route_source": "no_match",
+        "cache_hit": true,
+        "ok": true
+      }
+    ]
+  },
+  "first_pass_model_calls": 24,
+  "cached_repeat_model_calls": 0,
+  "model_usage": {
+    "prompt_tokens": 8957,
+    "completion_tokens": 1368,
+    "total_tokens": 10325
+  },
+  "registry_version": "9e33d8eeb94a6cbf"
+}

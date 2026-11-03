@@ -1,0 +1,53 @@
+{
+  "keyword_groups": [
+    [
+      "订单",
+      "退款",
+      "天花板",
+      "成交额"
+    ],
+    [
+      "订单",
+      "退款",
+      "不得",
+      "负数"
+    ],
+    [
+      "退款",
+      "顺序",
+      "截断",
+      "超额"
+    ],
+    [
+      "退款",
+      "流水",
+      "尚未",
+      "金额"
+    ],
+    [
+      "order",
+      "refund",
+      "ceiling",
+      "sales"
+    ],
+    [
+      "order",
+      "refund",
+      "must",
+      "negative"
+    ],
+    [
+      "refund",
+      "sequential",
+      "truncate",
+      "excess"
+    ],
+    [
+      "refund",
+      "remaining",
+      "balance",
+      "order"
+    ]
+  ],
+  "reason": "Replaced the overlong English negation group with a 4-token form and kept the useful Chinese ceiling/negative/sequential-truncation semantics plus English ceiling, negation, truncation, and remaining-balance conjunctions. All groups have 2-4 literal tokens, avoid task ids and regex, and do not repeat the existing literal cues."
+}

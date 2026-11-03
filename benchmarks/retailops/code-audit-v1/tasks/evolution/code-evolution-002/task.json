@@ -1,0 +1,11 @@
+{
+  "instruction": "核算品类和每日净销售额。每个订单的累计有效退款不得超过该订单原始销售额；依输入顺序扣减余额，最后一笔可被截断到剩余金额。",
+  "tools": [
+    "category_ranking",
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "case_kind": "code_capability"
+  }
+}

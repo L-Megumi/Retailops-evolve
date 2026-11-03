@@ -1,0 +1,6 @@
+{
+  "instruction": "计算 refund rate；订单明细包含重复订单号时，分母仍按唯一订单统计。",
+  "tools": [
+    "refund_rate"
+  ]
+}

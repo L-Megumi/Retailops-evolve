@@ -1,0 +1,867 @@
+{
+  "accepted": false,
+  "baseline": {
+    "evolution": {
+      "passed": 0,
+      "count": 12,
+      "rows": [
+        {
+          "case_id": "metric-evolution-001",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-002",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-003",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-004",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-005",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-006",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-007",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-008",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-009",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-010",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-011",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-012",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        }
+      ]
+    },
+    "validation": {
+      "passed": 0,
+      "count": 12,
+      "rows": [
+        {
+          "case_id": "metric-validation-001",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-validation-002",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-validation-003",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-validation-004",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-validation-005",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-validation-006",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-validation-007",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-validation-008",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-validation-009",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-validation-010",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-validation-011",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-validation-012",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        }
+      ]
+    },
+    "audit": {
+      "passed": 0,
+      "count": 12,
+      "rows": [
+        {
+          "case_id": "metric-audit-001",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-audit-002",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-audit-003",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-audit-004",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-audit-005",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-audit-006",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-audit-007",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-audit-008",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-audit-009",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-audit-010",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-audit-011",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        },
+        {
+          "case_id": "metric-audit-012",
+          "ok": false,
+          "issues": [
+            "unsupported_capability"
+          ]
+        }
+      ]
+    }
+  },
+  "initial_failure_trace": [
+    {
+      "code": "unsupported_capability",
+      "message": "任务要求的结果 refund_replay_rate 当前没有可执行工具或插件",
+      "expected": "refund_replay_rate"
+    }
+  ],
+  "gap_proposal": {
+    "plugin_id": "refund-replay-rate-metric-v1",
+    "cues": [
+      "退款事件重放率",
+      "refund_id",
+      "首次出现后",
+      "重放行数",
+      "全部退款行数",
+      "refund_replay_rate"
+    ],
+    "positive_definition": "Computes a single scalar metric over the refunds input: rows whose refund_id (or equivalent unique refund-event identity) has already appeared at an earlier position in input order are counted as replay rows; the replay row count is divided by the total number of refund rows to yield the replay rate. Computation only reads and counts rows; it does not alter, drop, or cap any event. Exposed as metric_tool with compute_metric(orders, refunds) and output_name refund_replay_rate.",
+    "exclusions": [
+      "Does not remove or deduplicate replay rows or return a filtered event list (that is refund-event-dedup-v1).",
+      "Does not accumulate or cap refund value per order against original gross merchandise value (that is cumulative-refund-cap-v1).",
+      "Does not compute ordinary refund rate or refund-to-sales ratio (that is refund_rate).",
+      "Does not rank categories or produce per-group breakdowns (that is category_ranking).",
+      "Does not modify input rows, amounts, or field values in any way."
+    ],
+    "output_name": "refund_replay_rate",
+    "reason": "The task requires a replay-rate scalar keyed to repeated refund_id occurrences, but existing tools only expose daily_net_sales, refund_rate, and category_ranking, and existing plugins only deduplicate or cap refund events. Neither deduplication nor capping reports a replay proportion, so the expected result refund_replay_rate is unavailable; a minimal metric_tool computing replay rows over total refund rows fills exactly this gap."
+  },
+  "code_attempts": [
+    {
+      "attempt": 1,
+      "record_status": "quarantined",
+      "quarantine_reason": "install validation failed: disallowed syntax: Is",
+      "evolution": {
+        "passed": 0,
+        "count": 12,
+        "rows": [
+          {
+            "case_id": "metric-evolution-001",
+            "ok": false,
+            "error": "disallowed syntax: Is"
+          },
+          {
+            "case_id": "metric-evolution-002",
+            "ok": false,
+            "error": "disallowed syntax: Is"
+          },
+          {
+            "case_id": "metric-evolution-003",
+            "ok": false,
+            "error": "disallowed syntax: Is"
+          },
+          {
+            "case_id": "metric-evolution-004",
+            "ok": false,
+            "error": "disallowed syntax: Is"
+          },
+          {
+            "case_id": "metric-evolution-005",
+            "ok": false,
+            "error": "disallowed syntax: Is"
+          },
+          {
+            "case_id": "metric-evolution-006",
+            "ok": false,
+            "error": "disallowed syntax: Is"
+          },
+          {
+            "case_id": "metric-evolution-007",
+            "ok": false,
+            "error": "disallowed syntax: Is"
+          },
+          {
+            "case_id": "metric-evolution-008",
+            "ok": false,
+            "error": "disallowed syntax: Is"
+          },
+          {
+            "case_id": "metric-evolution-009",
+            "ok": false,
+            "error": "disallowed syntax: Is"
+          },
+          {
+            "case_id": "metric-evolution-010",
+            "ok": false,
+            "error": "disallowed syntax: Is"
+          },
+          {
+            "case_id": "metric-evolution-011",
+            "ok": false,
+            "error": "disallowed syntax: Is"
+          },
+          {
+            "case_id": "metric-evolution-012",
+            "ok": false,
+            "error": "disallowed syntax: Is"
+          }
+        ]
+      },
+      "validation": null
+    },
+    {
+      "attempt": 2,
+      "record_status": "active",
+      "quarantine_reason": "",
+      "evolution": {
+        "passed": 12,
+        "count": 12,
+        "rows": [
+          {
+            "case_id": "metric-evolution-001",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-evolution-002",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-evolution-003",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-evolution-004",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-evolution-005",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-evolution-006",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-evolution-007",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-evolution-008",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-evolution-009",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-evolution-010",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-evolution-011",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-evolution-012",
+            "ok": true,
+            "error": ""
+          }
+        ]
+      },
+      "validation": {
+        "passed": 12,
+        "count": 12,
+        "rows": [
+          {
+            "case_id": "metric-validation-001",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-validation-002",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-validation-003",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-validation-004",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-validation-005",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-validation-006",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-validation-007",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-validation-008",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-validation-009",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-validation-010",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-validation-011",
+            "ok": true,
+            "error": ""
+          },
+          {
+            "case_id": "metric-validation-012",
+            "ok": true,
+            "error": ""
+          }
+        ]
+      }
+    }
+  ],
+  "route_development": {
+    "evolution": {
+      "passed": 9,
+      "count": 12,
+      "rows": [
+        {
+          "case_id": "metric-evolution-001",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 8,
+            "duplicate_rows": 3,
+            "replay_rate_bps": 3750
+          },
+          "issues": [],
+          "route_source": "deterministic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-002",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 13,
+            "duplicate_rows": 6,
+            "replay_rate_bps": 4615
+          },
+          "issues": [],
+          "route_source": "semantic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-003",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 19,
+            "duplicate_rows": 12,
+            "replay_rate_bps": 6315
+          },
+          "issues": [],
+          "route_source": "semantic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-004",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 6,
+            "duplicate_rows": 2,
+            "replay_rate_bps": 3333
+          },
+          "issues": [],
+          "route_source": "semantic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-005",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 8,
+            "duplicate_rows": 4,
+            "replay_rate_bps": 5000
+          },
+          "issues": [],
+          "route_source": "semantic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-006",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 8,
+            "duplicate_rows": 0,
+            "replay_rate_bps": 0
+          },
+          "issues": [],
+          "route_source": "semantic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-007",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 17,
+            "duplicate_rows": 10,
+            "replay_rate_bps": 5882
+          },
+          "issues": [],
+          "route_source": "deterministic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-008",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 20,
+            "duplicate_rows": 11,
+            "replay_rate_bps": 5500
+          },
+          "issues": [],
+          "route_source": "semantic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-009",
+          "ok": false,
+          "actual": null,
+          "issues": [
+            "unsupported_capability"
+          ],
+          "route_source": "deterministic",
+          "pipeline": [
+            "refund-event-dedup-v1"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-010",
+          "ok": false,
+          "actual": null,
+          "issues": [
+            "unsupported_capability"
+          ],
+          "route_source": "deterministic",
+          "pipeline": [
+            "refund-event-dedup-v1"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-011",
+          "ok": false,
+          "actual": null,
+          "issues": [
+            "unsupported_capability"
+          ],
+          "route_source": "deterministic",
+          "pipeline": [
+            "refund-event-dedup-v1"
+          ]
+        },
+        {
+          "case_id": "metric-evolution-012",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 4,
+            "duplicate_rows": 0,
+            "replay_rate_bps": 0
+          },
+          "issues": [],
+          "route_source": "deterministic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        }
+      ]
+    },
+    "validation": {
+      "passed": 12,
+      "count": 12,
+      "rows": [
+        {
+          "case_id": "metric-validation-001",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 22,
+            "duplicate_rows": 13,
+            "replay_rate_bps": 5909
+          },
+          "issues": [],
+          "route_source": "semantic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-validation-002",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 14,
+            "duplicate_rows": 8,
+            "replay_rate_bps": 5714
+          },
+          "issues": [],
+          "route_source": "semantic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-validation-003",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 16,
+            "duplicate_rows": 8,
+            "replay_rate_bps": 5000
+          },
+          "issues": [],
+          "route_source": "semantic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-validation-004",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 13,
+            "duplicate_rows": 7,
+            "replay_rate_bps": 5384
+          },
+          "issues": [],
+          "route_source": "semantic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-validation-005",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 12,
+            "duplicate_rows": 5,
+            "replay_rate_bps": 4166
+          },
+          "issues": [],
+          "route_source": "semantic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-validation-006",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 10,
+            "duplicate_rows": 0,
+            "replay_rate_bps": 0
+          },
+          "issues": [],
+          "route_source": "deterministic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-validation-007",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 9,
+            "duplicate_rows": 5,
+            "replay_rate_bps": 5555
+          },
+          "issues": [],
+          "route_source": "semantic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-validation-008",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 12,
+            "duplicate_rows": 7,
+            "replay_rate_bps": 5833
+          },
+          "issues": [],
+          "route_source": "semantic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-validation-009",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 11,
+            "duplicate_rows": 5,
+            "replay_rate_bps": 4545
+          },
+          "issues": [],
+          "route_source": "semantic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-validation-010",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 7,
+            "duplicate_rows": 3,
+            "replay_rate_bps": 4285
+          },
+          "issues": [],
+          "route_source": "semantic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-validation-011",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 10,
+            "duplicate_rows": 5,
+            "replay_rate_bps": 5000
+          },
+          "issues": [],
+          "route_source": "semantic",
+          "pipeline": [
+            "refund-replay-rate-metric-v1"
+          ]
+        },
+        {
+          "case_id": "metric-validation-012",
+          "ok": true,
+          "actual": {
+            "total_refund_rows": 10,
+            "duplicate_rows": 0,
+            "replay_rate_bps": 0
+          },
+          "issues": [],
+          "route_source": "deterministic",
+          "pipeline": [
+            "refund-event-dedup-v1",
+            "refund-replay-rate-metric-v1"
+          ]
+        }
+      ]
+    }
+  },
+  "post_freeze_audit": null,
+  "model_calls": 24,
+  "model_usage": {
+    "prompt_tokens": 13292,
+    "completion_tokens": 16073,
+    "total_tokens": 29365
+  },
+  "claim_boundary": "bounded harness-level capability RSI: a required-result failure triggers spec proposal, code generation, gated activation, and rerun; no model weights or unrestricted codebase are modified"
+}

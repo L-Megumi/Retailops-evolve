@@ -1,0 +1,5 @@
+{
+  "cue": "等额拆分",
+  "action": "equal_category_allocation",
+  "reason": "deterministic test proposal inferred from the task rule"
+}

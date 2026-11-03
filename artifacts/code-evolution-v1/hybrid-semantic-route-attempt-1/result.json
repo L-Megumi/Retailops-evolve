@@ -1,0 +1,1861 @@
+{
+  "accepted": true,
+  "gate_passed": true,
+  "audit_passed": true,
+  "gate_checks": {
+    "hybrid_route_full": true,
+    "plugin_code_full": true,
+    "legacy_strategy_full": true
+  },
+  "capability": {
+    "capability_id": "order-lifetime-cumulative-refund-cap",
+    "positive_definition": "For each individual order or sale, accepted refund/return value is accumulated across multiple events and capped at that order's original gross merchandise value. Events are processed in input/time order; the event crossing the remaining allowance is partially accepted and later excess is rejected.",
+    "exclusions": [
+      "a limit on each refund event rather than their per-order cumulative total",
+      "store/day/category aggregate caps or presentation-only non-negative clamping",
+      "alerts or reports that detect excess without changing accepted amounts",
+      "deduplication, status filtering, allocation, discounts, shipping, or chargebacks",
+      "any task that does not explicitly entail an order-specific allowance based on original value"
+    ]
+  },
+  "route_gate": {
+    "passed": 184,
+    "count": 184,
+    "true_positive": 16,
+    "true_negative": 168,
+    "rows": [
+      {
+        "id": "code-evolution-001",
+        "use_plugin": true,
+        "reason": "matched frozen literal/keyword registration",
+        "route_source": "deterministic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "code-evolution-002",
+        "use_plugin": true,
+        "reason": "matched frozen literal/keyword registration",
+        "route_source": "deterministic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "code-evolution-003",
+        "use_plugin": true,
+        "reason": "matched frozen literal/keyword registration",
+        "route_source": "deterministic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "code-evolution-004",
+        "use_plugin": true,
+        "reason": "matched frozen literal/keyword registration",
+        "route_source": "deterministic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "code-validation-001",
+        "use_plugin": true,
+        "reason": "matched frozen literal/keyword registration",
+        "route_source": "deterministic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "code-validation-002",
+        "use_plugin": true,
+        "reason": "matched frozen literal/keyword registration",
+        "route_source": "deterministic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "code-validation-003",
+        "use_plugin": true,
+        "reason": "matched frozen literal/keyword registration",
+        "route_source": "deterministic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "code-validation-004",
+        "use_plugin": true,
+        "reason": "matched frozen literal/keyword registration",
+        "route_source": "deterministic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "code-transfer-001",
+        "use_plugin": true,
+        "reason": "matched frozen literal/keyword registration",
+        "route_source": "deterministic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "code-transfer-002",
+        "use_plugin": true,
+        "reason": "matched frozen literal/keyword registration",
+        "route_source": "deterministic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "code-transfer-003",
+        "use_plugin": true,
+        "reason": "matched frozen literal/keyword registration",
+        "route_source": "deterministic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "code-transfer-004",
+        "use_plugin": true,
+        "reason": "matched frozen literal/keyword registration",
+        "route_source": "deterministic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "semantic-dev::code-transfer-001",
+        "use_plugin": true,
+        "reason": "Explicitly caps each order's cumulative refunds at original principal, partially accepts boundary event, rejects excess.",
+        "route_source": "semantic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "semantic-dev::code-transfer-002",
+        "use_plugin": true,
+        "reason": "Maintains per-order remaining refundable balance, reduces to zero, ignores later excess.",
+        "route_source": "semantic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "semantic-dev::code-transfer-003",
+        "use_plugin": true,
+        "reason": "Recognized returns per order capped at original value, sequential trimming and ignoring excess.",
+        "route_source": "semantic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "semantic-dev::code-transfer-004",
+        "use_plugin": true,
+        "reason": "Prevents per-transaction refunds below zero using order gross as principal, sequential acceptance.",
+        "route_source": "semantic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "holdout-001-refund_rate",
+        "use_plugin": false,
+        "reason": "Only computes refund order ratio; no per-order cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-002-category",
+        "use_plugin": false,
+        "reason": "Category ranking with allocation; no order-specific refund allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-003-combined",
+        "use_plugin": false,
+        "reason": "Refund rate and category ranking with allocation; no cumulative per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-004-daily",
+        "use_plugin": false,
+        "reason": "Daily net sales with date attribution; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-005-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund rate by line count; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-006-category",
+        "use_plugin": false,
+        "reason": "Category ranking with first-category allocation; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-007-combined",
+        "use_plugin": false,
+        "reason": "Refund rate and category ranking with allocation; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-008-daily",
+        "use_plugin": false,
+        "reason": "Daily net sales by refund date; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-009-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund order ratio only; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-010-category",
+        "use_plugin": false,
+        "reason": "Category ranking with allocation; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-011-combined",
+        "use_plugin": false,
+        "reason": "Refund rate and category ranking with allocation; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-012-daily",
+        "use_plugin": false,
+        "reason": "Daily net sales with original-date attribution; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-013-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund rate by line count; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-014-category",
+        "use_plugin": false,
+        "reason": "Category ranking with first-category allocation; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-015-combined",
+        "use_plugin": false,
+        "reason": "Refund rate and category ranking with allocation; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-016-daily",
+        "use_plugin": false,
+        "reason": "Daily aggregation by refund date; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-017-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund rate by unique orders; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-018-category",
+        "use_plugin": false,
+        "reason": "Category ranking with allocation; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-019-combined",
+        "use_plugin": false,
+        "reason": "Refund rate and category ranking with allocation; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-020-daily",
+        "use_plugin": false,
+        "reason": "Daily aggregation with original-date attribution; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-021-refund_rate",
+        "use_plugin": false,
+        "reason": "Computes a refund rate with line-count denominator; no per-order cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-022-category",
+        "use_plugin": false,
+        "reason": "Category ranking with first-category allocation; no order-specific refund allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-023-combined",
+        "use_plugin": false,
+        "reason": "Refund rate and category ranking; no cumulative per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-024-daily",
+        "use_plugin": false,
+        "reason": "Daily net sales by refund date; no per-order allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-025-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund order share; no cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-026-category",
+        "use_plugin": false,
+        "reason": "Category ranking with proportional allocation; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-027-combined",
+        "use_plugin": false,
+        "reason": "Refund rate and category ranking; no order-specific cumulative allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-028-daily",
+        "use_plugin": false,
+        "reason": "Daily aggregation with refund backdating; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-029-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund order share with line-count denominator; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-030-category",
+        "use_plugin": false,
+        "reason": "Category ranking with first-category allocation; no per-order allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-031-combined",
+        "use_plugin": false,
+        "reason": "Refund rate and category ranking; no cumulative per-order refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-032-daily",
+        "use_plugin": false,
+        "reason": "Daily aggregation by refund date; no per-order allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-033-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund order share; no cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-034-category",
+        "use_plugin": false,
+        "reason": "Category ranking with proportional allocation; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-035-combined",
+        "use_plugin": false,
+        "reason": "Refund rate and category ranking; no order-specific cumulative allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-036-daily",
+        "use_plugin": false,
+        "reason": "Daily aggregation with backdating; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-037-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund rate with line-count denominator; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-038-category",
+        "use_plugin": false,
+        "reason": "Category ranking with first-category allocation; no per-order allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-039-combined",
+        "use_plugin": false,
+        "reason": "Refund rate and category ranking; no cumulative per-order refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "holdout-040-daily",
+        "use_plugin": false,
+        "reason": "Daily aggregation by refund date; no per-order allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-evolution-001",
+        "use_plugin": false,
+        "reason": "Equal 1/N category allocation of refunds; no per-order cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-evolution-002",
+        "use_plugin": false,
+        "reason": "Quantity-weighted category allocation; no order-specific refund allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-evolution-003",
+        "use_plugin": false,
+        "reason": "Deduplication and allocation rules; no cumulative per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-evolution-004",
+        "use_plugin": false,
+        "reason": "Date attribution rule for refunds; no per-order cumulative allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-evolution-005",
+        "use_plugin": false,
+        "reason": "Category-level refund allocation by 1/N split; no per-order cumulative cap on accepted refunds.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-evolution-006",
+        "use_plugin": false,
+        "reason": "Quantity-weighted cross-category allocation; no order-specific refund allowance or cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-evolution-007",
+        "use_plugin": false,
+        "reason": "Deduplication, rate denominator, allocation, and date attribution; explicitly excluded topics, no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-evolution-008",
+        "use_plugin": false,
+        "reason": "Date attribution rule based on day gap; no refund amount cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-evolution-009",
+        "use_plugin": false,
+        "reason": "Equal 1/N category refund split; no per-order cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-evolution-010",
+        "use_plugin": false,
+        "reason": "Quantity-weighted allocation for category ranking; no cap on cumulative refunds.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-evolution-011",
+        "use_plugin": false,
+        "reason": "Deduplication, rate, first-category allocation, actual-date attribution; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-evolution-012",
+        "use_plugin": false,
+        "reason": "Day-gap date attribution rule; no order-specific refund allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-evolution-013",
+        "use_plugin": false,
+        "reason": "1/N category refund allocation; no cumulative per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-evolution-014",
+        "use_plugin": false,
+        "reason": "Quantity-weighted allocation; no refund cap logic.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-evolution-015",
+        "use_plugin": false,
+        "reason": "Deduplication, rate, first-category allocation, original-date attribution; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-evolution-016",
+        "use_plugin": false,
+        "reason": "Date attribution by day gap; no refund amount cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-001-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund order rate with order_id deduplication; no cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-002-category",
+        "use_plugin": false,
+        "reason": "Category refund allocation by GMV proportion; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-003-daily",
+        "use_plugin": false,
+        "reason": "Daily aggregation with actual refund date; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-004-all_metrics",
+        "use_plugin": false,
+        "reason": "Rate, allocation, and date attribution rules; no order-specific refund allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-005-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund order rate definition; no cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-006-category",
+        "use_plugin": false,
+        "reason": "Category refund split by GMV ratio; no cap on cumulative refunds.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-007-daily",
+        "use_plugin": false,
+        "reason": "Date attribution to original order date; no refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-008-all_metrics",
+        "use_plugin": false,
+        "reason": "Rate, allocation, and date rules; no cumulative per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-009-refund_rate",
+        "use_plugin": false,
+        "reason": "Denominator uses unique orders; no refund amount cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-010-category",
+        "use_plugin": false,
+        "reason": "First-category allocation of refunds; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-011-daily",
+        "use_plugin": false,
+        "reason": "Actual refund date attribution; no cap logic.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-012-all_metrics",
+        "use_plugin": false,
+        "reason": "Rate, first-category allocation, and date rules; no order-specific refund allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-013-refund_rate",
+        "use_plugin": false,
+        "reason": "Defines refund order rate denominator/numerator; no per-order cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-014-category",
+        "use_plugin": false,
+        "reason": "Category allocation of refunds; no order-specific cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-015-daily",
+        "use_plugin": false,
+        "reason": "Daily aggregation with refund backdating; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-016-all_metrics",
+        "use_plugin": false,
+        "reason": "Refund rate, category allocation, and date attribution; no cumulative per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-017-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund order rate denominator definition; no cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-018-category",
+        "use_plugin": false,
+        "reason": "Proportional category allocation of refunds; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-019-daily",
+        "use_plugin": false,
+        "reason": "Refund date attribution for daily summary; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-020-all_metrics",
+        "use_plugin": false,
+        "reason": "Refund rate, category allocation, and date attribution; no per-order cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-021-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund order rate denominator definition; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-022-category",
+        "use_plugin": false,
+        "reason": "Proportional category refund split; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-023-daily",
+        "use_plugin": false,
+        "reason": "Refund backdating for daily summary; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-024-all_metrics",
+        "use_plugin": false,
+        "reason": "Refund rate, category allocation, and backdating; no per-order cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-025-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund order rate denominator example; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-026-category",
+        "use_plugin": false,
+        "reason": "Category allocation of refunds; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-027-daily",
+        "use_plugin": false,
+        "reason": "Refund date attribution; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-028-all_metrics",
+        "use_plugin": false,
+        "reason": "Refund rate, category allocation, and date attribution; no per-order cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-029-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund order rate denominator definition; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-030-category",
+        "use_plugin": false,
+        "reason": "Category allocation of refunds; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-031-daily",
+        "use_plugin": false,
+        "reason": "Refund backdating for daily summary; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "evolution-032-all_metrics",
+        "use_plugin": false,
+        "reason": "Refund rate, category allocation, and backdating; no per-order cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-validation-001",
+        "use_plugin": false,
+        "reason": "Equal 1/N category split of refunds; no per-order cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-validation-002",
+        "use_plugin": false,
+        "reason": "Quantity-weighted category refund allocation; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-validation-003",
+        "use_plugin": false,
+        "reason": "Refund deduplication plus rate/category/date rules; deduplication is excluded and no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-validation-004",
+        "use_plugin": false,
+        "reason": "Per-refund date attribution rule; no per-order cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-validation-005",
+        "use_plugin": false,
+        "reason": "Category-level refund allocation by 1/N split; no per-order cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-validation-006",
+        "use_plugin": false,
+        "reason": "Category allocation weighted by quantity; no order-specific cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-validation-007",
+        "use_plugin": false,
+        "reason": "Deduplication, refund rate, allocation, and date attribution; no cumulative per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-validation-008",
+        "use_plugin": false,
+        "reason": "Date attribution rule per refund; no cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-validation-009",
+        "use_plugin": false,
+        "reason": "Category 1/N refund split; no per-order cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-validation-010",
+        "use_plugin": false,
+        "reason": "Quantity-weighted category allocation; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-validation-011",
+        "use_plugin": false,
+        "reason": "Dedup, refund rate, first-category allocation, actual-date attribution; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-validation-012",
+        "use_plugin": false,
+        "reason": "Date attribution threshold; no cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-validation-013",
+        "use_plugin": false,
+        "reason": "Category 1/N refund split; no per-order cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-validation-014",
+        "use_plugin": false,
+        "reason": "Quantity-weighted category allocation; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-validation-015",
+        "use_plugin": false,
+        "reason": "Dedup, refund rate, first-category allocation, date attribution; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-validation-016",
+        "use_plugin": false,
+        "reason": "Date attribution threshold; no cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-001-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund order rate denominator dedup; no cumulative per-order refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-002-category",
+        "use_plugin": false,
+        "reason": "Category refund allocation by gross share; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-003-daily",
+        "use_plugin": false,
+        "reason": "Daily aggregation by refund date; no per-order cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-004-all_metrics",
+        "use_plugin": false,
+        "reason": "Refund rate, allocation, and date attribution; no cumulative per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-005-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund order rate denominator dedup; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-006-category",
+        "use_plugin": false,
+        "reason": "Category refund allocation formula; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-007-daily",
+        "use_plugin": false,
+        "reason": "Date attribution to order date; no cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-008-all_metrics",
+        "use_plugin": false,
+        "reason": "Refund rate, allocation, and date attribution; no cumulative per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-009-refund_rate",
+        "use_plugin": false,
+        "reason": "Distinct order denominator; no cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-010-category",
+        "use_plugin": false,
+        "reason": "First-category refund allocation; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-011-daily",
+        "use_plugin": false,
+        "reason": "Refund date attribution; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-012-all_metrics",
+        "use_plugin": false,
+        "reason": "Refund rate, allocation, and date attribution; no cumulative per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-013-refund_rate",
+        "use_plugin": false,
+        "reason": "Defines refund order rate via distinct order counts; no per-order cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-014-category",
+        "use_plugin": false,
+        "reason": "Category refund allocation rule; no order-specific cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-015-daily",
+        "use_plugin": false,
+        "reason": "Refund time attribution to original order date; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-016-all_metrics",
+        "use_plugin": false,
+        "reason": "Combines rate, allocation, and time attribution; none entail per-order cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-017-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund rate denominator uses detail rows; no cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-018-category",
+        "use_plugin": false,
+        "reason": "Proportional category allocation; no per-order cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-019-daily",
+        "use_plugin": false,
+        "reason": "Refund grouped by refund date; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-020-all_metrics",
+        "use_plugin": false,
+        "reason": "Rate, allocation, and date attribution rules; no order-specific cumulative refund allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-021-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund rate denominator by detail rows; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-022-category",
+        "use_plugin": false,
+        "reason": "Proportional category refund allocation; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-023-daily",
+        "use_plugin": false,
+        "reason": "Refund attributed to original order date; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "validation-024-all_metrics",
+        "use_plugin": false,
+        "reason": "Rate, allocation, and date attribution examples; no per-order cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-transfer-001",
+        "use_plugin": false,
+        "reason": "Equal 1/N category split; no order-level cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-transfer-002",
+        "use_plugin": false,
+        "reason": "Quantity-weighted category allocation; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-transfer-003",
+        "use_plugin": false,
+        "reason": "Deduplication and allocation rules; dedup is explicitly excluded and no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-transfer-004",
+        "use_plugin": false,
+        "reason": "Per-refund date attribution threshold; no cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-transfer-005",
+        "use_plugin": false,
+        "reason": "Equal category split; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-transfer-006",
+        "use_plugin": false,
+        "reason": "Quantity-weighted allocation; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-transfer-007",
+        "use_plugin": false,
+        "reason": "Dedup and allocation rules; no per-order cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-transfer-008",
+        "use_plugin": false,
+        "reason": "Date attribution threshold; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-transfer-009",
+        "use_plugin": false,
+        "reason": "Equal category split; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-transfer-010",
+        "use_plugin": false,
+        "reason": "Quantity-weighted allocation; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-transfer-011",
+        "use_plugin": false,
+        "reason": "Dedup and first-category allocation; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-transfer-012",
+        "use_plugin": false,
+        "reason": "Date attribution threshold; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-transfer-013",
+        "use_plugin": false,
+        "reason": "Category-level refund allocation by 1/N split; no per-order cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-transfer-014",
+        "use_plugin": false,
+        "reason": "Cross-category refund allocation by quantity weights; no order-specific cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-transfer-015",
+        "use_plugin": false,
+        "reason": "Deduplication, refund-rate, and category allocation rules; no cumulative per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "cap-transfer-016",
+        "use_plugin": false,
+        "reason": "Refund date attribution rule; no per-order cumulative refund allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-001-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund-rate denominator deduplication; not a per-order cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-002-category",
+        "use_plugin": false,
+        "reason": "Category refund allocation formula; no order-level cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-003-daily",
+        "use_plugin": false,
+        "reason": "Daily aggregation with event-day refund attribution; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-004-all_metrics",
+        "use_plugin": false,
+        "reason": "Refund-rate, category allocation, and date attribution; no cumulative per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-005-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund-rate denominator definition only.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-006-category",
+        "use_plugin": false,
+        "reason": "Category refund split by gross weight; no per-order cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-007-daily",
+        "use_plugin": false,
+        "reason": "Backdating refunds to order date; no cumulative refund allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-008-all_metrics",
+        "use_plugin": false,
+        "reason": "Dedup, category proration, and backdating; no per-order cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-009-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund-rate base parameter only.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-010-category",
+        "use_plugin": false,
+        "reason": "Whole refund to first category; no cumulative per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-011-daily",
+        "use_plugin": false,
+        "reason": "Refund recognition on actual refund date; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-012-all_metrics",
+        "use_plugin": false,
+        "reason": "Refund-rate, first-category allocation, and refund-date grouping; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-013-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund-rate unique order counting; not a cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-014-category",
+        "use_plugin": false,
+        "reason": "First-category refund booking; no per-order cumulative allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-015-daily",
+        "use_plugin": false,
+        "reason": "Refund attribution by original order date; no cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-016-all_metrics",
+        "use_plugin": false,
+        "reason": "Parameters for refund rate, category split, and refund day; no per-order cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-017-refund_rate",
+        "use_plugin": false,
+        "reason": "Refund-rate denominator by raw row count; no cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-018-category",
+        "use_plugin": false,
+        "reason": "Category refund allocation formula; no order-level cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-019-daily",
+        "use_plugin": false,
+        "reason": "Daily aggregation with event-day refunds; no per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-020-all_metrics",
+        "use_plugin": false,
+        "reason": "Refund-rate denominator, category allocation, and date attribution; no cumulative per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-021-refund_rate",
+        "use_plugin": false,
+        "reason": "Computes a refund order rate metric, not a per-order cumulative refund cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-022-category",
+        "use_plugin": false,
+        "reason": "Category net sales ranking with gross-weight refund split; no order-specific cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-023-daily",
+        "use_plugin": false,
+        "reason": "Daily aggregate recomputation with backdating; no per-order cumulative refund allowance.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "transfer-024-all_metrics",
+        "use_plugin": false,
+        "reason": "Report with refund-rate denominator, category proration, and backdating; no order-level cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      }
+    ]
+  },
+  "gate_deterministic_count": 12,
+  "gate_semantic_count": 172,
+  "direct_plugin_scores": {
+    "evolution": {
+      "split": "evolution",
+      "passed": 4,
+      "task_count": 4,
+      "errors": 0,
+      "rows": [
+        {
+          "task": "code-evolution-001",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-evolution-002",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-evolution-003",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-evolution-004",
+          "ok": true,
+          "error": "",
+          "actual": null
+        }
+      ]
+    },
+    "validation": {
+      "split": "validation",
+      "passed": 4,
+      "task_count": 4,
+      "errors": 0,
+      "rows": [
+        {
+          "task": "code-validation-001",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-validation-002",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-validation-003",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-validation-004",
+          "ok": true,
+          "error": "",
+          "actual": null
+        }
+      ]
+    },
+    "transfer": {
+      "split": "transfer",
+      "passed": 4,
+      "task_count": 4,
+      "errors": 0,
+      "rows": [
+        {
+          "task": "code-transfer-001",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-transfer-002",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-transfer-003",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-transfer-004",
+          "ok": true,
+          "error": "",
+          "actual": null
+        }
+      ]
+    },
+    "semantic_development": {
+      "split": "transfer",
+      "passed": 4,
+      "task_count": 4,
+      "errors": 0,
+      "rows": [
+        {
+          "task": "code-transfer-001",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-transfer-002",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-transfer-003",
+          "ok": true,
+          "error": "",
+          "actual": null
+        },
+        {
+          "task": "code-transfer-004",
+          "ok": true,
+          "error": "",
+          "actual": null
+        }
+      ]
+    }
+  },
+  "legacy_strategy_scores": {
+    "regression": {
+      "split": "regression",
+      "passed": 40,
+      "task_count": 40
+    },
+    "evolution": {
+      "split": "evolution",
+      "passed": 48,
+      "task_count": 48
+    },
+    "validation": {
+      "split": "validation",
+      "passed": 40,
+      "task_count": 40
+    },
+    "transfer": {
+      "split": "transfer",
+      "passed": 40,
+      "task_count": 40
+    }
+  },
+  "post_gate_audit": {
+    "passed": 24,
+    "count": 24,
+    "true_positive": 12,
+    "true_negative": 12,
+    "rows": [
+      {
+        "id": "route-audit-pos-001",
+        "use_plugin": true,
+        "reason": "Per-order cumulative refund capped at original payment, processed in order with partial acceptance at boundary.",
+        "route_source": "semantic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "route-audit-pos-002",
+        "use_plugin": true,
+        "reason": "Multiple after-sales per transaction capped at original merchandise value, boundary trimmed, later excess ignored.",
+        "route_source": "semantic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "route-audit-pos-003",
+        "use_plugin": true,
+        "reason": "Per-sale refund balance initialized from principal, consumed in event order to zero.",
+        "route_source": "semantic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "route-audit-pos-004",
+        "use_plugin": true,
+        "reason": "Per-order return events settled in order, cumulative capped at gross value, last partially accepted.",
+        "route_source": "semantic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "route-audit-pos-005",
+        "use_plugin": true,
+        "reason": "Repeated returns accepted chronologically until combined value reaches original gross, boundary partial.",
+        "route_source": "semantic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "route-audit-pos-006",
+        "use_plugin": true,
+        "reason": "Order-specific refundable balance from original value, consumed in event order, remainder rejected.",
+        "route_source": "semantic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "route-audit-pos-007",
+        "use_plugin": true,
+        "reason": "Per-transaction cumulative return capped at original sold value, earlier priority, boundary trimmed.",
+        "route_source": "semantic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "route-audit-pos-008",
+        "use_plugin": true,
+        "reason": "Per-order lifetime allowance equal to original gross, accepted portions used downstream.",
+        "route_source": "semantic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "route-audit-pos-009",
+        "use_plugin": true,
+        "reason": "Historical plus current refunds combined per order, cumulative capped at original principal.",
+        "route_source": "semantic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "route-audit-pos-010",
+        "use_plugin": true,
+        "reason": "Repeated returns consume order refundable principal in order, capped at original amount, boundary partial.",
+        "route_source": "semantic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "route-audit-pos-011",
+        "use_plugin": true,
+        "reason": "Order refundable balance from original value, decremented per refund, exhausted remainder unconfirmed.",
+        "route_source": "semantic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "route-audit-pos-012",
+        "use_plugin": true,
+        "reason": "Per-order original amount, valid refund portions determined in file order, total capped.",
+        "route_source": "semantic",
+        "expected": true,
+        "ok": true
+      },
+      {
+        "id": "route-audit-neg-001",
+        "use_plugin": false,
+        "reason": "Per-event limit of 500, not per-order cumulative cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "route-audit-neg-002",
+        "use_plugin": false,
+        "reason": "Detection/reporting of excess without altering accepted amounts.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "route-audit-neg-003",
+        "use_plugin": false,
+        "reason": "Category-level presentation clamping to zero.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "route-audit-neg-004",
+        "use_plugin": false,
+        "reason": "Store-wide daily aggregate budget cap, not per-order.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "route-audit-neg-005",
+        "use_plugin": false,
+        "reason": "Deduplication and status filtering, explicitly excluded.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "route-audit-neg-006",
+        "use_plugin": false,
+        "reason": "Shipping allowed beyond merchandise value, contradicts order-specific cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "route-audit-neg-007",
+        "use_plugin": false,
+        "reason": "Per-event threshold limit, not cumulative per-order cap.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "route-audit-neg-008",
+        "use_plugin": false,
+        "reason": "Reporting refund ratio without altering accepted amounts.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "route-audit-neg-009",
+        "use_plugin": false,
+        "reason": "Store aggregate daily cap, explicitly excluded.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "route-audit-neg-010",
+        "use_plugin": false,
+        "reason": "Presentation-only category clamping, explicitly excluded.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "route-audit-neg-011",
+        "use_plugin": false,
+        "reason": "Discount payable check unrelated to refund flows.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      },
+      {
+        "id": "route-audit-neg-012",
+        "use_plugin": false,
+        "reason": "Allocation across line items keeping totals unchanged, explicitly excluded.",
+        "route_source": "semantic",
+        "expected": false,
+        "ok": true
+      }
+    ]
+  },
+  "model_calls": 9,
+  "model_usage": {
+    "prompt_tokens": 13361,
+    "completion_tokens": 6115,
+    "total_tokens": 19476
+  }
+}

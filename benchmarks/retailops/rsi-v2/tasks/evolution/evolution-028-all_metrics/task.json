@@ -1,0 +1,15 @@
+{
+  "instruction": "经营分析备忘录｜交付：退款订单率、品类净销售额排行以及每日经营汇总。P0 口径覆盖系统默认值：退款订单率的分母采用订单商品明细行数，不对分母中的 order_id 去重；分子仍为发生退款的唯一订单数；跨品类订单的整笔退款全部归入该订单在输入文件中首次出现的品类，不做比例拆分；退款计入退款实际发生日期。币种保持人民币，净额=成交额-退款额。",
+  "tools": [
+    "refund_rate",
+    "category_ranking",
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "difficulty": "challenge",
+    "case_kind": "contract_selection",
+    "instruction_style": "ops_memo",
+    "data_profile": "shuffled"
+  }
+}

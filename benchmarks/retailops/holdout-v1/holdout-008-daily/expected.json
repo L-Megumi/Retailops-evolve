@@ -1,0 +1,56 @@
+{
+  "case_id": "holdout-008-daily",
+  "scenario": "daily",
+  "results": {
+    "daily_net_sales": [
+      {
+        "date": "2026-09-01",
+        "gross_sales": "1391.50",
+        "refund_amount": "0",
+        "net_sales": "1391.50"
+      },
+      {
+        "date": "2026-09-02",
+        "gross_sales": "1843.50",
+        "refund_amount": "0",
+        "net_sales": "1843.50"
+      },
+      {
+        "date": "2026-09-03",
+        "gross_sales": "2031.40",
+        "refund_amount": "0",
+        "net_sales": "2031.40"
+      },
+      {
+        "date": "2026-09-04",
+        "gross_sales": "1140.00",
+        "refund_amount": "0",
+        "net_sales": "1140.00"
+      },
+      {
+        "date": "2026-09-05",
+        "gross_sales": "2939.80",
+        "refund_amount": "0",
+        "net_sales": "2939.80"
+      },
+      {
+        "date": "2026-09-06",
+        "gross_sales": "2919.60",
+        "refund_amount": "0",
+        "net_sales": "2919.60"
+      },
+      {
+        "date": "2026-09-07",
+        "gross_sales": "0",
+        "refund_amount": "541.00",
+        "net_sales": "-541.00"
+      },
+      {
+        "date": "2026-09-08",
+        "gross_sales": "0",
+        "refund_amount": "285.00",
+        "net_sales": "-285.00"
+      }
+    ]
+  }
+}

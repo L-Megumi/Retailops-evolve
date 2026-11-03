@@ -1,0 +1,16 @@
+{
+  "kind": "metric_tool",
+  "entrypoint": "compute_metric",
+  "arguments": [
+    "orders",
+    "refunds"
+  ],
+  "input_schema": "retailops.metric-input.v1",
+  "output_schema": "retailops.metric-result.v1",
+  "output_name": "refund_replay_rate",
+  "invariants": [],
+  "order_before": [],
+  "order_after": [],
+  "conflicts": [],
+  "timeout_seconds": 2.0
+}

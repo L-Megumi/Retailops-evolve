@@ -1,0 +1,336 @@
+{
+  "suite": "rsi-v2",
+  "initial": {
+    "regression": {
+      "split": "regression",
+      "passed": 40,
+      "task_count": 40
+    },
+    "evolution": {
+      "split": "evolution",
+      "passed": 32,
+      "task_count": 48
+    },
+    "validation": {
+      "split": "validation",
+      "passed": 24,
+      "task_count": 40
+    }
+  },
+  "final": {
+    "regression": {
+      "split": "regression",
+      "passed": 40,
+      "task_count": 40
+    },
+    "evolution": {
+      "split": "evolution",
+      "passed": 48,
+      "task_count": 48
+    },
+    "validation": {
+      "split": "validation",
+      "passed": 40,
+      "task_count": 40
+    },
+    "transfer": {
+      "split": "transfer",
+      "passed": 40,
+      "task_count": 40
+    }
+  },
+  "library": {
+    "version": 4,
+    "rules": [
+      {
+        "rule_id": "learned-g01",
+        "cue": "等额拆分",
+        "action": "equal_category_allocation",
+        "reason": "deterministic test proposal inferred from the task rule",
+        "source_task": "cap-evolution-001"
+      },
+      {
+        "rule_id": "learned-g02",
+        "cue": "商品数量之和加权分摊",
+        "action": "quantity_category_allocation",
+        "reason": "deterministic test proposal inferred from the task rule",
+        "source_task": "cap-evolution-002"
+      },
+      {
+        "rule_id": "learned-g03",
+        "cue": "相同 refund_id 只认第一次",
+        "action": "deduplicate_refunds",
+        "reason": "deterministic test proposal inferred from the task rule",
+        "source_task": "cap-evolution-003"
+      },
+      {
+        "rule_id": "learned-g04",
+        "cue": "逐笔计算退款日与原订单日的自然日间隔",
+        "action": "hybrid_refund_time",
+        "reason": "deterministic test proposal inferred from the task rule",
+        "source_task": "cap-evolution-004"
+      }
+    ]
+  },
+  "library_hash": "8c8a7b980d20d2ebf2d7e842e6a8f3fbb017c50136d5acc1e6ac93e0f840cf52",
+  "accepted_generations": 4,
+  "candidate_attempts": 4,
+  "stopped_reason": "all_evolution_tasks_passed",
+  "transfer_opened_once_after_search": true,
+  "proposer_calls": 4,
+  "proposer_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0
+  },
+  "ledger": [
+    {
+      "generation": 1,
+      "candidate": 1,
+      "source_task": "cap-evolution-001",
+      "proposal": {
+        "cue": "等额拆分",
+        "action": "equal_category_allocation",
+        "reason": "deterministic test proposal inferred from the task rule"
+      },
+      "decision": {
+        "accepted": true,
+        "gate_checks": {
+          "bounded_one_rule_edit": true,
+          "regression_no_loss": true,
+          "evolution_no_loss": true,
+          "validation_no_loss": true,
+          "evolution_improved": true,
+          "validation_improved": true
+        },
+        "lost_passes": {
+          "regression": [],
+          "evolution": [],
+          "validation": []
+        },
+        "incumbent_scores": {
+          "regression": {
+            "split": "regression",
+            "passed": 40,
+            "task_count": 40
+          },
+          "evolution": {
+            "split": "evolution",
+            "passed": 32,
+            "task_count": 48
+          },
+          "validation": {
+            "split": "validation",
+            "passed": 24,
+            "task_count": 40
+          }
+        },
+        "candidate_scores": {
+          "regression": {
+            "split": "regression",
+            "passed": 40,
+            "task_count": 40
+          },
+          "evolution": {
+            "split": "evolution",
+            "passed": 36,
+            "task_count": 48
+          },
+          "validation": {
+            "split": "validation",
+            "passed": 28,
+            "task_count": 40
+          }
+        }
+      },
+      "incumbent_version_after": 1,
+      "incumbent_hash_after": "ce2888e0b708f6a06d24961cb439084431d3e5544cc67a7a7efc0357a0774ad0"
+    },
+    {
+      "generation": 2,
+      "candidate": 1,
+      "source_task": "cap-evolution-002",
+      "proposal": {
+        "cue": "商品数量之和加权分摊",
+        "action": "quantity_category_allocation",
+        "reason": "deterministic test proposal inferred from the task rule"
+      },
+      "decision": {
+        "accepted": true,
+        "gate_checks": {
+          "bounded_one_rule_edit": true,
+          "regression_no_loss": true,
+          "evolution_no_loss": true,
+          "validation_no_loss": true,
+          "evolution_improved": true,
+          "validation_improved": true
+        },
+        "lost_passes": {
+          "regression": [],
+          "evolution": [],
+          "validation": []
+        },
+        "incumbent_scores": {
+          "regression": {
+            "split": "regression",
+            "passed": 40,
+            "task_count": 40
+          },
+          "evolution": {
+            "split": "evolution",
+            "passed": 36,
+            "task_count": 48
+          },
+          "validation": {
+            "split": "validation",
+            "passed": 28,
+            "task_count": 40
+          }
+        },
+        "candidate_scores": {
+          "regression": {
+            "split": "regression",
+            "passed": 40,
+            "task_count": 40
+          },
+          "evolution": {
+            "split": "evolution",
+            "passed": 40,
+            "task_count": 48
+          },
+          "validation": {
+            "split": "validation",
+            "passed": 32,
+            "task_count": 40
+          }
+        }
+      },
+      "incumbent_version_after": 2,
+      "incumbent_hash_after": "f961ba82c654fc3aec3d84fa434f43c76745b75aa0831282f0a790fb06e811cc"
+    },
+    {
+      "generation": 3,
+      "candidate": 1,
+      "source_task": "cap-evolution-003",
+      "proposal": {
+        "cue": "相同 refund_id 只认第一次",
+        "action": "deduplicate_refunds",
+        "reason": "deterministic test proposal inferred from the task rule"
+      },
+      "decision": {
+        "accepted": true,
+        "gate_checks": {
+          "bounded_one_rule_edit": true,
+          "regression_no_loss": true,
+          "evolution_no_loss": true,
+          "validation_no_loss": true,
+          "evolution_improved": true,
+          "validation_improved": true
+        },
+        "lost_passes": {
+          "regression": [],
+          "evolution": [],
+          "validation": []
+        },
+        "incumbent_scores": {
+          "regression": {
+            "split": "regression",
+            "passed": 40,
+            "task_count": 40
+          },
+          "evolution": {
+            "split": "evolution",
+            "passed": 40,
+            "task_count": 48
+          },
+          "validation": {
+            "split": "validation",
+            "passed": 32,
+            "task_count": 40
+          }
+        },
+        "candidate_scores": {
+          "regression": {
+            "split": "regression",
+            "passed": 40,
+            "task_count": 40
+          },
+          "evolution": {
+            "split": "evolution",
+            "passed": 44,
+            "task_count": 48
+          },
+          "validation": {
+            "split": "validation",
+            "passed": 36,
+            "task_count": 40
+          }
+        }
+      },
+      "incumbent_version_after": 3,
+      "incumbent_hash_after": "136c8436cbd92b9cc6d829791043dddb19452412bc39a6a5d530036738ba8a06"
+    },
+    {
+      "generation": 4,
+      "candidate": 1,
+      "source_task": "cap-evolution-004",
+      "proposal": {
+        "cue": "逐笔计算退款日与原订单日的自然日间隔",
+        "action": "hybrid_refund_time",
+        "reason": "deterministic test proposal inferred from the task rule"
+      },
+      "decision": {
+        "accepted": true,
+        "gate_checks": {
+          "bounded_one_rule_edit": true,
+          "regression_no_loss": true,
+          "evolution_no_loss": true,
+          "validation_no_loss": true,
+          "evolution_improved": true,
+          "validation_improved": true
+        },
+        "lost_passes": {
+          "regression": [],
+          "evolution": [],
+          "validation": []
+        },
+        "incumbent_scores": {
+          "regression": {
+            "split": "regression",
+            "passed": 40,
+            "task_count": 40
+          },
+          "evolution": {
+            "split": "evolution",
+            "passed": 44,
+            "task_count": 48
+          },
+          "validation": {
+            "split": "validation",
+            "passed": 36,
+            "task_count": 40
+          }
+        },
+        "candidate_scores": {
+          "regression": {
+            "split": "regression",
+            "passed": 40,
+            "task_count": 40
+          },
+          "evolution": {
+            "split": "evolution",
+            "passed": 48,
+            "task_count": 48
+          },
+          "validation": {
+            "split": "validation",
+            "passed": 40,
+            "task_count": 40
+          }
+        }
+      },
+      "incumbent_version_after": 4,
+      "incumbent_hash_after": "8c8a7b980d20d2ebf2d7e842e6a8f3fbb017c50136d5acc1e6ac93e0f840cf52"
+    }
+  ]
+}

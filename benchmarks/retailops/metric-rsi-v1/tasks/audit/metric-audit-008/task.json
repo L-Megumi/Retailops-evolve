@@ -1,0 +1,10 @@
+{
+  "instruction": "What fraction of the raw refund stream consists of replays of an earlier unique event reference?",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "audit",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "instruction": "按退款事件 ID 计算重复行占比，保留三项指标：total rows、duplicate rows、rate bps。",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

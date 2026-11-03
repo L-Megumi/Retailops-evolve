@@ -1,0 +1,10 @@
+{
+  "instruction": "Return the duplicate-delivery basis-point rate plus raw and replay row counts for refund events.",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "audit",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

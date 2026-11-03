@@ -1,0 +1,858 @@
+{
+  "benchmark": "holdout-v4",
+  "task_count": 40,
+  "naive_passed": 17,
+  "repaired_passed": 40,
+  "oracle_passed": 40,
+  "rows": [
+    {
+      "task": "holdout-001-refund_rate",
+      "scenario": "refund_rate",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "refund_rate_definition"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-002-category",
+      "scenario": "category",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "category_refund_allocation"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-003-combined",
+      "scenario": "combined",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "category_refund_allocation",
+        "refund_rate_definition"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-004-daily",
+      "scenario": "daily",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "refund_time_attribution"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "holdout-005-refund_rate",
+      "scenario": "refund_rate",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-006-category",
+      "scenario": "category",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-007-combined",
+      "scenario": "combined",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "refund_rate_definition"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-008-daily",
+      "scenario": "daily",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-009-refund_rate",
+      "scenario": "refund_rate",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "refund_rate_definition"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-010-category",
+      "scenario": "category",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "category_refund_allocation"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-011-combined",
+      "scenario": "combined",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "category_refund_allocation"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-012-daily",
+      "scenario": "daily",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "refund_time_attribution"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "holdout-013-refund_rate",
+      "scenario": "refund_rate",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-014-category",
+      "scenario": "category",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-015-combined",
+      "scenario": "combined",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-016-daily",
+      "scenario": "daily",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-017-refund_rate",
+      "scenario": "refund_rate",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "refund_rate_definition"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-018-category",
+      "scenario": "category",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "category_refund_allocation"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-019-combined",
+      "scenario": "combined",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "category_refund_allocation",
+        "refund_rate_definition"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-020-daily",
+      "scenario": "daily",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "refund_time_attribution"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "holdout-021-refund_rate",
+      "scenario": "refund_rate",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-022-category",
+      "scenario": "category",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-023-combined",
+      "scenario": "combined",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "refund_rate_definition"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-024-daily",
+      "scenario": "daily",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-025-refund_rate",
+      "scenario": "refund_rate",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "refund_rate_definition"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-026-category",
+      "scenario": "category",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "category_refund_allocation"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-027-combined",
+      "scenario": "combined",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "category_refund_allocation"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-028-daily",
+      "scenario": "daily",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "refund_time_attribution"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "holdout-029-refund_rate",
+      "scenario": "refund_rate",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-030-category",
+      "scenario": "category",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-031-combined",
+      "scenario": "combined",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-032-daily",
+      "scenario": "daily",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-033-refund_rate",
+      "scenario": "refund_rate",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "refund_rate_definition"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-034-category",
+      "scenario": "category",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "category_refund_allocation"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-035-combined",
+      "scenario": "combined",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "category_refund_allocation",
+        "refund_rate_definition"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-036-daily",
+      "scenario": "daily",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "refund_time_attribution"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "order_date"
+      }
+    },
+    {
+      "task": "holdout-037-refund_rate",
+      "scenario": "refund_rate",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-038-category",
+      "scenario": "category",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-039-combined",
+      "scenario": "combined",
+      "metric_contract": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": false,
+      "naive_issues": [
+        "refund_rate_definition"
+      ],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 2,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    },
+    {
+      "task": "holdout-040-daily",
+      "scenario": "daily",
+      "metric_contract": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      },
+      "naive_ok": true,
+      "naive_issues": [],
+      "repaired_ok": true,
+      "oracle_ok": true,
+      "repair_attempts": 1,
+      "final_issues": [],
+      "final_policy": {
+        "refund_rate_denominator": "order_lines",
+        "category_refund_allocation": "first_category",
+        "refund_time_attribution": "refund_date"
+      }
+    }
+  ]
+}

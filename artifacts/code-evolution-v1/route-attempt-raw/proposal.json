@@ -1,0 +1,25 @@
+{
+  "cues": [
+    "累计退款上限",
+    "累计有效退款",
+    "订单级余额池",
+    "累计可退款额度",
+    "订单级退款封顶",
+    "退款总确认额不能大于订单销售额",
+    "总退款最多等于其 gross sales",
+    "退款余额从成交额开始",
+    "按退款文件顺序",
+    "依输入顺序扣减余额",
+    "顺序消费额度",
+    "逐笔扣减可用额度",
+    "边界行只确认剩余额度",
+    "最后一笔可被截断到剩余金额",
+    "确认金额取申报额与剩余额度的较小值",
+    "余额耗尽后忽略后续行",
+    "余额为零后跳过",
+    "超出部分作废",
+    "裁剪越界退款",
+    "顺序裁剪"
+  ],
+  "reason": "Cues are literal Chinese/English substrings specific to order-level cumulative refund caps and sequential consumption/clipping semantics; they avoid standalone broad terms like 退款/订单/汇总/category/daily and cover all provided wording variants plus a concise English paraphrase."
+}

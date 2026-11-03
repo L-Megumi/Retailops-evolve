@@ -1,0 +1,127 @@
+{
+  "name": "retailops-holdout-v1",
+  "seed": 2026110303,
+  "count": 8,
+  "scenarios": [
+    "refund_rate",
+    "category",
+    "combined",
+    "daily"
+  ],
+  "cases": [
+    {
+      "case_id": "holdout-001-refund_rate",
+      "scenario": "refund_rate",
+      "orders": 6,
+      "order_lines": 13,
+      "refund_rows": 1,
+      "instruction": "给出退款订单率，分母使用去重后的订单编号，多次退款的订单只计一次。"
+    },
+    {
+      "case_id": "holdout-002-category",
+      "scenario": "category",
+      "orders": 6,
+      "order_lines": 9,
+      "refund_rows": 1,
+      "instruction": "比较各品类净成交额，跨品类订单的退款依据订单行金额比例拆分。"
+    },
+    {
+      "case_id": "holdout-003-combined",
+      "scenario": "combined",
+      "orders": 7,
+      "order_lines": 19,
+      "refund_rows": 2,
+      "instruction": "核算退款订单率和类别净销售额排行。订单率按唯一订单编号统计，跨类别订单的退款按对应订单行成交额比例拆分。"
+    },
+    {
+      "case_id": "holdout-004-daily",
+      "scenario": "daily",
+      "orders": 7,
+      "order_lines": 18,
+      "refund_rows": 2,
+      "instruction": "calculate daily net sales using order dates and refund dates."
+    },
+    {
+      "case_id": "holdout-005-refund_rate",
+      "scenario": "refund_rate",
+      "orders": 10,
+      "order_lines": 22,
+      "refund_rows": 1,
+      "instruction": "计算 refund rate；订单明细包含重复订单号时，分母仍按唯一订单统计。"
+    },
+    {
+      "case_id": "holdout-006-category",
+      "scenario": "category",
+      "orders": 10,
+      "order_lines": 25,
+      "refund_rows": 3,
+      "instruction": "比较各品类净成交额，跨品类订单的退款依据订单行金额比例拆分。"
+    },
+    {
+      "case_id": "holdout-007-combined",
+      "scenario": "combined",
+      "orders": 10,
+      "order_lines": 21,
+      "refund_rows": 1,
+      "instruction": "核算退款订单率和类别净销售额排行。订单率按唯一订单编号统计，跨类别订单的退款按对应订单行成交额比例拆分。"
+    },
+    {
+      "case_id": "holdout-008-daily",
+      "scenario": "daily",
+      "orders": 9,
+      "order_lines": 18,
+      "refund_rows": 2,
+      "instruction": "按订单日期与退款发生日期汇总每日销售额、退款额和净销售额。"
+    }
+  ],
+  "file_sha256": {
+    "holdout-001-refund_rate/expected.json": "3d49ddfad350bac94964ccdeef40fbc72eb1347a35f2d8168d51a48f4fe3818a",
+    "holdout-001-refund_rate/orders.csv": "6175ca8221258ca093ee6ea1ae0c955f118e1b50ed23407066811edc567bfb31",
+    "holdout-001-refund_rate/refunds.csv": "6e0c3f58d7732c76810a0a0bdc59b3d4656b5671b24af0591888a9ba42d7760e",
+    "holdout-001-refund_rate/task.json": "3538876b02ecd82c481079a49d7814ec2cae3d6faf11cdca50c7c1a7495d2615",
+    "holdout-002-category/expected.json": "ba7a22b7e107a1775fc19d3dbb5ec390920a64bb7e39cc32cbf6e8e5015449f6",
+    "holdout-002-category/orders.csv": "1294a06eea2fa83d31cad5317c23375eb79e24364a1f48e8ffd4deed322ef55d",
+    "holdout-002-category/refunds.csv": "a4660c0b0981896de7c6be84a6ceffbf01b7853adc7a624e26013dbd35a0455e",
+    "holdout-002-category/task.json": "1d77a95ee4f44f5c47302ff4c2a76f2ebb2ffbdd31ed17a7b8675453fa41f92b",
+    "holdout-003-combined/expected.json": "f96825f44bda9a7693875b95416df2c3efbe5251a222c6a7b90e5de4858cf37d",
+    "holdout-003-combined/orders.csv": "349fada0e6d76ca2d6b97a0155dcc092c5dc6701c5c059ab4ce0c346e45b4d56",
+    "holdout-003-combined/refunds.csv": "a91265411f20499158a3dcda4ead77e4759297c4198b0ed732a4301a3216f538",
+    "holdout-003-combined/task.json": "f9a162fb249c6423adc171770777fd999c2f2b599b5a73dfe05d5186a8bc144d",
+    "holdout-004-daily/expected.json": "42a4c13fe770a975c02ed0f577e824e5851a85e94bd0135ac46116765c090e17",
+    "holdout-004-daily/orders.csv": "6301f95fe374cbba6e03c6966047da95083460052de233e95c0cdb5ec373f3f9",
+    "holdout-004-daily/refunds.csv": "bfd97dcf03482888fd763f2091e8735e7387873597d465416a593fe4257e9966",
+    "holdout-004-daily/task.json": "7f7fc65b8cfa4480c23def2828f26f4ec52dae2028586717988347aab832b7b9",
+    "holdout-005-refund_rate/expected.json": "455fa0c175a36713fe02e156c0c4659c53169ad165f60f7c290da1902f4b330c",
+    "holdout-005-refund_rate/orders.csv": "bd455372e84e4a8ff8ba342eba1b8279f0c1724e8d7a754637440747043af688",
+    "holdout-005-refund_rate/refunds.csv": "f3e04847bbe3ba8eb285c1892112fb9a0d4357300dff97dbd8b510f04f16ef9e",
+    "holdout-005-refund_rate/task.json": "52aeee58eeb4436e3def9084d6c8c1721885ec9b828e369f6070410fb7e619d9",
+    "holdout-006-category/expected.json": "25b5835a9ad321079ab4de366cf47bc2b4c2b5e7473d95e1dd30867fb1cdfbd1",
+    "holdout-006-category/orders.csv": "229e52fdb30e8411867a955ce01290a9d496096ed937b626db7af2ac70082c98",
+    "holdout-006-category/refunds.csv": "a9a1ef6ddfa22fbda17b35f0b32e8db3b53d3cc3dee2846b3b4ed4d3b2642a1e",
+    "holdout-006-category/task.json": "1d77a95ee4f44f5c47302ff4c2a76f2ebb2ffbdd31ed17a7b8675453fa41f92b",
+    "holdout-007-combined/expected.json": "831848251996c449f1759aafce007365365396d40da5a44550598d970d939411",
+    "holdout-007-combined/orders.csv": "7dd7ab599e8be7cb9e1494b324b29e032d98a4b7e638bf055482fd1ce51f49d8",
+    "holdout-007-combined/refunds.csv": "2f00b81ca8352746775ff8930ee55c6b450def3f59dc1f7919bbe722e4de1081",
+    "holdout-007-combined/task.json": "f9a162fb249c6423adc171770777fd999c2f2b599b5a73dfe05d5186a8bc144d",
+    "holdout-008-daily/expected.json": "2347855988b6ef879bfc0efa68f1c694a515ea14ea687cc30b7fe8dbacb2a732",
+    "holdout-008-daily/orders.csv": "b0fc9e56b5185c34879ed2093425f3333fe565cd3dc9b13f1cab18dd1aeff30a",
+    "holdout-008-daily/refunds.csv": "bc00da03a98e6c6acf456fbbcf5b63e13f2d8096b9634afe4c2deb1226d5dfb2",
+    "holdout-008-daily/task.json": "655603683c5082f0f6489b8f442451c726cf750e909984f10f4f4a1ac00ecb41"
+  },
+  "frozen_source_sha256": {
+    "src/retailops_agent/__init__.py": "1a7876a698f21b994095ec0e092e51caa5c12d72665ff31fec2e562431df2601",
+    "src/retailops_agent/agent.py": "8cc64718766f4b0d7beaf8cc606812d5e92472ff0d863d6dc6760a12aeece4cb",
+    "src/retailops_agent/cli.py": "83022fbae3425b29ffbc0a333283b3051c6749b31320e757db68f32dc8e294e9",
+    "src/retailops_agent/data.py": "6c6e0ed43402aeb1cffc70849793d544034c3c3d21b5dddbe065798a0f04b0bb",
+    "src/retailops_agent/harness2_adapter.py": "a5844ba8da8289ed9ada2ce71b4e4c8bab135dbe9bebf1ef692e3b89c70ac9aa",
+    "src/retailops_agent/harness_runner.py": "c19ebdf324769642af6ad8c51330ecac736ec9572de7f41897ebd33ab5462b1c",
+    "src/retailops_agent/llm.py": "66be86258373cb231c69a787481ef3d5f92c7a0537a1e308e5ad71f32a70a7bb",
+    "src/retailops_agent/models.py": "b8535b0a8d93b9215213365867f7df0efe9a0becd6db270e1e535ac875cc7b60",
+    "src/retailops_agent/planner.py": "00d01cc9385602901e72b5ae69662809b13539d245b16dd55a32c06b1d4dd38d",
+    "src/retailops_agent/repair.py": "76fae3990e7aae667e60d01fef7a48b99662317e4f85eac9c562712b9943d5be",
+    "src/retailops_agent/report.py": "1444462f80a10761e92c42d93e429254190d01e397d14e372a0ea0c691d63858",
+    "src/retailops_agent/tools.py": "ba0ae7dd484596bb74489f49be7d8dc042f9e9612d74499f84ecae0922300cbd",
+    "src/retailops_agent/validators.py": "0fb98c509d56050cc525e5cf9b3166047336596bbc16c3d7511de7a844fd6beb",
+    "experiments/run_harness2_model.py": "21b32bf424c624db45279edc1d6de1f6f1f1c1b189e6bbb878a03d5f7f578f61"
+  }
+}

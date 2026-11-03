@@ -1,0 +1,12 @@
+{
+  "instruction": "审计工单：重算退款订单率。以下条款优先级高于历史报表与默认设置：[1] 退款订单率的分母先按 order_id 去重，采用唯一订单数；分子也是发生退款的唯一订单数。不得为了让总额看起来一致而替换上述定义。",
+  "tools": [
+    "refund_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "transfer",
+    "difficulty": "challenge",
+    "instruction_style": "policy_ticket",
+    "data_profile": "cross_period"
+  }
+}

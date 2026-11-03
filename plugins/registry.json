@@ -1,0 +1,203 @@
+{
+  "schema_version": 2,
+  "plugins": [
+    {
+      "plugin_id": "cumulative-refund-cap-v1",
+      "version": "1",
+      "status": "active",
+      "source_path": "cumulative-refund-cap-v1.py",
+      "registration": {
+        "plugin_id": "cumulative-refund-cap-v1",
+        "cues": [
+          "累计退款上限",
+          "累计有效退款",
+          "订单级余额池",
+          "累计可退款额度",
+          "订单级退款封顶",
+          "退款总确认额不能大于订单销售额",
+          "总退款最多等于其 gross sales",
+          "退款余额从成交额开始",
+          "按退款文件顺序",
+          "依输入顺序扣减余额",
+          "顺序消费额度",
+          "cumulative refund cap"
+        ],
+        "source_sha256": "906f3b16020aa6760c07a0556daa19b17587406bef3e423a1e83e3ca3e23bd5c",
+        "source_path": "cumulative-refund-cap-v1.py",
+        "keyword_groups": [
+          [
+            "剩余",
+            "可退",
+            "金额",
+            "流水"
+          ],
+          [
+            "订单",
+            "退款",
+            "天花板",
+            "成交额"
+          ],
+          [
+            "订单",
+            "退款",
+            "不得",
+            "负数"
+          ]
+        ],
+        "reason": "Minimum non-regressing crossover selected from archived route candidates."
+      },
+      "capability": {
+        "capability_id": "order-lifetime-cumulative-refund-cap",
+        "positive_definition": "For each individual order or sale, accepted refund or return value is accumulated across multiple events and capped at that order's original gross merchandise value. Events are processed in input or time order; the event crossing the remaining allowance is partially accepted and later excess is rejected.",
+        "exclusions": [
+          "a limit on each refund event rather than their per-order cumulative total",
+          "store, day, or category aggregate caps and presentation-only non-negative clamping",
+          "alerts or reports that detect excess without changing accepted amounts",
+          "deduplication, status filtering, allocation, discounts, shipping, or chargebacks",
+          "tasks without an order-specific allowance based on original value"
+        ]
+      },
+      "spec": {
+        "kind": "refund_transform",
+        "entrypoint": "transform_refunds",
+        "arguments": [
+          "order_totals_cents",
+          "refunds"
+        ],
+        "input_schema": "retailops.refund-transform-input.v1",
+        "output_schema": "retailops.refund-rows.v1",
+        "output_name": "",
+        "invariants": [
+          "order_gross_cap"
+        ],
+        "order_before": [],
+        "order_after": [
+          "refund-event-dedup-v1"
+        ],
+        "conflicts": [],
+        "timeout_seconds": 2.0
+      },
+      "failure_count": 0,
+      "quarantine_reason": "",
+      "installed_order": 1
+    },
+    {
+      "plugin_id": "refund-event-dedup-v1",
+      "version": "1",
+      "status": "active",
+      "source_path": "refund-dedup-v1.py",
+      "registration": {
+        "plugin_id": "refund-event-dedup-v1",
+        "cues": [
+          "重复退款去重",
+          "按 refund_id 去重",
+          "相同退款编号只保留第一条",
+          "重复退款编号保留首条",
+          "duplicate refund id",
+          "deduplicate refunds by refund_id"
+        ],
+        "source_sha256": "4edbd375e9e55641165fc8c5346cf4ab4a9f73241416d01d209cd1d834d52467",
+        "source_path": "refund-dedup-v1.py",
+        "keyword_groups": [
+          [
+            "退款",
+            "编号",
+            "重复",
+            "第一条"
+          ],
+          [
+            "refund_id",
+            "重复",
+            "去重"
+          ],
+          [
+            "duplicate",
+            "refund",
+            "id"
+          ]
+        ],
+        "reason": "Generated candidate passed 20 development and 20 frozen audit cases."
+      },
+      "capability": {
+        "capability_id": "first-occurrence-refund-id-deduplication",
+        "positive_definition": "Remove replayed or duplicate refund events by their unique event identity or reference while preserving input order. The identifier may be named refund_id, refund reference, reimbursement key, return-event key, or equivalent. Keep only the earliest occurrence of that same unique identity and preserve every retained row without changing its fields or amount.",
+        "exclusions": [
+          "cumulative or per-event refund amount caps",
+          "deduplication by order_id, amount, date, customer, composite attributes, or approximate similarity rather than a unique event identity",
+          "duplicate detection reports that do not remove repeated events",
+          "aggregation or allocation of distinct refund events"
+        ]
+      },
+      "spec": {
+        "kind": "refund_transform",
+        "entrypoint": "transform_refunds",
+        "arguments": [
+          "order_totals_cents",
+          "refunds"
+        ],
+        "input_schema": "retailops.refund-transform-input.v1",
+        "output_schema": "retailops.refund-rows.v1",
+        "output_name": "",
+        "invariants": [],
+        "order_before": [
+          "cumulative-refund-cap-v1"
+        ],
+        "order_after": [],
+        "conflicts": [],
+        "timeout_seconds": 2.0
+      },
+      "failure_count": 0,
+      "quarantine_reason": "",
+      "installed_order": 2
+    },
+    {
+      "plugin_id": "refund-replay-rate-metric-v1",
+      "version": "1",
+      "status": "active",
+      "source_path": "refund-replay-rate-v1.py",
+      "registration": {
+        "plugin_id": "refund-replay-rate-metric-v1",
+        "cues": [
+          "退款事件重放率",
+          "重放行数除以全部退款行数",
+          "refund replay rate",
+          "replay rate in basis points",
+          "refund_replay_rate"
+        ],
+        "source_sha256": "bb5a7c6f452f7ceca2008e8fbe51076ccc108351ceb366d8356b513431e2f13b",
+        "source_path": "refund-replay-rate-v1.py",
+        "keyword_groups": [],
+        "reason": "RSI proposal cues were conservatively distilled after cross-capability collision checks; broad refund_id-only cues were removed."
+      },
+      "capability": {
+        "capability_id": "refund-replay-rate-metric-v1",
+        "positive_definition": "Computes a scalar metric over the raw refunds input: rows whose unique refund-event identity has already appeared earlier are replay rows; replay rows divided by all refund rows yields the replay rate in integer basis points. The plugin reads and counts rows without modifying them.",
+        "exclusions": [
+          "does not remove duplicate rows or return a filtered event list",
+          "does not cap refund value per order",
+          "does not compute ordinary refunded-order rate or refund-to-sales ratio",
+          "does not rank categories or modify input rows"
+        ]
+      },
+      "spec": {
+        "kind": "metric_tool",
+        "entrypoint": "compute_metric",
+        "arguments": [
+          "orders",
+          "refunds"
+        ],
+        "input_schema": "retailops.metric-input.v1",
+        "output_schema": "retailops.metric-result.v1",
+        "output_name": "refund_replay_rate",
+        "invariants": [],
+        "order_before": [],
+        "order_after": [],
+        "conflicts": [],
+        "timeout_seconds": 2.0
+      },
+      "failure_count": 0,
+      "quarantine_reason": "",
+      "installed_order": 3
+    }
+  ]
+}

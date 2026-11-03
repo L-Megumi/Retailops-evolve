@@ -1,0 +1,10 @@
+{
+  "instruction": "Compute a refund idempotency replay KPI in bps without removing duplicate rows from the denominator.",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "audit",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

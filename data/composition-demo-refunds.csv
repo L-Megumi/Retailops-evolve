@@ -1,0 +1,4 @@
+refund_id,order_id,refund_date,refund_amount
+R-C1,O-C1,2026-11-02,70.00
+R-C1,O-C1,2026-11-02,70.00
+R-C2,O-C1,2026-11-03,60.00

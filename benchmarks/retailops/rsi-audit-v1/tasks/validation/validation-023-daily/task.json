@@ -1,0 +1,13 @@
+{
+  "instruction": "审计工单：重算每日成交额、退款额与净销售额。以下条款优先级高于历史报表与默认设置：[1] 退款回溯计入原订单日期。不得为了让总额看起来一致而替换上述定义。",
+  "tools": [
+    "daily_net_sales"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "difficulty": "challenge",
+    "case_kind": "contract_selection",
+    "instruction_style": "policy_ticket",
+    "data_profile": "dense"
+  }
+}

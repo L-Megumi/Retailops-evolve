@@ -1,0 +1,12 @@
+{
+  "instruction": "请输出退款订单率。本批次口径：退款订单率的分母采用订单商品明细行数，不对分母中的 order_id 去重；分子仍为发生退款的唯一订单数。",
+  "tools": [
+    "refund_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "difficulty": "challenge",
+    "instruction_style": "direct",
+    "data_profile": "dense"
+  }
+}

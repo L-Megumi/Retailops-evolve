@@ -1,0 +1,83 @@
+{
+  "case_id": "transfer-003-daily",
+  "split": "transfer",
+  "scenario": "daily",
+  "metric_contract": {
+    "refund_rate_denominator": "distinct_orders",
+    "category_refund_allocation": "proportional",
+    "refund_time_attribution": "refund_date"
+  },
+  "relevant_contract_fields": [
+    "refund_time_attribution"
+  ],
+  "results": {
+    "daily_net_sales": [
+      {
+        "date": "2026-09-29",
+        "gross_sales": "11498.58",
+        "refund_amount": "0",
+        "net_sales": "11498.58"
+      },
+      {
+        "date": "2026-09-30",
+        "gross_sales": "2568.78",
+        "refund_amount": "0",
+        "net_sales": "2568.78"
+      },
+      {
+        "date": "2026-10-01",
+        "gross_sales": "15046.17",
+        "refund_amount": "0",
+        "net_sales": "15046.17"
+      },
+      {
+        "date": "2026-10-02",
+        "gross_sales": "12771.51",
+        "refund_amount": "0",
+        "net_sales": "12771.51"
+      },
+      {
+        "date": "2026-10-03",
+        "gross_sales": "467.35",
+        "refund_amount": "0",
+        "net_sales": "467.35"
+      },
+      {
+        "date": "2026-10-04",
+        "gross_sales": "4623.29",
+        "refund_amount": "1221.03",
+        "net_sales": "3402.26"
+      },
+      {
+        "date": "2026-10-05",
+        "gross_sales": "22751.91",
+        "refund_amount": "0",
+        "net_sales": "22751.91"
+      },
+      {
+        "date": "2026-10-06",
+        "gross_sales": "3853.96",
+        "refund_amount": "0",
+        "net_sales": "3853.96"
+      },
+      {
+        "date": "2026-10-09",
+        "gross_sales": "0",
+        "refund_amount": "1221.02",
+        "net_sales": "-1221.02"
+      },
+      {
+        "date": "2026-10-12",
+        "gross_sales": "0",
+        "refund_amount": "2188.93",
+        "net_sales": "-2188.93"
+      },
+      {
+        "date": "2026-10-14",
+        "gross_sales": "0",
+        "refund_amount": "2013.94",
+        "net_sales": "-2013.94"
+      }
+    ]
+  }
+}

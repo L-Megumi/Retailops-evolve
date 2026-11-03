@@ -1,0 +1,10 @@
+{
+  "instruction": "Calculate replayed refund rows divided by raw refund rows, alongside both underlying counts.",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "validation",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

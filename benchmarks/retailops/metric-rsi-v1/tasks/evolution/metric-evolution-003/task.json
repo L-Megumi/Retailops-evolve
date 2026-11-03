@@ -1,0 +1,10 @@
+{
+  "instruction": "输出 refund replay rate、总退款事件数和重复事件行数；同一事件键第一次不算重复。",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

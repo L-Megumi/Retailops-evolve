@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "rule_id": "learned-g01",
+      "cue": "等额拆分",
+      "action": "equal_category_allocation",
+      "reason": "deterministic test proposal inferred from the task rule",
+      "source_task": "cap-evolution-001"
+    },
+    {
+      "rule_id": "learned-g02",
+      "cue": "商品数量之和加权分摊",
+      "action": "quantity_category_allocation",
+      "reason": "deterministic test proposal inferred from the task rule",
+      "source_task": "cap-evolution-002"
+    }
+  ]
+}

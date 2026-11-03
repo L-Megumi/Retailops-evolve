@@ -1,0 +1,122 @@
+[
+  {
+    "id": "multi-route-cap-001",
+    "instruction": "同一笔销售发生多次退货时，按先后次序认可，合计最多退回最初商品货款，越界那笔只取尚余部分。",
+    "expected_plugin_id": "cumulative-refund-cap-v1"
+  },
+  {
+    "id": "multi-route-cap-002",
+    "instruction": "为每张销售单维护可退本金，售后事件逐条消耗它；本金归零以后不再确认后续金额。",
+    "expected_plugin_id": "cumulative-refund-cap-v1"
+  },
+  {
+    "id": "multi-route-cap-003",
+    "instruction": "历史与本次退货要连续核算，每笔交易最终认可的退货总额不可超过其原始货值。",
+    "expected_plugin_id": "cumulative-refund-cap-v1"
+  },
+  {
+    "id": "multi-route-cap-004",
+    "instruction": "一张销售凭证上的多笔返款依到达顺序结算，跨过原销售金额的那条需要裁短。",
+    "expected_plugin_id": "cumulative-refund-cap-v1"
+  },
+  {
+    "id": "multi-route-cap-005",
+    "instruction": "Repeated returns on one sale share an allowance equal to its original merchandise value; earlier events consume it first.",
+    "expected_plugin_id": "cumulative-refund-cap-v1"
+  },
+  {
+    "id": "multi-route-cap-006",
+    "instruction": "Recognize return events chronologically until their combined value reaches the value originally sold, partially accepting the boundary event.",
+    "expected_plugin_id": "cumulative-refund-cap-v1"
+  },
+  {
+    "id": "multi-route-cap-007",
+    "instruction": "Maintain a remaining refundable principal for each transaction and stop recognizing value after that balance reaches zero.",
+    "expected_plugin_id": "cumulative-refund-cap-v1"
+  },
+  {
+    "id": "multi-route-cap-008",
+    "instruction": "Across all return events for a sale, accepted value must not exceed original gross; trim only the event that crosses the limit.",
+    "expected_plugin_id": "cumulative-refund-cap-v1"
+  },
+  {
+    "id": "multi-route-dedup-001",
+    "instruction": "同一售后流水号反复出现时只采信最早到达的记录，其余原样重复项丢弃。",
+    "expected_plugin_id": "refund-event-dedup-v1"
+  },
+  {
+    "id": "multi-route-dedup-002",
+    "instruction": "清理重复导入的退货事件：业务流水标识相同的只留下第一次出现，保持原文件顺序。",
+    "expected_plugin_id": "refund-event-dedup-v1"
+  },
+  {
+    "id": "multi-route-dedup-003",
+    "instruction": "一个返款凭证编号可能被上游重放，只处理最先看到的那条，后续相同编号跳过。",
+    "expected_plugin_id": "refund-event-dedup-v1"
+  },
+  {
+    "id": "multi-route-dedup-004",
+    "instruction": "按售后事件唯一标识消除重复记录，首条保留且金额、日期和关联销售单都不能修改。",
+    "expected_plugin_id": "refund-event-dedup-v1"
+  },
+  {
+    "id": "multi-route-dedup-005",
+    "instruction": "When a reimbursement reference is replayed, retain its earliest event and discard later events carrying that same reference.",
+    "expected_plugin_id": "refund-event-dedup-v1"
+  },
+  {
+    "id": "multi-route-dedup-006",
+    "instruction": "Remove repeated return-event records using their unique event identifier, with first occurrence winning and order preserved.",
+    "expected_plugin_id": "refund-event-dedup-v1"
+  },
+  {
+    "id": "multi-route-dedup-007",
+    "instruction": "The ingestion feed may replay the same reimbursement key; process that key once using the earliest row unchanged.",
+    "expected_plugin_id": "refund-event-dedup-v1"
+  },
+  {
+    "id": "multi-route-dedup-008",
+    "instruction": "Filter exact event-identity repetitions while preserving distinct return events even when their amounts are equal.",
+    "expected_plugin_id": "refund-event-dedup-v1"
+  },
+  {
+    "id": "multi-route-none-001",
+    "instruction": "先删除重复售后流水，再把每张销售单的累计退货限制在原货值以内。",
+    "expected_plugin_id": null
+  },
+  {
+    "id": "multi-route-none-002",
+    "instruction": "单笔返款超过 500 元就转人工，其余金额保持不变。",
+    "expected_plugin_id": null
+  },
+  {
+    "id": "multi-route-none-003",
+    "instruction": "列出重复退款编号供审计，但不要删除或修改任何记录。",
+    "expected_plugin_id": null
+  },
+  {
+    "id": "multi-route-none-004",
+    "instruction": "按销售单编号合并所有退货行，不考虑售后流水标识。",
+    "expected_plugin_id": null
+  },
+  {
+    "id": "multi-route-none-005",
+    "instruction": "全店每天最多退款十万元，达到预算后暂停当天退款。",
+    "expected_plugin_id": null
+  },
+  {
+    "id": "multi-route-none-006",
+    "instruction": "找出累计退货超过成交金额的交易并告警，但保留输入金额。",
+    "expected_plugin_id": null
+  },
+  {
+    "id": "multi-route-none-007",
+    "instruction": "把金额和日期相同的退款视为重复，即使它们的事件编号不同。",
+    "expected_plugin_id": null
+  },
+  {
+    "id": "multi-route-none-008",
+    "instruction": "将每笔退款平均分摊到商品明细，退款事件数量和金额保持不变。",
+    "expected_plugin_id": null
+  }
+]

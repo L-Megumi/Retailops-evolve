@@ -1,0 +1,10 @@
+{
+  "instruction": "How often are refund events replayed? Use duplicate event-id rows over the complete refund feed.",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

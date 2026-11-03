@@ -1,0 +1,10 @@
+{
+  "instruction": "Measure redelivered refund messages: every row after the first use of an event key is in the numerator.",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "audit",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "instruction": "经营分析备忘录｜交付：品类净销售额排行。P0 口径覆盖系统默认值：跨品类订单的退款按各品类在该订单中的成交额占比分摊。币种保持人民币，净额=成交额-退款额。",
+  "tools": [
+    "category_ranking"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "difficulty": "challenge",
+    "case_kind": "contract_selection",
+    "capability_family": "none",
+    "instruction_style": "ops_memo",
+    "data_profile": "multi_refund"
+  }
+}

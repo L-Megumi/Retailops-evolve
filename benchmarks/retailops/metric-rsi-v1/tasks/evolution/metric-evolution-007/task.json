@@ -1,0 +1,10 @@
+{
+  "instruction": "Calculate the refund replay rate: later rows with an already seen refund_id are replay rows divided by all refund rows.",
+  "required_results": [
+    "refund_replay_rate"
+  ],
+  "benchmark_metadata": {
+    "split": "evolution",
+    "case_kind": "capability_gap_metric_tool"
+  }
+}
