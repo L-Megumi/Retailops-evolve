@@ -3,6 +3,8 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass
 from pathlib import Path
+import re
+from .task_contract import BOUNDARY, NEGATION, affirmative_mentions
 
 
 def _normalize(value: str) -> str:
@@ -47,10 +49,12 @@ class CodePluginRegistration:
 
     def matches(self, instruction: str) -> bool:
         text = _normalize(instruction)
-        return any(_normalize(cue) in text for cue in self.cues) or any(
-            all(_normalize(token) in text for token in group)
-            for group in self.keyword_groups
+        literal = any(affirmative_mentions(text, re.escape(_normalize(cue)))[0] for cue in self.cues)
+        grouped = any(
+            all(_normalize(token) in clause for token in group) and not NEGATION.search(clause)
+            for clause in BOUNDARY.split(text) for group in self.keyword_groups
         )
+        return literal or grouped
 
     def to_dict(self) -> dict[str, object]:
         return {

@@ -2,8 +2,10 @@ from __future__ import annotations
 
 import ast
 import json
+import os
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 
@@ -98,6 +100,9 @@ def validate_plugin_source(
         raise UnsafePluginError(f"plugin function must be named {entrypoint}")
     if function.decorator_list or function.returns is not None:
         raise UnsafePluginError("decorators and return annotations are not allowed")
+    if (function.args.defaults or function.args.kw_defaults or function.args.kwonlyargs
+            or function.args.posonlyargs or function.args.vararg or function.args.kwarg):
+        raise UnsafePluginError("defaults, keyword-only and variadic arguments are not allowed")
     actual_argument_names = [argument.arg for argument in function.args.args]
     if actual_argument_names != list(argument_names):
         raise UnsafePluginError(
@@ -106,11 +111,24 @@ def validate_plugin_source(
     if any(argument.annotation is not None for argument in function.args.args):
         raise UnsafePluginError("argument annotations are not allowed")
 
+    parents = {id(child): parent for parent in nodes for child in ast.iter_child_nodes(parent)}
     for node in nodes:
         if type(node) not in ALLOWED_NODES:
             raise UnsafePluginError(f"disallowed syntax: {type(node).__name__}")
         if isinstance(node, ast.Name) and node.id.startswith("_"):
             raise UnsafePluginError("private or dunder names are not allowed")
+        if isinstance(node, ast.arg) and (node.arg.startswith("_") or node.arg in ALLOWED_BUILTIN_CALLS):
+            raise UnsafePluginError("plugin cannot shadow safe builtin names")
+        if isinstance(node, ast.Name) and isinstance(node.ctx, ast.Store):
+            if node.id in ALLOWED_BUILTIN_CALLS or node.id == entrypoint:
+                raise UnsafePluginError("plugin cannot rebind safe builtins or its entrypoint")
+        if isinstance(node, ast.FunctionDef) and node is not function:
+            raise UnsafePluginError("nested functions are not allowed")
+        if isinstance(node, ast.Attribute):
+            parent = parents.get(id(node))
+            if (node.attr not in ALLOWED_METHOD_CALLS or not isinstance(parent, ast.Call)
+                    or parent.func is not node):
+                raise UnsafePluginError("only direct calls to safe methods are allowed; attributes cannot be extracted")
         if isinstance(node, ast.Call):
             if isinstance(node.func, ast.Name):
                 if node.func.id not in ALLOWED_BUILTIN_CALLS:
@@ -143,20 +161,26 @@ def run_json_plugin(
         "argument_names": list(argument_names),
         "arguments": arguments,
     }
+    encoded = json.dumps(payload, ensure_ascii=False, allow_nan=False)
+    if len(encoded.encode("utf-8")) > 4 * 1024 * 1024:
+        raise UnsafePluginError("plugin input exceeds 4 MiB")
+    if not sys.platform.startswith("linux"):
+        raise UnsafePluginError("plugin execution requires Linux seccomp and resource limits")
     try:
-        completed = subprocess.run(
-            [sys.executable, "-I", "-S", str(worker)],
-            input=json.dumps(payload, ensure_ascii=False),
-            capture_output=True,
-            text=True,
-            timeout=timeout,
-            check=False,
-        )
+        with tempfile.TemporaryDirectory(prefix="retailops-sandbox-") as directory:
+            completed = subprocess.run(
+                [sys.executable, "-I", "-S", str(worker)],
+                input=encoded, capture_output=True, text=True, encoding="utf-8",
+                timeout=timeout, check=False, close_fds=True, start_new_session=True,
+                cwd=directory, env={"LANG": "C.UTF-8", "LC_ALL": "C.UTF-8"},
+            )
     except subprocess.TimeoutExpired as exc:
         raise UnsafePluginError("plugin execution timed out") from exc
     if completed.returncode:
         detail = completed.stderr.strip()[-1000:]
         raise UnsafePluginError(f"plugin worker failed: {detail}")
+    if len(completed.stdout.encode("utf-8")) > 4 * 1024 * 1024:
+        raise UnsafePluginError("plugin output exceeds 4 MiB")
     try:
         return json.loads(completed.stdout)
     except json.JSONDecodeError as exc:

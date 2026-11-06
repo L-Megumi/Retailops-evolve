@@ -2,6 +2,65 @@
 
 面向电商运营的经营数据分析与自动报表智能体。它把自然语言分析任务转换为受限的分析计划，执行数据工具，依据业务口径校验结果，并在失败时进行有限次数的修复。
 
+## 2026-11-06 运行时修复
+
+统一入口现在支持任务输出契约、必需转换和禁止操作；无法识别的任务返回 `unsupported_task`，不会再用三个旧指标冒充成功。规则提取覆盖已登记的退款能力，复杂表述可以启用模型规划；没有可信 Verifier 的未知指标会拒绝自动生成。
+
+- 沙箱阻止私有属性链、方法别名、Builtin 重绑定、默认参数与嵌套函数；Linux Worker 清理继承环境，使用 `no_new_privs`、seccomp 系统调用白名单和 CPU/内存限制。限制安装失败时停止执行。插件执行需要 Linux；已在 ljh3 的 x86_64 环境验证。
+- `PluginSpec.input_view` 区分 `raw` 和 `effective`，重放率读取原始退款。`provides` 描述退款去重与封顶能力，防止只执行复合需求中的一部分；输出 Schema 版本经过适配器校验。
+- 指标插件必须通过开发者维护的字段、类型、独立语义 Verifier 与双种子准入测试；准入记录绑定源码、协议和 Verifier 摘要，在线执行仍逐次验证。当前可信定义包括重放率、唯一退款事件数和平均退款金额。
+- `CapabilityEvolver` 接入 CLI 和 Agent 主链路，以有界错误反馈生成候选、冻结审计、持久注册并在后续任务复用。生成代码不能提供自己的答案或判分器；自动生成须显式开启，会产生模型调用费用。
+- 注册表采用进程锁、原子持久写和版本冲突检测；路由缓存按完整任务契约及能力定义区分，并合并多进程增量写入。
+- 可选 FastAPI 服务支持结构化请求、Bearer 鉴权、持久任务状态、租约心跳和可续读 SSE Trace。过期运行任务标记为 `interrupted` 并保留证据，不盲目重放可能已发布插件的任务。
+
+安装服务与接口测试依赖：
+
+```bash
+python -m pip install -r requirements-service.lock -e '.[service,test]'
+```
+
+正常运行会自动推导已知任务的必需输出，也允许重复添加 `--required-result` 显式声明结果。在线演进使用同一入口：
+
+```bash
+PYTHONPATH=src python -m retailops_agent.cli run \
+  --orders data/dedup-demo-orders.csv --refunds data/dedup-demo-refunds.csv \
+  --task 'Calculate the average refund amount' \
+  --plugin-registry plugins/registry.json --evolve
+```
+
+服务默认绑定本机，外部绑定必须设置 `RETAILOPS_SERVICE_TOKEN`。模型密钥沿用环境变量配置；在线演进默认关闭，启用时添加 `--allow-evolution`：
+
+```bash
+PYTHONPATH=src python -m retailops_agent.cli serve \
+  --data-root data --plugin-registry plugins/registry.json --state state/tasks.sqlite3
+```
+
+接口包括 `GET /health`、`POST /tasks`、`GET /tasks/{task_id}`、`GET /tasks/{task_id}/events`。CSV 路径必须位于配置的数据目录，支持 `Last-Event-ID` 续读事件：
+
+```json
+{"task":"Calculate refund replay rate","orders":"dedup-demo-orders.csv","refunds":"dedup-demo-refunds.csv","planner":"rule","evolve":false}
+```
+
+提供非 root 用户的 Dockerfile；状态和动态插件分别持久化到数据卷。容器内仍要求内核允许安装更严格的 seccomp 过滤器：
+
+```bash
+docker build -t retailops-evolve:local .
+docker run --rm -p 127.0.0.1:8000:8000 \
+  -e RETAILOPS_SERVICE_TOKEN \
+  -v retailops-state:/app/state -v retailops-plugins:/app/plugins retailops-evolve:local
+```
+
+本轮只运行定向组件测试、替身 Agent 接口测试与组件级耗时测试，**未运行完整端到端回归、历史 Benchmark 重评分或真实模型修复试验**：
+
+```bash
+PYTHONPATH=src python experiments/run_component_checks.py \
+  --output artifacts/hardening-20261106/component-tests.json
+PYTHONPATH=src python experiments/benchmark_runtime_components.py \
+  --output artifacts/hardening-20261106/component-timing.json
+```
+
+测试结果、性能边界和历史数据的准确口径见 [本轮修复报告](artifacts/hardening-20261106/REPORT.md)。下文已有报告保留原实验时的代码与数据结论，不代表新版本的端到端成绩。
+
 当前 MVP 支持：
 
 - 按日期统计净销售额；

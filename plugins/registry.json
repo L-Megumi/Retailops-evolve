@@ -25,24 +25,9 @@
         "source_sha256": "906f3b16020aa6760c07a0556daa19b17587406bef3e423a1e83e3ca3e23bd5c",
         "source_path": "cumulative-refund-cap-v1.py",
         "keyword_groups": [
-          [
-            "剩余",
-            "可退",
-            "金额",
-            "流水"
-          ],
-          [
-            "订单",
-            "退款",
-            "天花板",
-            "成交额"
-          ],
-          [
-            "订单",
-            "退款",
-            "不得",
-            "负数"
-          ]
+          ["剩余", "可退", "金额", "流水"],
+          ["订单", "退款", "天花板", "成交额"],
+          ["订单", "退款", "不得", "负数"]
         ],
         "reason": "Minimum non-regressing crossover selected from archived route candidates."
       },
@@ -60,20 +45,15 @@
       "spec": {
         "kind": "refund_transform",
         "entrypoint": "transform_refunds",
-        "arguments": [
-          "order_totals_cents",
-          "refunds"
-        ],
+        "arguments": ["order_totals_cents", "refunds"],
         "input_schema": "retailops.refund-transform-input.v1",
         "output_schema": "retailops.refund-rows.v1",
         "output_name": "",
-        "invariants": [
-          "order_gross_cap"
-        ],
+        "invariants": ["order_gross_cap"],
+        "input_view": "effective",
+        "provides": ["refund_cap"],
         "order_before": [],
-        "order_after": [
-          "refund-event-dedup-v1"
-        ],
+        "order_after": ["refund-event-dedup-v1"],
         "conflicts": [],
         "timeout_seconds": 2.0
       },
@@ -99,22 +79,9 @@
         "source_sha256": "4edbd375e9e55641165fc8c5346cf4ab4a9f73241416d01d209cd1d834d52467",
         "source_path": "refund-dedup-v1.py",
         "keyword_groups": [
-          [
-            "退款",
-            "编号",
-            "重复",
-            "第一条"
-          ],
-          [
-            "refund_id",
-            "重复",
-            "去重"
-          ],
-          [
-            "duplicate",
-            "refund",
-            "id"
-          ]
+          ["退款", "编号", "重复", "第一条"],
+          ["refund_id", "重复", "去重"],
+          ["duplicate", "refund", "id"]
         ],
         "reason": "Generated candidate passed 20 development and 20 frozen audit cases."
       },
@@ -131,17 +98,14 @@
       "spec": {
         "kind": "refund_transform",
         "entrypoint": "transform_refunds",
-        "arguments": [
-          "order_totals_cents",
-          "refunds"
-        ],
+        "arguments": ["order_totals_cents", "refunds"],
         "input_schema": "retailops.refund-transform-input.v1",
         "output_schema": "retailops.refund-rows.v1",
         "output_name": "",
         "invariants": [],
-        "order_before": [
-          "cumulative-refund-cap-v1"
-        ],
+        "input_view": "effective",
+        "provides": ["refund_dedup"],
+        "order_before": ["cumulative-refund-cap-v1"],
         "order_after": [],
         "conflicts": [],
         "timeout_seconds": 2.0
@@ -182,14 +146,13 @@
       "spec": {
         "kind": "metric_tool",
         "entrypoint": "compute_metric",
-        "arguments": [
-          "orders",
-          "refunds"
-        ],
+        "arguments": ["orders", "refunds"],
         "input_schema": "retailops.metric-input.v1",
         "output_schema": "retailops.metric-result.v1",
         "output_name": "refund_replay_rate",
         "invariants": [],
+        "input_view": "raw",
+        "provides": [],
         "order_before": [],
         "order_after": [],
         "conflicts": [],

@@ -22,6 +22,8 @@ class PluginSpec:
     order_after: tuple[str, ...] = ()
     conflicts: tuple[str, ...] = ()
     timeout_seconds: float = 2.0
+    input_view: str = "effective"
+    provides: tuple[str, ...] = ()
 
     def __post_init__(self) -> None:
         if self.kind not in {"refund_transform", "metric_tool"}:
@@ -37,6 +39,20 @@ class PluginSpec:
             raise ValueError("plugin arguments must be unique")
         if not self.input_schema or not self.output_schema:
             raise ValueError("plugin schemas must be named")
+        schemas = {
+            "refund_transform": ("retailops.refund-transform-input.v1", "retailops.refund-rows.v1"),
+            "metric_tool": ("retailops.metric-input.v1", "retailops.metric-result.v1"),
+        }
+        if (self.input_schema, self.output_schema) != schemas[self.kind]:
+            raise ValueError("plugin schema version is not supported by its adapter")
+        if self.input_view not in {"raw", "effective"}:
+            raise ValueError("input_view must be raw or effective")
+        if self.kind == "refund_transform" and self.input_view != "effective":
+            raise ValueError("refund transforms must consume the effective view")
+        if not set(self.provides) <= {"refund_cap", "refund_dedup"}:
+            raise ValueError("plugin declares an unsupported transform capability")
+        if self.kind == "metric_tool" and self.provides:
+            raise ValueError("a read-only metric cannot claim a transforming capability")
         if self.kind == "metric_tool" and not self.output_name:
             raise ValueError("metric_tool plugins require output_name")
         if self.kind == "refund_transform" and self.output_name:
@@ -65,6 +81,7 @@ class PluginSpec:
         conflicts: tuple[str, ...] = (),
         invariants: tuple[str, ...] = ("order_gross_cap",),
         timeout_seconds: float = 2.0,
+        provides: tuple[str, ...] | None = None,
     ) -> "PluginSpec":
         return cls(
             kind="refund_transform",
@@ -77,6 +94,7 @@ class PluginSpec:
             order_after=order_after,
             conflicts=conflicts,
             timeout_seconds=timeout_seconds,
+            provides=provides if provides is not None else (("refund_cap",) if "order_gross_cap" in invariants else ("refund_dedup",)),
         )
 
     @classmethod
@@ -88,6 +106,7 @@ class PluginSpec:
         order_after: tuple[str, ...] = (),
         conflicts: tuple[str, ...] = (),
         timeout_seconds: float = 2.0,
+        input_view: str = "raw",
     ) -> "PluginSpec":
         return cls(
             kind="metric_tool",
@@ -100,6 +119,7 @@ class PluginSpec:
             order_after=order_after,
             conflicts=conflicts,
             timeout_seconds=timeout_seconds,
+            input_view=input_view,
         )
 
     def to_dict(self) -> dict[str, object]:
@@ -115,6 +135,8 @@ class PluginSpec:
             "order_after": list(self.order_after),
             "conflicts": list(self.conflicts),
             "timeout_seconds": self.timeout_seconds,
+            "input_view": self.input_view,
+            "provides": list(self.provides),
         }
 
     @classmethod
@@ -137,4 +159,9 @@ class PluginSpec:
             order_after=strings("order_after"),
             conflicts=strings("conflicts"),
             timeout_seconds=float(payload.get("timeout_seconds", 2.0)),
+            input_view=str(payload.get("input_view", "raw" if payload.get("kind") == "metric_tool" else "effective")),
+            provides=strings("provides") if "provides" in payload else (
+                ("refund_cap",) if "order_gross_cap" in strings("invariants") else
+                (("refund_dedup",) if payload.get("kind") == "refund_transform" else ())
+            ),
         )

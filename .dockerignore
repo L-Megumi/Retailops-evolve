@@ -1,0 +1,10 @@
+.git
+.env
+.env.*
+**/__pycache__
+runs
+state
+artifacts
+benchmarks
+tests
+*.sqlite3*

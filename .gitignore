@@ -8,4 +8,8 @@ benchmarks/retailops/dynamic-dev/
 benchmarks/retailops/rsi-smoke/
 dist/
 *.egg-info/
+*.lock
+!requirements-service.lock
+state/
+*.sqlite3*
 

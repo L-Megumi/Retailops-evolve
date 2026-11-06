@@ -199,7 +199,7 @@ class PluginManagerTests(unittest.TestCase):
             self.assertTrue(cached_application.metadata["cache_hit"])
             self.assertEqual(cached_application.metadata["route_source"], "semantic_cache")
 
-    def test_negative_semantic_decision_is_cached(self) -> None:
+    def test_explicit_mutation_exclusion_needs_no_model(self) -> None:
         model = FakeModel([False])
         manager = PluginManager(semantic_model=model)
         install(manager, GOOD_SOURCE, "1")
@@ -209,8 +209,8 @@ class PluginManagerTests(unittest.TestCase):
 
         self.assertFalse(first.matched)
         self.assertFalse(second.matched)
-        self.assertEqual(model.calls, 1)
-        self.assertTrue(second.metadata["cache_hit"])
+        self.assertEqual(model.calls, 0)
+        self.assertFalse(second.metadata["cache_hit"])
         self.assertEqual(second.refunds, REFUNDS)
 
     def test_registry_change_invalidates_semantic_cache(self) -> None:
@@ -434,9 +434,10 @@ class PluginManagerTests(unittest.TestCase):
 
         self.assertEqual(application.metadata["route_source"], "coverage_semantic")
         self.assertEqual(
-            application.metadata["selected_plugin_ids"], ["refund-replay-rate"]
+            application.metadata["selected_plugin_ids"], ["refund-dedup", "refund-replay-rate"]
         )
         self.assertIn("refund_replay_rate", application.results)
+        self.assertEqual(application.results["refund_replay_rate"].data["replay_rate_bps"], 3333)
         self.assertEqual(model.calls, 1)
 
     def test_bad_new_version_is_quarantined_and_rolls_back(self) -> None:

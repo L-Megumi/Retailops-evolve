@@ -35,6 +35,9 @@ def render_markdown(trace: RunTrace) -> str:
 
     lines.extend(["## 执行摘要", "", f"- 执行尝试：{trace.attempts}"])
     lines.append(f"- 最终状态：{'通过' if trace.ok else '未通过'}")
+    lines.append(f"- 总耗时：{trace.elapsed_ms:.3f} ms")
+    if trace.task_contract:
+        lines.append(f"- 输出契约：{trace.task_contract}")
     lines.append(f"- 使用工具：{', '.join(trace.plan.tools)}")
     if trace.plugin:
         pipeline = trace.plugin.get("pipeline")

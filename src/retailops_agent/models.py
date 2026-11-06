@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import Any
+from .task_contract import TaskContract
 
 
 @dataclass(frozen=True)
@@ -32,6 +33,7 @@ class AnalysisPlan:
     task: str
     tools: tuple[str, ...]
     max_repairs: int = 2
+    contract: TaskContract | None = None
 
 
 @dataclass(frozen=True)
@@ -81,6 +83,8 @@ class RunTrace:
     events: list[dict[str, Any]] = field(default_factory=list)
     policies: list[ExecutionPolicy] = field(default_factory=list)
     plugin: dict[str, Any] | None = None
+    task_contract: dict[str, object] = field(default_factory=dict)
+    elapsed_ms: float = 0
 
     @property
     def ok(self) -> bool:

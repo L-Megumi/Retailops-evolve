@@ -10,6 +10,7 @@ from retailops_agent.llm import OpenAICompatibleModel
 from retailops_agent.plugin_manager import PluginManager
 from retailops_agent.plugin_protocol import PluginSpec
 from retailops_agent.semantic_plugin_router import CapabilitySpec
+from retailops_agent.task_contract import infer_task_contract
 
 try:
     from .run_capability_rsi import _agent_score, _load_task, _task_paths
@@ -79,6 +80,7 @@ def _prime_split(
             str(task["instruction"]),
             tuple(plugin_ids),
             reason=str(decision.get("reason", "")),
+            contract=infer_task_contract(str(task["instruction"])).with_results(tuple(task["required_results"])),
         )
         rows.append({"id": task["id"], "plugin_ids": plugin_ids})
     return {"split": split, "count": len(rows), "rows": rows}
