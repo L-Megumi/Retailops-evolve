@@ -15,7 +15,7 @@ import time
 from urllib.parse import urlparse
 
 from retailops_agent.assistant import RetailOpsAssistant
-from retailops_agent.knowledge import FastEmbedEncoder, KnowledgeStore
+from retailops_agent.knowledge import FastEmbedEncoder, FastEmbedReranker, KnowledgeStore, is_official_source
 from retailops_agent.llm import OpenAICompatibleModel
 
 
@@ -25,28 +25,34 @@ def main():
     parser.add_argument("--questions", type=Path, default=Path("benchmarks/knowledge/questions.json"))
     parser.add_argument("--embedding-model", default="BAAI/bge-small-zh-v1.5")
     parser.add_argument("--modes", default="bm25,dense,hybrid")
+    parser.add_argument("--qdrant-url")
+    parser.add_argument("--vector-alias", default="retailops_policy")
+    parser.add_argument("--reranker-model")
     parser.add_argument("--with-model", action="store_true")
     parser.add_argument("--public-policy-only", action="store_true",
-                        help="validate that model evidence contains only public JD/Suning policy summaries")
+                        help="validate that model evidence contains only reviewed official public policy summaries")
     parser.add_argument("--ids", help="comma-separated question IDs for live scenario checks")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     questions = json.loads(args.questions.read_text(encoding="utf-8-sig"))
     if args.public_policy_only:
         documents = json.loads(args.corpus.read_text(encoding="utf-8-sig"))["documents"]
-        if any(d["source_type"] != "official_public_policy" or d["platform"] not in {"jd", "suning"}
-               or urlparse(d["source_url"]).hostname not in {"help.jd.com", "rule.suning.com"} for d in documents):
+        if any(d["source_type"] != "official_public_policy" or not is_official_source(d["platform"], d["source_url"]) for d in documents):
             raise ValueError("public-only evaluation excludes internal documents and unapproved sources")
         if any("retailops" in q.get("platforms", []) for q in questions):
             raise ValueError("public-only evaluation excludes internal knowledge questions")
     modes = args.modes.split(",")
     encoder = FastEmbedEncoder(args.embedding_model) if any(m != "bm25" for m in modes) else None
-    store = KnowledgeStore.from_path(args.corpus, encoder=encoder)
+    from retailops_agent.vector_index import QdrantVectorIndex
+    vector = QdrantVectorIndex(args.qdrant_url, alias=args.vector_alias) if args.qdrant_url else None
+    store = KnowledgeStore.from_path(args.corpus, encoder=encoder, vector_index=vector,
+                                     reranker=FastEmbedReranker(args.reranker_model) if args.reranker_model else None)
     report = {"created_at": datetime.now(timezone.utc).isoformat(), "evaluation_set": "seed-development",
               "corpus_hash": store.corpus_hash,
               "questions_hash": hashlib.sha256(args.questions.read_bytes()).hexdigest(),
               "embedding_model": args.embedding_model if encoder else None,
               "public_policy_only": args.public_policy_only,
+              "vector_backend": "qdrant" if vector else "memory", "reranker_model": args.reranker_model,
               "retrieval": {}, "scenarios": []}
     for mode in modes:
         rows = []

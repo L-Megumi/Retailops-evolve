@@ -32,7 +32,7 @@ class TaskRequest(BaseModel):
     mode: Literal["analysis", "assistant"] = "analysis"
     orders: str | None = Field(default=None, min_length=1, max_length=240)
     refunds: str | None = Field(default=None, min_length=1, max_length=240)
-    platforms: list[Literal["jd", "suning", "retailops"]] = Field(default_factory=list, max_length=3)
+    platforms: list[Literal["jd", "suning", "taobao", "tmall", "pinduoduo", "retailops"]] = Field(default_factory=list, max_length=6)
     business_scope: Literal["marketplace", "self_operated", "platform", "internal"] | None = None
     as_of: str | None = None
     required_results: list[str] = Field(default_factory=list, max_length=8)
@@ -139,14 +139,18 @@ class TaskRunner:
 def create_app(*, data_root: Path, manifest: Path, state_path: Path,
                allow_evolution: bool = False, agent_factory=None, token: str | None = None,
                knowledge_path: Path | None = None, embedding_model: str | None = None,
-               retrieval_mode: str = "hybrid") -> FastAPI:
+               retrieval_mode: str = "hybrid", qdrant_url: str | None = None,
+               vector_alias: str = "retailops_policy", reranker_model: str | None = None) -> FastAPI:
     store = TaskStore(state_path)
     token = token if token is not None else os.environ.get("RETAILOPS_SERVICE_TOKEN", "")
     knowledge = None
     if knowledge_path is not None:
-        from .knowledge import FastEmbedEncoder, KnowledgeStore
+        from .knowledge import FastEmbedEncoder, FastEmbedReranker, KnowledgeStore
         encoder = FastEmbedEncoder(embedding_model) if embedding_model else None
-        knowledge = KnowledgeStore.from_path(knowledge_path, encoder=encoder)
+        from .vector_index import QdrantVectorIndex
+        vector = QdrantVectorIndex(qdrant_url, alias=vector_alias) if qdrant_url else None
+        knowledge = KnowledgeStore.from_path(knowledge_path, encoder=encoder, vector_index=vector,
+                                             reranker=FastEmbedReranker(reranker_model) if reranker_model else None)
 
     def factory(request):
         needs_model = request["planner"] == "model" or request["evolve"]
@@ -185,7 +189,9 @@ def create_app(*, data_root: Path, manifest: Path, state_path: Path,
     def health():
         return {"status": "ok", "sandbox": "linux-seccomp", "evolution_enabled": allow_evolution,
                 "knowledge_enabled": knowledge is not None,
-                "dense_retrieval_enabled": knowledge is not None and embedding_model is not None}
+                "dense_retrieval_enabled": knowledge is not None and embedding_model is not None,
+                "vector_backend": "qdrant" if knowledge is not None and qdrant_url else "memory",
+                "reranker_model": reranker_model}
 
     @app.post("/tasks", status_code=202, dependencies=[Depends(authenticate)])
     def submit(body: TaskRequest):

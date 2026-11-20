@@ -66,6 +66,50 @@ class Analysis:
 
 
 class AssistantTests(unittest.TestCase):
+    def test_supporting_evidence_selection_limits_generation_context(self):
+        relevant, unrelated = hit(suffix="relevant"), hit(suffix="unrelated")
+        model = Model({"sufficient": True, "supporting_citation_ids": [relevant.chunk_id]},
+                      {"claims": [{"text": "按相关条款办理", "citation_ids": [relevant.chunk_id]}]})
+        result = RetailOpsAssistant(Store([relevant, unrelated]), model=model).run("京东自营退货规则")
+        generation = json.loads(model.calls[-1]["user"])
+        self.assertEqual([c["citation_id"] for c in generation["evidence"]], [relevant.chunk_id])
+        self.assertEqual(result.status, "completed")
+
+    def test_selection_cannot_drop_a_comparison_platform(self):
+        a, b = hit("taobao", "platform"), hit("tmall", "platform")
+        model = Model({"sufficient": True, "supporting_citation_ids": [a.chunk_id]},
+                      {"claims": [{"text": "淘宝规则", "citation_ids": [a.chunk_id]},
+                                  {"text": "天猫规则", "citation_ids": [b.chunk_id]}]})
+        result = RetailOpsAssistant(Store([a, b]), model=model).run("比较淘宝和天猫退货规则")
+        self.assertEqual(len(json.loads(model.calls[-1]["user"])["evidence"]), 2)
+        self.assertEqual(result.status, "completed")
+
+    def test_new_platforms_are_resolved_without_cross_platform_evidence(self):
+        for name, code in (("淘宝", "taobao"), ("天猫", "tmall"), ("拼多多", "pinduoduo")):
+            store = Store([hit(code, "platform"), hit("jd", "self_operated")])
+            result = RetailOpsAssistant(store).run(name + "退货政策")
+            self.assertEqual(result.status, "retrieved")
+            self.assertEqual({c["platform"] for c in result.citations}, {code})
+
+    def test_new_platform_comparison_uses_separate_targets(self):
+        store = Store([hit("taobao", "platform"), hit("tmall", "platform"), hit("pinduoduo", "platform")])
+        result = RetailOpsAssistant(store).run("比较淘宝、天猫与拼多多的退货规则")
+        self.assertEqual(result.status, "retrieved")
+        self.assertEqual(len(store.calls), 3)
+        self.assertEqual({c["platform"] for c in result.citations}, {"taobao", "tmall", "pinduoduo"})
+
+    def test_special_platform_businesses_do_not_inherit_mainland_rules(self):
+        for task in ("天猫国际退货规则", "淘宝全球购退货政策", "多多国际退款规则", "天猫超市退货政策"):
+            store = Store([hit("tmall", "platform"), hit("taobao", "platform"), hit("pinduoduo", "platform")])
+            self.assertEqual(RetailOpsAssistant(store).run(task).status, "insufficient_evidence")
+            self.assertFalse(store.calls)
+
+    def test_wrong_new_platform_claim_is_rejected(self):
+        row = hit("taobao", "platform")
+        model = Model({"sufficient": True}, {"claims": [{"text": "拼多多所有退货都包邮", "platform": "taobao", "citation_ids": [row.chunk_id]}]})
+        result = RetailOpsAssistant(Store([row]), model=model).run("淘宝退货政策")
+        self.assertEqual(result.mode, "extractive_fallback")
+
     def test_missing_policy_value_is_not_replaced_by_irrelevant_user_questions(self):
         model = Model({"sufficient": False, "next_action": "retrieve",
                        "missing_evidence": ["报销金额上限条款"],

@@ -22,7 +22,11 @@ from typing import Any, Protocol, Sequence
 from urllib.parse import urlparse
 
 
-PLATFORMS = frozenset({"jd", "suning", "retailops"})
+PLATFORMS = frozenset({"jd", "suning", "taobao", "tmall", "pinduoduo", "retailops"})
+OFFICIAL_DOMAINS = {"jd": ("jd.com",), "suning": ("suning.com",),
+                    "taobao": ("taobao.com", "alicdn.com"),
+                    "tmall": ("tmall.com", "alicdn.com"),
+                    "pinduoduo": ("pinduoduo.com", "yangkeduo.com")}
 BUSINESS_SCOPES = frozenset({"marketplace", "self_operated", "platform", "internal"})
 SOURCE_TYPES = frozenset({"official_public_policy", "project_spec", "demo_sop"})
 STATUSES = frozenset({"active", "draft", "inactive", "archived", "superseded"})
@@ -35,6 +39,33 @@ _TOKEN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\U00020000-\U0002ffff]+|[a-z
 
 class Encoder(Protocol):
     def encode(self, texts: list[str]) -> Sequence[Sequence[float]]: ...
+
+
+def is_official_source(platform: str, source_url: str) -> bool:
+    parsed = urlparse(source_url)
+    host = (parsed.hostname or "").lower()
+    return (parsed.scheme in {"https", "http"} and not parsed.username and not parsed.password
+            and any(host == d or host.endswith("." + d) for d in OFFICIAL_DOMAINS.get(platform, ())))
+
+
+class FastEmbedReranker:
+    """Optional local cross-encoder; scores question/paragraph pairs."""
+    def __init__(self, model_name="BAAI/bge-reranker-base", *, cache_dir=None, threads=2):
+        self.model_name = model_name
+        self.cache_dir = cache_dir or os.environ.get("RETAILOPS_EMBEDDING_CACHE")
+        self.threads = _bounded_integer(threads, "threads", 1, 64)
+        self._model = None
+        self._lock = threading.RLock()
+
+    def rerank(self, query, texts):
+        with self._lock:
+            if self._model is None:
+                from fastembed.rerank.cross_encoder import TextCrossEncoder
+                self._model = TextCrossEncoder(self.model_name, cache_dir=self.cache_dir, threads=self.threads)
+            scores = [float(v) for v in self._model.rerank(query, texts)]
+            if len(scores) != len(texts) or not all(math.isfinite(v) for v in scores):
+                raise ValueError("reranker returned invalid scores")
+            return scores
 
 
 class FastEmbedEncoder:
@@ -204,11 +235,14 @@ def _bounded_integer(value: Any, name: str, low: int, high: int) -> int:
 
 
 class KnowledgeStore:
-    def __init__(self, chunks: list[_Chunk], corpus_hash: str, encoder: Encoder | None = None) -> None:
+    def __init__(self, chunks: list[_Chunk], corpus_hash: str, encoder: Encoder | None = None,
+                 *, vector_index=None, reranker=None) -> None:
         self._chunks = tuple(chunks)
         self._by_id = {chunk.hit.chunk_id: chunk for chunk in chunks}
         self.corpus_hash = corpus_hash
         self.encoder = encoder
+        self.vector_index = vector_index
+        self.reranker = reranker
         self._vectors: dict[str, tuple[float, ...]] = {}
         self._dimension: int | None = None
         self._vector_lock = threading.RLock()
@@ -217,7 +251,7 @@ class KnowledgeStore:
         )
 
     @classmethod
-    def from_path(cls, path: Path, encoder: Encoder | None = None) -> KnowledgeStore:
+    def from_path(cls, path: Path, encoder: Encoder | None = None, *, vector_index=None, reranker=None) -> KnowledgeStore:
         path = Path(path)
         with path.open("rb") as handle:
             raw = handle.read(MAX_CORPUS_BYTES + 1)
@@ -258,9 +292,7 @@ class KnowledgeStore:
                 parsed = urlparse(source_url)
                 if parsed.scheme not in {"https", "http"} or not parsed.hostname:
                     raise ValueError("official public policies require an HTTP(S) source URL")
-                domain = {"jd": "jd.com", "suning": "suning.com"}.get(platform)
-                hostname = parsed.hostname.lower()
-                if parsed.username or parsed.password or (domain and hostname != domain and not hostname.endswith("." + domain)):
+                if not is_official_source(platform, source_url):
                     raise ValueError(f"official policy source URL does not match platform {platform}")
             version = _text(document["version"], "version", max_length=200)
             content_kind = _text(document.get("content_kind", "source_text"), "content_kind", max_length=128)
@@ -302,7 +334,11 @@ class KnowledgeStore:
                 if len(chunks) > 100000:
                     raise ValueError("knowledge corpus has too many clauses")
         canonical = json.dumps(payload, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
-        return cls(chunks, hashlib.sha256(canonical.encode("utf-8")).hexdigest(), encoder)
+        store = cls(chunks, hashlib.sha256(canonical.encode("utf-8")).hexdigest(), encoder,
+                    vector_index=vector_index, reranker=reranker)
+        if vector_index is not None:
+            vector_index.open(store)
+        return store
 
     @property
     def last_search_metadata(self) -> dict[str, Any]:
@@ -389,12 +425,13 @@ class KnowledgeStore:
         except (TypeError, OverflowError) as exc:
             raise ValueError("encoder must return a batch of finite numeric vectors") from exc
 
-    def _dense(self, query: str, chunks: list[_Chunk]) -> dict[str, float]:
+    def _dense(self, query: str, chunks: list[_Chunk], *, platforms=(), business_scope=None,
+               as_of=None, limit=20) -> dict[str, float]:
         if not chunks:
             return {}
         assert self.encoder is not None
         with self._vector_lock:
-            missing = [chunk for chunk in chunks if chunk.hit.chunk_id not in self._vectors]
+            missing = [chunk for chunk in chunks if chunk.hit.chunk_id not in self._vectors] if self.vector_index is None else []
             if missing:
                 vectors = self._normalize_vectors(self.encoder.encode([c.embedding_text for c in missing]), len(missing))
                 self._vectors.update((c.hit.chunk_id, vector) for c, vector in zip(missing, vectors))
@@ -404,6 +441,13 @@ class KnowledgeStore:
                 encode_query = getattr(self.encoder, "encode_queries", self.encoder.encode)
                 query_batch = encode_query([query])
             query_vector = self._normalize_vectors(query_batch, 1)[0]
+            if self.vector_index is not None:
+                scores = self.vector_index.search(query_vector, platforms=platforms,
+                                                 business_scope=business_scope, as_of=as_of, limit=limit)
+                allowed = {c.hit.chunk_id for c in chunks}
+                if set(scores) - allowed:
+                    raise RuntimeError("vector database returned out-of-scope evidence")
+                return scores
             return {
                 chunk.hit.chunk_id: sum(a * b for a, b in zip(query_vector, self._vectors[chunk.hit.chunk_id]))
                 for chunk in chunks
@@ -421,16 +465,19 @@ class KnowledgeStore:
         metadata: dict[str, Any] = {
             "requested_mode": mode, "effective_mode": effective_mode,
             "eligible_chunks": len(chunks), "corpus_hash": self.corpus_hash,
+            "vector_backend": "qdrant" if self.vector_index is not None else "memory",
+            "reranker": getattr(self.reranker, "model_name", None),
         }
         if effective_mode != mode:
             metadata["fallback_reason"] = "encoder_not_configured"
         self._search_metadata.set(metadata)
         bm25 = self._bm25(query, chunks) if effective_mode in {"bm25", "hybrid"} else {}
-        dense = self._dense(query, chunks) if effective_mode in {"dense", "hybrid"} else {}
+        window = max(20, top_k * 4)
+        dense = self._dense(query, chunks, platforms=platforms, business_scope=business_scope,
+                            as_of=as_of, limit=window) if effective_mode in {"dense", "hybrid"} else {}
         channels: dict[str, tuple[str, ...]] = {}
         if effective_mode == "hybrid":
             scores: dict[str, float] = {}
-            window = max(20, top_k * 4)
             for channel, channel_scores in (("bm25", bm25), ("dense", dense)):
                 ranked = sorted(channel_scores, key=lambda key: (-channel_scores[key], key))[:window]
                 for rank, chunk_id in enumerate(ranked, 1):
@@ -439,7 +486,17 @@ class KnowledgeStore:
         else:
             scores = bm25 if effective_mode == "bm25" else dense
             channels = {key: (effective_mode,) for key in scores}
-        selected = sorted(scores, key=lambda key: (-scores[key], key))[:top_k]
+        selected = sorted(scores, key=lambda key: (-scores[key], key))[:window]
+        metadata["candidate_count"] = len(selected)
+        if self.reranker is not None and selected:
+            rerank_scores = self.reranker.rerank(query, [self._by_id[k].embedding_text for k in selected])
+            if len(rerank_scores) != len(selected) or not all(math.isfinite(float(v)) for v in rerank_scores):
+                raise ValueError("reranker returned invalid scores")
+            scores = dict(zip(selected, map(float, rerank_scores)))
+            channels = {k: channels[k] + ("rerank",) for k in selected}
+            selected = sorted(selected, key=lambda k: (-scores[k], k))
+        self._search_metadata.set(metadata)
+        selected = selected[:top_k]
         return [replace(self._by_id[key].hit, score=scores[key], channels=channels[key], retrieval_mode=effective_mode) for key in selected]
 
     def read_document(

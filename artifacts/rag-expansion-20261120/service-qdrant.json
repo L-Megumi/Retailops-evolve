@@ -1,0 +1,51 @@
+{
+  "health": {
+    "status": "ok",
+    "sandbox": "linux-seccomp",
+    "evolution_enabled": false,
+    "knowledge_enabled": true,
+    "dense_retrieval_enabled": true,
+    "vector_backend": "qdrant",
+    "reranker_model": null
+  },
+  "cases": [
+    {
+      "platforms": [
+        "taobao"
+      ],
+      "status": "succeeded",
+      "result_status": "retrieved",
+      "citation_count": 5,
+      "sse_done": true
+    },
+    {
+      "platforms": [
+        "tmall"
+      ],
+      "status": "succeeded",
+      "result_status": "retrieved",
+      "citation_count": 5,
+      "sse_done": true
+    },
+    {
+      "platforms": [
+        "pinduoduo"
+      ],
+      "status": "succeeded",
+      "result_status": "retrieved",
+      "citation_count": 5,
+      "sse_done": true
+    },
+    {
+      "platforms": [
+        "taobao",
+        "tmall",
+        "pinduoduo"
+      ],
+      "status": "succeeded",
+      "result_status": "retrieved",
+      "citation_count": 15,
+      "sse_done": true
+    }
+  ]
+}

@@ -15,8 +15,12 @@ from typing import Any
 
 
 _PLATFORMS = {"京东": "jd", "jd": "jd", "苏宁": "suning", "suning": "suning",
+              "淘宝": "taobao", "taobao": "taobao", "天猫": "tmall", "tmall": "tmall",
+              "拼多多": "pinduoduo", "pinduoduo": "pinduoduo",
               "retailops": "retailops", "内部": "retailops"}
-_NAMES = {"jd": "京东", "suning": "苏宁", "retailops": "RetailOps 内部"}
+_NAMES = {"jd": "京东", "suning": "苏宁", "taobao": "淘宝", "tmall": "天猫",
+          "pinduoduo": "拼多多", "retailops": "RetailOps 内部"}
+_PLATFORM_PATTERN = r"京东|\bjd\b|苏宁|\bsuning\b|淘宝|\btaobao\b|天猫|\btmall\b|拼多多|\bpinduoduo\b"
 _SCOPES = {"self_operated": "自营", "marketplace": "第三方", "platform": "平台规则", "internal": "内部口径"}
 _METRICS = re.compile(r"退款率|退款订单率|净销售额|销售额|退款金额|退款事件|订单占比|指标|refund.rate|net.sales", re.I)
 _KNOWLEDGE = re.compile(r"政策|规则|规范|条款|规定|流程|材料|定义|口径|依据|解释|说明|为什么|如何|怎样|怎么|区别|售后|运费|签收|退货", re.I)
@@ -215,13 +219,16 @@ class RetailOpsAssistant:
                     assessment = complete("""
 评估给定证据是否足以回答原始问题，每个比较对象都必须有适用证据。
 返回 {"sufficient":boolean,"next_action":"answer|clarify|retrieve","missing_evidence":[string],"missing_information":[string],
-"queries":{目标key:改写检索问题},"read_chunk_ids":[已命中的citation_id]}。
+"queries":{目标key:改写检索问题},"read_chunk_ids":[已命中的citation_id],
+"supporting_citation_ids":[回答当前问题及必要适用条件所需的citation_id]}。
 缺少用户事实放missing_information；缺条款放missing_evidence。
 若命中条款需要阅读同文档相邻条款，可用read_chunk_ids请求扩读，每轮最多2个，必须来自已给出的citation_id。
 queries只允许修改搜索文字，保留原问题的否定、平台、时间和适用范围，不得更改计算任务。
 区分两个缺口：用户事实决定现有哪条规则适用时选择clarify（如缺商品类别、签收日期）；
 用户询问的政策数值、时效或规则本身不在材料中时选择retrieve，不能用询问无关用户事实替代缺失条款。
 澄清问题只围绕当前问题的必要条件；不得引入证据中不存在的新规则或附加要求。
+证据足够时，supporting_citation_ids仅保留直接回答所问和必要适用条件的证据；比较时须覆盖每个对象。
+不要因为属于同一文档就选择所有条款：质量问题退货、主观无理由退货、到付操作是不同场景。
 """, {"original_question": task, "targets": coverage, "evidence": list(evidence.values()), "round": round_no})
                     missing_policy = _strings(assessment.get("missing_evidence"))
                     missing = _strings(assessment.get("missing_information"))
@@ -232,6 +239,13 @@ queries只允许修改搜索文字，保留原问题的否定、平台、时间�
                         return stop("needs_clarification", "请补充：" + "；".join(missing), missing)
                     sufficient = assessment.get("sufficient") is True and all(coverage.values())
                     if sufficient:
+                        selected_ids = _strings(assessment.get("supporting_citation_ids"), 20)
+                        selected_evidence = {cid: evidence[cid] for cid in selected_ids if cid in evidence}
+                        if selected_ids and len(selected_evidence) == len(set(selected_ids)) and all(
+                            any(self._in_scope(c, p, s) for c in selected_evidence.values()) for p, s in targets
+                        ):
+                            emit("evidence_selected", candidate_count=len(evidence), selected_count=len(selected_evidence))
+                            evidence = selected_evidence
                         break
                     proposed_reads = _strings(assessment.get("read_chunk_ids"), 2)
                     pending_reads = [cid for cid in dict.fromkeys(proposed_reads) if cid in evidence and cid not in read_ids_seen]
@@ -270,6 +284,10 @@ queries只允许修改搜索文字，保留原问题的否定、平台、时间�
 每条结论只针对一个平台和渠道；引用必须选用给定citation_id，至少一个。同一结论不能混用平台或渠道。
 对多平台分别陈述；不生成数据计算结果（系统会另行附上工具结果）。没有支持依据就不生成该结论。
 只回答用户所问的内容；与已知用户条件不适用的补充规则不输出。
+先给直接答案，再补充判断适用所必需的条件；不要罗列其他相关政策。
+单平台通常1至2条结论，多平台每个平台1至2条；用户明确询问多项时按所问项目展开。
+不同场景的规则分别判断，不得将七天无理由退货期限附加到质量问题或描述不符退货；
+多条引用须共同支持所述关系，不能只因同平台、同文档就把一个条款的条件套到另一个条款。
 必须保留所引用规则的适用前提、时间窗口、商品范围、履约方、会员身份与例外。
 用户未提供的适用条件采用“若/在……情况下”表述，不能默认满足或把有条件规则写成普遍承诺。
 """, {"original_question": task, "evidence": citations})
@@ -333,7 +351,7 @@ queries只允许修改搜索文字，保留原问题的否定、平台、时间�
     def _targets(task, platforms, business_scope):
         mentioned = tuple(dict.fromkeys(code for alias, code in _PLATFORMS.items() if alias in task.lower()))
         requested = tuple(dict.fromkeys(_PLATFORMS.get(str(p).lower(), str(p).lower()) for p in platforms))
-        if any(p not in _NAMES for p in requested) or re.search(r"拼多多|淘宝|天猫|唯品会|抖音|亚马逊|amazon|小米商城", task, re.I):
+        if any(p not in _NAMES for p in requested) or re.search(r"唯品会|抖音|亚马逊|amazon|小米商城|天猫国际|淘宝全球购|苏宁国际|多多国际|京东国际|天猫超市|天猫自营", task, re.I):
             return [], "知识库目前没有该平台的适用政策。", "insufficient_evidence"
         if requested and set(mentioned) - set(requested):
             return [], "问题中的平台与指定检索范围不同，请确认平台。", "needs_clarification"
@@ -345,7 +363,7 @@ queries只允许修改搜索文字，保留原问题的否定、平台、时间�
             if (internal or definition) and not transaction:
                 selected = ("retailops",)
             else:
-                return [], "请明确要查询的平台（京东或苏宁）及适用渠道。", "needs_clarification"
+                return [], "请明确要查询的平台（京东、苏宁、淘宝、天猫或拼多多）及适用渠道。", "needs_clarification"
         if len(selected) > 1 and not _COMPARE.search(task):
             return [], "涉及多个平台，请明确是要比较规则，还是查询其中一个平台。", "needs_clarification"
         if business_scope is not None and business_scope not in _SCOPES:
@@ -358,10 +376,10 @@ queries只允许修改搜索文字，保留原问题的否定、平台、时间�
         if len(selected) > 1:
             # Channel words following Suning cannot be applied to JD by a global
             # keyword scan. The first version supports Suning platform-wide rules.
-            markers = list(re.finditer(r"京东|\bjd\b|苏宁|\bsuning\b", task, re.I))
+            markers = list(re.finditer(_PLATFORM_PATTERN, task, re.I))
             for index, marker in enumerate(markers):
                 end = markers[index + 1].start() if index + 1 < len(markers) else len(task)
-                if marker.group().lower() in {"苏宁", "suning"} and re.search(r"自营|第三方|三方", task[marker.end():end]):
+                if marker.group().lower() not in {"京东", "jd"} and re.search(r"自营|第三方|三方", task[marker.end():end]):
                     return [], "请分别明确平台和渠道；当前苏宁资料覆盖平台规则，京东需区分自营与第三方。", "needs_clarification"
         targets = []
         for platform in selected:
@@ -416,7 +434,7 @@ queries只允许修改搜索文字，保留原问题的否定、平台、时间�
             scope = next(iter(source_scopes)) if source_scopes else "platform"
             if claim.get("platform", platform) != platform or claim.get("business_scope", scope) != scope:
                 return None
-            named_platforms = {_PLATFORMS[m.group().lower()] for m in re.finditer(r"京东|\bjd\b|苏宁|\bsuning\b", claim["text"], re.I)}
+            named_platforms = {_PLATFORMS[m.group().lower()] for m in re.finditer(_PLATFORM_PATTERN, claim["text"], re.I)}
             if named_platforms - {platform}:
                 return None
             covered.add((platform, scope))

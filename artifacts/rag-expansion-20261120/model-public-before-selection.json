@@ -1,0 +1,2782 @@
+{
+  "created_at": "2026-11-20T03:37:17.366886+00:00",
+  "evaluation_set": "seed-development",
+  "corpus_hash": "acb6a2fbe5837fc1e64eb6a33b22ce2daea1c1570735e8c976b885b642ec7161",
+  "questions_hash": "9e539882a74eaf4af3549497ef33f1dbe1e6688386f07c356852918e4d5ff364",
+  "embedding_model": "BAAI/bge-small-zh-v1.5",
+  "public_policy_only": true,
+  "vector_backend": "qdrant",
+  "reranker_model": null,
+  "retrieval": {
+    "hybrid": {
+      "case_count": 16,
+      "mean_recall_at_3_per_platform": 1.0,
+      "all_required_found_count": 16,
+      "platform_leakage_count": 0,
+      "cases": [
+        {
+          "id": "challenge-001",
+          "expected": [
+            "taobao-consumer-address"
+          ],
+          "retrieved": [
+            "taobao-consumer-address",
+            "taobao-seller-closure",
+            "taobao-seller-orders"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 288.406
+        },
+        {
+          "id": "challenge-002",
+          "expected": [
+            "taobao-consumer-promise"
+          ],
+          "retrieved": [
+            "taobao-seller-closure",
+            "taobao-consumer-promise",
+            "taobao-seller-orders"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 16.239
+        },
+        {
+          "id": "challenge-004",
+          "expected": [
+            "taobao-seller-closure"
+          ],
+          "retrieved": [
+            "taobao-seller-closure",
+            "taobao-consumer-return",
+            "taobao-consumer-description"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 15.433
+        },
+        {
+          "id": "challenge-006",
+          "expected": [
+            "tmall-seven-clock"
+          ],
+          "retrieved": [
+            "tmall-seven-clock",
+            "tmall-seven-freight",
+            "tmall-seven-condition"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 14.568
+        },
+        {
+          "id": "challenge-008",
+          "expected": [
+            "tmall-seven-quality"
+          ],
+          "retrieved": [
+            "tmall-seven-condition",
+            "tmall-merchant-category-fee",
+            "tmall-seven-quality"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 14.277
+        },
+        {
+          "id": "challenge-009",
+          "expected": [
+            "tmall-warranty-limit"
+          ],
+          "retrieved": [
+            "tmall-warranty-limit",
+            "tmall-warranty-accident",
+            "tmall-warranty-extension"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 15.517
+        },
+        {
+          "id": "challenge-011",
+          "expected": [
+            "tmall-merchant-invoice"
+          ],
+          "retrieved": [
+            "tmall-merchant-invoice",
+            "tmall-merchant-category-fee",
+            "tmall-merchant-exit"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 13.614
+        },
+        {
+          "id": "challenge-013",
+          "expected": [
+            "pdd-protection-freight"
+          ],
+          "retrieved": [
+            "pdd-protection-freight",
+            "pdd-help-cod",
+            "pdd-help-personal"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 14.778
+        },
+        {
+          "id": "challenge-014",
+          "expected": [
+            "pdd-protection-authenticity"
+          ],
+          "retrieved": [
+            "pdd-protection-authenticity",
+            "pdd-help-cod",
+            "pdd-protection-delivery"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 15.199
+        },
+        {
+          "id": "challenge-017",
+          "expected": [
+            "pdd-help-exchange"
+          ],
+          "retrieved": [
+            "pdd-help-exchange",
+            "pdd-help-contact",
+            "pdd-protection-deadline"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 14.779
+        },
+        {
+          "id": "challenge-018",
+          "expected": [
+            "jd-cancel-warehouse"
+          ],
+          "retrieved": [
+            "jd-cancel-before-outbound",
+            "jd-cancel-warehouse",
+            "jd-cancel-ecard"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 14.175
+        },
+        {
+          "id": "challenge-019",
+          "expected": [
+            "jd-cancel-ecard"
+          ],
+          "retrieved": [
+            "jd-cancel-ecard",
+            "jd-cancel-before-outbound",
+            "jd-cancel-original"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 14.442
+        },
+        {
+          "id": "challenge-025",
+          "expected": [
+            "suning-seven-freight"
+          ],
+          "retrieved": [
+            "suning-seven-freight",
+            "suning_shipping_evidence",
+            "suning-seven-clock"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 14.946
+        },
+        {
+          "id": "challenge-026",
+          "expected": [
+            "suning-seven-clock"
+          ],
+          "retrieved": [
+            "suning-seven-clock",
+            "suning-seven-exceptions",
+            "suning-seven-promise"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 13.97
+        },
+        {
+          "id": "v2-cross-freight",
+          "expected": [
+            "pdd-help-personal",
+            "tmall-seven-freight"
+          ],
+          "retrieved": [
+            "tmall-seven-freight",
+            "tmall-seven-quality",
+            "tmall-seven-clock",
+            "pdd-help-personal",
+            "pdd-help-cod",
+            "pdd-protection-seven"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 29.473
+        },
+        {
+          "id": "v2-cross-quality",
+          "expected": [
+            "pdd-protection-freight",
+            "tmall-seven-quality"
+          ],
+          "retrieved": [
+            "tmall-seven-quality",
+            "tmall-merchant-category-fee",
+            "tmall-seven-freight",
+            "pdd-protection-freight",
+            "pdd-help-personal",
+            "pdd-help-cod"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 30.788
+        }
+      ],
+      "timing_note": "includes first-use model/index loading; not a steady-state latency benchmark"
+    }
+  },
+  "scenarios": [
+    {
+      "id": "challenge-001",
+      "category": "colloquial_retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 2036.114,
+      "result": {
+        "task": "淘宝店给我的收件人电话是空号，包裹送不到又坏了，这笔损失算谁的？",
+        "status": "completed",
+        "answer": "若淘宝卖家提供的收件人联系方式错误（如收件人电话为空号），导致包裹毁损、灭失及相关支出，风险和责任由卖家按规则承担。 [taobao-consumer::taobao-consumer-address]\n若卖家曾就破损补寄、免费换新等作出特色服务承诺，应按承诺履行；包裹破损是否适用该承诺，取决于卖家是否作出过相应承诺。 [taobao-consumer::taobao-consumer-promise]",
+        "citations": [
+          {
+            "chunk_id": "taobao-consumer::taobao-consumer-address",
+            "doc_id": "taobao-consumer",
+            "title": "淘宝消费者保障服务协议",
+            "text": "淘宝卖家须准确更新退货地址、收件人与联系方式；信息错误导致的毁损、灭失风险及相关支出由卖家按规则承担。",
+            "platform": "taobao",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201709261344_28562.html",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "taobao-consumer-address",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "ae5c70de6ae5416a4ab98b9f71315889d2f619d8068640278e1fe6a4633cf0cb",
+            "retrieved_at": "2026-11-20",
+            "effective_from": "2024-09-12",
+            "effective_to": null,
+            "clause_title": "退货地址",
+            "content_kind": "curated_summary",
+            "citation_id": "taobao-consumer::taobao-consumer-address"
+          },
+          {
+            "chunk_id": "taobao-consumer::taobao-consumer-promise",
+            "doc_id": "taobao-consumer",
+            "title": "淘宝消费者保障服务协议",
+            "text": "淘宝卖家自愿承诺发货时间、破损补寄、免费换新等特色服务后，应按承诺履行。",
+            "platform": "taobao",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201709261344_28562.html",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "taobao-consumer-promise",
+            "score": 0.031009615384615385,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "04364af468b1fffd92a01d6c6713c2688599425e0cc01e3948dc61a6b7285a82",
+            "retrieved_at": "2026-11-20",
+            "effective_from": "2024-09-12",
+            "effective_to": null,
+            "clause_title": "特色服务承诺",
+            "content_kind": "curated_summary",
+            "citation_id": "taobao-consumer::taobao-consumer-promise"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 1.719
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "taobao",
+            "business_scope": "platform",
+            "query": "淘宝店给我的收件人电话是空号，包裹送不到又坏了，这笔损失算谁的？",
+            "citation_ids": [
+              "taobao-consumer::taobao-consumer-address",
+              "taobao-seller::taobao-seller-closure",
+              "taobao-seller::taobao-seller-orders",
+              "taobao-consumer::taobao-consumer-promise",
+              "taobao-consumer::taobao-consumer-description"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 16.724
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 866.643
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2036.042
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2036.068
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2036.061,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3866,
+          "completion_tokens": 170,
+          "total_tokens": 4036,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "challenge-002",
+      "category": "colloquial_retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 2901.685,
+      "result": {
+        "task": "淘宝店下单前说碎了就再寄一份，真碎了却说那只是宣传，能这样吗？",
+        "status": "completed",
+        "answer": "若淘宝卖家在商品页、店铺页或阿里旺旺等渠道自愿承诺破损补寄等特色服务，则应按该承诺履行，不能以“只是宣传”为由拒绝。 [taobao-consumer::taobao-consumer-promise]\n淘宝卖家应在商品页、店铺页及阿里旺旺等渠道如实描述商品或服务；下单前关于“碎了再寄一份”的说明属于该如实描述义务范围。 [taobao-consumer::taobao-consumer-description]",
+        "citations": [
+          {
+            "chunk_id": "taobao-consumer::taobao-consumer-promise",
+            "doc_id": "taobao-consumer",
+            "title": "淘宝消费者保障服务协议",
+            "text": "淘宝卖家自愿承诺发货时间、破损补寄、免费换新等特色服务后，应按承诺履行。",
+            "platform": "taobao",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201709261344_28562.html",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "taobao-consumer-promise",
+            "score": 0.032018442622950824,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "04364af468b1fffd92a01d6c6713c2688599425e0cc01e3948dc61a6b7285a82",
+            "retrieved_at": "2026-11-20",
+            "effective_from": "2024-09-12",
+            "effective_to": null,
+            "clause_title": "特色服务承诺",
+            "content_kind": "curated_summary",
+            "citation_id": "taobao-consumer::taobao-consumer-promise"
+          },
+          {
+            "chunk_id": "taobao-consumer::taobao-consumer-description",
+            "doc_id": "taobao-consumer",
+            "title": "淘宝消费者保障服务协议",
+            "text": "淘宝卖家应在商品页、店铺页及阿里旺旺等渠道如实描述商品或服务。",
+            "platform": "taobao",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201709261344_28562.html",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "taobao-consumer-description",
+            "score": 0.030776515151515152,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "fbb0f3def2fe236b11beab01b06408bcab24d5925ec234459d28059d4805109c",
+            "retrieved_at": "2026-11-20",
+            "effective_from": "2024-09-12",
+            "effective_to": null,
+            "clause_title": "如实描述",
+            "content_kind": "curated_summary",
+            "citation_id": "taobao-consumer::taobao-consumer-description"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.13
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "taobao",
+            "business_scope": "platform",
+            "query": "淘宝店下单前说碎了就再寄一份，真碎了却说那只是宣传，能这样吗？",
+            "citation_ids": [
+              "taobao-seller::taobao-seller-closure",
+              "taobao-consumer::taobao-consumer-promise",
+              "taobao-seller::taobao-seller-orders",
+              "taobao-consumer::taobao-consumer-return",
+              "taobao-consumer::taobao-consumer-description"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 23.811
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 1139.811
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2901.591
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2901.618
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2901.61,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3848,
+          "completion_tokens": 175,
+          "total_tokens": 4023,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "challenge-004",
+      "category": "colloquial_retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 3472.946,
+      "result": {
+        "task": "淘宝店已经不营业了，我半年前买的机器还在质保，商家能直接不管吗？",
+        "status": "completed",
+        "answer": "不能。淘宝店铺关停后，卖家仍应承担关停前交易的发货、退换货、质保维修及维权投诉处理责任；若你的机器属于关停前购买的交易，商家不能以店铺不营业为由直接不管。 [taobao-seller::taobao-seller-closure]\n此外，淘宝卖家服务协议终止后，若交易相对方要求继续履行存续期间的订单，卖家仍应履约并承担相关损失或增加费用；若你的质保维修请求属于关停前订单的存续履行事项，可据此主张。 [taobao-seller::taobao-seller-orders]",
+        "citations": [
+          {
+            "chunk_id": "taobao-seller::taobao-seller-closure",
+            "doc_id": "taobao-seller",
+            "title": "淘宝网卖家服务协议：关店与交易责任",
+            "text": "淘宝店铺关停后，卖家仍应承担关停前交易的发货、退换货、质保维修及维权投诉处理责任。",
+            "platform": "taobao",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201908081502_44434.html",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "taobao-seller-closure",
+            "score": 0.03252247488101534,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "b7d172b49853f424a0891b657ced7459d2be3450eb91c394705df1bb0df428f8",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "关店后的售后",
+            "content_kind": "curated_summary",
+            "citation_id": "taobao-seller::taobao-seller-closure"
+          },
+          {
+            "chunk_id": "taobao-seller::taobao-seller-orders",
+            "doc_id": "taobao-seller",
+            "title": "淘宝网卖家服务协议：关店与交易责任",
+            "text": "淘宝卖家服务协议终止后，交易相对方要求继续履行存续期间的订单时，卖家仍应履约并承担相关损失或增加费用。",
+            "platform": "taobao",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201908081502_44434.html",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "taobao-seller-orders",
+            "score": 0.03125,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "beb4b2450c32f1d19e4b72dccf1adf408120e9347a23d313aea2df8836ed1f82",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "协议终止后的订单",
+            "content_kind": "curated_summary",
+            "citation_id": "taobao-seller::taobao-seller-orders"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.14
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "taobao",
+            "business_scope": "platform",
+            "query": "淘宝店已经不营业了，我半年前买的机器还在质保，商家能直接不管吗？",
+            "citation_ids": [
+              "taobao-seller::taobao-seller-closure",
+              "taobao-consumer::taobao-consumer-return",
+              "taobao-consumer::taobao-consumer-description",
+              "taobao-consumer::taobao-consumer-promise",
+              "taobao-seller::taobao-seller-orders"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 24.478
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 1155.43
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 3472.867
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 3472.89
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 3472.884,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3838,
+          "completion_tokens": 204,
+          "total_tokens": 4042,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "challenge-006",
+      "category": "colloquial_retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 2428.257,
+      "result": {
+        "task": "天猫周一下午收的包裹，无理由退货的倒计时从周一下午就开始吗？",
+        "status": "completed",
+        "answer": "不是从周一下午签收时立即起算。天猫七天无理由退换货按物流签收次日零时开始计时，满168小时为七天，须在该期限内提出申请；因此若包裹在周一下午签收，倒计时从周二零时起算。 [tmall-seven::tmall-seven-clock]",
+        "citations": [
+          {
+            "chunk_id": "tmall-seven::tmall-seven-clock",
+            "doc_id": "tmall-seven",
+            "title": "天猫七天无理由退换货公开服务说明",
+            "text": "天猫该说明按物流签收次日零时开始计时，满168小时为七天，须在该期限内提出申请。",
+            "platform": "tmall",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.tmall.com/wow/seller/act/seven-day",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "tmall-seven-clock",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "e719e241de4d2576164c27941c0478b0b8a91f9219ba32c4895fd8c95574ac0c",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "七天起算",
+            "content_kind": "curated_summary",
+            "citation_id": "tmall-seven::tmall-seven-clock"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.129
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "tmall",
+            "business_scope": "platform",
+            "query": "天猫周一下午收的包裹，无理由退货的倒计时从周一下午就开始吗？",
+            "citation_ids": [
+              "tmall-seven::tmall-seven-clock",
+              "tmall-seven::tmall-seven-freight",
+              "tmall-seven::tmall-seven-condition",
+              "tmall-seven::tmall-seven-quality",
+              "tmall-seven::tmall-seven-escalation"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 24.28
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 1301.783
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2428.185
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2428.207
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2428.202,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3477,
+          "completion_tokens": 123,
+          "total_tokens": 3600,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "challenge-008",
+      "category": "colloquial_retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 2307.867,
+      "result": {
+        "task": "天猫页面说是纯棉，寄来的成分不是，我寄还的快递钱应该找谁？",
+        "status": "completed",
+        "answer": "若商品存在质量问题或与网上描述不符（如页面标注纯棉但实际成分不符）导致退货，退货费用由卖家承担，寄还的快递费可向卖家主张。 [tmall-seven::tmall-seven-quality]\n该退货费用由卖家承担的规则适用于天猫七天无理由退换货服务说明所覆盖的情形；若在签收次日零时起满168小时内提出申请，则属于该说明的申请期限范围。 [tmall-seven::tmall-seven-quality] [tmall-seven::tmall-seven-clock]",
+        "citations": [
+          {
+            "chunk_id": "tmall-seven::tmall-seven-quality",
+            "doc_id": "tmall-seven",
+            "title": "天猫七天无理由退换货公开服务说明",
+            "text": "天猫该说明中，商品质量问题或与网上描述不符导致退货，退货费用由卖家承担。",
+            "platform": "tmall",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.tmall.com/wow/seller/act/seven-day",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "tmall-seven-quality",
+            "score": 0.03149801587301587,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "ab1e4450392cd4f4c2bd264757d42442889c4cda57016a72208368c1249856de",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "质量或描述不符",
+            "content_kind": "curated_summary",
+            "citation_id": "tmall-seven::tmall-seven-quality"
+          },
+          {
+            "chunk_id": "tmall-seven::tmall-seven-clock",
+            "doc_id": "tmall-seven",
+            "title": "天猫七天无理由退换货公开服务说明",
+            "text": "天猫该说明按物流签收次日零时开始计时，满168小时为七天，须在该期限内提出申请。",
+            "platform": "tmall",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.tmall.com/wow/seller/act/seven-day",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "tmall-seven-clock",
+            "score": 0.031099324975891997,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "e719e241de4d2576164c27941c0478b0b8a91f9219ba32c4895fd8c95574ac0c",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "七天起算",
+            "content_kind": "curated_summary",
+            "citation_id": "tmall-seven::tmall-seven-clock"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.127
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "tmall",
+            "business_scope": "platform",
+            "query": "天猫页面说是纯棉，寄来的成分不是，我寄还的快递钱应该找谁？",
+            "citation_ids": [
+              "tmall-seven::tmall-seven-condition",
+              "tmall-merchant::tmall-merchant-category-fee",
+              "tmall-seven::tmall-seven-quality",
+              "tmall-seven::tmall-seven-clock",
+              "tmall-merchant::tmall-merchant-responsibility"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 23.786
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 774.315
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2307.785
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2307.81
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2307.804,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3539,
+          "completion_tokens": 178,
+          "total_tokens": 3717,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "challenge-009",
+      "category": "colloquial_retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 1711.826,
+      "result": {
+        "task": "天猫给这个商品买的保修，算能修多少钱时，另外付的服务费和快递钱也计入吗？",
+        "status": "completed",
+        "answer": "天猫保修保障额度按消费者购买商品的实际支付金额计算，不含服务费及运费；因此另付的服务费和快递钱不计入可修金额。 [tmall-warranty::tmall-warranty-limit]",
+        "citations": [
+          {
+            "chunk_id": "tmall-warranty::tmall-warranty-limit",
+            "doc_id": "tmall-warranty",
+            "title": "天猫保修服务卖家版订购协议",
+            "text": "该协议中保修保障额度为消费者购买商品的实际支付金额，不含服务费及运费。",
+            "platform": "tmall",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://terms.alicdn.com/legal-agreement/terms/b_end_product_protocol/20230914123010322/20230914123010322.html",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "tmall-warranty-limit",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "d087e1621ec31f9be2c63123e5110724ec3f7b3c8bbd7a81f2865e737229731e",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "保修保障额度",
+            "content_kind": "curated_summary",
+            "citation_id": "tmall-warranty::tmall-warranty-limit"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.138
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "tmall",
+            "business_scope": "platform",
+            "query": "天猫给这个商品买的保修，算能修多少钱时，另外付的服务费和快递钱也计入吗？",
+            "citation_ids": [
+              "tmall-warranty::tmall-warranty-limit",
+              "tmall-warranty::tmall-warranty-accident",
+              "tmall-warranty::tmall-warranty-extension",
+              "tmall-warranty::tmall-warranty-service-fee",
+              "tmall-merchant::tmall-merchant-invoice"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 25.799
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 867.693
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 1711.755
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 1711.776
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 1711.771,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3711,
+          "completion_tokens": 100,
+          "total_tokens": 3811,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "challenge-011",
+      "category": "colloquial_retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 2099.998,
+      "result": {
+        "task": "天猫标价500，优惠后只付了400，店铺票上应该写哪个数？",
+        "status": "completed",
+        "answer": "天猫商户应按买家在其店铺交易实际支付的金额开具合规发票；若标价500元、优惠后实际支付400元，店铺发票应写实际支付的400元。 [tmall-merchant::tmall-merchant-invoice]",
+        "citations": [
+          {
+            "chunk_id": "tmall-merchant::tmall-merchant-invoice",
+            "doc_id": "tmall-merchant",
+            "title": "天猫商户服务协议：保障、开票与退货费用",
+            "text": "天猫商户应按买家在其店铺交易实际支付的金额开具合规发票。",
+            "platform": "tmall",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://terms.alicdn.com/legal-agreement/terms/TD/TD201609271722_89275.html",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "tmall-merchant-invoice",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "54d9876a21bcef6c8c306f0166b342440cb470bc3e4b7fb9952b794317f9603c",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "实际付款开票",
+            "content_kind": "curated_summary",
+            "citation_id": "tmall-merchant::tmall-merchant-invoice"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.118
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "tmall",
+            "business_scope": "platform",
+            "query": "天猫标价500，优惠后只付了400，店铺票上应该写哪个数？",
+            "citation_ids": [
+              "tmall-merchant::tmall-merchant-invoice",
+              "tmall-merchant::tmall-merchant-category-fee",
+              "tmall-merchant::tmall-merchant-exit",
+              "tmall-seven::tmall-seven-condition",
+              "tmall-merchant::tmall-merchant-responsibility"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 21.206
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 823.741
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2099.928
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2099.95
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2099.945,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3617,
+          "completion_tokens": 102,
+          "total_tokens": 3719,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "challenge-013",
+      "category": "colloquial_retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 2055.538,
+      "result": {
+        "task": "拼多多买的东西确实坏了，我拍照片在申请页上传并通过审核，来回寄的钱谁掏？",
+        "status": "completed",
+        "answer": "在拼多多因商品质量问题退换货，若在申请页上传问题凭证且平台审核通过，全部运费由商家承担。 [pdd-protection::pdd-protection-freight]\n拼多多不支持未经协商的退货到付；若未协商即到付，应取回重寄，相关运费由买家承担。 [pdd-help::pdd-help-cod]",
+        "citations": [
+          {
+            "chunk_id": "pdd-protection::pdd-protection-freight",
+            "doc_id": "pdd-protection",
+            "title": "拼多多消费者保障计划（2026年修订）",
+            "text": "拼多多因质量问题退换货，申请页上传问题凭证且平台审核通过后，全部运费由商家承担。",
+            "platform": "pinduoduo",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.yangkeduo.com/home/customer/",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "pdd-protection-freight",
+            "score": 0.032018442622950824,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "7a794895d00def097b934e4fcf2792779be24264259ef9c51515174c370a9d44",
+            "retrieved_at": "2026-11-20",
+            "effective_from": "2026-01-18",
+            "effective_to": null,
+            "clause_title": "质量退货运费",
+            "content_kind": "curated_summary",
+            "citation_id": "pdd-protection::pdd-protection-freight"
+          },
+          {
+            "chunk_id": "pdd-help::pdd-help-cod",
+            "doc_id": "pdd-help",
+            "title": "拼多多官方帮助中心：退换货流程与规则",
+            "text": "拼多多帮助页不支持未经协商的退货到付；未协商就到付，应取回重寄，相关运费买家承担。",
+            "platform": "pinduoduo",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.yangkeduo.com/home/help/",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "pdd-help-cod",
+            "score": 0.03200204813108039,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "2777c4a37fe4f016e8cea4a6ce08a3403122cfd56575a07ede03a96f7471c0e7",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "退货到付",
+            "content_kind": "curated_summary",
+            "citation_id": "pdd-help::pdd-help-cod"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.136
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "pinduoduo",
+            "business_scope": "platform",
+            "query": "拼多多买的东西确实坏了，我拍照片在申请页上传并通过审核，来回寄的钱谁掏？",
+            "citation_ids": [
+              "pdd-protection::pdd-protection-freight",
+              "pdd-help::pdd-help-cod",
+              "pdd-help::pdd-help-personal",
+              "pdd-help::pdd-help-contact",
+              "pdd-help::pdd-help-exchange"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 26.476
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 695.262
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2055.464
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2055.486
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2055.481,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3559,
+          "completion_tokens": 152,
+          "total_tokens": 3711,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "challenge-014",
+      "category": "colloquial_retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 1959.922,
+      "result": {
+        "task": "拼多多买到了假的品牌货，我想要十倍补偿，是否还得看页面有没有对应承诺？",
+        "status": "completed",
+        "answer": "在拼多多，若要以“假一赔十”向商家主张十倍补偿，需商品页带有“假一赔十”标识；页面没有该承诺标识时，不能按该承诺主张。 [pdd-protection::pdd-protection-authenticity]\n拼多多消费者保障计划面向真实消费需求；若属于知假买假、牟利性打假或恶意购买维权等扰乱秩序情形，则不在该计划范围内。 [pdd-protection::pdd-protection-purpose]",
+        "citations": [
+          {
+            "chunk_id": "pdd-protection::pdd-protection-authenticity",
+            "doc_id": "pdd-protection",
+            "title": "拼多多消费者保障计划（2026年修订）",
+            "text": "拼多多假冒品牌商品须商品页带有“假一赔十”标识，才可按该承诺向商家主张假一赔十。",
+            "platform": "pinduoduo",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.yangkeduo.com/home/customer/",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "pdd-protection-authenticity",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "85784fd6b4a89fd57d0d256b3896b69c4471f0f0a70cb5417873fd2fd1630869",
+            "retrieved_at": "2026-11-20",
+            "effective_from": "2026-01-18",
+            "effective_to": null,
+            "clause_title": "正品承诺",
+            "content_kind": "curated_summary",
+            "citation_id": "pdd-protection::pdd-protection-authenticity"
+          },
+          {
+            "chunk_id": "pdd-protection::pdd-protection-purpose",
+            "doc_id": "pdd-protection",
+            "title": "拼多多消费者保障计划（2026年修订）",
+            "text": "拼多多该计划面向真实消费需求，不包括知假买假、牟利性打假或恶意购买维权等扰乱秩序情形。",
+            "platform": "pinduoduo",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.yangkeduo.com/home/customer/",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "pdd-protection-purpose",
+            "score": 0.03149801587301587,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "4ffb8e2e5b7a77727826c15dd31e82171c92bbb08a94b67234ee19ef2e27d312",
+            "retrieved_at": "2026-11-20",
+            "effective_from": "2026-01-18",
+            "effective_to": null,
+            "clause_title": "真实消费范围",
+            "content_kind": "curated_summary",
+            "citation_id": "pdd-protection::pdd-protection-purpose"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.121
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "pinduoduo",
+            "business_scope": "platform",
+            "query": "拼多多买到了假的品牌货，我想要十倍补偿，是否还得看页面有没有对应承诺？",
+            "citation_ids": [
+              "pdd-protection::pdd-protection-authenticity",
+              "pdd-help::pdd-help-cod",
+              "pdd-protection::pdd-protection-delivery",
+              "pdd-protection::pdd-protection-purpose",
+              "pdd-help::pdd-help-exchange"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 24.822
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 804.871
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 1959.843
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 1959.865
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 1959.86,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3581,
+          "completion_tokens": 176,
+          "total_tokens": 3757,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "challenge-015",
+      "category": "clarification",
+      "expected_status": "needs_clarification",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 895.892,
+      "result": {
+        "task": "拼多多拼成后我手动点了收货，现在还能向平台投诉到哪一天？",
+        "status": "needs_clarification",
+        "answer": "请补充：手动点击确认收货的具体日期（用于计算确认收货后15天的投诉截止日）",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.105
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "pinduoduo",
+            "business_scope": "platform",
+            "query": "拼多多拼成后我手动点了收货，现在还能向平台投诉到哪一天？",
+            "citation_ids": [
+              "pdd-help::pdd-help-exchange",
+              "pdd-protection::pdd-protection-deadline",
+              "pdd-help::pdd-help-contact",
+              "pdd-protection::pdd-protection-seven",
+              "pdd-protection::pdd-protection-authenticity"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 22.272
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": false,
+            "missing_evidence": [],
+            "missing_information": [
+              "手动点击确认收货的具体日期（用于计算确认收货后15天的投诉截止日）"
+            ],
+            "next_action": "clarify",
+            "elapsed_ms": 895.813
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "needs_clarification",
+            "mode": "model",
+            "elapsed_ms": 895.845
+          }
+        ],
+        "missing_information": [
+          "手动点击确认收货的具体日期（用于计算确认收货后15天的投诉截止日）"
+        ],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 895.837,
+        "mode": "model",
+        "usage": {
+          "model_calls": 1,
+          "prompt_tokens": 1814,
+          "completion_tokens": 55,
+          "total_tokens": 1869,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "challenge-017",
+      "category": "colloquial_retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 1971.813,
+      "result": {
+        "task": "拼多多我寄回去换另一件，对面签收后一直没有重发，什么时候能让平台处理？",
+        "status": "completed",
+        "answer": "在拼多多换货场景下，商家收回换货商品后应在三天内安排换货；自签收次日零时起满72小时仍未换货的，可申请平台介入处理。 [pdd-help::pdd-help-exchange]\n若在拼多多发起投诉或售后，需在下单或拼单成功后至确认收货后15天内提出；逾期平台可不受理，因此换货问题也应在该期限内申请介入。 [pdd-protection::pdd-protection-deadline]",
+        "citations": [
+          {
+            "chunk_id": "pdd-help::pdd-help-exchange",
+            "doc_id": "pdd-help",
+            "title": "拼多多官方帮助中心：退换货流程与规则",
+            "text": "拼多多帮助页规定，商家收回换货商品后应在三天内安排换货；签收次日零时起满72小时，逾期可申请平台介入。",
+            "platform": "pinduoduo",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.yangkeduo.com/home/help/",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "pdd-help-exchange",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "b55aabd917c9e14698a17b7082a556bfd8fad79dd556b7c868dbfe514416e004",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "换货处理时限",
+            "content_kind": "curated_summary",
+            "citation_id": "pdd-help::pdd-help-exchange"
+          },
+          {
+            "chunk_id": "pdd-protection::pdd-protection-deadline",
+            "doc_id": "pdd-protection",
+            "title": "拼多多消费者保障计划（2026年修订）",
+            "text": "拼多多该计划要求在下单或拼单成功后至确认收货后15天内发起投诉或售后；逾期平台可不受理。",
+            "platform": "pinduoduo",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.yangkeduo.com/home/customer/",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "pdd-protection-deadline",
+            "score": 0.031024531024531024,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "75b5e44cbe6c85a4ca796e59669f5c243ac5e2ac3483fffba07b1bb3ce7a734f",
+            "retrieved_at": "2026-11-20",
+            "effective_from": "2026-01-18",
+            "effective_to": null,
+            "clause_title": "维权申请期限",
+            "content_kind": "curated_summary",
+            "citation_id": "pdd-protection::pdd-protection-deadline"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.128
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "pinduoduo",
+            "business_scope": "platform",
+            "query": "拼多多我寄回去换另一件，对面签收后一直没有重发，什么时候能让平台处理？",
+            "citation_ids": [
+              "pdd-help::pdd-help-exchange",
+              "pdd-help::pdd-help-contact",
+              "pdd-protection::pdd-protection-deadline",
+              "pdd-protection::pdd-protection-seven",
+              "pdd-help::pdd-help-cod"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 24.733
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 700.833
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 1971.738
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 1971.761
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 1971.756,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3571,
+          "completion_tokens": 177,
+          "total_tokens": 3748,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "challenge-018",
+      "category": "colloquial_retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 2098.153,
+      "result": {
+        "task": "京东自营包裹到了我没接，订单是不是要等东西回到仓库才退钱？",
+        "status": "completed",
+        "answer": "京东自营商品出库后取消或拒收，需待商品退库后系统退款；拒收后系统自动提交取消申请。因此包裹到达后未签收被拒收，退款要等商品退回仓库后才处理。 [jd-cancel::jd-cancel-warehouse]",
+        "citations": [
+          {
+            "chunk_id": "jd-cancel::jd-cancel-warehouse",
+            "doc_id": "jd-cancel",
+            "title": "京东取消订单及退货退款说明：自营部分",
+            "text": "京东自营商品出库后取消或拒收，需待商品退库后系统退款；拒收后系统自动提交取消申请。",
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/130-256.html",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "jd-cancel-warehouse",
+            "score": 0.03225806451612903,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "985d151e6a2ce9d1a6ddb21dcc278365543805540e72a8397daca7cb1ba22367",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "退库后退款",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-cancel::jd-cancel-warehouse"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.128
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "query": "京东自营包裹到了我没接，订单是不是要等东西回到仓库才退钱？",
+            "citation_ids": [
+              "jd-cancel::jd-cancel-before-outbound",
+              "jd-cancel::jd-cancel-warehouse",
+              "jd-cancel::jd-cancel-ecard",
+              "jd-luxury::jd-luxury-gifts",
+              "jd-cancel::jd-cancel-original"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 23.771
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 974.783
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2098.042
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2098.098
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2098.092,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3568,
+          "completion_tokens": 114,
+          "total_tokens": 3682,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "challenge-019",
+      "category": "colloquial_retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 1643.899,
+      "result": {
+        "task": "京东自营用礼品E卡抵的部分，退掉订单后能不能直接提现到储蓄卡？",
+        "status": "completed",
+        "answer": "京东自营订单取消或退货后，用京东卡或京东E卡支付的部分不直接兑换现金，而是约一个工作日返还原卡；返还周期可能受相关机构影响。 [jd-cancel::jd-cancel-ecard]",
+        "citations": [
+          {
+            "chunk_id": "jd-cancel::jd-cancel-ecard",
+            "doc_id": "jd-cancel",
+            "title": "京东取消订单及退货退款说明：自营部分",
+            "text": "京东卡或京东E卡支付部分不直接兑换现金，帮助页说明约一个工作日返还原卡；周期可能受相关机构影响。",
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/130-256.html",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "jd-cancel-ecard",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "d48b19f206586ee98b21b8e57a9c3bd572b375041a2a6269fb5ea7ddd06321e5",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "京东卡退款",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-cancel::jd-cancel-ecard"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.135
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "query": "京东自营用礼品E卡抵的部分，退掉订单后能不能直接提现到储蓄卡？",
+            "citation_ids": [
+              "jd-cancel::jd-cancel-ecard",
+              "jd-cancel::jd-cancel-before-outbound",
+              "jd-cancel::jd-cancel-original",
+              "jd-cancel::jd-cancel-warehouse",
+              "jd-coupon-return::jd-coupon-return-split-jing"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 23.883
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 869.0
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 1643.826
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 1643.849
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 1643.843,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3610,
+          "completion_tokens": 103,
+          "total_tokens": 3713,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "challenge-025",
+      "category": "colloquial_retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 2347.541,
+      "result": {
+        "task": "苏宁原本凑够金额不用付快递钱，退掉一部分后凑不够了，寄来那趟也要我出吗？",
+        "status": "completed",
+        "answer": "在苏宁，若原订单为包邮商品，无理由退货时买家仅需支付退回运费；若原订单未包邮，或部分退货后不再满足包邮条件，则买家需承担所有邮费，另有约定的从约定。因此，退掉一部分导致凑不够包邮金额时，寄来那趟的运费可能需要由你承担，具体取决于原订单是否包邮及是否有另行约定。 [suning-seven::suning-seven-freight]",
+        "citations": [
+          {
+            "chunk_id": "suning-seven::suning-seven-freight",
+            "doc_id": "suning-seven",
+            "title": "苏宁易购主站七天无理由退货规范",
+            "text": "苏宁无理由退货，包邮商品买家仅付退回运费；未包邮或部分退货后不满足包邮条件时买家承担所有邮费，另约从约。",
+            "platform": "suning",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://rule.suning.com/ruleInfo/ruleInfoDetail/GZ100003631.htm",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "suning-seven-freight",
+            "score": 0.03252247488101534,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "076cde905f06b30bc54da953409229f02d3df6dff2dd80fbfe62d8657650680f",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "包邮及满额包邮",
+            "content_kind": "curated_summary",
+            "citation_id": "suning-seven::suning-seven-freight"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.129
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "suning",
+            "business_scope": "platform",
+            "query": "苏宁原本凑够金额不用付快递钱，退掉一部分后凑不够了，寄来那趟也要我出吗？",
+            "citation_ids": [
+              "suning-seven::suning-seven-freight",
+              "suning-freight-disputes::suning_shipping_evidence",
+              "suning-seven::suning-seven-clock",
+              "suning-seven::suning-seven-exceptions",
+              "suning-seven::suning-seven-promise"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 24.219
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 839.747
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2347.469
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2347.491
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2347.485,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3637,
+          "completion_tokens": 153,
+          "total_tokens": 3790,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "challenge-026",
+      "category": "colloquial_retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 2434.346,
+      "result": {
+        "task": "苏宁我只把盒子打开检查，没有不合理使用，商家能一概说不完整不给退吗？",
+        "status": "completed",
+        "answer": "在苏宁易购主站，若商品带有七天无理由标识，且自签收次日零时起满168小时内申请，合理查验开包装不影响商品完好，商家不能仅以“包装已打开”一概认定商品不完整而拒绝退货。 [suning-seven::suning-seven-clock]\n若商品属于定制、鲜活易腐、数字化及报刊等排除范围，或属于购买时已确认的部分拆封、激活或试用后不宜退的商品，则不适用上述七天无理由退货。 [suning-seven::suning-seven-exceptions]",
+        "citations": [
+          {
+            "chunk_id": "suning-seven::suning-seven-clock",
+            "doc_id": "suning-seven",
+            "title": "苏宁易购主站七天无理由退货规范",
+            "text": "苏宁带七天无理由标识的商品，签收次日零时起满168小时内、商品完好可申请；合理查验开包装不影响完好。",
+            "platform": "suning",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://rule.suning.com/ruleInfo/ruleInfoDetail/GZ100003631.htm",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "suning-seven-clock",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "de3dc3924629cead30cbe0ac435812b4395ce10880ff4d3b79d61807f8230183",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "七天计时与完好",
+            "content_kind": "curated_summary",
+            "citation_id": "suning-seven::suning-seven-clock"
+          },
+          {
+            "chunk_id": "suning-seven::suning-seven-exceptions",
+            "doc_id": "suning-seven",
+            "title": "苏宁易购主站七天无理由退货规范",
+            "text": "苏宁该规范排除定制、鲜活易腐、数字化及报刊等商品；部分拆封、激活或试用后不宜退的商品须购买时确认。",
+            "platform": "suning",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://rule.suning.com/ruleInfo/ruleInfoDetail/GZ100003631.htm",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "suning-seven-exceptions",
+            "score": 0.0315136476426799,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "bd15895b73b6599718d62d6215d74850af69b24f933cdec000ce372b2d7c8582",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "不适用及确认",
+            "content_kind": "curated_summary",
+            "citation_id": "suning-seven::suning-seven-exceptions"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.13
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "suning",
+            "business_scope": "platform",
+            "query": "苏宁我只把盒子打开检查，没有不合理使用，商家能一概说不完整不给退吗？",
+            "citation_ids": [
+              "suning-seven::suning-seven-clock",
+              "suning-seven::suning-seven-exceptions",
+              "suning-seven::suning-seven-promise",
+              "suning-seven::suning-seven-scope",
+              "suning-freight-disputes::suning_quality_shipping"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 23.631
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 1041.178
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2434.272
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2434.293
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2434.289,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3573,
+          "completion_tokens": 183,
+          "total_tokens": 3756,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-018",
+      "category": "scope",
+      "expected_status": "needs_clarification",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 0.244,
+      "result": {
+        "task": "我在京东申请七天无理由退货，退回运费由谁承担？",
+        "status": "needs_clarification",
+        "answer": "京东售后规则区分自营与第三方，请明确适用渠道。",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.112
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "needs_clarification",
+            "mode": "model",
+            "elapsed_ms": 0.209
+          }
+        ],
+        "missing_information": [
+          "京东售后规则区分自营与第三方，请明确适用渠道。"
+        ],
+        "retrieval_rounds": 0,
+        "elapsed_ms": 0.2,
+        "mode": "model",
+        "usage": {
+          "model_calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-024",
+      "category": "unanswerable",
+      "expected_status": "insufficient_evidence",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 0.131,
+      "result": {
+        "task": "小米商城的质量问题退货寄回运费由谁承担？",
+        "status": "insufficient_evidence",
+        "answer": "知识库目前没有该平台的适用政策。",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.061
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "insufficient_evidence",
+            "mode": "model",
+            "elapsed_ms": 0.111
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 0,
+        "elapsed_ms": 0.105,
+        "mode": "model",
+        "usage": {
+          "model_calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-025",
+      "category": "unanswerable",
+      "expected_status": "insufficient_evidence",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 1066.458,
+      "result": {
+        "task": "请查2020年1月1日适用的京东自营误购退货运费政策。",
+        "status": "insufficient_evidence",
+        "answer": "现有适用条款不足以支持完整回答。缺少：2020年1月1日适用的京东自营误购退货运费政策条款（含运费承担方、收费标准或免收条件）。",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.066
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "query": "请查2020年1月1日适用的京东自营误购退货运费政策。",
+            "citation_ids": [],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 0.359
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": false,
+            "missing_evidence": [
+              "2020年1月1日适用的京东自营误购退货运费政策条款（含运费承担方、收费标准或免收条件）"
+            ],
+            "missing_information": [],
+            "next_action": "retrieve",
+            "elapsed_ms": 1066.086
+          },
+          {
+            "stage": "retrieve",
+            "round": 2,
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "query": "京东自营 误购 退货 运费 政策 2020年1月1日",
+            "citation_ids": [],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 1066.374
+          },
+          {
+            "stage": "retrieval_stop",
+            "reason": "no_new_evidence",
+            "elapsed_ms": 1066.394
+          },
+          {
+            "stage": "evidence_check",
+            "sufficient": false,
+            "reason": "insufficient_or_budget_exhausted",
+            "elapsed_ms": 1066.401
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "insufficient_evidence",
+            "mode": "model",
+            "elapsed_ms": 1066.422
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 2,
+        "elapsed_ms": 1066.414,
+        "mode": "model",
+        "usage": {
+          "model_calls": 1,
+          "prompt_tokens": 379,
+          "completion_tokens": 93,
+          "total_tokens": 472,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-027",
+      "category": "unanswerable",
+      "expected_status": "insufficient_evidence",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 2777.682,
+      "result": {
+        "task": "苏宁易购质量问题退货，我垫了50元，政策规定的报销金额上限具体是多少？",
+        "status": "insufficient_evidence",
+        "answer": "现有适用条款不足以支持完整回答。缺少：苏宁易购关于质量问题退换货运费报销金额上限的具体条款（现有材料仅说明质量问题运费由商家承担，未规定报销上限数值）。",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.128
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "suning",
+            "business_scope": "platform",
+            "query": "苏宁易购质量问题退货，我垫了50元，政策规定的报销金额上限具体是多少？",
+            "citation_ids": [
+              "suning-freight-disputes::suning_quality_shipping",
+              "suning-seven::suning-seven-exceptions",
+              "suning-seven::suning-seven-freight",
+              "suning-seven::suning-seven-clock",
+              "suning-seven::suning-seven-promise"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 24.252
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": false,
+            "missing_evidence": [
+              "苏宁易购关于质量问题退换货运费报销金额上限的具体条款（现有条款仅说明由商家承担，未规定报销上限数值）"
+            ],
+            "missing_information": [],
+            "next_action": "retrieve",
+            "elapsed_ms": 1255.561
+          },
+          {
+            "stage": "read_document",
+            "round": 2,
+            "requested_id": "suning-freight-disputes::suning_quality_shipping",
+            "platform": "suning",
+            "business_scope": "platform",
+            "citation_ids": [
+              "suning-freight-disputes::suning_quality_shipping",
+              "suning-freight-disputes::suning_shipping_evidence"
+            ],
+            "elapsed_ms": 1255.897
+          },
+          {
+            "stage": "retrieve",
+            "round": 2,
+            "platform": "suning",
+            "business_scope": "platform",
+            "query": "苏宁易购质量问题退货，我垫了50元，政策规定的报销金额上限具体是多少？",
+            "citation_ids": [
+              "suning-freight-disputes::suning_quality_shipping",
+              "suning-seven::suning-seven-exceptions",
+              "suning-seven::suning-seven-freight",
+              "suning-seven::suning-seven-clock",
+              "suning-seven::suning-seven-promise"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 1279.945
+          },
+          {
+            "stage": "evidence_check",
+            "round": 2,
+            "sufficient": false,
+            "missing_evidence": [
+              "苏宁易购关于质量问题退换货运费报销金额上限的具体条款（现有材料仅说明质量问题运费由商家承担，未规定报销上限数值）"
+            ],
+            "missing_information": [],
+            "next_action": "retrieve",
+            "elapsed_ms": 2777.514
+          },
+          {
+            "stage": "evidence_check",
+            "sufficient": false,
+            "reason": "insufficient_or_budget_exhausted",
+            "elapsed_ms": 2777.564
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "insufficient_evidence",
+            "mode": "model",
+            "elapsed_ms": 2777.629
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 2,
+        "elapsed_ms": 2777.58,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3942,
+          "completion_tokens": 231,
+          "total_tokens": 4173,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-028",
+      "category": "unanswerable",
+      "expected_status": "insufficient_evidence",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 3168.629,
+      "result": {
+        "task": "京东自营商品退款成功后，资金精确需要几个小时到银行卡？",
+        "status": "insufficient_evidence",
+        "answer": "现有适用条款不足以支持完整回答。缺少：京东自营退款成功后资金到银行卡的具体到账时效（精确小时数）条款；退款到账时间受银行处理周期影响的相关说明。",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.136
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "query": "京东自营商品退款成功后，资金精确需要几个小时到银行卡？",
+            "citation_ids": [
+              "jd-cancel::jd-cancel-before-outbound",
+              "jd-cancel::jd-cancel-original",
+              "jd-cancel::jd-cancel-ecard",
+              "jd-cancel::jd-cancel-warehouse",
+              "jd-luxury::jd-luxury-gifts"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 22.806
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": false,
+            "missing_evidence": [
+              "京东自营退款成功后资金到银行卡的具体到账时效（精确小时数）条款缺失；现有材料仅说明退款审核30分钟、原卡原退、退库后退款，未给出银行卡到账时长"
+            ],
+            "missing_information": [],
+            "next_action": "retrieve",
+            "elapsed_ms": 1303.645
+          },
+          {
+            "stage": "read_document",
+            "round": 2,
+            "requested_id": "jd-cancel::jd-cancel-original",
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "citation_ids": [
+              "jd-cancel::jd-cancel-warehouse",
+              "jd-cancel::jd-cancel-original",
+              "jd-cancel::jd-cancel-ecard"
+            ],
+            "elapsed_ms": 1303.958
+          },
+          {
+            "stage": "read_document",
+            "round": 2,
+            "requested_id": "jd-cancel::jd-cancel-before-outbound",
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "citation_ids": [
+              "jd-cancel::jd-cancel-before-outbound",
+              "jd-cancel::jd-cancel-warehouse"
+            ],
+            "elapsed_ms": 1304.127
+          },
+          {
+            "stage": "retrieve",
+            "round": 2,
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "query": "京东自营商品退款成功后 资金到银行卡 需要几个小时 到账时效",
+            "citation_ids": [
+              "jd-cancel::jd-cancel-before-outbound",
+              "jd-cancel::jd-cancel-original",
+              "jd-cancel::jd-cancel-ecard",
+              "jd-cancel::jd-cancel-warehouse",
+              "jd-luxury::jd-luxury-condition"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 1327.067
+          },
+          {
+            "stage": "evidence_check",
+            "round": 2,
+            "sufficient": false,
+            "missing_evidence": [
+              "京东自营退款成功后资金到银行卡的具体到账时效（精确小时数）条款",
+              "退款到账时间受银行处理周期影响的相关说明"
+            ],
+            "missing_information": [],
+            "next_action": "retrieve",
+            "elapsed_ms": 3168.506
+          },
+          {
+            "stage": "evidence_check",
+            "sufficient": false,
+            "reason": "insufficient_or_budget_exhausted",
+            "elapsed_ms": 3168.555
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "insufficient_evidence",
+            "mode": "model",
+            "elapsed_ms": 3168.573
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 2,
+        "elapsed_ms": 3168.568,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3872,
+          "completion_tokens": 238,
+          "total_tokens": 4110,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "v2-cross-freight",
+      "category": "comparison",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 3189.361,
+      "result": {
+        "task": "比较天猫包邮商品七天无理由退货和拼多多七天无理由退货的寄回运费由谁承担。",
+        "status": "completed",
+        "answer": "天猫七天无理由退货中，若为包邮商品且因主观原因退货，买家仅承担退回运费。 [tmall-seven::tmall-seven-freight]\n天猫七天无理由退货中，若因商品质量问题或与网上描述不符导致退货，退货费用由卖家承担。 [tmall-seven::tmall-seven-quality]\n拼多多七天无理由退货中，若为个人原因退货，退回运费由买家承担。 [pdd-help::pdd-help-personal]\n拼多多因质量问题退换货时，若在申请页上传问题凭证且平台审核通过，全部运费由商家承担。 [pdd-protection::pdd-protection-freight]",
+        "citations": [
+          {
+            "chunk_id": "tmall-seven::tmall-seven-freight",
+            "doc_id": "tmall-seven",
+            "title": "天猫七天无理由退换货公开服务说明",
+            "text": "天猫该服务下无理由退货或拒签通常由买家承担来回运费；包邮商品买家仅承担退回运费。",
+            "platform": "tmall",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.tmall.com/wow/seller/act/seven-day",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "tmall-seven-freight",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "2320c2ea4298bfd48e7dcc6805c54e15534dc66eb23bbc2a0f244406a4deffbf",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "主观退货运费",
+            "content_kind": "curated_summary",
+            "citation_id": "tmall-seven::tmall-seven-freight"
+          },
+          {
+            "chunk_id": "tmall-seven::tmall-seven-quality",
+            "doc_id": "tmall-seven",
+            "title": "天猫七天无理由退换货公开服务说明",
+            "text": "天猫该说明中，商品质量问题或与网上描述不符导致退货，退货费用由卖家承担。",
+            "platform": "tmall",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.tmall.com/wow/seller/act/seven-day",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "tmall-seven-quality",
+            "score": 0.03225806451612903,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "ab1e4450392cd4f4c2bd264757d42442889c4cda57016a72208368c1249856de",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "质量或描述不符",
+            "content_kind": "curated_summary",
+            "citation_id": "tmall-seven::tmall-seven-quality"
+          },
+          {
+            "chunk_id": "pdd-help::pdd-help-personal",
+            "doc_id": "pdd-help",
+            "title": "拼多多官方帮助中心：退换货流程与规则",
+            "text": "拼多多七天无理由退货按该帮助页由买家承担退回运费；质量、发错或丢件导致退换货的运费由商家承担。",
+            "platform": "pinduoduo",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.yangkeduo.com/home/help/",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "pdd-help-personal",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "8ce86af22d701fdb4be601d2944a5de2ce0a30f6a904c7a30b489d78f43172fc",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "个人原因运费",
+            "content_kind": "curated_summary",
+            "citation_id": "pdd-help::pdd-help-personal"
+          },
+          {
+            "chunk_id": "pdd-protection::pdd-protection-freight",
+            "doc_id": "pdd-protection",
+            "title": "拼多多消费者保障计划（2026年修订）",
+            "text": "拼多多因质量问题退换货，申请页上传问题凭证且平台审核通过后，全部运费由商家承担。",
+            "platform": "pinduoduo",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.yangkeduo.com/home/customer/",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "pdd-protection-freight",
+            "score": 0.03149801587301587,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "7a794895d00def097b934e4fcf2792779be24264259ef9c51515174c370a9d44",
+            "retrieved_at": "2026-11-20",
+            "effective_from": "2026-01-18",
+            "effective_to": null,
+            "clause_title": "质量退货运费",
+            "content_kind": "curated_summary",
+            "citation_id": "pdd-protection::pdd-protection-freight"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.106
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "tmall",
+            "business_scope": "platform",
+            "query": "比较天猫包邮商品七天无理由退货和拼多多七天无理由退货的寄回运费由谁承担。",
+            "citation_ids": [
+              "tmall-seven::tmall-seven-freight",
+              "tmall-seven::tmall-seven-quality",
+              "tmall-seven::tmall-seven-clock",
+              "tmall-seven::tmall-seven-condition",
+              "tmall-seven::tmall-seven-escalation"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 25.736
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "pinduoduo",
+            "business_scope": "platform",
+            "query": "比较天猫包邮商品七天无理由退货和拼多多七天无理由退货的寄回运费由谁承担。",
+            "citation_ids": [
+              "pdd-help::pdd-help-personal",
+              "pdd-help::pdd-help-cod",
+              "pdd-protection::pdd-protection-seven",
+              "pdd-protection::pdd-protection-freight",
+              "pdd-help::pdd-help-contact"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 42.894
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 802.342
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 3189.272
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 3189.296
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 3189.291,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 6329,
+          "completion_tokens": 239,
+          "total_tokens": 6568,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "v2-cross-quality",
+      "category": "comparison",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 2473.97,
+      "result": {
+        "task": "比较天猫商品质量问题退货与拼多多质量问题退货审核通过后，寄回运费分别由谁承担？",
+        "status": "completed",
+        "answer": "在天猫，若退货原因是商品质量问题或与网上描述不符，退货费用由卖家承担。 [tmall-seven::tmall-seven-quality]\n在拼多多，因质量问题退换货时，若在申请页上传问题凭证且平台审核通过，全部运费由商家承担。 [pdd-protection::pdd-protection-freight]",
+        "citations": [
+          {
+            "chunk_id": "tmall-seven::tmall-seven-quality",
+            "doc_id": "tmall-seven",
+            "title": "天猫七天无理由退换货公开服务说明",
+            "text": "天猫该说明中，商品质量问题或与网上描述不符导致退货，退货费用由卖家承担。",
+            "platform": "tmall",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.tmall.com/wow/seller/act/seven-day",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "tmall-seven-quality",
+            "score": 0.03252247488101534,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "ab1e4450392cd4f4c2bd264757d42442889c4cda57016a72208368c1249856de",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "质量或描述不符",
+            "content_kind": "curated_summary",
+            "citation_id": "tmall-seven::tmall-seven-quality"
+          },
+          {
+            "chunk_id": "pdd-protection::pdd-protection-freight",
+            "doc_id": "pdd-protection",
+            "title": "拼多多消费者保障计划（2026年修订）",
+            "text": "拼多多因质量问题退换货，申请页上传问题凭证且平台审核通过后，全部运费由商家承担。",
+            "platform": "pinduoduo",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.yangkeduo.com/home/customer/",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "pdd-protection-freight",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "7a794895d00def097b934e4fcf2792779be24264259ef9c51515174c370a9d44",
+            "retrieved_at": "2026-11-20",
+            "effective_from": "2026-01-18",
+            "effective_to": null,
+            "clause_title": "质量退货运费",
+            "content_kind": "curated_summary",
+            "citation_id": "pdd-protection::pdd-protection-freight"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.122
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "tmall",
+            "business_scope": "platform",
+            "query": "比较天猫商品质量问题退货与拼多多质量问题退货审核通过后，寄回运费分别由谁承担？",
+            "citation_ids": [
+              "tmall-seven::tmall-seven-quality",
+              "tmall-merchant::tmall-merchant-category-fee",
+              "tmall-seven::tmall-seven-freight",
+              "tmall-seven::tmall-seven-condition",
+              "tmall-warranty::tmall-warranty-extension"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 25.256
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "pinduoduo",
+            "business_scope": "platform",
+            "query": "比较天猫商品质量问题退货与拼多多质量问题退货审核通过后，寄回运费分别由谁承担？",
+            "citation_ids": [
+              "pdd-protection::pdd-protection-freight",
+              "pdd-help::pdd-help-personal",
+              "pdd-help::pdd-help-cod",
+              "pdd-protection::pdd-protection-quality",
+              "pdd-help::pdd-help-contact"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 42.687
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 1471.579
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2473.84
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2473.904
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2473.898,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 6437,
+          "completion_tokens": 141,
+          "total_tokens": 6578,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "v2-international",
+      "category": "unanswerable",
+      "expected_status": "insufficient_evidence",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 0.179,
+      "result": {
+        "task": "天猫国际商品退货政策",
+        "status": "insufficient_evidence",
+        "answer": "知识库目前没有该平台的适用政策。",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.079
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "insufficient_evidence",
+            "mode": "model",
+            "elapsed_ms": 0.144
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 0,
+        "elapsed_ms": 0.138,
+        "mode": "model",
+        "usage": {
+          "model_calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "v2-pdd-history",
+      "category": "unanswerable",
+      "expected_status": "insufficient_evidence",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 1569.186,
+      "result": {
+        "task": "请查2020年1月1日适用的拼多多质量问题退货运费规则",
+        "status": "insufficient_evidence",
+        "answer": "现有适用条款不足以支持完整回答。缺少：2020年1月1日适用的拼多多质量问题退货运费规则条款。",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.084
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "pinduoduo",
+            "business_scope": "platform",
+            "query": "请查2020年1月1日适用的拼多多质量问题退货运费规则",
+            "citation_ids": [],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 0.464
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": false,
+            "missing_evidence": [
+              "2020年1月1日适用的拼多多质量问题退货运费规则条款"
+            ],
+            "missing_information": [],
+            "next_action": "retrieve",
+            "elapsed_ms": 1568.848
+          },
+          {
+            "stage": "retrieve",
+            "round": 2,
+            "platform": "pinduoduo",
+            "business_scope": "platform",
+            "query": "拼多多 2020年1月1日 质量问题 退货 运费 规则",
+            "citation_ids": [],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 1569.106
+          },
+          {
+            "stage": "retrieval_stop",
+            "reason": "no_new_evidence",
+            "elapsed_ms": 1569.126
+          },
+          {
+            "stage": "evidence_check",
+            "sufficient": false,
+            "reason": "insufficient_or_budget_exhausted",
+            "elapsed_ms": 1569.133
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "insufficient_evidence",
+            "mode": "model",
+            "elapsed_ms": 1569.149
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 2,
+        "elapsed_ms": 1569.143,
+        "mode": "model",
+        "usage": {
+          "model_calls": 1,
+          "prompt_tokens": 377,
+          "completion_tokens": 78,
+          "total_tokens": 455,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    }
+  ],
+  "scenario_summary": {
+    "count": 24,
+    "answer_evaluation_enabled": true,
+    "status_cases_scored": 24,
+    "status_matches": 24,
+    "citation_coverage_matches": 24
+  },
+  "model_usage": {
+    "model": "deepseek-flash",
+    "http_requests": 39,
+    "prompt_tokens": 74145,
+    "completion_tokens": 3185,
+    "total_tokens": 77330
+  }
+}

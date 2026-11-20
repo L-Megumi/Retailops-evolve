@@ -1,6 +1,6 @@
 # RetailOps knowledge sources
 
-本批语料为人工核对后编写的条款摘要（`content_kind=curated_summary`），不是官方全文镜像。官方网页按一页一文档组织，合计 5 份官方文档、10 条摘要；另有 2 份内部说明、4 条说明，共 7 份文档、14 条条款。
+本批语料为人工核对后编写的条款摘要（`content_kind=curated_summary`），不是官方全文镜像。官方网页按一页一文档组织，覆盖京东、苏宁、淘宝、天猫、拼多多五个平台，合计 17 份官方文档、63 条摘要；另有 2 份内部说明、4 条说明，共 19 份文档、67 条条款。
 
 ## 来源与适用范围
 
@@ -12,7 +12,7 @@
 | jd-self-operated-shipping | [京东自营售后运费说明](https://help.jd.com/user/issue/131-496.html) | 京东发货自营商品的会员运费差异与快递垫付返还 |
 | suning-freight-disputes | [运费争议处理规范](https://rule.suning.com/ruleInfo/ruleInfoDetail/GZ100006683.htm) | 平台介入的质量问题运费及运费争议举证 |
 
-只保存与本次任务相关的短摘要，每个页面的两条摘要合计均控制在 200 个汉字以内。条款保留平台、渠道、时间窗口、品类和例外，不能跨范围套用。
+只保存与业务问题相关的精简摘要，不保存官方页面全文。条款保留平台、渠道、时间窗口、品类和例外，不能跨范围套用。
 
 ## 时间、版本与状态
 
@@ -50,4 +50,33 @@
 
 `kb-027` 与 `kb-028` 标记 `evaluation_layer=answer_support`：现有语料不能回答精确运费上限或银行卡到账小时数。只返回相关运费摘要的摘录模式，应单独报告检索结果，不计为完整答案已得到证据支持。
 
-检索召回在可回答题上计算；澄清、历史有效期和答案充分性分别评估。问题、正确条款 ID 和预期状态仅存放在 benchmarks 目录，不加入检索正文。没有执行模型调用，没有借用其他项目测试数字。
+检索召回在可回答题上计算；澄清、历史有效期和答案充分性分别评估。问题、正确条款 ID 和预期状态仅存放在 benchmarks 目录，不加入检索正文。真实模型实验和离线检索对照分别报告，不借用其他项目测试数字。
+
+## 五平台扩展批次
+
+以下资料于 2026-11-20 核对公开页面；摘要版本为 `curated-2026-11-20-v2`。
+
+| 文档 ID | 官方页面 | 收录 |
+| --- | --- | --- |
+| taobao-consumer | [淘宝消费者保障服务协议](https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201709261344_28562.html) | 5 条摘要 |
+| taobao-seller | [淘宝网卖家服务协议：关店与交易责任](https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201908081502_44434.html) | 2 条摘要 |
+| tmall-seven | [天猫七天无理由退换货公开服务说明](https://www.tmall.com/wow/seller/act/seven-day) | 5 条摘要 |
+| tmall-warranty | [天猫保修服务卖家版订购协议](https://terms.alicdn.com/legal-agreement/terms/b_end_product_protocol/20230914123010322/20230914123010322.html) | 4 条摘要 |
+| tmall-merchant | [天猫商户服务协议：保障、开票与退货费用](https://terms.alicdn.com/legal-agreement/terms/TD/TD201609271722_89275.html) | 4 条摘要 |
+| pdd-protection | [拼多多消费者保障计划（2026年修订）](https://www.yangkeduo.com/home/customer/) | 7 条摘要 |
+| pdd-help | [拼多多官方帮助中心：退换货流程与规则](https://www.yangkeduo.com/home/help/) | 5 条摘要 |
+| jd-cancel | [京东取消订单及退货退款说明：自营部分](https://help.jd.com/user/issue/130-256.html) | 4 条摘要 |
+| jd-coupon-return | [京东拒收后优惠券返还说明](https://help.jd.com/user/issue/130-481.html) | 4 条摘要 |
+| jd-luxury | [京东奢侈品类自营售后服务细则](https://help.jd.com/user/issue/325-927.html) | 4 条摘要 |
+| jd-building | [京东家装建材类第三方售后细则](https://help.jd.com/user/issue/330-1030.html) | 4 条摘要 |
+| suning-seven | [苏宁易购主站七天无理由退货规范](https://rule.suning.com/ruleInfo/ruleInfoDetail/GZ100003631.htm) | 5 条摘要 |
+
+淘宝消保协议明确生效日期 2024-09-12；拼多多消费者保障计划明确于 2026-01-18 修订施行。其余新增页面的生效日期未核实，保留为空，不以页面更新或采集日期替代生效日期。
+
+天猫七天无理由公开页未标出生效版本，按公开服务说明提供摘录，历史日期查询不使用该页。天猫保修协议是特定服务的卖家版订购协议，不能解释成所有商品自带延保；天猫商户协议中的软件服务费属于商家费用，不是消费者退款手续费。
+
+淘宝规则中心的七天无理由详情、天猫部分详细类目规范需登录或未取得正文，本批未导入二手转载。淘宝现有无理由退货条款来自消费者保障协议，未补写未核实的运费或精确时效。天猫国际、淘宝全球购、多多国际等跨境业务没有单独资料时返回证据不足。
+
+`benchmarks/knowledge/expanded.json` 新增 132 道检索题，含 26 道口语化问题。按整份来源文档分组：96 题开发集、36 题测试集；同条款的两种表达不跨组。全部政策文档仍在检索库中，问题与标签不入库。这是本项目人工编写的评测集，不是外部公共榜单。
+
+`live-v2.json` 是 24 道模型场景验收题，覆盖五平台回答、跨平台比较、日期澄清与证据不足。`challenge-015` 问具体截止日但缺确认收货日期，复核后预期为澄清，原始运行报告保留在 `model-public-initial.json`。

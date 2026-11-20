@@ -1,0 +1,44 @@
+{
+  "python": "Python 3.12.16",
+  "versions": {
+    "fastembed": "0.7.4",
+    "qdrant-client": "1.20.0",
+    "onnxruntime": "1.32.0",
+    "fastapi": "0.162.0"
+  },
+  "qdrant_server": "1.20.2",
+  "qdrant_endpoint": "127.0.0.1:6333",
+  "embedding_model": "BAAI/bge-small-zh-v1.5",
+  "dimension": 512,
+  "reranker": "BAAI/bge-reranker-base",
+  "reranker_execution": "ONNX CPU, 4 threads",
+  "corpus_counts": {
+    "jd": {
+      "documents": 8,
+      "clauses": 24
+    },
+    "suning": {
+      "documents": 2,
+      "clauses": 7
+    },
+    "retailops": {
+      "documents": 2,
+      "clauses": 4
+    },
+    "taobao": {
+      "documents": 2,
+      "clauses": 7
+    },
+    "tmall": {
+      "documents": 3,
+      "clauses": 13
+    },
+    "pinduoduo": {
+      "documents": 2,
+      "clauses": 12
+    }
+  },
+  "service": "systemd --user retailops-qdrant.service",
+  "linger_enabled": true,
+  "release_sha256": "7c3e956b97830a9faa6391540330380c2fa4aa2f92df99bd8d1880a703b922af"
+}

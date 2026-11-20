@@ -279,6 +279,516 @@
           ]
         }
       ]
+    },
+    {
+      "id": "taobao-consumer",
+      "title": "淘宝消费者保障服务协议",
+      "platform": "taobao",
+      "business_scope": "platform",
+      "source_type": "official_public_policy",
+      "source_url": "https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201709261344_28562.html",
+      "version": "curated-2026-11-20-v2",
+      "retrieved_at": "2026-11-20",
+      "effective_from": "2024-09-12",
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "taobao-consumer-description",
+          "title": "如实描述",
+          "text": "淘宝卖家应在商品页、店铺页及阿里旺旺等渠道如实描述商品或服务。",
+          "topics": []
+        },
+        {
+          "id": "taobao-consumer-return",
+          "title": "无理由退货",
+          "text": "淘宝卖家按法律和平台规则保障商品完好前提下的无理由退货权益。",
+          "topics": []
+        },
+        {
+          "id": "taobao-consumer-address",
+          "title": "退货地址",
+          "text": "淘宝卖家须准确更新退货地址、收件人与联系方式；信息错误导致的毁损、灭失风险及相关支出由卖家按规则承担。",
+          "topics": []
+        },
+        {
+          "id": "taobao-consumer-promise",
+          "title": "特色服务承诺",
+          "text": "淘宝卖家自愿承诺发货时间、破损补寄、免费换新等特色服务后，应按承诺履行。",
+          "topics": []
+        },
+        {
+          "id": "taobao-consumer-evidence",
+          "title": "维权举证",
+          "text": "淘宝受理消保维权时，卖家应按要求及时提供真实合法证据；平台依证据、规则和流程判定赔付义务。",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "id": "taobao-seller",
+      "title": "淘宝网卖家服务协议：关店与交易责任",
+      "platform": "taobao",
+      "business_scope": "platform",
+      "source_type": "official_public_policy",
+      "source_url": "https://terms.alicdn.com/legal-agreement/terms/suit_bu1_taobao/suit_bu1_taobao201908081502_44434.html",
+      "version": "curated-2026-11-20-v2",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "taobao-seller-closure",
+          "title": "关店后的售后",
+          "text": "淘宝店铺关停后，卖家仍应承担关停前交易的发货、退换货、质保维修及维权投诉处理责任。",
+          "topics": []
+        },
+        {
+          "id": "taobao-seller-orders",
+          "title": "协议终止后的订单",
+          "text": "淘宝卖家服务协议终止后，交易相对方要求继续履行存续期间的订单时，卖家仍应履约并承担相关损失或增加费用。",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "id": "tmall-seven",
+      "title": "天猫七天无理由退换货公开服务说明",
+      "platform": "tmall",
+      "business_scope": "platform",
+      "source_type": "official_public_policy",
+      "source_url": "https://www.tmall.com/wow/seller/act/seven-day",
+      "version": "curated-2026-11-20-v2",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "tmall-seven-condition",
+          "title": "申请前提",
+          "text": "天猫该服务面向适用商品：支付宝担保交易签收后七天内因主观原因申请，退货须满足二次销售要求，部分商品及类目除外。",
+          "topics": []
+        },
+        {
+          "id": "tmall-seven-clock",
+          "title": "七天起算",
+          "text": "天猫该说明按物流签收次日零时开始计时，满168小时为七天，须在该期限内提出申请。",
+          "topics": []
+        },
+        {
+          "id": "tmall-seven-freight",
+          "title": "主观退货运费",
+          "text": "天猫该服务下无理由退货或拒签通常由买家承担来回运费；包邮商品买家仅承担退回运费。",
+          "topics": []
+        },
+        {
+          "id": "tmall-seven-quality",
+          "title": "质量或描述不符",
+          "text": "天猫该说明中，商品质量问题或与网上描述不符导致退货，退货费用由卖家承担。",
+          "topics": []
+        },
+        {
+          "id": "tmall-seven-escalation",
+          "title": "申请平台处理",
+          "text": "符合该服务条件且期限内向卖家申请遭拒、无法联系或卖家停业时，可向天猫申请处理；申请金额限实际支付货款。",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "id": "tmall-warranty",
+      "title": "天猫保修服务卖家版订购协议",
+      "platform": "tmall",
+      "business_scope": "platform",
+      "source_type": "official_public_policy",
+      "source_url": "https://terms.alicdn.com/legal-agreement/terms/b_end_product_protocol/20230914123010322/20230914123010322.html",
+      "version": "curated-2026-11-20-v2",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "tmall-warranty-extension",
+          "title": "延长保修适用",
+          "text": "购买含延长保修服务的商品并选择该服务后，保障期内制造质量故障经审核符合条件，可获额度内维修。",
+          "topics": []
+        },
+        {
+          "id": "tmall-warranty-accident",
+          "title": "意外保修",
+          "text": "购买并选择意外保修服务的用户，保障期内符合约定的意外性能故障，经审核可获额度内一次维修。",
+          "topics": []
+        },
+        {
+          "id": "tmall-warranty-limit",
+          "title": "保修保障额度",
+          "text": "该协议中保修保障额度为消费者购买商品的实际支付金额，不含服务费及运费。",
+          "topics": []
+        },
+        {
+          "id": "tmall-warranty-service-fee",
+          "title": "卖家服务费退回",
+          "text": "含该保修服务的交易确认收货后收取卖家服务费；用户退货退款成功时，相应服务费自动退回卖家。",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "id": "tmall-merchant",
+      "title": "天猫商户服务协议：保障、开票与退货费用",
+      "platform": "tmall",
+      "business_scope": "platform",
+      "source_type": "official_public_policy",
+      "source_url": "https://terms.alicdn.com/legal-agreement/terms/TD/TD201609271722_89275.html",
+      "version": "curated-2026-11-20-v2",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "tmall-merchant-responsibility",
+          "title": "消费者保障主体",
+          "text": "天猫商户是消费者保障责任主体，应按平台规则履行基础保障、天猫无忧购及行业特色服务义务。",
+          "topics": []
+        },
+        {
+          "id": "tmall-merchant-invoice",
+          "title": "实际付款开票",
+          "text": "天猫商户应按买家在其店铺交易实际支付的金额开具合规发票。",
+          "topics": []
+        },
+        {
+          "id": "tmall-merchant-category-fee",
+          "title": "退货软件服务费",
+          "text": "发生退货且商户无过错时，天猫核实线上退款记录后，退还对应交易实时划扣的类目软件服务费。",
+          "topics": []
+        },
+        {
+          "id": "tmall-merchant-exit",
+          "title": "退出期间处理",
+          "text": "天猫确认终止协议后商户进入退出流程，三十天内仅可处理交易纠纷及与天猫的账务、发票结算。",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "id": "pdd-protection",
+      "title": "拼多多消费者保障计划（2026年修订）",
+      "platform": "pinduoduo",
+      "business_scope": "platform",
+      "source_type": "official_public_policy",
+      "source_url": "https://www.yangkeduo.com/home/customer/",
+      "version": "curated-2026-11-20-v2",
+      "retrieved_at": "2026-11-20",
+      "effective_from": "2026-01-18",
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "pdd-protection-authenticity",
+          "title": "正品承诺",
+          "text": "拼多多假冒品牌商品须商品页带有“假一赔十”标识，才可按该承诺向商家主张假一赔十。",
+          "topics": []
+        },
+        {
+          "id": "pdd-protection-quality",
+          "title": "质量与描述保障",
+          "text": "拼多多商品质量不符描述或法定标准时，可主张换货、退货退款及赔付；商家应如实描述。",
+          "topics": []
+        },
+        {
+          "id": "pdd-protection-delivery",
+          "title": "诚信发货",
+          "text": "拼多多商家须在规定时限真实发货，物流单号真实有效；违反承诺可申请售后及赔付。",
+          "topics": []
+        },
+        {
+          "id": "pdd-protection-seven",
+          "title": "七天退换与介入",
+          "text": "拼多多提供七天无理由退换货保障，法律排除情形除外；商家拒绝或设置障碍时可申请平台介入。",
+          "topics": []
+        },
+        {
+          "id": "pdd-protection-freight",
+          "title": "质量退货运费",
+          "text": "拼多多因质量问题退换货，申请页上传问题凭证且平台审核通过后，全部运费由商家承担。",
+          "topics": []
+        },
+        {
+          "id": "pdd-protection-deadline",
+          "title": "维权申请期限",
+          "text": "拼多多该计划要求在下单或拼单成功后至确认收货后15天内发起投诉或售后；逾期平台可不受理。",
+          "topics": []
+        },
+        {
+          "id": "pdd-protection-purpose",
+          "title": "真实消费范围",
+          "text": "拼多多该计划面向真实消费需求，不包括知假买假、牟利性打假或恶意购买维权等扰乱秩序情形。",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "id": "pdd-help",
+      "title": "拼多多官方帮助中心：退换货流程与规则",
+      "platform": "pinduoduo",
+      "business_scope": "platform",
+      "source_type": "official_public_policy",
+      "source_url": "https://www.yangkeduo.com/home/help/",
+      "version": "curated-2026-11-20-v2",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "pdd-help-contact",
+          "title": "先联系再寄回",
+          "text": "拼多多帮助页建议先联系商家或客服获取退货地址与流程；未联系自行退货导致商家收不到商品，可能不予处理。",
+          "topics": []
+        },
+        {
+          "id": "pdd-help-cod",
+          "title": "退货到付",
+          "text": "拼多多帮助页不支持未经协商的退货到付；未协商就到付，应取回重寄，相关运费买家承担。",
+          "topics": []
+        },
+        {
+          "id": "pdd-help-amount",
+          "title": "退款金额",
+          "text": "拼多多帮助页规定，申请退款金额不得高于实际付款金额。",
+          "topics": []
+        },
+        {
+          "id": "pdd-help-personal",
+          "title": "个人原因运费",
+          "text": "拼多多七天无理由退货按该帮助页由买家承担退回运费；质量、发错或丢件导致退换货的运费由商家承担。",
+          "topics": []
+        },
+        {
+          "id": "pdd-help-exchange",
+          "title": "换货处理时限",
+          "text": "拼多多帮助页规定，商家收回换货商品后应在三天内安排换货；签收次日零时起满72小时，逾期可申请平台介入。",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "id": "jd-cancel",
+      "title": "京东取消订单及退货退款说明：自营部分",
+      "platform": "jd",
+      "business_scope": "self_operated",
+      "source_type": "official_public_policy",
+      "source_url": "https://help.jd.com/user/issue/130-256.html",
+      "version": "curated-2026-11-20-v2",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "jd-cancel-before-outbound",
+          "title": "未出库取消审核",
+          "text": "京东自营在线支付订单未出库前提交取消申请，帮助页说明为30分钟后完成退款审核，并非承诺银行卡同时到账。",
+          "topics": []
+        },
+        {
+          "id": "jd-cancel-warehouse",
+          "title": "退库后退款",
+          "text": "京东自营商品出库后取消或拒收，需待商品退库后系统退款；拒收后系统自动提交取消申请。",
+          "topics": []
+        },
+        {
+          "id": "jd-cancel-original",
+          "title": "退款路径",
+          "text": "京东在线支付及POS刷卡订单涉及银行信息时按原卡原退；企业转账需客服确认，退回原支付公司账户。",
+          "topics": []
+        },
+        {
+          "id": "jd-cancel-ecard",
+          "title": "京东卡退款",
+          "text": "京东卡或京东E卡支付部分不直接兑换现金，帮助页说明约一个工作日返还原卡；周期可能受相关机构影响。",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "id": "jd-coupon-return",
+      "title": "京东拒收后优惠券返还说明",
+      "platform": "jd",
+      "business_scope": "platform",
+      "source_type": "official_public_policy",
+      "source_url": "https://help.jd.com/user/issue/130-481.html",
+      "version": "curated-2026-11-20-v2",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "jd-coupon-return-unsplit",
+          "title": "未拆单退券",
+          "text": "京东使用京券或东券的未拆分订单，取消后系统自动返还相应优惠券。",
+          "topics": []
+        },
+        {
+          "id": "jd-coupon-return-split-jing",
+          "title": "拆单京券",
+          "text": "京东京券订单拆分后须取消全部子单；限品类、店铺京券返还，平台专享京券不返，全品类京券由系统判断返等值京豆。",
+          "topics": []
+        },
+        {
+          "id": "jd-coupon-return-split-dong",
+          "title": "拆单东券",
+          "text": "京东东券订单拆分后取消全部子单，系统自动返还相应东券。",
+          "topics": []
+        },
+        {
+          "id": "jd-coupon-return-promotion",
+          "title": "活动券例外",
+          "text": "京东促销活动领取的优惠券，取消后是否返还以具体活动规则为准，也可咨询客服。",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "id": "jd-luxury",
+      "title": "京东奢侈品类自营售后服务细则",
+      "platform": "jd",
+      "business_scope": "self_operated",
+      "source_type": "official_public_policy",
+      "source_url": "https://help.jd.com/user/issue/325-927.html",
+      "version": "curated-2026-11-20-v2",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "jd-luxury-condition",
+          "title": "适用品类与完好",
+          "text": "京东自营奢侈品无理由退货须在规定七日内、商品及附件完好且页面支持；例外及特殊规则以详情页为准。",
+          "topics": []
+        },
+        {
+          "id": "jd-luxury-packaging",
+          "title": "原包装与附件",
+          "text": "京东该奢侈品细则要求未使用、品相全新，附件标识及外包装完整；缺原包装无法办理七天无理由退货。",
+          "topics": []
+        },
+        {
+          "id": "jd-luxury-gifts",
+          "title": "赠品与发票",
+          "text": "京东该奢侈品退货应一并返回附件、发票、包装和赠品，电子发票无需返回；赠品缺失影响全额退款。",
+          "topics": []
+        },
+        {
+          "id": "jd-luxury-underwear",
+          "title": "贴身衣物例外",
+          "text": "京东该奢侈品细则中的贴身衣物出于卫生考虑，签收后非质量问题不接受退换货。",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "id": "jd-building",
+      "title": "京东家装建材类第三方售后细则",
+      "platform": "jd",
+      "business_scope": "marketplace",
+      "source_type": "official_public_policy",
+      "source_url": "https://help.jd.com/user/issue/330-1030.html",
+      "version": "curated-2026-11-20-v2",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "jd-building-custom",
+          "title": "定制与施工结余",
+          "text": "京东第三方家装建材定制商品不支持七日无理由；施工结余能否退货须看商品详情页。",
+          "topics": []
+        },
+        {
+          "id": "jd-building-quality",
+          "title": "质量举证与运费",
+          "text": "京东第三方建材质量问题须提供证据，经卖家确认后接受退换货，按审核的地址及方式妥善寄回，运费卖家承担。",
+          "topics": []
+        },
+        {
+          "id": "jd-building-difference",
+          "title": "色差与尺寸误差",
+          "text": "京东第三方建材因拍摄、光线、显示器形成的色差，以及相关标准允许范围内的测量误差，不归入该细则的质量问题。",
+          "topics": []
+        },
+        {
+          "id": "jd-building-description",
+          "title": "描述不符责任",
+          "text": "京东第三方建材因卖家原因尺寸错误或样式、材质、服务与页面不符，卖家应履约；因此退换货的运费卖家承担。",
+          "topics": []
+        }
+      ]
+    },
+    {
+      "id": "suning-seven",
+      "title": "苏宁易购主站七天无理由退货规范",
+      "platform": "suning",
+      "business_scope": "platform",
+      "source_type": "official_public_policy",
+      "source_url": "https://rule.suning.com/ruleInfo/ruleInfoDetail/GZ100003631.htm",
+      "version": "curated-2026-11-20-v2",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "suning-seven-scope",
+          "title": "主站适用范围",
+          "text": "苏宁该规范适用于主站；特卖、苏宁拼购、苏宁国际另有规则，不直接适用本规范。",
+          "topics": []
+        },
+        {
+          "id": "suning-seven-clock",
+          "title": "七天计时与完好",
+          "text": "苏宁带七天无理由标识的商品，签收次日零时起满168小时内、商品完好可申请；合理查验开包装不影响完好。",
+          "topics": []
+        },
+        {
+          "id": "suning-seven-freight",
+          "title": "包邮及满额包邮",
+          "text": "苏宁无理由退货，包邮商品买家仅付退回运费；未包邮或部分退货后不满足包邮条件时买家承担所有邮费，另约从约。",
+          "topics": []
+        },
+        {
+          "id": "suning-seven-exceptions",
+          "title": "不适用及确认",
+          "text": "苏宁该规范排除定制、鲜活易腐、数字化及报刊等商品；部分拆封、激活或试用后不宜退的商品须购买时确认。",
+          "topics": []
+        },
+        {
+          "id": "suning-seven-promise",
+          "title": "更优承诺",
+          "text": "苏宁鼓励商家提供更长退货期限或更优完好标准；低于法律或平台要求、降低消费者权益的承诺无效。",
+          "topics": []
+        }
+      ]
     }
   ]
 }

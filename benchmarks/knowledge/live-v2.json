@@ -1,0 +1,444 @@
+[
+  {
+    "id": "challenge-001",
+    "query": "淘宝店给我的收件人电话是空号，包裹送不到又坏了，这笔损失算谁的？",
+    "platforms": [
+      "taobao"
+    ],
+    "business_scope": "platform",
+    "category": "colloquial_retrieval",
+    "split": "dev",
+    "source_group": "taobao-consumer",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "taobao"
+    ],
+    "expected_chunk_ids": [
+      "taobao-consumer::taobao-consumer-address"
+    ],
+    "expected_clause_ids": [
+      "taobao-consumer-address"
+    ],
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "challenge-002",
+    "query": "淘宝店下单前说碎了就再寄一份，真碎了却说那只是宣传，能这样吗？",
+    "platforms": [
+      "taobao"
+    ],
+    "business_scope": "platform",
+    "category": "colloquial_retrieval",
+    "split": "dev",
+    "source_group": "taobao-consumer",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "taobao"
+    ],
+    "expected_chunk_ids": [
+      "taobao-consumer::taobao-consumer-promise"
+    ],
+    "expected_clause_ids": [
+      "taobao-consumer-promise"
+    ],
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "challenge-004",
+    "query": "淘宝店已经不营业了，我半年前买的机器还在质保，商家能直接不管吗？",
+    "platforms": [
+      "taobao"
+    ],
+    "business_scope": "platform",
+    "category": "colloquial_retrieval",
+    "split": "test",
+    "source_group": "taobao-seller",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "taobao"
+    ],
+    "expected_chunk_ids": [
+      "taobao-seller::taobao-seller-closure"
+    ],
+    "expected_clause_ids": [
+      "taobao-seller-closure"
+    ],
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "challenge-006",
+    "query": "天猫周一下午收的包裹，无理由退货的倒计时从周一下午就开始吗？",
+    "platforms": [
+      "tmall"
+    ],
+    "business_scope": "platform",
+    "category": "colloquial_retrieval",
+    "split": "dev",
+    "source_group": "tmall-seven",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "tmall"
+    ],
+    "expected_chunk_ids": [
+      "tmall-seven::tmall-seven-clock"
+    ],
+    "expected_clause_ids": [
+      "tmall-seven-clock"
+    ],
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "challenge-008",
+    "query": "天猫页面说是纯棉，寄来的成分不是，我寄还的快递钱应该找谁？",
+    "platforms": [
+      "tmall"
+    ],
+    "business_scope": "platform",
+    "category": "colloquial_retrieval",
+    "split": "dev",
+    "source_group": "tmall-seven",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "tmall"
+    ],
+    "expected_chunk_ids": [
+      "tmall-seven::tmall-seven-quality"
+    ],
+    "expected_clause_ids": [
+      "tmall-seven-quality"
+    ],
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "challenge-009",
+    "query": "天猫给这个商品买的保修，算能修多少钱时，另外付的服务费和快递钱也计入吗？",
+    "platforms": [
+      "tmall"
+    ],
+    "business_scope": "platform",
+    "category": "colloquial_retrieval",
+    "split": "dev",
+    "source_group": "tmall-warranty",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "tmall"
+    ],
+    "expected_chunk_ids": [
+      "tmall-warranty::tmall-warranty-limit"
+    ],
+    "expected_clause_ids": [
+      "tmall-warranty-limit"
+    ],
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "challenge-011",
+    "query": "天猫标价500，优惠后只付了400，店铺票上应该写哪个数？",
+    "platforms": [
+      "tmall"
+    ],
+    "business_scope": "platform",
+    "category": "colloquial_retrieval",
+    "split": "test",
+    "source_group": "tmall-merchant",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "tmall"
+    ],
+    "expected_chunk_ids": [
+      "tmall-merchant::tmall-merchant-invoice"
+    ],
+    "expected_clause_ids": [
+      "tmall-merchant-invoice"
+    ],
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "challenge-013",
+    "query": "拼多多买的东西确实坏了，我拍照片在申请页上传并通过审核，来回寄的钱谁掏？",
+    "platforms": [
+      "pinduoduo"
+    ],
+    "business_scope": "platform",
+    "category": "colloquial_retrieval",
+    "split": "dev",
+    "source_group": "pdd-protection",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "pinduoduo"
+    ],
+    "expected_chunk_ids": [
+      "pdd-protection::pdd-protection-freight"
+    ],
+    "expected_clause_ids": [
+      "pdd-protection-freight"
+    ],
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "challenge-014",
+    "query": "拼多多买到了假的品牌货，我想要十倍补偿，是否还得看页面有没有对应承诺？",
+    "platforms": [
+      "pinduoduo"
+    ],
+    "business_scope": "platform",
+    "category": "colloquial_retrieval",
+    "split": "dev",
+    "source_group": "pdd-protection",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "pinduoduo"
+    ],
+    "expected_chunk_ids": [
+      "pdd-protection::pdd-protection-authenticity"
+    ],
+    "expected_clause_ids": [
+      "pdd-protection-authenticity"
+    ],
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "challenge-015",
+    "query": "拼多多拼成后我手动点了收货，现在还能向平台投诉到哪一天？",
+    "platforms": [
+      "pinduoduo"
+    ],
+    "business_scope": "platform",
+    "category": "clarification",
+    "split": "dev",
+    "source_group": "pdd-protection",
+    "expected_status": "needs_clarification",
+    "expected_platforms": [],
+    "expected_chunk_ids": [],
+    "expected_clause_ids": [],
+    "evaluation_layer": "answer_support",
+    "annotation_note": "用户问具体截止日期，未提供确认收货日期，应先澄清；检索题仍评估期限条款召回。"
+  },
+  {
+    "id": "challenge-017",
+    "query": "拼多多我寄回去换另一件，对面签收后一直没有重发，什么时候能让平台处理？",
+    "platforms": [
+      "pinduoduo"
+    ],
+    "business_scope": "platform",
+    "category": "colloquial_retrieval",
+    "split": "dev",
+    "source_group": "pdd-help",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "pinduoduo"
+    ],
+    "expected_chunk_ids": [
+      "pdd-help::pdd-help-exchange"
+    ],
+    "expected_clause_ids": [
+      "pdd-help-exchange"
+    ],
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "challenge-018",
+    "query": "京东自营包裹到了我没接，订单是不是要等东西回到仓库才退钱？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "self_operated",
+    "category": "colloquial_retrieval",
+    "split": "test",
+    "source_group": "jd-cancel",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "jd"
+    ],
+    "expected_chunk_ids": [
+      "jd-cancel::jd-cancel-warehouse"
+    ],
+    "expected_clause_ids": [
+      "jd-cancel-warehouse"
+    ],
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "challenge-019",
+    "query": "京东自营用礼品E卡抵的部分，退掉订单后能不能直接提现到储蓄卡？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "self_operated",
+    "category": "colloquial_retrieval",
+    "split": "test",
+    "source_group": "jd-cancel",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "jd"
+    ],
+    "expected_chunk_ids": [
+      "jd-cancel::jd-cancel-ecard"
+    ],
+    "expected_clause_ids": [
+      "jd-cancel-ecard"
+    ],
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "challenge-025",
+    "query": "苏宁原本凑够金额不用付快递钱，退掉一部分后凑不够了，寄来那趟也要我出吗？",
+    "platforms": [
+      "suning"
+    ],
+    "business_scope": "platform",
+    "category": "colloquial_retrieval",
+    "split": "dev",
+    "source_group": "suning-seven",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "suning"
+    ],
+    "expected_chunk_ids": [
+      "suning-seven::suning-seven-freight"
+    ],
+    "expected_clause_ids": [
+      "suning-seven-freight"
+    ],
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "challenge-026",
+    "query": "苏宁我只把盒子打开检查，没有不合理使用，商家能一概说不完整不给退吗？",
+    "platforms": [
+      "suning"
+    ],
+    "business_scope": "platform",
+    "category": "colloquial_retrieval",
+    "split": "dev",
+    "source_group": "suning-seven",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "suning"
+    ],
+    "expected_chunk_ids": [
+      "suning-seven::suning-seven-clock"
+    ],
+    "expected_clause_ids": [
+      "suning-seven-clock"
+    ],
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "kb-018",
+    "query": "我在京东申请七天无理由退货，退回运费由谁承担？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": null,
+    "expected_clause_ids": [],
+    "category": "scope",
+    "expected_status": "needs_clarification",
+    "expected_platforms": []
+  },
+  {
+    "id": "kb-024",
+    "query": "小米商城的质量问题退货寄回运费由谁承担？",
+    "platforms": [],
+    "business_scope": null,
+    "expected_clause_ids": [],
+    "category": "unanswerable",
+    "expected_status": "insufficient_evidence",
+    "expected_platforms": []
+  },
+  {
+    "id": "kb-025",
+    "query": "请查2020年1月1日适用的京东自营误购退货运费政策。",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "self_operated",
+    "expected_clause_ids": [],
+    "category": "unanswerable",
+    "expected_status": "insufficient_evidence",
+    "expected_platforms": [],
+    "as_of": "2020-01-01"
+  },
+  {
+    "id": "kb-027",
+    "query": "苏宁易购质量问题退货，我垫了50元，政策规定的报销金额上限具体是多少？",
+    "platforms": [
+      "suning"
+    ],
+    "business_scope": "platform",
+    "expected_clause_ids": [],
+    "category": "unanswerable",
+    "expected_status": "insufficient_evidence",
+    "expected_platforms": [],
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "kb-028",
+    "query": "京东自营商品退款成功后，资金精确需要几个小时到银行卡？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "self_operated",
+    "expected_clause_ids": [],
+    "category": "unanswerable",
+    "expected_status": "insufficient_evidence",
+    "expected_platforms": [],
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "v2-cross-freight",
+    "query": "比较天猫包邮商品七天无理由退货和拼多多七天无理由退货的寄回运费由谁承担。",
+    "platforms": [
+      "tmall",
+      "pinduoduo"
+    ],
+    "expected_status": "completed",
+    "expected_platforms": [
+      "tmall",
+      "pinduoduo"
+    ],
+    "expected_clause_ids": [
+      "tmall-seven-freight",
+      "pdd-help-personal"
+    ],
+    "category": "comparison",
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "v2-cross-quality",
+    "query": "比较天猫商品质量问题退货与拼多多质量问题退货审核通过后，寄回运费分别由谁承担？",
+    "platforms": [
+      "tmall",
+      "pinduoduo"
+    ],
+    "expected_status": "completed",
+    "expected_platforms": [
+      "tmall",
+      "pinduoduo"
+    ],
+    "expected_clause_ids": [
+      "tmall-seven-quality",
+      "pdd-protection-freight"
+    ],
+    "category": "comparison",
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "v2-international",
+    "query": "天猫国际商品退货政策",
+    "platforms": [],
+    "expected_status": "insufficient_evidence",
+    "expected_platforms": [],
+    "expected_clause_ids": [],
+    "category": "unanswerable"
+  },
+  {
+    "id": "v2-pdd-history",
+    "query": "请查2020年1月1日适用的拼多多质量问题退货运费规则",
+    "platforms": [],
+    "expected_status": "insufficient_evidence",
+    "expected_platforms": [],
+    "expected_clause_ids": [],
+    "category": "unanswerable"
+  }
+]

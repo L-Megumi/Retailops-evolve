@@ -63,6 +63,16 @@ class KnowledgeServiceTests(unittest.TestCase):
         self.assertIn("needs_input", stream)
         self.assertIn("event: done", stream)
 
+    def test_expanded_platforms_complete_through_api_with_scoped_sources(self):
+        for platform, query in (("taobao", "淘宝卖家给错退货地址怎么办？"),
+                                ("tmall", "天猫包邮商品无理由退货运费谁出？"),
+                                ("pinduoduo", "拼多多质量问题退货运费谁出？")):
+            task_id, task = self.run_task({"task": query, "platforms": [platform]})
+            self.assertEqual(task["status"], "succeeded", task)
+            self.assertTrue(task["result"]["citations"])
+            self.assertEqual({c["platform"] for c in task["result"]["citations"]}, {platform})
+            self.assertIn("event: done", self.client.get(f"/tasks/{task_id}/events", headers=self.auth).text)
+
     def test_scope_schema_auth_and_legacy_input_contract(self):
         body = {"mode": "assistant", "task": "京东退货运费"}
         self.assertEqual(self.client.post("/tasks", json=body).status_code, 401)

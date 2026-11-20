@@ -1,0 +1,13 @@
+[Unit]
+Description=RetailOps Qdrant vector database
+After=network.target
+
+[Service]
+ExecStart=%h/.local/opt/retailops-qdrant-v1.20.2-musl/qdrant --config-path %h/.config/retailops/qdrant.yaml
+WorkingDirectory=%h/.local/share/retailops-qdrant
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+
+[Install]
+WantedBy=default.target

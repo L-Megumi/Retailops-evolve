@@ -63,7 +63,7 @@ def build_parser() -> argparse.ArgumentParser:
     ask = sub.add_parser("ask", help="answer scoped policy questions and combined retail analysis")
     ask.add_argument("--task", required=True)
     ask.add_argument("--knowledge", type=Path, default=Path("knowledge/retailops-policies.json"))
-    ask.add_argument("--platform", choices=("jd", "suning", "retailops"), action="append", default=[])
+    ask.add_argument("--platform", choices=("jd", "suning", "taobao", "tmall", "pinduoduo", "retailops"), action="append", default=[])
     ask.add_argument("--scope", choices=("marketplace", "self_operated", "platform", "internal"))
     ask.add_argument("--as-of", help="policy effective date in YYYY-MM-DD")
     ask.add_argument("--orders", type=Path)
@@ -75,19 +75,43 @@ def build_parser() -> argparse.ArgumentParser:
     ask.add_argument("--required-result", action="append", default=[])
     ask.add_argument("--evolve", action="store_true")
     ask.add_argument("--output", type=Path)
+    for entry in (ask, serve):
+        entry.add_argument("--qdrant-url", help="attach a published persistent vector snapshot")
+        entry.add_argument("--vector-alias", default="retailops_policy")
+        entry.add_argument("--reranker-model", help="optional FastEmbed cross-encoder, e.g. BAAI/bge-reranker-base")
+    index = sub.add_parser("knowledge-index", help="publish a versioned Qdrant knowledge snapshot")
+    index.add_argument("--knowledge", type=Path, default=Path("knowledge/retailops-policies.json"))
+    index.add_argument("--embedding-model", default="BAAI/bge-small-zh-v1.5")
+    index.add_argument("--qdrant-url", default="http://127.0.0.1:6333")
+    index.add_argument("--vector-alias", default="retailops_policy")
+    index.add_argument("--activate", help="rollback alias to an existing snapshot collection")
     return parser
 
 
 def main() -> int:
     args = build_parser().parse_args()
+    if args.command == "knowledge-index":
+        from .knowledge import FastEmbedEncoder, KnowledgeStore
+        from .vector_index import QdrantVectorIndex
+        index = QdrantVectorIndex(args.qdrant_url, alias=args.vector_alias)
+        if args.activate:
+            index.activate(args.activate)
+            print(json.dumps({"alias": args.vector_alias, "active": args.activate}))
+        else:
+            store = KnowledgeStore.from_path(args.knowledge, encoder=FastEmbedEncoder(args.embedding_model))
+            print(json.dumps(index.publish(store), ensure_ascii=False, indent=2))
+        return 0
     if args.command == "ask":
         from .assistant import RetailOpsAssistant
-        from .knowledge import FastEmbedEncoder, KnowledgeStore
+        from .knowledge import FastEmbedEncoder, FastEmbedReranker, KnowledgeStore
+        from .vector_index import QdrantVectorIndex
         if bool(args.orders) != bool(args.refunds):
             raise SystemExit("--orders and --refunds must be supplied together")
         model = OpenAICompatibleModel.deepseek_from_env() if args.planner == "model" or args.evolve else None
         encoder = FastEmbedEncoder(args.embedding_model) if args.embedding_model else None
-        store = KnowledgeStore.from_path(args.knowledge, encoder=encoder)
+        vector = QdrantVectorIndex(args.qdrant_url, alias=args.vector_alias) if args.qdrant_url else None
+        store = KnowledgeStore.from_path(args.knowledge, encoder=encoder, vector_index=vector,
+                                        reranker=FastEmbedReranker(args.reranker_model) if args.reranker_model else None)
         manager = PluginManager.from_manifest(args.plugin_registry) if args.plugin_registry.exists() else None
         if args.evolve and manager is None:
             raise SystemExit("--evolve requires an existing --plugin-registry")
@@ -120,7 +144,8 @@ def main() -> int:
         uvicorn.run(create_app(data_root=args.data_root, manifest=args.plugin_registry,
                                state_path=args.state, allow_evolution=args.allow_evolution,
                                knowledge_path=args.knowledge, embedding_model=args.embedding_model,
-                               retrieval_mode=args.retrieval_mode),
+                               retrieval_mode=args.retrieval_mode, qdrant_url=args.qdrant_url,
+                               vector_alias=args.vector_alias, reranker_model=args.reranker_model),
                     host=args.host, port=args.port)
         return 0
     if args.evolve and not args.plugin_registry:

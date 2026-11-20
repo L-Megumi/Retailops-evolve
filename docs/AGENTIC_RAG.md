@@ -4,9 +4,9 @@ RetailOps 现在提供独立的 `ask` 入口和服务端 `assistant` 模式。�
 
 ## 知识库
 
-首批语料位于 `knowledge/retailops-policies.json`：京东、苏宁共 5 份官方公开资料的 10 条人工核对摘要，另有 2 份项目规格/演示操作规范的 4 条条款。来源及适用范围见 `knowledge/SOURCES.md`。
+语料位于 `knowledge/retailops-policies.json`：京东、苏宁、淘宝、天猫、拼多多共 17 份官方公开资料、63 条人工核对摘要，另有 2 份项目规格/演示操作规范、4 条条款，共 19 份文档、67 条条款。来源及适用范围见 `knowledge/SOURCES.md`。
 
-平台编码为 `jd`、`suning`、`retailops`。京东自营与第三方分别检索；苏宁当前资料是平台通用运费争议规范；内部数据分析口径使用独立范围。缺少平台/渠道、文字与参数冲突时返回澄清。明确的多平台比较分别检索、分别引用。
+平台编码为 `jd`、`suning`、`taobao`、`tmall`、`pinduoduo`、`retailops`。京东自营与第三方分别检索；其他平台使用已收录的适用规则；内部数据分析口径使用独立范围。缺少平台/渠道、文字与参数冲突时返回澄清。明确的多平台比较分别检索、分别引用。未收录的跨境等特殊业务返回证据不足。
 
 每份文档包含来源、版本、采集时间、有效期和状态。采集时间不代表政策生效时间；未知生效日期保留为空，不能支持历史有效性判断。条款保留内容类型、标题、ID、内容哈希和来源 URL。官方页面使用精简摘要，引用可跳到原页面核对。
 
@@ -19,7 +19,39 @@ RetailOps 现在提供独立的 `ask` 入口和服务端 `assistant` 模式。�
 5. 需要计算时调用已有 `RetailOpsAgent`，使用原有业务校验与插件运行时。知识缺口不会直接触发指标插件生成。
 6. 生成带引用的回答，验证引用 ID 存在、平台及渠道一致；同时保留原始条款和计算证据。引用语义支持通过人工标注与模型实验评估。
 
-向量模型使用 FastEmbed 的 ONNX 运行时，默认候选为 `BAAI/bge-small-zh-v1.5`，CPU 推理。当前小型语料使用内存索引，向量按需缓存；未配置编码器时，`hybrid` 会明确报告 BM25 回退。文档文件是持久源，修改并验证后重启服务重建索引，语料哈希随内容和元数据改变。
+向量模型使用 FastEmbed 的 ONNX 运行时，`BAAI/bge-small-zh-v1.5` 输出 512 维向量，CPU 推理。指定 `--qdrant-url` 后使用 Qdrant 持久向量检索；不指定时保留内存索引用于离线对照。未配置编码器时，`hybrid` 明确报告 BM25 回退。JSON 是知识源，SQLite 保存任务状态，Qdrant 保存派生向量及过滤元数据。
+
+## 持久索引与增量发布
+
+在 ljh3 使用 Qdrant 1.20.2 的官方 Linux musl 静态发布包，避开主机 GLIBC 版本限制；由 `retailops-qdrant.service` 用户服务管理，仅监听 `127.0.0.1:6333/6334`。数据目录为 `/home/ljh/.local/share/retailops-qdrant`。新服务器可使用 `python deploy/qdrant/install.py` 安装；安装脚本校验固定版本及下载校验和，不覆盖已有配置。
+
+```bash
+python -m pip install -e '.[rag,vector,service,test]'
+export RETAILOPS_EMBEDDING_CACHE=/home/ljh/.cache/retailops-embeddings
+python -m retailops_agent.cli knowledge-index
+```
+
+每次发布将语料哈希、向量模型及输入格式绑定到不可变 Collection：复用上一快照中输入哈希相同的向量，仅对新增或变化文本重新编码，再写入完整新快照。元数据单独变化无需重新编码；删除条款不进入新快照。记录数和身份校验成功后，使用 Qdrant 原子别名切换发布；失败不切换，可重试未发布的中断构建。
+
+查询只打开与当前 JSON 匹配的活动快照，并在运行期间固定 Collection，避免发布期间混读版本。Qdrant 在召回前过滤平台、渠道、状态和有效期；应用再次核对返回 ID 的范围。别名回滚后，须同时恢复对应 JSON 并重新加载应用；已经运行的请求继续使用原固定快照。旧快照暂保留，不自动删除。
+
+```bash
+# 查询已发布的持久索引
+python -m retailops_agent.cli ask --task '拼多多质量问题退货运费由谁承担？' \
+  --platform pinduoduo --embedding-model BAAI/bge-small-zh-v1.5 \
+  --qdrant-url http://127.0.0.1:6333 --planner model
+
+# 回滚入口；COLLECTION 是 knowledge-index 输出中的某个历史快照名
+python -m retailops_agent.cli knowledge-index --activate "$COLLECTION"
+```
+
+索引发布由一个管理进程串行执行；并发查询使用固定快照。当前 BM25 在应用中计算，Qdrant 承担稠密向量召回，RRF 在应用中融合，没有把中文分词或重排序交给数据库。
+
+## 重排序与配置选择
+
+`--reranker-model BAAI/bge-reranker-base` 启用真实本地 Cross-Encoder，对已经过范围过滤的候选进行精排。默认候选窗口至少 20 条，返回前 5 条；命中后可沿现有 `read_document` 扩读同文档相邻条款。并未启用自动抓取或无条件扩写用户问题。
+
+132 道人工编写检索题包含 26 道口语化问题，按来源文档分成 96 道开发题和 36 道测试题。对照中混合检索 Recall@3 为 131/132，BM25 为 129/132；精排提高 MRR@5，但总体 Recall@5 从 132/132 下降到 131/132，CPU P95 约 757 ms。因此默认保持混合检索，将精排作为显式选项。详细数据见 `artifacts/rag-expansion-20261120`，不能把检索召回率解释成回答准确率。
 
 ## 命令行
 
@@ -56,6 +88,7 @@ python -m retailops_agent.cli ask \
 python -m retailops_agent.cli serve \
   --knowledge knowledge/retailops-policies.json \
   --embedding-model BAAI/bge-small-zh-v1.5 \
+  --qdrant-url http://127.0.0.1:6333 \
   --data-root data --state state/tasks.sqlite3
 ```
 
@@ -97,4 +130,15 @@ PYTHONPATH=src python experiments/evaluate_knowledge.py \
 - [WeKnora 文档阅读工具](https://github.com/Tencent/WeKnora/blob/main/internal/agent/tools/read_document.go)：命中后按需扩读。
 - [RAGFlow 证据登记](https://github.com/infiniflow/ragflow/blob/main/internal/agentic_rag/evidence_registry.go)：稳定证据标识、去重与引用映射。
 
-下一阶段可以评测重排序、可持久向量索引和文档增量刷新；首版未启用联网自动检索、知识图谱或真实退款交易操作。
+新增评测入口：
+
+```bash
+PYTHONPATH=src python experiments/evaluate_retrieval_v2.py \
+  --output artifacts/rag-expansion-20261120/retrieval.json
+PYTHONPATH=src python experiments/verify_qdrant.py \
+  --output artifacts/rag-expansion-20261120/qdrant-integration.json
+PYTHONPATH=src python experiments/prepare_public_policy_eval.py \
+  --questions benchmarks/knowledge/live-v2.json --output runs/public-policy-v2
+```
+
+下一步适合增加更长的真实政策章节、更多干扰条款及独立人工问题，继续评测切分方式和按需精排策略。当前版本未启用联网自动检索、知识图谱或真实退款交易操作。

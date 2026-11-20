@@ -1,0 +1,32 @@
+{
+  "reviewed_completed_scenarios": [
+    "challenge-001",
+    "challenge-002",
+    "challenge-004",
+    "challenge-006",
+    "challenge-008",
+    "challenge-009",
+    "challenge-011",
+    "challenge-013",
+    "challenge-014",
+    "challenge-017",
+    "challenge-018",
+    "challenge-019",
+    "challenge-025",
+    "challenge-026",
+    "v2-cross-freight",
+    "v2-cross-quality"
+  ],
+  "checks": [
+    "direct answer supported by cited summary",
+    "platform and channel applicability retained",
+    "quality-return conditions not replaced by seven-day subjective-return conditions",
+    "no invented refund amount or bank settlement deadline"
+  ],
+  "finding": "16 completed answers reviewed; no obvious unsupported platform, amount or timing claim found in final run",
+  "initial_annotation_correction": {
+    "id": "challenge-015",
+    "reason": "asks for a calendar deadline without the receipt date; expected clarification instead of a completed date answer"
+  },
+  "not_a_production_accuracy_estimate": true
+}
