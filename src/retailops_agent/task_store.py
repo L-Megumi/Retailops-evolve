@@ -89,6 +89,10 @@ class TaskStore:
     def finish(self, task_id: str, owner: str, *, result: dict | None = None,
                error: str | None = None) -> bool:
         status = "succeeded" if result is not None and result.get("ok") else "failed"
+        if result is not None and result.get("status") == "needs_clarification":
+            status = "needs_input"
+        elif result is not None and result.get("status") == "insufficient_evidence":
+            status = "insufficient_evidence"
         with self.connect() as db:
             return db.execute("UPDATE tasks SET status=?,result=?,error=?,updated=? WHERE id=? AND owner=? AND status='running'",
                               (status, json.dumps(result, ensure_ascii=False) if result else None,

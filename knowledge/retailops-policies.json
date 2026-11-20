@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "documents": [
+    {
+      "id": "jd-marketplace-shipping",
+      "title": "第三方卖家商品售后服务运费规则",
+      "platform": "jd",
+      "business_scope": "marketplace",
+      "source_type": "official_public_policy",
+      "source_url": "https://help.jd.com/user/issue/410-2968.html",
+      "version": "curated-2026-11-20-v1",
+      "retrieved_at": "2026-11-20T10:19:57+08:00",
+      "effective_from": null,
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "jd_marketplace_no_reason_shipping",
+          "title": "七天无理由退货运费",
+          "text": "签收后7天内，支持七天无理由退货的京东第三方商品：包邮订单由买家付退回运费；非包邮订单由买家付双向运费。",
+          "topics": [
+            "七天无理由",
+            "包邮",
+            "运费",
+            "退货"
+          ]
+        },
+        {
+          "id": "jd_marketplace_nonbuyer_shipping",
+          "title": "非买家原因退换货运费",
+          "text": "签收后7天内，京东第三方商品因质量、物流损坏、缺件或描述不符退换货：包邮订单由卖家付退回运费；非包邮订单由卖家付双向运费。",
+          "topics": [
+            "质量问题",
+            "物流损坏",
+            "缺件",
+            "退换货",
+            "运费"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jd-marketplace-office",
+      "title": "软件、电脑办公类商品售后服务细则（三方）",
+      "platform": "jd",
+      "business_scope": "marketplace",
+      "source_type": "official_public_policy",
+      "source_url": "https://help.jd.com/user/issue/289-936.html",
+      "version": "curated-2026-11-20-v1",
+      "retrieved_at": "2026-11-20T10:19:57+08:00",
+      "effective_from": null,
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "jd_office_return_materials",
+          "title": "电脑办公类退货材料",
+          "text": "京东第三方软件、电脑办公类商品退货需寄回已有赠品和发票，缺失可能影响全额退款；质量问题换货无需寄回这些材料。与商品详情页不一致时按详情页。",
+          "topics": [
+            "赠品",
+            "发票",
+            "材料",
+            "电脑办公",
+            "退货"
+          ]
+        },
+        {
+          "id": "jd_storage_repair_backup",
+          "title": "存储商品返修数据准备",
+          "text": "京东第三方电脑办公类中的存储商品，返修前应自行导出数据，商家不提供导出服务。与商品详情页不一致时按详情页。",
+          "topics": [
+            "存储",
+            "数据备份",
+            "数据导出",
+            "返修"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jd-marketplace-disputes",
+      "title": "京东纠纷处理规则（买家版）",
+      "platform": "jd",
+      "business_scope": "marketplace",
+      "source_type": "official_public_policy",
+      "source_url": "https://help.jd.com/user/issue/464-1501.html",
+      "version": "curated-2026-11-20-v1",
+      "retrieved_at": "2026-11-20T10:19:57+08:00",
+      "effective_from": "2023-09-19",
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "jd_marketplace_return_payment",
+          "title": "按审核意见寄回商品",
+          "text": "京东开放平台第三方退货应按商家审核意见寄回商品；运费到付须获商家同意。本规则不含自营、虚拟、闪购及海外购。",
+          "topics": [
+            "售后审核",
+            "寄回",
+            "到付",
+            "退货"
+          ]
+        },
+        {
+          "id": "jd_marketplace_dispute_evidence",
+          "title": "纠纷处理凭证提交",
+          "text": "京东处理纠纷期间，双方按纠纷页面或短信、电话、邮件通知及时提供凭证。本规则不含自营、虚拟、闪购及海外购。",
+          "topics": [
+            "纠纷",
+            "举证",
+            "凭证",
+            "材料"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jd-self-operated-shipping",
+      "title": "京东自营售后运费说明",
+      "platform": "jd",
+      "business_scope": "self_operated",
+      "source_type": "official_public_policy",
+      "source_url": "https://help.jd.com/user/issue/131-496.html",
+      "version": "curated-2026-11-20-v1",
+      "retrieved_at": "2026-11-20T10:26:47+08:00",
+      "effective_from": null,
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "jd_self_operated_shipping_membership",
+          "title": "自营退换货运费与会员身份",
+          "text": "适用京东发货的自营商品。误购、七天无理由等客户原因退换货，非PLUS会员付运费，PLUS会员由京东付；质量问题由京东付。",
+          "topics": [
+            "自营",
+            "PLUS",
+            "会员",
+            "质量问题",
+            "七天无理由",
+            "运费"
+          ]
+        },
+        {
+          "id": "jd_self_operated_courier_reimbursement",
+          "title": "自营快递寄回的运费返还",
+          "text": "适用京东发货的自营商品。京东承担运费且用户自行快递寄回时，用户先垫付，售后完成后按逆向运费补偿标准返京东余额；此标准限中国大陆收货地址。",
+          "topics": [
+            "自营",
+            "快递寄回",
+            "垫付",
+            "运费返还",
+            "京东余额"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "suning-freight-disputes",
+      "title": "运费争议处理规范",
+      "platform": "suning",
+      "business_scope": "platform",
+      "source_type": "official_public_policy",
+      "source_url": "https://rule.suning.com/ruleInfo/ruleInfoDetail/GZ100006683.htm",
+      "version": "curated-2026-11-20-v1",
+      "retrieved_at": "2026-11-20T10:19:57+08:00",
+      "effective_from": null,
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "suning_quality_shipping",
+          "title": "质量问题退换货运费",
+          "text": "苏宁易购介入运费争议时，商品确有质量问题的退换货运费由商家承担；双方另有约定时依约处理。",
+          "topics": [
+            "质量问题",
+            "退换货",
+            "运费",
+            "另有约定"
+          ]
+        },
+        {
+          "id": "suning_shipping_evidence",
+          "title": "运费争议所需证明",
+          "text": "苏宁易购运费争议中，承担方对对方垫付的运费有异议时，对方需配合举证，例如快递沟通、官网收费或寄件付款记录。",
+          "topics": [
+            "运费",
+            "垫付",
+            "举证",
+            "凭证",
+            "支付记录"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "retailops-analysis-spec",
+      "title": "RetailOps指标与数据视图说明",
+      "platform": "retailops",
+      "business_scope": "internal",
+      "source_type": "project_spec",
+      "source_url": "https://github.com/L-Megumi/Retailops-evolve/blob/main/src/retailops_agent/models.py",
+      "version": "curated-2026-11-20-v1",
+      "retrieved_at": "2026-11-20T10:26:47+08:00",
+      "effective_from": null,
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "retailops_metric_calculation",
+          "title": "指标计算与结果职责",
+          "text": "RetailOps通过TaskContract声明每日净销售额、退款率、品类排行等所需结果，以ToolResult.data保存工具计算结果。ExecutionPolicy默认退款率分母为去重订单数，品类退款按比例分配，退款按发生日期归属。具体金额和数量由结构化工具计算，知识说明负责解释口径。",
+          "topics": [
+            "指标",
+            "退款率",
+            "去重订单",
+            "计算",
+            "口径",
+            "工具"
+          ]
+        },
+        {
+          "id": "retailops_raw_effective_views",
+          "title": "原始与有效退款视图",
+          "text": "RetailOps的raw视图读取原始退款记录；effective视图读取已选退款变换链处理后的记录。退款变换使用effective视图，指标插件通过input_view声明读取哪一种视图；effective指标在变换后执行。报告应注明使用的视图和变换链。",
+          "topics": [
+            "raw",
+            "effective",
+            "原始视图",
+            "有效视图",
+            "去重",
+            "封顶",
+            "口径"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "retailops-review-sop",
+      "title": "RetailOps分析核查演示SOP",
+      "platform": "retailops",
+      "business_scope": "internal",
+      "source_type": "demo_sop",
+      "source_url": "https://github.com/L-Megumi/Retailops-evolve/blob/main/src/retailops_agent/models.py",
+      "version": "curated-2026-11-20-v1",
+      "retrieved_at": "2026-11-20T10:26:47+08:00",
+      "effective_from": null,
+      "effective_to": null,
+      "status": "active",
+      "content_kind": "curated_summary",
+      "clauses": [
+        {
+          "id": "retailops_duplicate_event_review",
+          "title": "重复事件与实际资金核查",
+          "text": "演示核查流程：相同refund_id重复出现时保留原始记录，对照源系统与支付流水核查。去重和封顶产生分析用的有效视图；实际是否重复支付、是否应退款以及可退金额，需要业务系统记录和适用售后政策共同确认。",
+          "topics": [
+            "重复退款",
+            "重复事件",
+            "refund_id",
+            "支付流水",
+            "数据核查"
+          ]
+        },
+        {
+          "id": "retailops_missing_order_facts",
+          "title": "退货资格判断所需事实",
+          "text": "现有OrderLine记录订单号、下单日期、品类、商品、数量和单价，Refund记录退款事件及金额，均无签收时间、商品状态或售后申请时间。演示处理流程：判断退货资格前补充平台、销售渠道、签收和申请时间、商品状态及退货原因，不能用下单日期代替签收时间。",
+          "topics": [
+            "签收时间",
+            "下单日期",
+            "字段",
+            "退货资格",
+            "信息补充"
+          ]
+        }
+      ]
+    }
+  ]
+}

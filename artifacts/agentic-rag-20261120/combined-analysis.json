@@ -1,0 +1,352 @@
+{
+  "task": "计算退款率，并解释退款率分母的口径",
+  "status": "retrieved",
+  "answer": "以下为检索到的知识条款摘录：\n\nRetailOps 内部 · 内部口径\n- RetailOps通过TaskContract声明每日净销售额、退款率、品类排行等所需结果，以ToolResult.data保存工具计算结果。ExecutionPolicy默认退款率分母为去重订单数，品类退款按比例分配，退款按发生日期归属。具体金额和数量由结构化工具计算，知识说明负责解释口径。 [retailops-analysis-spec::retailops_metric_calculation]\n- RetailOps的raw视图读取原始退款记录；effective视图读取已选退款变换链处理后的记录。退款变换使用effective视图，指标插件通过input_view声明读取哪一种视图；effective指标在变换后执行。报告应注明使用的视图和变换链。 [retailops-analysis-spec::retailops_raw_effective_views]\n- 现有OrderLine记录订单号、下单日期、品类、商品、数量和单价，Refund记录退款事件及金额，均无签收时间、商品状态或售后申请时间。演示处理流程：判断退货资格前补充平台、销售渠道、签收和申请时间、商品状态及退货原因，不能用下单日期代替签收时间。 [retailops-review-sop::retailops_missing_order_facts]\n- 演示核查流程：相同refund_id重复出现时保留原始记录，对照源系统与支付流水核查。去重和封顶产生分析用的有效视图；实际是否重复支付、是否应退款以及可退金额，需要业务系统记录和适用售后政策共同确认。 [retailops-review-sop::retailops_duplicate_event_review]\n\n已验证的数据分析结果：\n{\n  \"refund_rate\": {\n    \"tool\": \"refund_rate\",\n    \"data\": {\n      \"total_orders\": 7,\n      \"refunded_orders\": 2,\n      \"refund_rate\": \"0.2857142857142857142857142857\"\n    },\n    \"evidence\": {\n      \"denominator\": \"distinct_orders\"\n    }\n  }\n}",
+  "citations": [
+    {
+      "chunk_id": "retailops-analysis-spec::retailops_metric_calculation",
+      "doc_id": "retailops-analysis-spec",
+      "title": "RetailOps指标与数据视图说明",
+      "text": "RetailOps通过TaskContract声明每日净销售额、退款率、品类排行等所需结果，以ToolResult.data保存工具计算结果。ExecutionPolicy默认退款率分母为去重订单数，品类退款按比例分配，退款按发生日期归属。具体金额和数量由结构化工具计算，知识说明负责解释口径。",
+      "platform": "retailops",
+      "business_scope": "internal",
+      "source_type": "project_spec",
+      "source_url": "https://github.com/L-Megumi/Retailops-evolve/blob/main/src/retailops_agent/models.py",
+      "version": "curated-2026-11-20-v1",
+      "clause_id": "retailops_metric_calculation",
+      "score": 0.03278688524590164,
+      "channels": [
+        "bm25",
+        "dense"
+      ],
+      "content_hash": "c1c8329a71151083301fc663228a8a4a4c186a232477125f06b571d5521aeeab",
+      "retrieved_at": "2026-11-20T10:26:47+08:00",
+      "effective_from": null,
+      "effective_to": null,
+      "clause_title": "指标计算与结果职责",
+      "content_kind": "curated_summary",
+      "citation_id": "retailops-analysis-spec::retailops_metric_calculation"
+    },
+    {
+      "chunk_id": "retailops-analysis-spec::retailops_raw_effective_views",
+      "doc_id": "retailops-analysis-spec",
+      "title": "RetailOps指标与数据视图说明",
+      "text": "RetailOps的raw视图读取原始退款记录；effective视图读取已选退款变换链处理后的记录。退款变换使用effective视图，指标插件通过input_view声明读取哪一种视图；effective指标在变换后执行。报告应注明使用的视图和变换链。",
+      "platform": "retailops",
+      "business_scope": "internal",
+      "source_type": "project_spec",
+      "source_url": "https://github.com/L-Megumi/Retailops-evolve/blob/main/src/retailops_agent/models.py",
+      "version": "curated-2026-11-20-v1",
+      "clause_id": "retailops_raw_effective_views",
+      "score": 0.031754032258064516,
+      "channels": [
+        "bm25",
+        "dense"
+      ],
+      "content_hash": "a86cf4c0f3dc31281f731d1b5362813644aa65cec3c94c5a39214135fdf4cc48",
+      "retrieved_at": "2026-11-20T10:26:47+08:00",
+      "effective_from": null,
+      "effective_to": null,
+      "clause_title": "原始与有效退款视图",
+      "content_kind": "curated_summary",
+      "citation_id": "retailops-analysis-spec::retailops_raw_effective_views"
+    },
+    {
+      "chunk_id": "retailops-review-sop::retailops_missing_order_facts",
+      "doc_id": "retailops-review-sop",
+      "title": "RetailOps分析核查演示SOP",
+      "text": "现有OrderLine记录订单号、下单日期、品类、商品、数量和单价，Refund记录退款事件及金额，均无签收时间、商品状态或售后申请时间。演示处理流程：判断退货资格前补充平台、销售渠道、签收和申请时间、商品状态及退货原因，不能用下单日期代替签收时间。",
+      "platform": "retailops",
+      "business_scope": "internal",
+      "source_type": "demo_sop",
+      "source_url": "https://github.com/L-Megumi/Retailops-evolve/blob/main/src/retailops_agent/models.py",
+      "version": "curated-2026-11-20-v1",
+      "clause_id": "retailops_missing_order_facts",
+      "score": 0.031754032258064516,
+      "channels": [
+        "bm25",
+        "dense"
+      ],
+      "content_hash": "a2eb9ee8c53103fff731f9733bfefb3462760636fbcd4627b7ef4d11430e31f8",
+      "retrieved_at": "2026-11-20T10:26:47+08:00",
+      "effective_from": null,
+      "effective_to": null,
+      "clause_title": "退货资格判断所需事实",
+      "content_kind": "curated_summary",
+      "citation_id": "retailops-review-sop::retailops_missing_order_facts"
+    },
+    {
+      "chunk_id": "retailops-review-sop::retailops_duplicate_event_review",
+      "doc_id": "retailops-review-sop",
+      "title": "RetailOps分析核查演示SOP",
+      "text": "演示核查流程：相同refund_id重复出现时保留原始记录，对照源系统与支付流水核查。去重和封顶产生分析用的有效视图；实际是否重复支付、是否应退款以及可退金额，需要业务系统记录和适用售后政策共同确认。",
+      "platform": "retailops",
+      "business_scope": "internal",
+      "source_type": "demo_sop",
+      "source_url": "https://github.com/L-Megumi/Retailops-evolve/blob/main/src/retailops_agent/models.py",
+      "version": "curated-2026-11-20-v1",
+      "clause_id": "retailops_duplicate_event_review",
+      "score": 0.031746031746031744,
+      "channels": [
+        "bm25",
+        "dense"
+      ],
+      "content_hash": "d757607cbe4f771d3408b5cab9427f2825bf079706abd4742315e3d7458ac9bb",
+      "retrieved_at": "2026-11-20T10:26:47+08:00",
+      "effective_from": null,
+      "effective_to": null,
+      "clause_title": "重复事件与实际资金核查",
+      "content_kind": "curated_summary",
+      "citation_id": "retailops-review-sop::retailops_duplicate_event_review"
+    }
+  ],
+  "analysis": {
+    "task": "计算退款率，并解释退款率分母的口径",
+    "plan": {
+      "task": "计算退款率，并解释退款率分母的口径",
+      "tools": [
+        "refund_rate"
+      ],
+      "max_repairs": 2,
+      "contract": {
+        "required_results": [
+          "refund_rate"
+        ],
+        "required_capabilities": [],
+        "forbidden_capabilities": [],
+        "source": "rule"
+      }
+    },
+    "attempts": 1,
+    "results": {
+      "refund_rate": {
+        "tool": "refund_rate",
+        "data": {
+          "total_orders": 7,
+          "refunded_orders": 2,
+          "refund_rate": "0.2857142857142857142857142857"
+        },
+        "evidence": {
+          "denominator": "distinct_orders"
+        }
+      }
+    },
+    "issues": [],
+    "events": [
+      {
+        "stage": "plan",
+        "status": "ok",
+        "contract": {
+          "required_results": [
+            "refund_rate"
+          ],
+          "required_capabilities": [],
+          "forbidden_capabilities": [],
+          "source": "rule"
+        },
+        "elapsed_ms": 2.353
+      },
+      {
+        "stage": "load",
+        "status": "ok",
+        "orders": 8,
+        "refunds": 2,
+        "elapsed_ms": 2.747
+      },
+      {
+        "stage": "plugin",
+        "status": "not_applied",
+        "matched": false,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "route_reason": "semantic fallback disabled",
+        "registry_version": "70d38d90f9cbcae3",
+        "selected_plugin_ids": [],
+        "task_contract": {
+          "required_results": [
+            "refund_rate"
+          ],
+          "required_capabilities": [],
+          "forbidden_capabilities": [],
+          "source": "rule"
+        },
+        "elapsed_ms": 5.398
+      },
+      {
+        "stage": "validate",
+        "attempt": 1,
+        "status": "ok",
+        "issues": [],
+        "policy": {
+          "refund_rate_denominator": "distinct_orders",
+          "category_refund_allocation": "proportional",
+          "refund_time_attribution": "refund_date"
+        },
+        "metric_contract": {
+          "refund_rate_denominator": "distinct_orders",
+          "category_refund_allocation": "proportional",
+          "refund_time_attribution": "refund_date"
+        },
+        "elapsed_ms": 5.493
+      },
+      {
+        "stage": "complete",
+        "status": "ok",
+        "elapsed_ms": 5.502
+      }
+    ],
+    "policies": [
+      {
+        "refund_rate_denominator": "distinct_orders",
+        "category_refund_allocation": "proportional",
+        "refund_time_attribution": "refund_date"
+      }
+    ],
+    "plugin": {
+      "route_source": "no_match",
+      "cache_hit": false,
+      "route_reason": "semantic fallback disabled",
+      "registry_version": "70d38d90f9cbcae3",
+      "selected_plugin_ids": [],
+      "task_contract": {
+        "required_results": [
+          "refund_rate"
+        ],
+        "required_capabilities": [],
+        "forbidden_capabilities": [],
+        "source": "rule"
+      }
+    },
+    "task_contract": {
+      "required_results": [
+        "refund_rate"
+      ],
+      "required_capabilities": [],
+      "forbidden_capabilities": [],
+      "source": "rule"
+    },
+    "elapsed_ms": 5.498
+  },
+  "events": [
+    {
+      "stage": "assistant_route",
+      "calculation": true,
+      "knowledge": true,
+      "elapsed_ms": 4.275
+    },
+    {
+      "stage": "retrieve",
+      "round": 1,
+      "platform": "retailops",
+      "business_scope": "internal",
+      "query": "计算退款率，并解释退款率分母的口径",
+      "citation_ids": [
+        "retailops-analysis-spec::retailops_metric_calculation",
+        "retailops-analysis-spec::retailops_raw_effective_views",
+        "retailops-review-sop::retailops_missing_order_facts",
+        "retailops-review-sop::retailops_duplicate_event_review"
+      ],
+      "retrieval_mode": "hybrid",
+      "elapsed_ms": 898.072
+    },
+    {
+      "stage": "analysis",
+      "analysis_event": {
+        "stage": "plan",
+        "status": "ok",
+        "contract": {
+          "required_results": [
+            "refund_rate"
+          ],
+          "required_capabilities": [],
+          "forbidden_capabilities": [],
+          "source": "rule"
+        },
+        "elapsed_ms": 2.353
+      },
+      "elapsed_ms": 900.485
+    },
+    {
+      "stage": "analysis",
+      "analysis_event": {
+        "stage": "load",
+        "status": "ok",
+        "orders": 8,
+        "refunds": 2,
+        "elapsed_ms": 2.747
+      },
+      "elapsed_ms": 900.876
+    },
+    {
+      "stage": "analysis",
+      "analysis_event": {
+        "stage": "plugin",
+        "status": "not_applied",
+        "matched": false,
+        "route_source": "no_match",
+        "cache_hit": false,
+        "route_reason": "semantic fallback disabled",
+        "registry_version": "70d38d90f9cbcae3",
+        "selected_plugin_ids": [],
+        "task_contract": {
+          "required_results": [
+            "refund_rate"
+          ],
+          "required_capabilities": [],
+          "forbidden_capabilities": [],
+          "source": "rule"
+        },
+        "elapsed_ms": 5.398
+      },
+      "elapsed_ms": 903.528
+    },
+    {
+      "stage": "analysis",
+      "analysis_event": {
+        "stage": "validate",
+        "attempt": 1,
+        "status": "ok",
+        "issues": [],
+        "policy": {
+          "refund_rate_denominator": "distinct_orders",
+          "category_refund_allocation": "proportional",
+          "refund_time_attribution": "refund_date"
+        },
+        "metric_contract": {
+          "refund_rate_denominator": "distinct_orders",
+          "category_refund_allocation": "proportional",
+          "refund_time_attribution": "refund_date"
+        },
+        "elapsed_ms": 5.493
+      },
+      "elapsed_ms": 903.618
+    },
+    {
+      "stage": "analysis",
+      "analysis_event": {
+        "stage": "complete",
+        "status": "ok",
+        "elapsed_ms": 5.502
+      },
+      "elapsed_ms": 903.627
+    },
+    {
+      "stage": "assistant_complete",
+      "status": "retrieved",
+      "mode": "extractive",
+      "elapsed_ms": 903.99
+    }
+  ],
+  "missing_information": [],
+  "retrieval_rounds": 1,
+  "elapsed_ms": 903.985,
+  "mode": "extractive",
+  "usage": {
+    "model_calls": 0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "token_accounting": "last_reported_response_per_call"
+  },
+  "ok": true
+}

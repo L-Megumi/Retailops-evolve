@@ -1,0 +1,2717 @@
+{
+  "created_at": "2026-11-20T02:49:35.958202+00:00",
+  "evaluation_set": "seed-development",
+  "corpus_hash": "61e2c954ee012f3c195d46c4749d427a01daa37f363bc2f8a35162dc226e6748",
+  "questions_hash": "58d7972522a22b8c72fcd6f8a67876b621e19940e8e010a12964dfa063b2bcdd",
+  "embedding_model": "BAAI/bge-small-zh-v1.5",
+  "public_policy_only": true,
+  "retrieval": {
+    "hybrid": {
+      "case_count": 15,
+      "mean_recall_at_3_per_platform": 1.0,
+      "all_required_found_count": 15,
+      "platform_leakage_count": 0,
+      "cases": [
+        {
+          "id": "kb-001",
+          "expected": [
+            "jd_marketplace_no_reason_shipping"
+          ],
+          "retrieved": [
+            "jd_marketplace_no_reason_shipping",
+            "jd_marketplace_nonbuyer_shipping",
+            "jd_marketplace_return_payment"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 974.182
+        },
+        {
+          "id": "kb-002",
+          "expected": [
+            "jd_marketplace_nonbuyer_shipping"
+          ],
+          "retrieved": [
+            "jd_marketplace_nonbuyer_shipping",
+            "jd_marketplace_no_reason_shipping",
+            "jd_marketplace_return_payment"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 9.571
+        },
+        {
+          "id": "kb-003",
+          "expected": [
+            "jd_office_return_materials"
+          ],
+          "retrieved": [
+            "jd_office_return_materials",
+            "jd_marketplace_nonbuyer_shipping",
+            "jd_storage_repair_backup"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 9.465
+        },
+        {
+          "id": "kb-004",
+          "expected": [
+            "jd_storage_repair_backup"
+          ],
+          "retrieved": [
+            "jd_storage_repair_backup",
+            "jd_marketplace_return_payment",
+            "jd_marketplace_nonbuyer_shipping"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 8.238
+        },
+        {
+          "id": "kb-005",
+          "expected": [
+            "jd_marketplace_return_payment"
+          ],
+          "retrieved": [
+            "jd_marketplace_return_payment",
+            "jd_marketplace_no_reason_shipping",
+            "jd_marketplace_nonbuyer_shipping"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 8.233
+        },
+        {
+          "id": "kb-006",
+          "expected": [
+            "jd_marketplace_dispute_evidence"
+          ],
+          "retrieved": [
+            "jd_marketplace_dispute_evidence",
+            "jd_marketplace_return_payment",
+            "jd_office_return_materials"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 8.148
+        },
+        {
+          "id": "kb-007",
+          "expected": [
+            "jd_self_operated_shipping_membership"
+          ],
+          "retrieved": [
+            "jd_self_operated_shipping_membership",
+            "jd_self_operated_courier_reimbursement"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 46.901
+        },
+        {
+          "id": "kb-008",
+          "expected": [
+            "jd_self_operated_courier_reimbursement"
+          ],
+          "retrieved": [
+            "jd_self_operated_courier_reimbursement",
+            "jd_self_operated_shipping_membership"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 8.705
+        },
+        {
+          "id": "kb-009",
+          "expected": [
+            "suning_quality_shipping"
+          ],
+          "retrieved": [
+            "suning_quality_shipping",
+            "suning_shipping_evidence"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 38.13
+        },
+        {
+          "id": "kb-010",
+          "expected": [
+            "suning_shipping_evidence"
+          ],
+          "retrieved": [
+            "suning_shipping_evidence",
+            "suning_quality_shipping"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 8.497
+        },
+        {
+          "id": "kb-015",
+          "expected": [
+            "jd_self_operated_shipping_membership"
+          ],
+          "retrieved": [
+            "jd_self_operated_shipping_membership",
+            "jd_self_operated_courier_reimbursement"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 8.64
+        },
+        {
+          "id": "kb-016",
+          "expected": [
+            "jd_self_operated_shipping_membership"
+          ],
+          "retrieved": [
+            "jd_self_operated_shipping_membership",
+            "jd_self_operated_courier_reimbursement"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 7.835
+        },
+        {
+          "id": "kb-021",
+          "expected": [
+            "jd_marketplace_nonbuyer_shipping",
+            "suning_quality_shipping"
+          ],
+          "retrieved": [
+            "jd_marketplace_nonbuyer_shipping",
+            "jd_self_operated_shipping_membership",
+            "jd_marketplace_no_reason_shipping",
+            "suning_quality_shipping",
+            "suning_shipping_evidence"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 21.034
+        },
+        {
+          "id": "kb-022",
+          "expected": [
+            "jd_marketplace_no_reason_shipping",
+            "jd_self_operated_shipping_membership"
+          ],
+          "retrieved": [
+            "jd_self_operated_shipping_membership",
+            "jd_marketplace_no_reason_shipping",
+            "jd_marketplace_nonbuyer_shipping"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 10.485
+        },
+        {
+          "id": "kb-023",
+          "expected": [
+            "jd_marketplace_dispute_evidence",
+            "suning_shipping_evidence"
+          ],
+          "retrieved": [
+            "jd_marketplace_dispute_evidence",
+            "jd_marketplace_return_payment",
+            "jd_self_operated_courier_reimbursement",
+            "suning_shipping_evidence",
+            "suning_quality_shipping"
+          ],
+          "recall_at_3_per_platform": 1.0,
+          "all_required_found": true,
+          "platform_leakage": false,
+          "elapsed_ms": 21.183
+        }
+      ],
+      "timing_note": "includes first-use model/index loading; not a steady-state latency benchmark"
+    }
+  },
+  "scenarios": [
+    {
+      "id": "kb-001",
+      "category": "retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 2138.713,
+      "result": {
+        "task": "京东第三方店的包邮商品，签收第3天申请七天无理由退货，寄回运费由谁承担？",
+        "status": "completed",
+        "answer": "在京东第三方店铺购买包邮商品，若该商品支持七天无理由退货，并在签收后7天内申请七天无理由退货，则退回运费由买家承担。 [jd-marketplace-shipping::jd_marketplace_no_reason_shipping]",
+        "citations": [
+          {
+            "chunk_id": "jd-marketplace-shipping::jd_marketplace_no_reason_shipping",
+            "doc_id": "jd-marketplace-shipping",
+            "title": "第三方卖家商品售后服务运费规则",
+            "text": "签收后7天内，支持七天无理由退货的京东第三方商品：包邮订单由买家付退回运费；非包邮订单由买家付双向运费。",
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/410-2968.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_marketplace_no_reason_shipping",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "818266c79ebd5d7a24cd6e055b90385554c2dd2a2d98903276537536bc662f43",
+            "retrieved_at": "2026-11-20T10:19:57+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "七天无理由退货运费",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-marketplace-shipping::jd_marketplace_no_reason_shipping"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 2.088
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "query": "京东第三方店的包邮商品，签收第3天申请七天无理由退货，寄回运费由谁承担？",
+            "citation_ids": [
+              "jd-marketplace-shipping::jd_marketplace_no_reason_shipping",
+              "jd-marketplace-shipping::jd_marketplace_nonbuyer_shipping",
+              "jd-marketplace-disputes::jd_marketplace_return_payment",
+              "jd-marketplace-office::jd_office_return_materials",
+              "jd-marketplace-disputes::jd_marketplace_dispute_evidence"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 11.591
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 1263.484
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2138.639
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2138.665
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2138.658,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3871,
+          "completion_tokens": 107,
+          "total_tokens": 3978,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-002",
+      "category": "retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 2415.005,
+      "result": {
+        "task": "京东第三方商品不包邮，签收5天发现缺少配件而退换货，发出和退回的运费谁付？",
+        "status": "completed",
+        "answer": "在京东第三方商品非包邮订单的情况下，若签收后7天内因缺件退换货，卖家承担发出和退回的双向运费。 [jd-marketplace-shipping::jd_marketplace_nonbuyer_shipping]\n在京东第三方商品退货时，应按商家审核意见寄回商品；若需运费到付，须先获得商家同意。 [jd-marketplace-disputes::jd_marketplace_return_payment]",
+        "citations": [
+          {
+            "chunk_id": "jd-marketplace-shipping::jd_marketplace_nonbuyer_shipping",
+            "doc_id": "jd-marketplace-shipping",
+            "title": "第三方卖家商品售后服务运费规则",
+            "text": "签收后7天内，京东第三方商品因质量、物流损坏、缺件或描述不符退换货：包邮订单由卖家付退回运费；非包邮订单由卖家付双向运费。",
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/410-2968.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_marketplace_nonbuyer_shipping",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "1e1d081f1faa1cee6c4bf666a68968f06d44d6d1b666ac6dbe9e90255ea267a9",
+            "retrieved_at": "2026-11-20T10:19:57+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "非买家原因退换货运费",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-marketplace-shipping::jd_marketplace_nonbuyer_shipping"
+          },
+          {
+            "chunk_id": "jd-marketplace-disputes::jd_marketplace_return_payment",
+            "doc_id": "jd-marketplace-disputes",
+            "title": "京东纠纷处理规则（买家版）",
+            "text": "京东开放平台第三方退货应按商家审核意见寄回商品；运费到付须获商家同意。本规则不含自营、虚拟、闪购及海外购。",
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/464-1501.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_marketplace_return_payment",
+            "score": 0.03149801587301587,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "23c830b4685f54656a0a5c09b02f28f188bcdada555a91400bf98f3d8fd3edc2",
+            "retrieved_at": "2026-11-20T10:19:57+08:00",
+            "effective_from": "2023-09-19",
+            "effective_to": null,
+            "clause_title": "按审核意见寄回商品",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-marketplace-disputes::jd_marketplace_return_payment"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.139
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "query": "京东第三方商品不包邮，签收5天发现缺少配件而退换货，发出和退回的运费谁付？",
+            "citation_ids": [
+              "jd-marketplace-shipping::jd_marketplace_nonbuyer_shipping",
+              "jd-marketplace-shipping::jd_marketplace_no_reason_shipping",
+              "jd-marketplace-disputes::jd_marketplace_return_payment",
+              "jd-marketplace-office::jd_office_return_materials",
+              "jd-marketplace-office::jd_storage_repair_backup"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 19.003
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 972.422
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2414.919
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2414.945
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2414.938,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3851,
+          "completion_tokens": 157,
+          "total_tokens": 4008,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-003",
+      "category": "retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 1954.036,
+      "result": {
+        "task": "京东第三方电脑办公商品退货，赠品和发票都要放回包裹吗？质量问题换货也一样吗？",
+        "status": "completed",
+        "answer": "在京东第三方软件、电脑办公类商品退货时，需寄回已有赠品和发票，缺失可能影响全额退款；若商品详情页与规则不一致，按详情页执行。 [jd-marketplace-office::jd_office_return_materials]\n在京东第三方软件、电脑办公类商品因质量问题换货时，无需寄回赠品和发票；若商品详情页与规则不一致，按详情页执行。 [jd-marketplace-office::jd_office_return_materials]",
+        "citations": [
+          {
+            "chunk_id": "jd-marketplace-office::jd_office_return_materials",
+            "doc_id": "jd-marketplace-office",
+            "title": "软件、电脑办公类商品售后服务细则（三方）",
+            "text": "京东第三方软件、电脑办公类商品退货需寄回已有赠品和发票，缺失可能影响全额退款；质量问题换货无需寄回这些材料。与商品详情页不一致时按详情页。",
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/289-936.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_office_return_materials",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "f33f7a1eb4625140c1d54f1f77fd1434dbfd58ac8d52e7c2a671d97a4ff41eb0",
+            "retrieved_at": "2026-11-20T10:19:57+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "电脑办公类退货材料",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-marketplace-office::jd_office_return_materials"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.142
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "query": "京东第三方电脑办公商品退货，赠品和发票都要放回包裹吗？质量问题换货也一样吗？",
+            "citation_ids": [
+              "jd-marketplace-office::jd_office_return_materials",
+              "jd-marketplace-shipping::jd_marketplace_nonbuyer_shipping",
+              "jd-marketplace-office::jd_storage_repair_backup",
+              "jd-marketplace-disputes::jd_marketplace_return_payment",
+              "jd-marketplace-shipping::jd_marketplace_no_reason_shipping"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 18.633
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 899.42
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 1953.952
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 1953.978
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 1953.973,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3843,
+          "completion_tokens": 166,
+          "total_tokens": 4009,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-004",
+      "category": "retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 2523.915,
+      "result": {
+        "task": "京东第三方购买的存储设备准备返修，商家会帮我导出里面的数据吗？",
+        "status": "completed",
+        "answer": "在京东第三方购买电脑办公类中的存储商品，返修前应自行导出数据，商家不提供导出服务；若商品详情页另有说明，则按详情页执行。 [jd-marketplace-office::jd_storage_repair_backup]",
+        "citations": [
+          {
+            "chunk_id": "jd-marketplace-office::jd_storage_repair_backup",
+            "doc_id": "jd-marketplace-office",
+            "title": "软件、电脑办公类商品售后服务细则（三方）",
+            "text": "京东第三方电脑办公类中的存储商品，返修前应自行导出数据，商家不提供导出服务。与商品详情页不一致时按详情页。",
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/289-936.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_storage_repair_backup",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "2e8be450bbb4ccca11476bf70448aec7397165b4bbd31ae6d4e19327edc2be01",
+            "retrieved_at": "2026-11-20T10:19:57+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "存储商品返修数据准备",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-marketplace-office::jd_storage_repair_backup"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.115
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "query": "京东第三方购买的存储设备准备返修，商家会帮我导出里面的数据吗？",
+            "citation_ids": [
+              "jd-marketplace-office::jd_storage_repair_backup",
+              "jd-marketplace-disputes::jd_marketplace_return_payment",
+              "jd-marketplace-shipping::jd_marketplace_nonbuyer_shipping",
+              "jd-marketplace-shipping::jd_marketplace_no_reason_shipping",
+              "jd-marketplace-disputes::jd_marketplace_dispute_evidence"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 17.135
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 1246.978
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2523.831
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2523.858
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2523.852,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3843,
+          "completion_tokens": 105,
+          "total_tokens": 3948,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-005",
+      "category": "retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 3209.157,
+      "result": {
+        "task": "京东第三方商家已经通过退货审核，我可以直接把包裹运费设为到付吗？",
+        "status": "completed",
+        "answer": "在京东开放平台第三方商家退货场景下，即使退货审核已通过，也应按商家审核意见寄回商品；若要将包裹运费设为到付，须先获得商家同意。该规则不适用于自营、虚拟、闪购及海外购。 [jd-marketplace-disputes::jd_marketplace_return_payment]",
+        "citations": [
+          {
+            "chunk_id": "jd-marketplace-disputes::jd_marketplace_return_payment",
+            "doc_id": "jd-marketplace-disputes",
+            "title": "京东纠纷处理规则（买家版）",
+            "text": "京东开放平台第三方退货应按商家审核意见寄回商品；运费到付须获商家同意。本规则不含自营、虚拟、闪购及海外购。",
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/464-1501.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_marketplace_return_payment",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "23c830b4685f54656a0a5c09b02f28f188bcdada555a91400bf98f3d8fd3edc2",
+            "retrieved_at": "2026-11-20T10:19:57+08:00",
+            "effective_from": "2023-09-19",
+            "effective_to": null,
+            "clause_title": "按审核意见寄回商品",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-marketplace-disputes::jd_marketplace_return_payment"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.125
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "query": "京东第三方商家已经通过退货审核，我可以直接把包裹运费设为到付吗？",
+            "citation_ids": [
+              "jd-marketplace-disputes::jd_marketplace_return_payment",
+              "jd-marketplace-shipping::jd_marketplace_no_reason_shipping",
+              "jd-marketplace-shipping::jd_marketplace_nonbuyer_shipping",
+              "jd-marketplace-office::jd_office_return_materials",
+              "jd-marketplace-disputes::jd_marketplace_dispute_evidence"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 17.504
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 1311.073
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 3209.073
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 3209.1
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 3209.094,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3855,
+          "completion_tokens": 122,
+          "total_tokens": 3977,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-006",
+      "category": "retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 2051.914,
+      "result": {
+        "task": "京东第三方订单申请平台处理纠纷后，应该根据哪些通知提交证明材料？",
+        "status": "completed",
+        "answer": "在京东处理第三方订单纠纷期间，若纠纷页面或短信、电话、邮件通知要求提供凭证，双方应按该通知及时提交证明材料。 [jd-marketplace-disputes::jd_marketplace_dispute_evidence]",
+        "citations": [
+          {
+            "chunk_id": "jd-marketplace-disputes::jd_marketplace_dispute_evidence",
+            "doc_id": "jd-marketplace-disputes",
+            "title": "京东纠纷处理规则（买家版）",
+            "text": "京东处理纠纷期间，双方按纠纷页面或短信、电话、邮件通知及时提供凭证。本规则不含自营、虚拟、闪购及海外购。",
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/464-1501.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_marketplace_dispute_evidence",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "463e6d0d0b59900c2eb61f7f447f702b6e5f12c1cd0cbbd61213b555c1a76d74",
+            "retrieved_at": "2026-11-20T10:19:57+08:00",
+            "effective_from": "2023-09-19",
+            "effective_to": null,
+            "clause_title": "纠纷处理凭证提交",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-marketplace-disputes::jd_marketplace_dispute_evidence"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.119
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "query": "京东第三方订单申请平台处理纠纷后，应该根据哪些通知提交证明材料？",
+            "citation_ids": [
+              "jd-marketplace-disputes::jd_marketplace_dispute_evidence",
+              "jd-marketplace-disputes::jd_marketplace_return_payment",
+              "jd-marketplace-office::jd_office_return_materials",
+              "jd-marketplace-office::jd_storage_repair_backup",
+              "jd-marketplace-shipping::jd_marketplace_no_reason_shipping"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 17.848
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 1118.29
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2051.838
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2051.862
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2051.856,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 3817,
+          "completion_tokens": 99,
+          "total_tokens": 3916,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-007",
+      "category": "retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 1720.469,
+      "result": {
+        "task": "京东发货的自营商品，我不是PLUS，因为误购申请退货，运费是谁承担？",
+        "status": "completed",
+        "answer": "在京东发货的自营商品场景下，因误购等客户原因申请退货时，非PLUS会员需承担运费，PLUS会员的运费由京东承担。 [jd-self-operated-shipping::jd_self_operated_shipping_membership]",
+        "citations": [
+          {
+            "chunk_id": "jd-self-operated-shipping::jd_self_operated_shipping_membership",
+            "doc_id": "jd-self-operated-shipping",
+            "title": "京东自营售后运费说明",
+            "text": "适用京东发货的自营商品。误购、七天无理由等客户原因退换货，非PLUS会员付运费，PLUS会员由京东付；质量问题由京东付。",
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/131-496.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_self_operated_shipping_membership",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "4605800cf8942cf7afe8eb21b3103eb0d016ff91fe0982135e089ce27ff32e73",
+            "retrieved_at": "2026-11-20T10:26:47+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "自营退换货运费与会员身份",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-self-operated-shipping::jd_self_operated_shipping_membership"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.154
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "query": "京东发货的自营商品，我不是PLUS，因为误购申请退货，运费是谁承担？",
+            "citation_ids": [
+              "jd-self-operated-shipping::jd_self_operated_shipping_membership",
+              "jd-self-operated-shipping::jd_self_operated_courier_reimbursement"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 17.126
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 854.512
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 1720.401
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 1720.424
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 1720.419,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 1990,
+          "completion_tokens": 108,
+          "total_tokens": 2098,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-008",
+      "category": "retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 2447.128,
+      "result": {
+        "task": "京东发货的自营商品由京东承担运费，我在大陆自行快递寄回，先垫的钱怎样返还？",
+        "status": "completed",
+        "answer": "在京东发货的自营商品场景下，若京东承担运费且用户自行快递寄回并先垫付运费，售后完成后按逆向运费补偿标准返还至京东余额。 [jd-self-operated-shipping::jd_self_operated_courier_reimbursement]\n上述自行快递寄回的运费返还标准限中国大陆收货地址。 [jd-self-operated-shipping::jd_self_operated_courier_reimbursement]\n在京东发货的自营商品场景下，因误购、七天无理由等客户原因退换货时，非PLUS会员需付运费，PLUS会员由京东付；质量问题由京东付。 [jd-self-operated-shipping::jd_self_operated_shipping_membership]",
+        "citations": [
+          {
+            "chunk_id": "jd-self-operated-shipping::jd_self_operated_courier_reimbursement",
+            "doc_id": "jd-self-operated-shipping",
+            "title": "京东自营售后运费说明",
+            "text": "适用京东发货的自营商品。京东承担运费且用户自行快递寄回时，用户先垫付，售后完成后按逆向运费补偿标准返京东余额；此标准限中国大陆收货地址。",
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/131-496.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_self_operated_courier_reimbursement",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "a1555c4ed5c74c080317745a696f7d115a7469549ef0e4ad741ad7745a0f8b49",
+            "retrieved_at": "2026-11-20T10:26:47+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "自营快递寄回的运费返还",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-self-operated-shipping::jd_self_operated_courier_reimbursement"
+          },
+          {
+            "chunk_id": "jd-self-operated-shipping::jd_self_operated_shipping_membership",
+            "doc_id": "jd-self-operated-shipping",
+            "title": "京东自营售后运费说明",
+            "text": "适用京东发货的自营商品。误购、七天无理由等客户原因退换货，非PLUS会员付运费，PLUS会员由京东付；质量问题由京东付。",
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/131-496.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_self_operated_shipping_membership",
+            "score": 0.03225806451612903,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "4605800cf8942cf7afe8eb21b3103eb0d016ff91fe0982135e089ce27ff32e73",
+            "retrieved_at": "2026-11-20T10:26:47+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "自营退换货运费与会员身份",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-self-operated-shipping::jd_self_operated_shipping_membership"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.124
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "query": "京东发货的自营商品由京东承担运费，我在大陆自行快递寄回，先垫的钱怎样返还？",
+            "citation_ids": [
+              "jd-self-operated-shipping::jd_self_operated_courier_reimbursement",
+              "jd-self-operated-shipping::jd_self_operated_shipping_membership"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 17.804
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 969.937
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2447.054
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2447.077
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2447.071,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 1996,
+          "completion_tokens": 232,
+          "total_tokens": 2228,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-009",
+      "category": "retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 2791.745,
+      "result": {
+        "task": "苏宁易购介入运费争议，已确认商品有质量问题，退换货运费如何分担？",
+        "status": "completed",
+        "answer": "在苏宁易购平台介入运费争议的情况下，若商品确有质量问题，退换货运费由商家承担；若双方另有约定，则依约处理。 [suning-freight-disputes::suning_quality_shipping]\n在苏宁易购平台运费争议中，若承担方对对方垫付的运费有异议，对方需配合举证，例如提供快递沟通、官网收费或寄件付款记录。 [suning-freight-disputes::suning_shipping_evidence]",
+        "citations": [
+          {
+            "chunk_id": "suning-freight-disputes::suning_quality_shipping",
+            "doc_id": "suning-freight-disputes",
+            "title": "运费争议处理规范",
+            "text": "苏宁易购介入运费争议时，商品确有质量问题的退换货运费由商家承担；双方另有约定时依约处理。",
+            "platform": "suning",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://rule.suning.com/ruleInfo/ruleInfoDetail/GZ100006683.htm",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "suning_quality_shipping",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "dfd734ae4f51ba0897996050c8ea7b9831aab3c1146577498acc55a1c87ec51a",
+            "retrieved_at": "2026-11-20T10:19:57+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "质量问题退换货运费",
+            "content_kind": "curated_summary",
+            "citation_id": "suning-freight-disputes::suning_quality_shipping"
+          },
+          {
+            "chunk_id": "suning-freight-disputes::suning_shipping_evidence",
+            "doc_id": "suning-freight-disputes",
+            "title": "运费争议处理规范",
+            "text": "苏宁易购运费争议中，承担方对对方垫付的运费有异议时，对方需配合举证，例如快递沟通、官网收费或寄件付款记录。",
+            "platform": "suning",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://rule.suning.com/ruleInfo/ruleInfoDetail/GZ100006683.htm",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "suning_shipping_evidence",
+            "score": 0.03225806451612903,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "970438e81a728a8f7fae2905e079a93cb49a7af722949000d6ac7ecb52db13a1",
+            "retrieved_at": "2026-11-20T10:19:57+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "运费争议所需证明",
+            "content_kind": "curated_summary",
+            "citation_id": "suning-freight-disputes::suning_shipping_evidence"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.141
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "suning",
+            "business_scope": "platform",
+            "query": "苏宁易购介入运费争议，已确认商品有质量问题，退换货运费如何分担？",
+            "citation_ids": [
+              "suning-freight-disputes::suning_quality_shipping",
+              "suning-freight-disputes::suning_shipping_evidence"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 17.207
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 1240.646
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2791.674
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2791.697
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2791.692,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 1909,
+          "completion_tokens": 172,
+          "total_tokens": 2081,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-010",
+      "category": "retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 2604.078,
+      "result": {
+        "task": "苏宁易购退货运费是对方先垫付的，我对金额有异议，需要对方提供什么证明？",
+        "status": "completed",
+        "answer": "在苏宁易购平台运费争议中，若承担方对对方垫付的运费有异议，对方需配合举证，例如提供快递沟通记录、官网收费记录或寄件付款记录。 [suning-freight-disputes::suning_shipping_evidence]\n在苏宁易购平台，若商品确有质量问题，退换货运费由商家承担；若双方另有约定，则依约处理。 [suning-freight-disputes::suning_quality_shipping]",
+        "citations": [
+          {
+            "chunk_id": "suning-freight-disputes::suning_shipping_evidence",
+            "doc_id": "suning-freight-disputes",
+            "title": "运费争议处理规范",
+            "text": "苏宁易购运费争议中，承担方对对方垫付的运费有异议时，对方需配合举证，例如快递沟通、官网收费或寄件付款记录。",
+            "platform": "suning",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://rule.suning.com/ruleInfo/ruleInfoDetail/GZ100006683.htm",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "suning_shipping_evidence",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "970438e81a728a8f7fae2905e079a93cb49a7af722949000d6ac7ecb52db13a1",
+            "retrieved_at": "2026-11-20T10:19:57+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "运费争议所需证明",
+            "content_kind": "curated_summary",
+            "citation_id": "suning-freight-disputes::suning_shipping_evidence"
+          },
+          {
+            "chunk_id": "suning-freight-disputes::suning_quality_shipping",
+            "doc_id": "suning-freight-disputes",
+            "title": "运费争议处理规范",
+            "text": "苏宁易购介入运费争议时，商品确有质量问题的退换货运费由商家承担；双方另有约定时依约处理。",
+            "platform": "suning",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://rule.suning.com/ruleInfo/ruleInfoDetail/GZ100006683.htm",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "suning_quality_shipping",
+            "score": 0.03225806451612903,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "dfd734ae4f51ba0897996050c8ea7b9831aab3c1146577498acc55a1c87ec51a",
+            "retrieved_at": "2026-11-20T10:19:57+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "质量问题退换货运费",
+            "content_kind": "curated_summary",
+            "citation_id": "suning-freight-disputes::suning_quality_shipping"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.125
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "suning",
+            "business_scope": "platform",
+            "query": "苏宁易购退货运费是对方先垫付的，我对金额有异议，需要对方提供什么证明？",
+            "citation_ids": [
+              "suning-freight-disputes::suning_shipping_evidence",
+              "suning-freight-disputes::suning_quality_shipping"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 17.424
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 1091.432
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2604.006
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2604.028
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2604.023,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 1917,
+          "completion_tokens": 170,
+          "total_tokens": 2087,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-015",
+      "category": "retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 2430.575,
+      "result": {
+        "task": "我是PLUS会员，京东发货的自营商品因为不喜欢而退货，客户原因的运费规则是什么？",
+        "status": "completed",
+        "answer": "在京东发货的自营商品场景下，因误购、七天无理由等客户原因退换货时，PLUS会员的运费由京东承担。 [jd-self-operated-shipping::jd_self_operated_shipping_membership]\n在京东发货的自营商品场景下，若京东承担运费且用户自行快递寄回，用户需先垫付运费，售后完成后按逆向运费补偿标准返还至京东余额；该标准限中国大陆收货地址。 [jd-self-operated-shipping::jd_self_operated_courier_reimbursement]",
+        "citations": [
+          {
+            "chunk_id": "jd-self-operated-shipping::jd_self_operated_shipping_membership",
+            "doc_id": "jd-self-operated-shipping",
+            "title": "京东自营售后运费说明",
+            "text": "适用京东发货的自营商品。误购、七天无理由等客户原因退换货，非PLUS会员付运费，PLUS会员由京东付；质量问题由京东付。",
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/131-496.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_self_operated_shipping_membership",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "4605800cf8942cf7afe8eb21b3103eb0d016ff91fe0982135e089ce27ff32e73",
+            "retrieved_at": "2026-11-20T10:26:47+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "自营退换货运费与会员身份",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-self-operated-shipping::jd_self_operated_shipping_membership"
+          },
+          {
+            "chunk_id": "jd-self-operated-shipping::jd_self_operated_courier_reimbursement",
+            "doc_id": "jd-self-operated-shipping",
+            "title": "京东自营售后运费说明",
+            "text": "适用京东发货的自营商品。京东承担运费且用户自行快递寄回时，用户先垫付，售后完成后按逆向运费补偿标准返京东余额；此标准限中国大陆收货地址。",
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/131-496.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_self_operated_courier_reimbursement",
+            "score": 0.03225806451612903,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "a1555c4ed5c74c080317745a696f7d115a7469549ef0e4ad741ad7745a0f8b49",
+            "retrieved_at": "2026-11-20T10:26:47+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "自营快递寄回的运费返还",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-self-operated-shipping::jd_self_operated_courier_reimbursement"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.134
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "query": "我是PLUS会员，京东发货的自营商品因为不喜欢而退货，客户原因的运费规则是什么？",
+            "citation_ids": [
+              "jd-self-operated-shipping::jd_self_operated_shipping_membership",
+              "jd-self-operated-shipping::jd_self_operated_courier_reimbursement"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 18.147
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 1133.8
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2430.45
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2430.524
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2430.518,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 1992,
+          "completion_tokens": 184,
+          "total_tokens": 2176,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-016",
+      "category": "retrieval",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 2473.216,
+      "result": {
+        "task": "不是PLUS会员，京东发货的自营商品存在质量问题，运费仍然要我承担吗？",
+        "status": "completed",
+        "answer": "在京东发货的自营商品因质量问题退换货的情况下，运费由京东承担，非PLUS会员无需承担。 [jd-self-operated-shipping::jd_self_operated_shipping_membership]\n在京东发货的自营商品、京东承担运费且用户自行快递寄回的情况下，用户需先垫付运费，售后完成后按逆向运费补偿标准返还至京东余额；该标准限中国大陆收货地址。 [jd-self-operated-shipping::jd_self_operated_courier_reimbursement]",
+        "citations": [
+          {
+            "chunk_id": "jd-self-operated-shipping::jd_self_operated_shipping_membership",
+            "doc_id": "jd-self-operated-shipping",
+            "title": "京东自营售后运费说明",
+            "text": "适用京东发货的自营商品。误购、七天无理由等客户原因退换货，非PLUS会员付运费，PLUS会员由京东付；质量问题由京东付。",
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/131-496.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_self_operated_shipping_membership",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "4605800cf8942cf7afe8eb21b3103eb0d016ff91fe0982135e089ce27ff32e73",
+            "retrieved_at": "2026-11-20T10:26:47+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "自营退换货运费与会员身份",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-self-operated-shipping::jd_self_operated_shipping_membership"
+          },
+          {
+            "chunk_id": "jd-self-operated-shipping::jd_self_operated_courier_reimbursement",
+            "doc_id": "jd-self-operated-shipping",
+            "title": "京东自营售后运费说明",
+            "text": "适用京东发货的自营商品。京东承担运费且用户自行快递寄回时，用户先垫付，售后完成后按逆向运费补偿标准返京东余额；此标准限中国大陆收货地址。",
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/131-496.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_self_operated_courier_reimbursement",
+            "score": 0.03225806451612903,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "a1555c4ed5c74c080317745a696f7d115a7469549ef0e4ad741ad7745a0f8b49",
+            "retrieved_at": "2026-11-20T10:26:47+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "自营快递寄回的运费返还",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-self-operated-shipping::jd_self_operated_courier_reimbursement"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.127
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "query": "不是PLUS会员，京东发货的自营商品存在质量问题，运费仍然要我承担吗？",
+            "citation_ids": [
+              "jd-self-operated-shipping::jd_self_operated_shipping_membership",
+              "jd-self-operated-shipping::jd_self_operated_courier_reimbursement"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 16.221
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 1074.752
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2473.144
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2473.167
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2473.162,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 1988,
+          "completion_tokens": 174,
+          "total_tokens": 2162,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-017",
+      "category": "scope",
+      "expected_status": "needs_clarification",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 1.604,
+      "result": {
+        "task": "商品有质量问题要退货，寄回的快递费应该谁出？",
+        "status": "needs_clarification",
+        "answer": "请明确要查询的平台（京东或苏宁）及适用渠道。",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.106
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "needs_clarification",
+            "mode": "model",
+            "elapsed_ms": 1.57
+          }
+        ],
+        "missing_information": [
+          "请明确要查询的平台（京东或苏宁）及适用渠道。"
+        ],
+        "retrieval_rounds": 0,
+        "elapsed_ms": 1.558,
+        "mode": "model",
+        "usage": {
+          "model_calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-018",
+      "category": "scope",
+      "expected_status": "needs_clarification",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 0.221,
+      "result": {
+        "task": "我在京东申请七天无理由退货，退回运费由谁承担？",
+        "status": "needs_clarification",
+        "answer": "京东售后规则区分自营与第三方，请明确适用渠道。",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.112
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "needs_clarification",
+            "mode": "model",
+            "elapsed_ms": 0.195
+          }
+        ],
+        "missing_information": [
+          "京东售后规则区分自营与第三方，请明确适用渠道。"
+        ],
+        "retrieval_rounds": 0,
+        "elapsed_ms": 0.186,
+        "mode": "model",
+        "usage": {
+          "model_calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-019",
+      "category": "scope",
+      "expected_status": "needs_clarification",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 0.147,
+      "result": {
+        "task": "第三方店包邮商品不喜欢了想退，应该由谁承担运费？",
+        "status": "needs_clarification",
+        "answer": "请明确要查询的平台（京东或苏宁）及适用渠道。",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.073
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "needs_clarification",
+            "mode": "model",
+            "elapsed_ms": 0.128
+          }
+        ],
+        "missing_information": [
+          "请明确要查询的平台（京东或苏宁）及适用渠道。"
+        ],
+        "retrieval_rounds": 0,
+        "elapsed_ms": 0.124,
+        "mode": "model",
+        "usage": {
+          "model_calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-020",
+      "category": "scope",
+      "expected_status": "needs_clarification",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 0.15,
+      "result": {
+        "task": "我要退货，赠品和发票必须寄回吗？",
+        "status": "needs_clarification",
+        "answer": "请明确要查询的平台（京东或苏宁）及适用渠道。",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.082
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "needs_clarification",
+            "mode": "model",
+            "elapsed_ms": 0.132
+          }
+        ],
+        "missing_information": [
+          "请明确要查询的平台（京东或苏宁）及适用渠道。"
+        ],
+        "retrieval_rounds": 0,
+        "elapsed_ms": 0.127,
+        "mode": "model",
+        "usage": {
+          "model_calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-021",
+      "category": "comparison",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 2441.341,
+      "result": {
+        "task": "比较京东第三方签收7天内质量问题退换货，与苏宁易购已确认质量问题的退换货，两边运费分别谁承担？",
+        "status": "completed",
+        "answer": "在京东第三方（开放平台）商品签收后7天内，因质量问题退换货：若为包邮订单，由卖家承担退回运费；若为非包邮订单，由卖家承担双向运费。 [jd-marketplace-shipping::jd_marketplace_nonbuyer_shipping]\n在苏宁易购介入运费争议的情况下，若商品确有质量问题，退换货运费由商家承担；若双方另有约定，则依约处理。 [suning-freight-disputes::suning_quality_shipping]",
+        "citations": [
+          {
+            "chunk_id": "jd-marketplace-shipping::jd_marketplace_nonbuyer_shipping",
+            "doc_id": "jd-marketplace-shipping",
+            "title": "第三方卖家商品售后服务运费规则",
+            "text": "签收后7天内，京东第三方商品因质量、物流损坏、缺件或描述不符退换货：包邮订单由卖家付退回运费；非包邮订单由卖家付双向运费。",
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/410-2968.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_marketplace_nonbuyer_shipping",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "1e1d081f1faa1cee6c4bf666a68968f06d44d6d1b666ac6dbe9e90255ea267a9",
+            "retrieved_at": "2026-11-20T10:19:57+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "非买家原因退换货运费",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-marketplace-shipping::jd_marketplace_nonbuyer_shipping"
+          },
+          {
+            "chunk_id": "suning-freight-disputes::suning_quality_shipping",
+            "doc_id": "suning-freight-disputes",
+            "title": "运费争议处理规范",
+            "text": "苏宁易购介入运费争议时，商品确有质量问题的退换货运费由商家承担；双方另有约定时依约处理。",
+            "platform": "suning",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://rule.suning.com/ruleInfo/ruleInfoDetail/GZ100006683.htm",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "suning_quality_shipping",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "dfd734ae4f51ba0897996050c8ea7b9831aab3c1146577498acc55a1c87ec51a",
+            "retrieved_at": "2026-11-20T10:19:57+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "质量问题退换货运费",
+            "content_kind": "curated_summary",
+            "citation_id": "suning-freight-disputes::suning_quality_shipping"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.063
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "query": "比较京东第三方签收7天内质量问题退换货，与苏宁易购已确认质量问题的退换货，两边运费分别谁承担？",
+            "citation_ids": [
+              "jd-marketplace-shipping::jd_marketplace_nonbuyer_shipping",
+              "jd-marketplace-shipping::jd_marketplace_no_reason_shipping",
+              "jd-marketplace-disputes::jd_marketplace_return_payment",
+              "jd-marketplace-office::jd_office_return_materials",
+              "jd-marketplace-disputes::jd_marketplace_dispute_evidence"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 21.479
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "suning",
+            "business_scope": "platform",
+            "query": "比较京东第三方签收7天内质量问题退换货，与苏宁易购已确认质量问题的退换货，两边运费分别谁承担？",
+            "citation_ids": [
+              "suning-freight-disputes::suning_quality_shipping",
+              "suning-freight-disputes::suning_shipping_evidence"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 35.043
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 921.874
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2441.274
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2441.297
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2441.292,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 5129,
+          "completion_tokens": 176,
+          "total_tokens": 5305,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-022",
+      "category": "comparison",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 2478.684,
+      "result": {
+        "task": "对比京东自营PLUS会员因误购退货，与京东第三方包邮商品签收7天内无理由退货，运费分别由谁承担？",
+        "status": "completed",
+        "answer": "在京东发货的自营商品场景下，因误购等客户原因退换货，PLUS会员的运费由京东承担。 [jd-self-operated-shipping::jd_self_operated_shipping_membership]\n在京东发货的自营商品场景下，若京东承担运费且用户自行快递寄回，用户需先垫付运费，售后完成后按逆向运费补偿标准返还至京东余额；该标准限中国大陆收货地址。 [jd-self-operated-shipping::jd_self_operated_courier_reimbursement]\n京东第三方商品在签收后7天内、支持七天无理由退货的情况下，包邮订单由买家承担退回运费。 [jd-marketplace-shipping::jd_marketplace_no_reason_shipping]",
+        "citations": [
+          {
+            "chunk_id": "jd-self-operated-shipping::jd_self_operated_shipping_membership",
+            "doc_id": "jd-self-operated-shipping",
+            "title": "京东自营售后运费说明",
+            "text": "适用京东发货的自营商品。误购、七天无理由等客户原因退换货，非PLUS会员付运费，PLUS会员由京东付；质量问题由京东付。",
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/131-496.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_self_operated_shipping_membership",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "4605800cf8942cf7afe8eb21b3103eb0d016ff91fe0982135e089ce27ff32e73",
+            "retrieved_at": "2026-11-20T10:26:47+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "自营退换货运费与会员身份",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-self-operated-shipping::jd_self_operated_shipping_membership"
+          },
+          {
+            "chunk_id": "jd-self-operated-shipping::jd_self_operated_courier_reimbursement",
+            "doc_id": "jd-self-operated-shipping",
+            "title": "京东自营售后运费说明",
+            "text": "适用京东发货的自营商品。京东承担运费且用户自行快递寄回时，用户先垫付，售后完成后按逆向运费补偿标准返京东余额；此标准限中国大陆收货地址。",
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/131-496.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_self_operated_courier_reimbursement",
+            "score": 0.03225806451612903,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "a1555c4ed5c74c080317745a696f7d115a7469549ef0e4ad741ad7745a0f8b49",
+            "retrieved_at": "2026-11-20T10:26:47+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "自营快递寄回的运费返还",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-self-operated-shipping::jd_self_operated_courier_reimbursement"
+          },
+          {
+            "chunk_id": "jd-marketplace-shipping::jd_marketplace_no_reason_shipping",
+            "doc_id": "jd-marketplace-shipping",
+            "title": "第三方卖家商品售后服务运费规则",
+            "text": "签收后7天内，支持七天无理由退货的京东第三方商品：包邮订单由买家付退回运费；非包邮订单由买家付双向运费。",
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/410-2968.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_marketplace_no_reason_shipping",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "818266c79ebd5d7a24cd6e055b90385554c2dd2a2d98903276537536bc662f43",
+            "retrieved_at": "2026-11-20T10:19:57+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "七天无理由退货运费",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-marketplace-shipping::jd_marketplace_no_reason_shipping"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.193
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "query": "对比京东自营PLUS会员因误购退货，与京东第三方包邮商品签收7天内无理由退货，运费分别由谁承担？",
+            "citation_ids": [
+              "jd-self-operated-shipping::jd_self_operated_shipping_membership",
+              "jd-self-operated-shipping::jd_self_operated_courier_reimbursement"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 20.411
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "query": "对比京东自营PLUS会员因误购退货，与京东第三方包邮商品签收7天内无理由退货，运费分别由谁承担？",
+            "citation_ids": [
+              "jd-marketplace-shipping::jd_marketplace_no_reason_shipping",
+              "jd-marketplace-shipping::jd_marketplace_nonbuyer_shipping",
+              "jd-marketplace-disputes::jd_marketplace_return_payment",
+              "jd-marketplace-office::jd_office_return_materials",
+              "jd-marketplace-disputes::jd_marketplace_dispute_evidence"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 33.594
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 1102.242
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2478.566
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2478.601
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2478.592,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 5206,
+          "completion_tokens": 235,
+          "total_tokens": 5441,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-023",
+      "category": "comparison",
+      "expected_status": "completed",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 2739.66,
+      "result": {
+        "task": "京东第三方订单纠纷应按什么通知提交凭证？苏宁易购对垫付运费有争议时又可以用哪些凭证？请分别说明。",
+        "status": "completed",
+        "answer": "在京东第三方订单纠纷处理期间，双方应按纠纷页面或短信、电话、邮件通知及时提供凭证；该规则不适用于自营、虚拟、闪购及海外购。 [jd-marketplace-disputes::jd_marketplace_dispute_evidence]\n在苏宁易购运费争议中，若承担方对对方垫付的运费有异议，对方需配合举证，例如提供快递沟通、官网收费或寄件付款记录。 [suning-freight-disputes::suning_shipping_evidence]",
+        "citations": [
+          {
+            "chunk_id": "jd-marketplace-disputes::jd_marketplace_dispute_evidence",
+            "doc_id": "jd-marketplace-disputes",
+            "title": "京东纠纷处理规则（买家版）",
+            "text": "京东处理纠纷期间，双方按纠纷页面或短信、电话、邮件通知及时提供凭证。本规则不含自营、虚拟、闪购及海外购。",
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "source_type": "official_public_policy",
+            "source_url": "https://help.jd.com/user/issue/464-1501.html",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "jd_marketplace_dispute_evidence",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "463e6d0d0b59900c2eb61f7f447f702b6e5f12c1cd0cbbd61213b555c1a76d74",
+            "retrieved_at": "2026-11-20T10:19:57+08:00",
+            "effective_from": "2023-09-19",
+            "effective_to": null,
+            "clause_title": "纠纷处理凭证提交",
+            "content_kind": "curated_summary",
+            "citation_id": "jd-marketplace-disputes::jd_marketplace_dispute_evidence"
+          },
+          {
+            "chunk_id": "suning-freight-disputes::suning_shipping_evidence",
+            "doc_id": "suning-freight-disputes",
+            "title": "运费争议处理规范",
+            "text": "苏宁易购运费争议中，承担方对对方垫付的运费有异议时，对方需配合举证，例如快递沟通、官网收费或寄件付款记录。",
+            "platform": "suning",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://rule.suning.com/ruleInfo/ruleInfoDetail/GZ100006683.htm",
+            "version": "curated-2026-11-20-v1",
+            "clause_id": "suning_shipping_evidence",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "970438e81a728a8f7fae2905e079a93cb49a7af722949000d6ac7ecb52db13a1",
+            "retrieved_at": "2026-11-20T10:19:57+08:00",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "运费争议所需证明",
+            "content_kind": "curated_summary",
+            "citation_id": "suning-freight-disputes::suning_shipping_evidence"
+          }
+        ],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.142
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "query": "京东第三方订单纠纷应按什么通知提交凭证？苏宁易购对垫付运费有争议时又可以用哪些凭证？请分别说明。",
+            "citation_ids": [
+              "jd-marketplace-disputes::jd_marketplace_dispute_evidence",
+              "jd-marketplace-disputes::jd_marketplace_return_payment",
+              "jd-marketplace-shipping::jd_marketplace_no_reason_shipping",
+              "jd-marketplace-shipping::jd_marketplace_nonbuyer_shipping",
+              "jd-marketplace-office::jd_office_return_materials"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 21.908
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "suning",
+            "business_scope": "platform",
+            "query": "京东第三方订单纠纷应按什么通知提交凭证？苏宁易购对垫付运费有争议时又可以用哪些凭证？请分别说明。",
+            "citation_ids": [
+              "suning-freight-disputes::suning_shipping_evidence",
+              "suning-freight-disputes::suning_quality_shipping"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 35.107
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": true,
+            "missing_evidence": [],
+            "missing_information": [],
+            "next_action": "answer",
+            "elapsed_ms": 1301.423
+          },
+          {
+            "stage": "citations_validated",
+            "status": "valid_ids_and_scope",
+            "semantic_support": "evaluation_required",
+            "elapsed_ms": 2739.573
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "completed",
+            "mode": "model",
+            "elapsed_ms": 2739.6
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2739.594,
+        "mode": "model",
+        "usage": {
+          "model_calls": 2,
+          "prompt_tokens": 5127,
+          "completion_tokens": 175,
+          "total_tokens": 5302,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-024",
+      "category": "unanswerable",
+      "expected_status": "insufficient_evidence",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 0.2,
+      "result": {
+        "task": "小米商城的质量问题退货寄回运费由谁承担？",
+        "status": "insufficient_evidence",
+        "answer": "知识库目前没有该平台的适用政策。",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.101
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "insufficient_evidence",
+            "mode": "model",
+            "elapsed_ms": 0.165
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 0,
+        "elapsed_ms": 0.158,
+        "mode": "model",
+        "usage": {
+          "model_calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-025",
+      "category": "unanswerable",
+      "expected_status": "insufficient_evidence",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 1144.116,
+      "result": {
+        "task": "请查2020年1月1日适用的京东自营误购退货运费政策。",
+        "status": "insufficient_evidence",
+        "answer": "现有适用条款不足以支持完整回答。缺少：2020年1月1日适用的京东自营误购退货运费政策条款（含运费承担方、收费标准、适用条件）。",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.069
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "query": "请查2020年1月1日适用的京东自营误购退货运费政策。",
+            "citation_ids": [],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 0.348
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": false,
+            "missing_evidence": [
+              "2020年1月1日适用的京东自营误购退货运费政策条款（含运费承担方、收费标准、适用条件）"
+            ],
+            "missing_information": [],
+            "next_action": "retrieve",
+            "elapsed_ms": 1143.748
+          },
+          {
+            "stage": "retrieve",
+            "round": 2,
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "query": "京东自营 误购 退货 运费 政策 2020年1月1日 适用",
+            "citation_ids": [],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 1144.034
+          },
+          {
+            "stage": "retrieval_stop",
+            "reason": "no_new_evidence",
+            "elapsed_ms": 1144.055
+          },
+          {
+            "stage": "evidence_check",
+            "sufficient": false,
+            "reason": "insufficient_or_budget_exhausted",
+            "elapsed_ms": 1144.061
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "insufficient_evidence",
+            "mode": "model",
+            "elapsed_ms": 1144.082
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 2,
+        "elapsed_ms": 1144.075,
+        "mode": "model",
+        "usage": {
+          "model_calls": 1,
+          "prompt_tokens": 379,
+          "completion_tokens": 94,
+          "total_tokens": 473,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-026",
+      "category": "unanswerable",
+      "expected_status": "insufficient_evidence",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 1495.031,
+      "result": {
+        "task": "请查2022年1月1日适用的京东第三方退货到付规则。",
+        "status": "insufficient_evidence",
+        "answer": "现有适用条款不足以支持完整回答。缺少：2022年1月1日适用的京东第三方（POP）退货到付规则条款（运费承担、到付条件、时效等）。",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.111
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "query": "请查2022年1月1日适用的京东第三方退货到付规则。",
+            "citation_ids": [],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 0.446
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": false,
+            "missing_evidence": [
+              "2022年1月1日适用的京东第三方（POP）退货到付规则条款（运费承担、到付条件、时效等）"
+            ],
+            "missing_information": [],
+            "next_action": "retrieve",
+            "elapsed_ms": 1494.64
+          },
+          {
+            "stage": "retrieve",
+            "round": 2,
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "query": "京东第三方 POP 商家 退货 到付 运费 规则 2022年1月1日 适用",
+            "citation_ids": [],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 1494.94
+          },
+          {
+            "stage": "retrieval_stop",
+            "reason": "no_new_evidence",
+            "elapsed_ms": 1494.96
+          },
+          {
+            "stage": "evidence_check",
+            "sufficient": false,
+            "reason": "insufficient_or_budget_exhausted",
+            "elapsed_ms": 1494.967
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "insufficient_evidence",
+            "mode": "model",
+            "elapsed_ms": 1494.989
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 2,
+        "elapsed_ms": 1494.981,
+        "mode": "model",
+        "usage": {
+          "model_calls": 1,
+          "prompt_tokens": 375,
+          "completion_tokens": 95,
+          "total_tokens": 470,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-027",
+      "category": "unanswerable",
+      "expected_status": "insufficient_evidence",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 1358.135,
+      "result": {
+        "task": "苏宁易购质量问题退货，我垫了50元，政策规定的报销金额上限具体是多少？",
+        "status": "insufficient_evidence",
+        "answer": "现有适用条款不足以支持完整回答。缺少：苏宁易购质量问题退换货运费报销金额上限的具体条款（现有条款仅说明运费由商家承担，未规定报销金额上限）。",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.125
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "suning",
+            "business_scope": "platform",
+            "query": "苏宁易购质量问题退货，我垫了50元，政策规定的报销金额上限具体是多少？",
+            "citation_ids": [
+              "suning-freight-disputes::suning_quality_shipping",
+              "suning-freight-disputes::suning_shipping_evidence"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 17.232
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": false,
+            "missing_evidence": [
+              "苏宁易购质量问题退换货运费报销金额上限的具体条款（现有条款仅说明运费由商家承担，未规定报销金额上限）"
+            ],
+            "missing_information": [],
+            "next_action": "retrieve",
+            "elapsed_ms": 1344.365
+          },
+          {
+            "stage": "read_document",
+            "round": 2,
+            "requested_id": "suning-freight-disputes::suning_quality_shipping",
+            "platform": "suning",
+            "business_scope": "platform",
+            "citation_ids": [
+              "suning-freight-disputes::suning_quality_shipping",
+              "suning-freight-disputes::suning_shipping_evidence"
+            ],
+            "elapsed_ms": 1344.645
+          },
+          {
+            "stage": "read_document",
+            "round": 2,
+            "requested_id": "suning-freight-disputes::suning_shipping_evidence",
+            "platform": "suning",
+            "business_scope": "platform",
+            "citation_ids": [
+              "suning-freight-disputes::suning_quality_shipping",
+              "suning-freight-disputes::suning_shipping_evidence"
+            ],
+            "elapsed_ms": 1344.776
+          },
+          {
+            "stage": "retrieve",
+            "round": 2,
+            "platform": "suning",
+            "business_scope": "platform",
+            "query": "苏宁易购 质量问题 退换货运费 报销金额 上限 标准",
+            "citation_ids": [
+              "suning-freight-disputes::suning_quality_shipping",
+              "suning-freight-disputes::suning_shipping_evidence"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 1358.036
+          },
+          {
+            "stage": "retrieval_stop",
+            "reason": "no_new_evidence",
+            "elapsed_ms": 1358.069
+          },
+          {
+            "stage": "evidence_check",
+            "sufficient": false,
+            "reason": "insufficient_or_budget_exhausted",
+            "elapsed_ms": 1358.075
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "insufficient_evidence",
+            "mode": "model",
+            "elapsed_ms": 1358.09
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 2,
+        "elapsed_ms": 1358.085,
+        "mode": "model",
+        "usage": {
+          "model_calls": 1,
+          "prompt_tokens": 995,
+          "completion_tokens": 120,
+          "total_tokens": 1115,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-028",
+      "category": "unanswerable",
+      "expected_status": "insufficient_evidence",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "manual_review_required",
+      "elapsed_ms": 1332.229,
+      "result": {
+        "task": "京东自营商品退款成功后，资金精确需要几个小时到银行卡？",
+        "status": "insufficient_evidence",
+        "answer": "现有适用条款不足以支持完整回答。缺少：京东自营商品退款成功后资金到银行卡的精确到账时效（小时数）条款。",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.09
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "self_operated",
+            "query": "京东自营商品退款成功后，资金精确需要几个小时到银行卡？",
+            "citation_ids": [
+              "jd-self-operated-shipping::jd_self_operated_courier_reimbursement",
+              "jd-self-operated-shipping::jd_self_operated_shipping_membership"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 10.663
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": false,
+            "missing_evidence": [
+              "京东自营商品退款成功后资金到银行卡的精确到账时效（小时数）条款"
+            ],
+            "missing_information": [],
+            "next_action": "retrieve",
+            "elapsed_ms": 1332.073
+          },
+          {
+            "stage": "retrieval_stop",
+            "reason": "repeated_query",
+            "elapsed_ms": 1332.159
+          },
+          {
+            "stage": "evidence_check",
+            "sufficient": false,
+            "reason": "insufficient_or_budget_exhausted",
+            "elapsed_ms": 1332.166
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "insufficient_evidence",
+            "mode": "model",
+            "elapsed_ms": 1332.182
+          }
+        ],
+        "missing_information": [],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 1332.178,
+        "mode": "model",
+        "usage": {
+          "model_calls": 1,
+          "prompt_tokens": 1030,
+          "completion_tokens": 88,
+          "total_tokens": 1118,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-029",
+      "category": "scope",
+      "expected_status": "needs_clarification",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 2035.402,
+      "result": {
+        "task": "京东第三方订单只知道下单日期，没有签收日期和商品状态，现在是否可以七天无理由退货？",
+        "status": "needs_clarification",
+        "answer": "请补充：商品类别/商品性质（是否属于七天无理由退货例外商品）；实际签收日期（用于判断是否仍在签收后7天内）；商品是否完好、是否影响二次销售",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.166
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "query": "京东第三方订单只知道下单日期，没有签收日期和商品状态，现在是否可以七天无理由退货？",
+            "citation_ids": [
+              "jd-marketplace-shipping::jd_marketplace_no_reason_shipping",
+              "jd-marketplace-shipping::jd_marketplace_nonbuyer_shipping",
+              "jd-marketplace-disputes::jd_marketplace_return_payment",
+              "jd-marketplace-office::jd_office_return_materials",
+              "jd-marketplace-disputes::jd_marketplace_dispute_evidence"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 20.014
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": false,
+            "missing_evidence": [
+              "京东第三方商品七天无理由退货的适用条件（商品完好、商品性质是否属于不适用七天无理由退货的商品类别）及7天起算规则（自签收次日起算）的条款原文"
+            ],
+            "missing_information": [
+              "商品类别/商品性质（是否属于七天无理由退货例外商品）",
+              "实际签收日期（用于判断是否仍在签收后7天内）",
+              "商品是否完好、是否影响二次销售"
+            ],
+            "next_action": "clarify",
+            "elapsed_ms": 2035.302
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "needs_clarification",
+            "mode": "model",
+            "elapsed_ms": 2035.327
+          }
+        ],
+        "missing_information": [
+          "商品类别/商品性质（是否属于七天无理由退货例外商品）",
+          "实际签收日期（用于判断是否仍在签收后7天内）",
+          "商品是否完好、是否影响二次销售"
+        ],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 2035.322,
+        "mode": "model",
+        "usage": {
+          "model_calls": 1,
+          "prompt_tokens": 1977,
+          "completion_tokens": 169,
+          "total_tokens": 2146,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    },
+    {
+      "id": "kb-030",
+      "category": "scope",
+      "expected_status": "needs_clarification",
+      "status_match": true,
+      "expected_citations_present": true,
+      "expected_platforms_match": true,
+      "answer_support_evaluation": "not_scored",
+      "elapsed_ms": 1332.346,
+      "result": {
+        "task": "京东第三方购买的商品准备退货，只知道平台和店铺，还没确认商品类别，赠品和发票都必须寄回吗？",
+        "status": "needs_clarification",
+        "answer": "请补充：商品类别（是否属于软件、电脑办公类商品）；退货原因（质量问题换货还是退货/七天无理由退货）",
+        "citations": [],
+        "analysis": null,
+        "events": [
+          {
+            "stage": "assistant_route",
+            "calculation": false,
+            "knowledge": true,
+            "elapsed_ms": 0.101
+          },
+          {
+            "stage": "retrieve",
+            "round": 1,
+            "platform": "jd",
+            "business_scope": "marketplace",
+            "query": "京东第三方购买的商品准备退货，只知道平台和店铺，还没确认商品类别，赠品和发票都必须寄回吗？",
+            "citation_ids": [
+              "jd-marketplace-office::jd_office_return_materials",
+              "jd-marketplace-disputes::jd_marketplace_return_payment",
+              "jd-marketplace-office::jd_storage_repair_backup",
+              "jd-marketplace-shipping::jd_marketplace_nonbuyer_shipping",
+              "jd-marketplace-shipping::jd_marketplace_no_reason_shipping"
+            ],
+            "retrieval_mode": "hybrid",
+            "elapsed_ms": 21.72
+          },
+          {
+            "stage": "evidence_check",
+            "round": 1,
+            "sufficient": false,
+            "missing_evidence": [],
+            "missing_information": [
+              "商品类别（是否属于软件、电脑办公类商品）",
+              "退货原因（质量问题换货还是退货/七天无理由退货）"
+            ],
+            "next_action": "clarify",
+            "elapsed_ms": 1332.251
+          },
+          {
+            "stage": "assistant_complete",
+            "status": "needs_clarification",
+            "mode": "model",
+            "elapsed_ms": 1332.293
+          }
+        ],
+        "missing_information": [
+          "商品类别（是否属于软件、电脑办公类商品）",
+          "退货原因（质量问题换货还是退货/七天无理由退货）"
+        ],
+        "retrieval_rounds": 1,
+        "elapsed_ms": 1332.285,
+        "mode": "model",
+        "usage": {
+          "model_calls": 1,
+          "prompt_tokens": 1961,
+          "completion_tokens": 64,
+          "total_tokens": 2025,
+          "token_accounting": "last_reported_response_per_call"
+        }
+      }
+    }
+  ],
+  "scenario_summary": {
+    "count": 26,
+    "status_matches": 26,
+    "citation_coverage_matches": 26
+  },
+  "model_usage": {
+    "model": "deepseek-flash",
+    "http_requests": 36,
+    "prompt_tokens": 57051,
+    "completion_tokens": 3012,
+    "total_tokens": 60063
+  }
+}

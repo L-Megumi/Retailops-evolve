@@ -2,6 +2,9 @@ from __future__ import annotations
 
 import argparse
 import os
+import json
+from dataclasses import asdict
+from decimal import Decimal
 from pathlib import Path
 
 from .agent import RetailOpsAgent
@@ -54,11 +57,58 @@ def build_parser() -> argparse.ArgumentParser:
     serve.add_argument("--plugin-registry", type=Path, default=Path("plugins/registry.json"))
     serve.add_argument("--state", type=Path, default=Path("state/tasks.sqlite3"))
     serve.add_argument("--allow-evolution", action="store_true")
+    serve.add_argument("--knowledge", type=Path)
+    serve.add_argument("--embedding-model", help="optional FastEmbed model; enables dense retrieval")
+    serve.add_argument("--retrieval-mode", choices=("bm25", "dense", "hybrid"), default="hybrid")
+    ask = sub.add_parser("ask", help="answer scoped policy questions and combined retail analysis")
+    ask.add_argument("--task", required=True)
+    ask.add_argument("--knowledge", type=Path, default=Path("knowledge/retailops-policies.json"))
+    ask.add_argument("--platform", choices=("jd", "suning", "retailops"), action="append", default=[])
+    ask.add_argument("--scope", choices=("marketplace", "self_operated", "platform", "internal"))
+    ask.add_argument("--as-of", help="policy effective date in YYYY-MM-DD")
+    ask.add_argument("--orders", type=Path)
+    ask.add_argument("--refunds", type=Path)
+    ask.add_argument("--planner", choices=("rule", "model"), default="rule")
+    ask.add_argument("--retrieval-mode", choices=("bm25", "dense", "hybrid"), default="hybrid")
+    ask.add_argument("--embedding-model", help="e.g. BAAI/bge-small-zh-v1.5; requires the rag extra")
+    ask.add_argument("--plugin-registry", type=Path, default=Path("plugins/registry.json"))
+    ask.add_argument("--required-result", action="append", default=[])
+    ask.add_argument("--evolve", action="store_true")
+    ask.add_argument("--output", type=Path)
     return parser
 
 
 def main() -> int:
     args = build_parser().parse_args()
+    if args.command == "ask":
+        from .assistant import RetailOpsAssistant
+        from .knowledge import FastEmbedEncoder, KnowledgeStore
+        if bool(args.orders) != bool(args.refunds):
+            raise SystemExit("--orders and --refunds must be supplied together")
+        model = OpenAICompatibleModel.deepseek_from_env() if args.planner == "model" or args.evolve else None
+        encoder = FastEmbedEncoder(args.embedding_model) if args.embedding_model else None
+        store = KnowledgeStore.from_path(args.knowledge, encoder=encoder)
+        manager = PluginManager.from_manifest(args.plugin_registry) if args.plugin_registry.exists() else None
+        if args.evolve and manager is None:
+            raise SystemExit("--evolve requires an existing --plugin-registry")
+        analysis = RetailOpsAgent(ModelPlanner(model) if args.planner == "model" else None,
+                                  plugin_manager=manager,
+                                  evolver=CapabilityEvolver(model, Path("runs/online-evolution")) if args.evolve else None)
+        result = RetailOpsAssistant(store, analysis_agent=analysis, model=model,
+                                    retrieval_mode=args.retrieval_mode).run(
+            args.task, args.orders, args.refunds, platforms=tuple(args.platform),
+            business_scope=args.scope, as_of=args.as_of, required_results=tuple(args.required_result))
+        payload = asdict(result)
+        payload["ok"] = result.ok
+        report = json.dumps(payload, ensure_ascii=False, indent=2,
+                            default=lambda value: str(value) if isinstance(value, Decimal) else value)
+        if args.output:
+            args.output.parent.mkdir(parents=True, exist_ok=True)
+            args.output.write_text(report + "\n", encoding="utf-8")
+            print(args.output)
+        else:
+            print(report)
+        return 0 if result.ok else 1
     if args.command == "serve":
         if args.host not in {"127.0.0.1", "localhost", "::1"} and not os.environ.get("RETAILOPS_SERVICE_TOKEN"):
             raise SystemExit("set RETAILOPS_SERVICE_TOKEN before binding a non-loopback address")
@@ -68,7 +118,9 @@ def main() -> int:
         except ImportError as exc:
             raise SystemExit("install the service extra: pip install '.[service]'") from exc
         uvicorn.run(create_app(data_root=args.data_root, manifest=args.plugin_registry,
-                               state_path=args.state, allow_evolution=args.allow_evolution),
+                               state_path=args.state, allow_evolution=args.allow_evolution,
+                               knowledge_path=args.knowledge, embedding_model=args.embedding_model,
+                               retrieval_mode=args.retrieval_mode),
                     host=args.host, port=args.port)
         return 0
     if args.evolve and not args.plugin_registry:

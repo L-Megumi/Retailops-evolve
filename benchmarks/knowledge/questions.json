@@ -1,0 +1,441 @@
+[
+  {
+    "id": "kb-001",
+    "query": "京东第三方店的包邮商品，签收第3天申请七天无理由退货，寄回运费由谁承担？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "marketplace",
+    "expected_clause_ids": [
+      "jd_marketplace_no_reason_shipping"
+    ],
+    "category": "retrieval",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "jd"
+    ]
+  },
+  {
+    "id": "kb-002",
+    "query": "京东第三方商品不包邮，签收5天发现缺少配件而退换货，发出和退回的运费谁付？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "marketplace",
+    "expected_clause_ids": [
+      "jd_marketplace_nonbuyer_shipping"
+    ],
+    "category": "retrieval",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "jd"
+    ]
+  },
+  {
+    "id": "kb-003",
+    "query": "京东第三方电脑办公商品退货，赠品和发票都要放回包裹吗？质量问题换货也一样吗？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "marketplace",
+    "expected_clause_ids": [
+      "jd_office_return_materials"
+    ],
+    "category": "retrieval",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "jd"
+    ]
+  },
+  {
+    "id": "kb-004",
+    "query": "京东第三方购买的存储设备准备返修，商家会帮我导出里面的数据吗？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "marketplace",
+    "expected_clause_ids": [
+      "jd_storage_repair_backup"
+    ],
+    "category": "retrieval",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "jd"
+    ]
+  },
+  {
+    "id": "kb-005",
+    "query": "京东第三方商家已经通过退货审核，我可以直接把包裹运费设为到付吗？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "marketplace",
+    "expected_clause_ids": [
+      "jd_marketplace_return_payment"
+    ],
+    "category": "retrieval",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "jd"
+    ]
+  },
+  {
+    "id": "kb-006",
+    "query": "京东第三方订单申请平台处理纠纷后，应该根据哪些通知提交证明材料？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "marketplace",
+    "expected_clause_ids": [
+      "jd_marketplace_dispute_evidence"
+    ],
+    "category": "retrieval",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "jd"
+    ]
+  },
+  {
+    "id": "kb-007",
+    "query": "京东发货的自营商品，我不是PLUS，因为误购申请退货，运费是谁承担？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "self_operated",
+    "expected_clause_ids": [
+      "jd_self_operated_shipping_membership"
+    ],
+    "category": "retrieval",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "jd"
+    ]
+  },
+  {
+    "id": "kb-008",
+    "query": "京东发货的自营商品由京东承担运费，我在大陆自行快递寄回，先垫的钱怎样返还？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "self_operated",
+    "expected_clause_ids": [
+      "jd_self_operated_courier_reimbursement"
+    ],
+    "category": "retrieval",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "jd"
+    ]
+  },
+  {
+    "id": "kb-009",
+    "query": "苏宁易购介入运费争议，已确认商品有质量问题，退换货运费如何分担？",
+    "platforms": [
+      "suning"
+    ],
+    "business_scope": "platform",
+    "expected_clause_ids": [
+      "suning_quality_shipping"
+    ],
+    "category": "retrieval",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "suning"
+    ]
+  },
+  {
+    "id": "kb-010",
+    "query": "苏宁易购退货运费是对方先垫付的，我对金额有异议，需要对方提供什么证明？",
+    "platforms": [
+      "suning"
+    ],
+    "business_scope": "platform",
+    "expected_clause_ids": [
+      "suning_shipping_evidence"
+    ],
+    "category": "retrieval",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "suning"
+    ]
+  },
+  {
+    "id": "kb-011",
+    "query": "RetailOps默认退款率分母和退款日期归属是什么，具体金额由谁计算？",
+    "platforms": [
+      "retailops"
+    ],
+    "business_scope": "internal",
+    "expected_clause_ids": [
+      "retailops_metric_calculation"
+    ],
+    "category": "retrieval",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "retailops"
+    ]
+  },
+  {
+    "id": "kb-012",
+    "query": "RetailOps的raw与effective退款视图有什么差别？指标插件怎样选择输入？",
+    "platforms": [
+      "retailops"
+    ],
+    "business_scope": "internal",
+    "expected_clause_ids": [
+      "retailops_raw_effective_views"
+    ],
+    "category": "retrieval",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "retailops"
+    ]
+  },
+  {
+    "id": "kb-013",
+    "query": "RetailOps发现同一个refund_id重复出现，核查实际资金是否重复支付时应该做什么？",
+    "platforms": [
+      "retailops"
+    ],
+    "business_scope": "internal",
+    "expected_clause_ids": [
+      "retailops_duplicate_event_review"
+    ],
+    "category": "retrieval",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "retailops"
+    ]
+  },
+  {
+    "id": "kb-014",
+    "query": "RetailOps现有订单字段是否含签收时间？判断退货资格还需要补哪些信息？",
+    "platforms": [
+      "retailops"
+    ],
+    "business_scope": "internal",
+    "expected_clause_ids": [
+      "retailops_missing_order_facts"
+    ],
+    "category": "retrieval",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "retailops"
+    ]
+  },
+  {
+    "id": "kb-015",
+    "query": "我是PLUS会员，京东发货的自营商品因为不喜欢而退货，客户原因的运费规则是什么？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "self_operated",
+    "expected_clause_ids": [
+      "jd_self_operated_shipping_membership"
+    ],
+    "category": "retrieval",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "jd"
+    ]
+  },
+  {
+    "id": "kb-016",
+    "query": "不是PLUS会员，京东发货的自营商品存在质量问题，运费仍然要我承担吗？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "self_operated",
+    "expected_clause_ids": [
+      "jd_self_operated_shipping_membership"
+    ],
+    "category": "retrieval",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "jd"
+    ]
+  },
+  {
+    "id": "kb-017",
+    "query": "商品有质量问题要退货，寄回的快递费应该谁出？",
+    "platforms": [],
+    "business_scope": null,
+    "expected_clause_ids": [],
+    "category": "scope",
+    "expected_status": "needs_clarification",
+    "expected_platforms": []
+  },
+  {
+    "id": "kb-018",
+    "query": "我在京东申请七天无理由退货，退回运费由谁承担？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": null,
+    "expected_clause_ids": [],
+    "category": "scope",
+    "expected_status": "needs_clarification",
+    "expected_platforms": []
+  },
+  {
+    "id": "kb-019",
+    "query": "第三方店包邮商品不喜欢了想退，应该由谁承担运费？",
+    "platforms": [],
+    "business_scope": "marketplace",
+    "expected_clause_ids": [],
+    "category": "scope",
+    "expected_status": "needs_clarification",
+    "expected_platforms": []
+  },
+  {
+    "id": "kb-020",
+    "query": "我要退货，赠品和发票必须寄回吗？",
+    "platforms": [],
+    "business_scope": null,
+    "expected_clause_ids": [],
+    "category": "scope",
+    "expected_status": "needs_clarification",
+    "expected_platforms": []
+  },
+  {
+    "id": "kb-021",
+    "query": "比较京东第三方签收7天内质量问题退换货，与苏宁易购已确认质量问题的退换货，两边运费分别谁承担？",
+    "platforms": [
+      "jd",
+      "suning"
+    ],
+    "business_scope": null,
+    "expected_clause_ids": [
+      "jd_marketplace_nonbuyer_shipping",
+      "suning_quality_shipping"
+    ],
+    "category": "comparison",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "jd",
+      "suning"
+    ]
+  },
+  {
+    "id": "kb-022",
+    "query": "对比京东自营PLUS会员因误购退货，与京东第三方包邮商品签收7天内无理由退货，运费分别由谁承担？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": null,
+    "expected_clause_ids": [
+      "jd_self_operated_shipping_membership",
+      "jd_marketplace_no_reason_shipping"
+    ],
+    "category": "comparison",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "jd"
+    ]
+  },
+  {
+    "id": "kb-023",
+    "query": "京东第三方订单纠纷应按什么通知提交凭证？苏宁易购对垫付运费有争议时又可以用哪些凭证？请分别说明。",
+    "platforms": [
+      "jd",
+      "suning"
+    ],
+    "business_scope": null,
+    "expected_clause_ids": [
+      "jd_marketplace_dispute_evidence",
+      "suning_shipping_evidence"
+    ],
+    "category": "comparison",
+    "expected_status": "completed",
+    "expected_platforms": [
+      "jd",
+      "suning"
+    ]
+  },
+  {
+    "id": "kb-024",
+    "query": "小米商城的质量问题退货寄回运费由谁承担？",
+    "platforms": [],
+    "business_scope": null,
+    "expected_clause_ids": [],
+    "category": "unanswerable",
+    "expected_status": "insufficient_evidence",
+    "expected_platforms": []
+  },
+  {
+    "id": "kb-025",
+    "query": "请查2020年1月1日适用的京东自营误购退货运费政策。",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "self_operated",
+    "expected_clause_ids": [],
+    "category": "unanswerable",
+    "expected_status": "insufficient_evidence",
+    "expected_platforms": [],
+    "as_of": "2020-01-01"
+  },
+  {
+    "id": "kb-026",
+    "query": "请查2022年1月1日适用的京东第三方退货到付规则。",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "marketplace",
+    "expected_clause_ids": [],
+    "category": "unanswerable",
+    "expected_status": "insufficient_evidence",
+    "expected_platforms": [],
+    "as_of": "2022-01-01"
+  },
+  {
+    "id": "kb-027",
+    "query": "苏宁易购质量问题退货，我垫了50元，政策规定的报销金额上限具体是多少？",
+    "platforms": [
+      "suning"
+    ],
+    "business_scope": "platform",
+    "expected_clause_ids": [],
+    "category": "unanswerable",
+    "expected_status": "insufficient_evidence",
+    "expected_platforms": [],
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "kb-028",
+    "query": "京东自营商品退款成功后，资金精确需要几个小时到银行卡？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "self_operated",
+    "expected_clause_ids": [],
+    "category": "unanswerable",
+    "expected_status": "insufficient_evidence",
+    "expected_platforms": [],
+    "evaluation_layer": "answer_support"
+  },
+  {
+    "id": "kb-029",
+    "query": "京东第三方订单只知道下单日期，没有签收日期和商品状态，现在是否可以七天无理由退货？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "marketplace",
+    "expected_clause_ids": [],
+    "category": "scope",
+    "expected_status": "needs_clarification",
+    "expected_platforms": []
+  },
+  {
+    "id": "kb-030",
+    "query": "京东第三方购买的商品准备退货，只知道平台和店铺，还没确认商品类别，赠品和发票都必须寄回吗？",
+    "platforms": [
+      "jd"
+    ],
+    "business_scope": "marketplace",
+    "expected_clause_ids": [],
+    "category": "scope",
+    "expected_status": "needs_clarification",
+    "expected_platforms": []
+  }
+]

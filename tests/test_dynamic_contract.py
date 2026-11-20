@@ -36,8 +36,9 @@ class DynamicMetricContractTests(unittest.TestCase):
         self.assertTrue(trace.ok, trace.issues)
         self.assertEqual(trace.attempts, 2)
         self.assertEqual(trace.policies[-1].refund_time_attribution, "order_date")
+        first_validation = next(event for event in trace.events if event["stage"] == "validate")
         self.assertEqual(
-            trace.events[1]["issues"],
+            first_validation["issues"],
             ["refund_time_attribution"],
         )
 

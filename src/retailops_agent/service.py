@@ -6,6 +6,7 @@ import json
 import os
 import threading
 import uuid
+from datetime import date
 from concurrent.futures import ThreadPoolExecutor
 from contextlib import asynccontextmanager
 from dataclasses import asdict
@@ -15,7 +16,7 @@ from typing import Literal
 
 from fastapi import Depends, FastAPI, Header, HTTPException, Request
 from fastapi.responses import StreamingResponse
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from .agent import RetailOpsAgent
 from .evolution import CapabilityEvolver
@@ -28,11 +29,25 @@ from .task_store import TaskStore
 class TaskRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
     task: str = Field(min_length=1, max_length=10000)
-    orders: str = Field(min_length=1, max_length=240)
-    refunds: str = Field(min_length=1, max_length=240)
+    mode: Literal["analysis", "assistant"] = "analysis"
+    orders: str | None = Field(default=None, min_length=1, max_length=240)
+    refunds: str | None = Field(default=None, min_length=1, max_length=240)
+    platforms: list[Literal["jd", "suning", "retailops"]] = Field(default_factory=list, max_length=3)
+    business_scope: Literal["marketplace", "self_operated", "platform", "internal"] | None = None
+    as_of: str | None = None
     required_results: list[str] = Field(default_factory=list, max_length=8)
     planner: Literal["rule", "model"] = "rule"
     evolve: bool = False
+
+    @model_validator(mode="after")
+    def check_inputs(self):
+        if self.mode == "analysis" and (not self.orders or not self.refunds):
+            raise ValueError("analysis mode requires orders and refunds")
+        if bool(self.orders) != bool(self.refunds):
+            raise ValueError("orders and refunds must be supplied together")
+        if self.as_of is not None:
+            date.fromisoformat(self.as_of)
+        return self
 
 
 def _csv_path(root: Path, relative: str) -> Path:
@@ -93,10 +108,14 @@ class TaskRunner:
             heartbeat.start()
             request = self.store.get(task_id)["request"]
             agent = self.factory(request)
-            trace = agent.run(request["task"], _csv_path(self.data_root, request["orders"]),
-                              _csv_path(self.data_root, request["refunds"]),
-                              required_results=tuple(request.get("required_results", [])),
-                              on_event=lambda event: self.store.append(task_id, event, owner))
+            kwargs = {"required_results": tuple(request.get("required_results", [])),
+                      "on_event": lambda event: self.store.append(task_id, event, owner)}
+            if request.get("mode") == "assistant":
+                kwargs.update(platforms=tuple(request.get("platforms", [])),
+                              business_scope=request.get("business_scope"), as_of=request.get("as_of"))
+            orders = _csv_path(self.data_root, request["orders"]) if request.get("orders") else None
+            refunds = _csv_path(self.data_root, request["refunds"]) if request.get("refunds") else None
+            trace = agent.run(request["task"], orders, refunds, **kwargs)
             payload = json.loads(json.dumps(asdict(trace), default=lambda value: str(value) if isinstance(value, Decimal) else value))
             payload["ok"] = trace.ok
             self.store.finish(task_id, owner, result=payload)
@@ -118,18 +137,30 @@ class TaskRunner:
 
 
 def create_app(*, data_root: Path, manifest: Path, state_path: Path,
-               allow_evolution: bool = False, agent_factory=None, token: str | None = None) -> FastAPI:
+               allow_evolution: bool = False, agent_factory=None, token: str | None = None,
+               knowledge_path: Path | None = None, embedding_model: str | None = None,
+               retrieval_mode: str = "hybrid") -> FastAPI:
     store = TaskStore(state_path)
     token = token if token is not None else os.environ.get("RETAILOPS_SERVICE_TOKEN", "")
+    knowledge = None
+    if knowledge_path is not None:
+        from .knowledge import FastEmbedEncoder, KnowledgeStore
+        encoder = FastEmbedEncoder(embedding_model) if embedding_model else None
+        knowledge = KnowledgeStore.from_path(knowledge_path, encoder=encoder)
 
     def factory(request):
         needs_model = request["planner"] == "model" or request["evolve"]
         model = OpenAICompatibleModel.deepseek_from_env() if needs_model else None
         manager = PluginManager.from_manifest(manifest, semantic_model=model,
                                              cache_path=state_path.parent / "route-cache.json")
-        return RetailOpsAgent(ModelPlanner(model) if request["planner"] == "model" else None,
+        analysis = RetailOpsAgent(ModelPlanner(model) if request["planner"] == "model" else None,
                               plugin_manager=manager,
                               evolver=CapabilityEvolver(model, state_path.parent / "evolution") if request["evolve"] else None)
+        if request.get("mode") == "assistant":
+            from .assistant import RetailOpsAssistant
+            return RetailOpsAssistant(knowledge, analysis_agent=analysis, model=model,
+                                      retrieval_mode=retrieval_mode)
+        return analysis
 
     runner = TaskRunner(store, agent_factory or factory, data_root)
 
@@ -152,15 +183,20 @@ def create_app(*, data_root: Path, manifest: Path, state_path: Path,
 
     @app.get("/health")
     def health():
-        return {"status": "ok", "sandbox": "linux-seccomp", "evolution_enabled": allow_evolution}
+        return {"status": "ok", "sandbox": "linux-seccomp", "evolution_enabled": allow_evolution,
+                "knowledge_enabled": knowledge is not None,
+                "dense_retrieval_enabled": knowledge is not None and embedding_model is not None}
 
     @app.post("/tasks", status_code=202, dependencies=[Depends(authenticate)])
     def submit(body: TaskRequest):
         if body.evolve and not allow_evolution:
             raise HTTPException(403, "online evolution is disabled by the server")
+        if body.mode == "assistant" and knowledge is None and agent_factory is None:
+            raise HTTPException(503, "knowledge is not configured")
         try:
-            _csv_path(data_root, body.orders)
-            _csv_path(data_root, body.refunds)
+            if body.orders:
+                _csv_path(data_root, body.orders)
+                _csv_path(data_root, body.refunds)
         except ValueError as exc:
             raise HTTPException(400, str(exc)) from exc
         task_id = store.create(body.model_dump())
@@ -194,7 +230,7 @@ def create_app(*, data_root: Path, manifest: Path, state_path: Path,
                     current = row["id"]
                     yield f"id: {current}\nevent: trace\ndata: {json.dumps(row['event'], ensure_ascii=False)}\n\n"
                 task = await asyncio.to_thread(store.get, task_id)
-                if task["status"] in {"succeeded", "failed", "interrupted"} and not rows:
+                if task["status"] in {"succeeded", "failed", "interrupted", "needs_input", "insufficient_evidence"} and not rows:
                     yield f"event: done\ndata: {json.dumps({'status': task['status']})}\n\n"
                     break
                 await asyncio.sleep(0.1)
