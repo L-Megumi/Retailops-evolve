@@ -52,7 +52,7 @@ RetailOps 的 `review` 入口关联售后案例、订单主记录、退款记录
 
 报告执行成功与业务案例是否异常分别记录：任务 `completed` 表示核查报告已形成，案例仍可为 `needs_review`。输入无效或依赖失败时任务为 `failed`。
 
-缺口按 `data`、`knowledge`、`tool` 分类：补信息、核验知识源、准备工具规格。工具缺口会记录可进入演进的候选，但本次业务核查不自动生成或准入插件；现有插件协议面向退款变换与指标计算，新增案例核查插件仍需相应规格、适配器和独立验证器。
+缺口按 `data`、`knowledge`、`tool` 分类：补信息、核验知识源、准备工具规格。启用 `--evolve` 后，已登记可信定义和适配器的工具缺口可自动生成指标插件，经过独立验证后重新规划执行。知识缺口及未定义的新检查仍保留，不由代码生成补写政策或验证标准。
 
 ## 命令行
 
@@ -89,7 +89,7 @@ PYTHONPATH=src python -m retailops_agent.cli review \
 }
 ```
 
-`casebook` 必须位于服务数据根目录内，大小最多 4 MiB。平台、渠道与政策日期放在每个案例中，服务不接受另外一组会被静默忽略的范围参数。`required_results` 在此模式下指定检查项。在线演进与案例核查分别调用，`evolve` 不适用于该模式。
+`casebook` 必须位于服务数据根目录内，大小最多 4 MiB。平台、渠道与政策日期放在每个案例中，服务不接受另外一组会被静默忽略的范围参数。`required_results` 在此模式下指定检查项。`evolve: true` 可请求案例派生指标演进，服务必须以 `--allow-evolution` 启用。插件保存到任务状态目录旁的 `case-plugins/registry.json`，后续任务可在 `evolve: false` 时复用。`planner: rule` 加 `evolve: true` 只调用代码生成，`planner: model` 才额外生成报告说明。
 
 ## 案例评测
 
@@ -104,3 +104,60 @@ PYTHONPATH=src python experiments/evaluate_case_review.py \
 对照分别启用数据工具、政策工具、组合流程；统计案例状态/异常类型/缺口类型/运费建议是否匹配，以及异常精确率、召回率、正常案例误报和引用有效性。缺失能力在对照组中保留为缺口，不能冒充正常完成。
 
 当前合成集用于验证执行和证据约束。商家实际处理耗时、人工改写量及真实异常识别效果，需后续接入脱敏工单进行验证。
+
+## 任务规划与受控 RSI
+
+规划器将案例检查项、显式 `--check` 和自然语言需求整理为检查契约与依赖步骤：关联记录、政策检索、各检查节点、报告。支持“只统计退款频次”“不要检查运费”“不要生成插件”等限制，显式检查与禁止项冲突时拒绝执行。当前规划器使用检查目录及规则匹配，不让模型重写已核对的业务事实。
+
+| 检查项 | 可信指标插件 | 必需参数 | 范围 |
+| --- | --- | --- | --- |
+| `refund_velocity` | `unique_refund_events` | `window_days`、`event_count_threshold`，以及案例 `application_date` | 同平台/店铺/订单，参考日及此前 N-1 个自然日内，成功且唯一退款 ID 的事件数；超过阈值才提示 |
+| `refund_average` | `average_refund_amount` | `average_amount_threshold`，金额字符串 | 同订单成功且唯一的退款记录，平均金额按分向下取整；超过指定金额才提示 |
+| `refund_replay` | `refund_replay_rate` | `replay_rate_threshold_bps`，0–10000 | 同订单原始导出记录中重复退款 ID 的行数比例；不代表真实重复付款 |
+
+参数放在案例的 `review_parameters` 中，是用户提供的分析阈值，不是平台政策。记录或流水关联冲突时先补信息，不生成工具来掩盖冲突。此前演示中的 `refund_velocity` 占位任务未带参数，新运行时会将其从工具缺口细化为参数缺失。
+
+执行顺序：检查输入 → 查已安装能力 → 若缺失且已授权，生成候选 → AST 静态检查与 Linux 隔离执行 → 两组独立验证 → 冻结第三组审计 → 原子写入插件注册表 → 发出 `case_replan` 事件并执行 → 后续任务复用。每次运行仍检查源码及验证器绑定，并验证实际结果；故障版本隔离，存在稳定版本时回滚。
+
+复用现有 `CapabilityEvolver`、`PluginManager` 和 `PluginSpec.metric_tool`，新增加的是案例数据适配器与任务规划连接。模型不提供验证器、修改政策规则或修改模型权重。默认每任务最多 6 次代码生成调用，每能力最多 2 次尝试；同任务失败能力不逐案例重复生成。缺事实、缺知识或缺可信定义时不进入生成。每个受理指标在 5 个开发样例、5 个验证样例及冻结后的 5 个审计样例上核对，真实输入结果仍逐次验证。
+
+```json
+{
+  "checks": ["records", "amount", "freight", "refund_velocity"],
+  "application_date": "2026-11-20",
+  "review_parameters": {"window_days": 7, "event_count_threshold": 2}
+}
+```
+
+```bash
+# 缺工具时生成并重规划，之后可去掉 --evolve 复用
+PYTHONPATH=src python -m retailops_agent.cli review \
+  --casebook data/case-review/rsi-v2.json --evolve \
+  --case-plugin-registry state/case-plugins/registry.json \
+  --output runs/rsi-review.json --report runs/rsi-review.md
+
+# 六类检查共同运行的案例
+PYTHONPATH=src python -m retailops_agent.cli review \
+  --casebook data/case-review/integrated-v2.json --evolve \
+  --output runs/integrated-review.json --report runs/integrated-review.md
+```
+
+## 第二版评测资料
+
+- `public-v2.json`：6 个公开案例改编。原始事实、未披露信息、人工添加的核查问题分别标记；不推测平台，不将判决结果写入运行输入。当前均为政策覆盖缺口，不能将缺口分类正确率解释为案件解决率。
+- `combination-v2.json`：24 个同时包含数据和政策条件的新组合。
+- `rsi-v2.json`：24 个派生指标边界案例，其中 21 个具备输入条件、3 个需补数据。
+- `integrated-v2.json`：记录、金额、政策、频次、均额、重放率共同执行的案例。
+
+标签分别保存在 `benchmarks/case-review/*-oracle.json`；公开来源清单在 `public-v2-sources.json`。阈值只用于显式定义的分析，不据此宣称发现欺诈或真实资金重复支付。
+
+```bash
+PYTHONPATH=src python experiments/evaluate_case_review.py \
+  --casebook data/case-review/combination-v2.json \
+  --oracle benchmarks/case-review/combination-v2-oracle.json \
+  --output runs/combination-eval.json
+
+# 使用全新状态目录，比较演进前、演进后及重新加载复用
+PYTHONPATH=src python experiments/evaluate_case_rsi.py \
+  --state runs/new-case-rsi-state --output runs/case-rsi-eval.json
+```

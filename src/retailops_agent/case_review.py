@@ -54,12 +54,16 @@ def _canonical(value):
 
 class CaseReviewAgent:
     def __init__(self, store=None, *, rules_path=Path('knowledge/review-rules.json'),
-                 model=None, retrieval_mode='hybrid', max_model_calls=8, available_checks=CHECKS):
+                 model=None, retrieval_mode='hybrid', max_model_calls=8, available_checks=CHECKS,
+                 capability_runtime=None, task_planner=None):
         if type(max_model_calls) is not int or not 0 <= max_model_calls <= 32:
             raise ValueError('max_model_calls must be 0-32')
         if retrieval_mode not in {'bm25', 'dense', 'hybrid'}:
             raise ValueError('invalid retrieval_mode')
         self.store, self.model = store, model
+        self.capability_runtime = capability_runtime
+        from .case_planner import CaseTaskPlanner
+        self.task_planner = task_planner or CaseTaskPlanner()
         if not set(available_checks) <= CHECKS:
             raise ValueError('unknown available check')
         self.available_checks = frozenset(available_checks)
@@ -106,6 +110,8 @@ class CaseReviewAgent:
             if on_event:
                 on_event(event)
         try:
+            if self.capability_runtime:
+                self.capability_runtime.begin_task()
             if not isinstance(task, str) or not task.strip() or len(task) > 10000:
                 raise ValueError('task must contain 1-10000 characters')
             book = casebook_path if isinstance(casebook_path, CaseBook) else CaseBook.from_path(casebook_path)
@@ -129,7 +135,8 @@ class CaseReviewAgent:
             for case in book.cases:
                 if case_ids and case['case_id'] not in case_ids:
                     continue
-                selected = self._select_checks(task, required_results, case['checks'])
+                plan = self.task_planner.plan(task,required_results,case['checks'])
+                selected = plan.required_checks
                 if not selected or len(selected) > 12 or any(not isinstance(c, str) or not c or len(c) > 80 for c in selected):
                     raise ValueError('invalid requested checks')
                 result = {'case_id': case['case_id'], 'platform': case['platform'], 'shop_id': case['shop_id'],
@@ -138,9 +145,13 @@ class CaseReviewAgent:
                           'guidance': [], 'draft_explanation': None,
                           'policy_context': {'mode': 'dated' if case.get('policy_as_of') else 'current_snapshot',
                                              'as_of': case.get('policy_as_of')}}
+                result['plan'] = asdict(plan)
                 current_orders, current_refunds = orders[key(case)], refunds[key(case)]
-                emit('case_plan', case_id=case['case_id'], checks=result['checks'])
+                emit('case_plan', case_id=case['case_id'], checks=result['checks'], plan=asdict(plan))
+                from .case_capabilities import CAPABILITIES
                 for unknown in sorted(set(selected) - self.available_checks):
+                    if unknown in CAPABILITIES and self.capability_runtime is not None:
+                        continue
                     self._gap(result, 'tool', unknown, f'现有核查工具未覆盖 {unknown}，需明确该检查项的定义与验证标准',
                               action='evolution_candidate_requires_spec_and_independent_validation')
                 if {'records', 'amount'} & set(selected) & self.available_checks:
@@ -148,6 +159,10 @@ class CaseReviewAgent:
                     emit('record_tools', case_id=case['case_id'], findings=[f['code'] for f in result['findings']])
                 if {'freight', 'materials'} & set(selected) & self.available_checks:
                     self._policy(case, result, current_orders, evidence[case['case_id']], emit)
+                if self.capability_runtime is not None:
+                    for check in selected:
+                        if check in CAPABILITIES:
+                            self._capability(check, case, result, current_orders, current_refunds, ids, transactions, emit)
                 # Evidence first. Missing prerequisites never become a normal case.
                 if result['findings']:
                     result['status'] = 'needs_review'
@@ -163,6 +178,7 @@ class CaseReviewAgent:
                              'finding_count': sum(len(c['findings']) for c in trace.cases),
                              'gap_kinds': dict(Counter(g['kind'] for c in trace.cases for g in c['gaps'])),
                              'source_records_modified': 0, 'payment_actions': 0}
+            trace.model_usage['generation_calls'] = self.capability_runtime.generation_calls if self.capability_runtime else 0
         except (ValueError, TypeError, KeyError, RuntimeError, OSError) as exc:
             trace.status = 'failed'
             trace.issues.append(f'{type(exc).__name__}: {str(exc)[:300]}')
@@ -173,6 +189,42 @@ class CaseReviewAgent:
             trace.elapsed_ms = round((time.perf_counter() - started) * 1000, 3)
             emit('review_complete', status=trace.status)
         return trace
+
+    def _capability(self, check, case, result, orders, refunds, ids, transactions, emit):
+        prepared, missing = self.capability_runtime.prepare(check,case,orders,refunds,ids,transactions)
+        if missing:
+            for field in missing:
+                self._gap(result,'data',field,'派生检查需要补充或核对 '+FIELD_LABELS.get(field,field))
+            emit('capability_blocked',case_id=case['case_id'],check=check,reason='missing_input',fields=missing)
+            return
+        try:
+            computed,evidence_ids,receipt=self.capability_runtime.execute(check,case,prepared,emit,
+                allow_generation=result['plan']['evolution_allowed'])
+        except (ValueError,RuntimeError) as exc:
+            self._gap(result,'tool',check,'能力尚未安装或未通过独立验证',action='review_capability_spec_and_admission')
+            emit('capability_blocked',case_id=case['case_id'],check=check,reason=type(exc).__name__)
+            return
+        data=computed.data
+        result['facts'].append({'fact_id':check,'metric':computed.tool,'data':data,
+            'parameters':case.get('review_parameters',{}),'evidence_ids':evidence_ids,
+            'computation':'sandboxed_plugin_and_independent_verifier','threshold_source':'analyst_provided_not_platform_policy'})
+        params=case['review_parameters']
+        if check=='refund_velocity':
+            exceeded=data['unique_refund_events']>params['event_count_threshold']
+            details={'count':data['unique_refund_events'],'threshold':params['event_count_threshold'],'window_days':params['window_days']}
+            code,message='refund_frequency_threshold_exceeded','窗口内成功退款事件数超过指定核查阈值'
+        elif check=='refund_average':
+            limit=int(Decimal(params['average_amount_threshold'])*100)
+            exceeded=data['average_refund_cents']>limit
+            details={'average_cents':data['average_refund_cents'],'threshold_cents':limit}
+            code,message='refund_average_threshold_exceeded','成功退款平均金额超过指定核查阈值'
+        else:
+            exceeded=data['replay_rate_bps']>params['replay_rate_threshold_bps']
+            details={'replay_rate_bps':data['replay_rate_bps'],'threshold_bps':params['replay_rate_threshold_bps']}
+            code,message='refund_replay_threshold_exceeded','原始退款记录重放比例超过指定核查阈值'
+        if exceeded:
+            self._finding(result,code,message,evidence_ids,details=details)
+        emit('capability_executed',case_id=case['case_id'],check=check,metric=computed.tool,data=data)
 
     @staticmethod
     def _select_checks(task, explicit, defaults):
@@ -474,7 +526,10 @@ def render_case_review(trace):
     platforms = {'jd': '京东', 'suning': '苏宁', 'taobao': '淘宝', 'tmall': '天猫', 'pinduoduo': '拼多多'}
     detail_names = {'refund_id': '退款ID', 'refund_transaction_id': '退款流水号', 'paid_amount': '订单实付金额',
                     'refund_total': '成功退款记录合计', 'difference': '差额', 'missing': '待补材料',
-                    'proposed_party': '原拟承担方', 'policy_party': '政策对应承担方'}
+                    'proposed_party': '原拟承担方', 'policy_party': '政策对应承担方',
+                    'count':'事件数','threshold':'核查阈值','window_days':'窗口天数',
+                    'average_cents':'平均金额（分）','threshold_cents':'核查阈值（分）',
+                    'replay_rate_bps':'记录重放比例（万分比）','threshold_bps':'核查阈值（万分比）'}
     if trace.issues:
         lines += ['执行未完成：' + '；'.join(trace.issues), '']
     for case in trace.cases:
@@ -502,6 +557,17 @@ def render_case_review(trace):
                 lines.append(f"- 运费核查参考：{parties[guidance['party']]}承担{coverage[guidance['coverage']]}；依据：{', '.join(guidance['policy_citation_ids'])}")
             else:
                 lines.append('- 本次材料检查所需信息已齐全；依据：' + ', '.join(guidance['policy_citation_ids']))
+        for fact in case['facts']:
+            if fact.get('computation') != 'sandboxed_plugin_and_independent_verifier':
+                continue
+            data = fact['data']
+            if fact['fact_id'] == 'refund_velocity':
+                description = f"窗口内成功退款事件数：{data['unique_refund_events']}"
+            elif fact['fact_id'] == 'refund_average':
+                description = f"成功退款记录数：{data['total_refund_rows']}；平均退款金额：{Decimal(data['average_refund_cents']) / 100} 元"
+            else:
+                description = f"原始记录数：{data['total_refund_rows']}；重放行数：{data['duplicate_rows']}；记录重放比例：{Decimal(data['replay_rate_bps']) / 100}%"
+            lines.append('- 派生核查：' + description + '；使用本次指定的分析阈值。')
         if not case['findings'] and not case['gaps']:
             lines.append('- 本次指定检查未发现异常。')
         for citation in case['citations']:

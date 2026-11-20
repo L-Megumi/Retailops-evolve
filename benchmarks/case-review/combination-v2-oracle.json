@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "labels": [
+    {
+      "case_id": "COMBO-01-0",
+      "family": 0,
+      "split": "combination-audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_total_exceeds_paid",
+        "freight_responsibility_mismatch"
+      ],
+      "gap_kinds": [],
+      "freight_party": "merchant"
+    },
+    {
+      "case_id": "COMBO-01-1",
+      "family": 0,
+      "split": "combination-audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_total_exceeds_paid",
+        "freight_responsibility_mismatch"
+      ],
+      "gap_kinds": [],
+      "freight_party": "merchant"
+    },
+    {
+      "case_id": "COMBO-01-2",
+      "family": 0,
+      "split": "combination-audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_total_exceeds_paid",
+        "freight_responsibility_mismatch"
+      ],
+      "gap_kinds": [],
+      "freight_party": "merchant"
+    },
+    {
+      "case_id": "COMBO-02-0",
+      "family": 1,
+      "split": "combination-audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "freight_responsibility_mismatch"
+      ],
+      "gap_kinds": [],
+      "freight_party": "buyer"
+    },
+    {
+      "case_id": "COMBO-02-1",
+      "family": 1,
+      "split": "combination-audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "freight_responsibility_mismatch"
+      ],
+      "gap_kinds": [],
+      "freight_party": "buyer"
+    },
+    {
+      "case_id": "COMBO-02-2",
+      "family": 1,
+      "split": "combination-audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "freight_responsibility_mismatch"
+      ],
+      "gap_kinds": [],
+      "freight_party": "buyer"
+    },
+    {
+      "case_id": "COMBO-03-0",
+      "family": 2,
+      "split": "combination-audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "duplicate_refund_record",
+        "required_materials_missing"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "COMBO-03-1",
+      "family": 2,
+      "split": "combination-audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "duplicate_refund_record",
+        "required_materials_missing"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "COMBO-03-2",
+      "family": 2,
+      "split": "combination-audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "duplicate_refund_record",
+        "required_materials_missing"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "COMBO-04-0",
+      "family": 3,
+      "split": "combination-audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_total_exceeds_paid"
+      ],
+      "gap_kinds": [
+        "knowledge"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "COMBO-04-1",
+      "family": 3,
+      "split": "combination-audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_total_exceeds_paid"
+      ],
+      "gap_kinds": [
+        "knowledge"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "COMBO-04-2",
+      "family": 3,
+      "split": "combination-audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_total_exceeds_paid"
+      ],
+      "gap_kinds": [
+        "knowledge"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "COMBO-05-0",
+      "family": 4,
+      "split": "combination-audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": "merchant"
+    },
+    {
+      "case_id": "COMBO-05-1",
+      "family": 4,
+      "split": "combination-audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": "merchant"
+    },
+    {
+      "case_id": "COMBO-05-2",
+      "family": 4,
+      "split": "combination-audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": "merchant"
+    },
+    {
+      "case_id": "COMBO-06-0",
+      "family": 5,
+      "split": "combination-audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_record_conflict",
+        "required_materials_missing"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "COMBO-06-1",
+      "family": 5,
+      "split": "combination-audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_record_conflict",
+        "required_materials_missing"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "COMBO-06-2",
+      "family": 5,
+      "split": "combination-audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_record_conflict",
+        "required_materials_missing"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "COMBO-07-0",
+      "family": 6,
+      "split": "combination-audit",
+      "status": "needs_information",
+      "finding_codes": [],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "COMBO-07-1",
+      "family": 6,
+      "split": "combination-audit",
+      "status": "needs_information",
+      "finding_codes": [],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "COMBO-07-2",
+      "family": 6,
+      "split": "combination-audit",
+      "status": "needs_information",
+      "finding_codes": [],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "COMBO-08-0",
+      "family": 7,
+      "split": "combination-audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "freight_responsibility_mismatch"
+      ],
+      "gap_kinds": [],
+      "freight_party": "buyer"
+    },
+    {
+      "case_id": "COMBO-08-1",
+      "family": 7,
+      "split": "combination-audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "freight_responsibility_mismatch"
+      ],
+      "gap_kinds": [],
+      "freight_party": "buyer"
+    },
+    {
+      "case_id": "COMBO-08-2",
+      "family": 7,
+      "split": "combination-audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "freight_responsibility_mismatch"
+      ],
+      "gap_kinds": [],
+      "freight_party": "buyer"
+    }
+  ],
+  "split_policy": "24 new mixed data-and-policy combinations, frozen before RSI integration; three amount boundaries per family"
+}

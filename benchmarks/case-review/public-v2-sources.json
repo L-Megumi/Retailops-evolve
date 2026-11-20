@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "case_id": "spc-promise",
+      "title": "直播商品承诺与描述不符",
+      "source_url": "https://www.court.gov.cn/zixun/xiangqing/467931.html",
+      "published_at": "2025-06-16",
+      "locator": "案例1",
+      "retrieved_at": "2026-11-20",
+      "input_facts": "直播手串材质与承诺不符，购买价款1000元，消费者主张承诺赔偿。",
+      "not_disclosed": [
+        "platform_identity",
+        "merchant_promise",
+        "product_identification"
+      ]
+    },
+    {
+      "case_id": "spc-handbag",
+      "title": "手提包无理由退货遭拒",
+      "source_url": "https://www.court.gov.cn/zixun/xiangqing/467931.html",
+      "published_at": "2025-06-16",
+      "locator": "案例2",
+      "retrieved_at": "2026-11-20",
+      "input_facts": "手提包签收七日内申请退货，商家援引页面不支持退货条款拒绝。",
+      "not_disclosed": [
+        "platform_identity",
+        "product_eligibility",
+        "return_condition"
+      ]
+    },
+    {
+      "case_id": "spc-promotion",
+      "title": "促销优惠争议",
+      "source_url": "https://www.court.gov.cn/zixun/xiangqing/467931.html",
+      "published_at": "2025-06-16",
+      "locator": "案例3",
+      "retrieved_at": "2026-11-20",
+      "input_facts": "家具促销中提前支付定金，客服未说明时点不符；合计支付2499元。",
+      "not_disclosed": [
+        "platform_identity",
+        "promotion_terms",
+        "customer_service_commitment"
+      ]
+    },
+    {
+      "case_id": "spc-ticket",
+      "title": "同单两张票退票争议",
+      "source_url": "https://www.court.gov.cn/zixun/xiangqing/467931.html",
+      "published_at": "2025-06-16",
+      "locator": "案例4",
+      "retrieved_at": "2026-11-20",
+      "input_facts": "同次购买两张演出票，一张退票、另一张仅退八成，规则含义有争议。",
+      "not_disclosed": [
+        "platform_identity",
+        "ticket_terms",
+        "refund_ledger"
+      ]
+    },
+    {
+      "case_id": "samr-phone",
+      "title": "手机合理拆封后退货遭拒",
+      "source_url": "https://www.samr.gov.cn/zt/pgt/art/2026/art_dc27a442bba24b25a824a502209ecc7a.html",
+      "published_at": "2026-03-13",
+      "locator": "上海迪信电子通信技术有限公司案",
+      "retrieved_at": "2026-11-20",
+      "input_facts": "手机仅拆原厂塑料膜且未激活，消费者退货时被商家拒绝。",
+      "not_disclosed": [
+        "platform_identity",
+        "product_eligibility",
+        "application_dates"
+      ]
+    },
+    {
+      "case_id": "suzhou-pearl",
+      "title": "珍珠耳钉次日退货争议",
+      "source_url": "https://www.suzhou.gov.cn/szsrmzf/szyw/202603/f6ec3a07d4c34b5c9a8e6ccc1c1cd37a.shtml",
+      "published_at": "2026-03-25",
+      "locator": "孙某某诉某商贸公司案",
+      "retrieved_at": "2026-11-20",
+      "input_facts": "小红书直播购买珍珠耳钉15800元，签收次日申请退货被拒。",
+      "not_disclosed": [
+        "unsupported_platform_policy",
+        "product_eligibility",
+        "purchase_confirmation"
+      ]
+    }
+  ]
+}

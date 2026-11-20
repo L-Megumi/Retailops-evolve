@@ -1,0 +1,1117 @@
+{
+  "created_at": "2026-11-20T06:33:07.309990+00:00",
+  "input_hash": "d88590d635a7429ffcb71bc5c629c9dff8ee4f54c6227f68132849cdf1d263f7",
+  "oracle_sha256": "94b7fae58adbd2aed08ca6a45a7c80fbcf691aec9bf3078565c08f1b235a69fe",
+  "rules_sha256": "bbca789017ca440a68549e8ee2629b83f2f2301f0dde659d86da77fdd92e2dec",
+  "approved_sources_sha256": "54b3c77471bdaeecb95af6790a2e7a778ff34c51524bce910c5b6fc401239171",
+  "corpus_hash": "9964a04826d3f10a3ce2a24bb9c21bbb8da37d3984462cca59712f600df4ccd5",
+  "dataset_kind": "public_case_adaptation",
+  "split_policy": "six public-source adaptations; coverage/refusal evaluation, not complete reconstructed ledgers",
+  "vector_backend": "memory",
+  "configs": {
+    "data_tools_only": {
+      "scores": {
+        "case_count": 6,
+        "exact_case_matches": 0,
+        "finding_true_positive": 0,
+        "finding_false_positive": 0,
+        "finding_false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "normal_case_false_positives": 0
+      },
+      "splits": {
+        "dev": {
+          "case_count": 0,
+          "exact_case_matches": 0,
+          "finding_true_positive": 0,
+          "finding_false_positive": 0,
+          "finding_false_negative": 0,
+          "precision": null,
+          "recall": null,
+          "normal_case_false_positives": 0
+        },
+        "test": {
+          "case_count": 0,
+          "exact_case_matches": 0,
+          "finding_true_positive": 0,
+          "finding_false_positive": 0,
+          "finding_false_negative": 0,
+          "precision": null,
+          "recall": null,
+          "normal_case_false_positives": 0
+        }
+      },
+      "invalid_references": [],
+      "model_draft_count": 0,
+      "model_fallback_count": 0,
+      "trace": {
+        "task": "核查售后案例并整理证据及待补信息",
+        "status": "completed",
+        "cases": [
+          {
+            "case_id": "spc-promise",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-promise",
+            "order_id": "PUBLIC-ORDER-spc-promise",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_tool",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "tool",
+                "name": "freight",
+                "message": "现有核查工具未覆盖 freight，需明确该检查项的定义与验证标准",
+                "next_action": "evolution_candidate_requires_spec_and_independent_validation"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "spc-handbag",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-handbag",
+            "order_id": "PUBLIC-ORDER-spc-handbag",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_tool",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "tool",
+                "name": "freight",
+                "message": "现有核查工具未覆盖 freight，需明确该检查项的定义与验证标准",
+                "next_action": "evolution_candidate_requires_spec_and_independent_validation"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "spc-promotion",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-promotion",
+            "order_id": "PUBLIC-ORDER-spc-promotion",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_tool",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "tool",
+                "name": "freight",
+                "message": "现有核查工具未覆盖 freight，需明确该检查项的定义与验证标准",
+                "next_action": "evolution_candidate_requires_spec_and_independent_validation"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "spc-ticket",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-ticket",
+            "order_id": "PUBLIC-ORDER-spc-ticket",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_tool",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "tool",
+                "name": "freight",
+                "message": "现有核查工具未覆盖 freight，需明确该检查项的定义与验证标准",
+                "next_action": "evolution_candidate_requires_spec_and_independent_validation"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "samr-phone",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-samr-phone",
+            "order_id": "PUBLIC-ORDER-samr-phone",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_tool",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "tool",
+                "name": "freight",
+                "message": "现有核查工具未覆盖 freight，需明确该检查项的定义与验证标准",
+                "next_action": "evolution_candidate_requires_spec_and_independent_validation"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "suzhou-pearl",
+            "platform": "xiaohongshu",
+            "shop_id": "PUBLIC-SHOP-suzhou-pearl",
+            "order_id": "PUBLIC-ORDER-suzhou-pearl",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_tool",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "tool",
+                "name": "freight",
+                "message": "现有核查工具未覆盖 freight，需明确该检查项的定义与验证标准",
+                "next_action": "evolution_candidate_requires_spec_and_independent_validation"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          }
+        ],
+        "summary": {
+          "case_count": 6,
+          "statuses": {
+            "needs_tool": 6
+          },
+          "finding_count": 0,
+          "gap_kinds": {
+            "tool": 6
+          },
+          "source_records_modified": 0,
+          "payment_actions": 0
+        },
+        "events": [
+          {
+            "stage": "casebook_loaded",
+            "cases": 6,
+            "orders": 6,
+            "refunds": 0,
+            "dataset_kind": "public_case_adaptation",
+            "input_hash": "d88590d635a7429ffcb71bc5c629c9dff8ee4f54c6227f68132849cdf1d263f7",
+            "elapsed_ms": 0.025
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-promise",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 0.955
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-promise",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.967
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-promise",
+            "status": "needs_tool",
+            "elapsed_ms": 0.968
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-handbag",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 0.981
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-handbag",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.987
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-handbag",
+            "status": "needs_tool",
+            "elapsed_ms": 0.988
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-promotion",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 0.997
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-promotion",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 1.001
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-promotion",
+            "status": "needs_tool",
+            "elapsed_ms": 1.002
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-ticket",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 1.01
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-ticket",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 1.013
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-ticket",
+            "status": "needs_tool",
+            "elapsed_ms": 1.014
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "samr-phone",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 1.021
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "samr-phone",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 1.025
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "samr-phone",
+            "status": "needs_tool",
+            "elapsed_ms": 1.026
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "suzhou-pearl",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 1.033
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "suzhou-pearl",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 1.036
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "suzhou-pearl",
+            "status": "needs_tool",
+            "elapsed_ms": 1.037
+          },
+          {
+            "stage": "review_complete",
+            "status": "completed",
+            "elapsed_ms": 1.069
+          }
+        ],
+        "issues": [],
+        "input_hash": "d88590d635a7429ffcb71bc5c629c9dff8ee4f54c6227f68132849cdf1d263f7",
+        "elapsed_ms": 1.068,
+        "model_usage": {
+          "calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0
+        }
+      }
+    },
+    "policy_tools_only": {
+      "scores": {
+        "case_count": 6,
+        "exact_case_matches": 6,
+        "finding_true_positive": 0,
+        "finding_false_positive": 0,
+        "finding_false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "normal_case_false_positives": 0
+      },
+      "splits": {
+        "dev": {
+          "case_count": 0,
+          "exact_case_matches": 0,
+          "finding_true_positive": 0,
+          "finding_false_positive": 0,
+          "finding_false_negative": 0,
+          "precision": null,
+          "recall": null,
+          "normal_case_false_positives": 0
+        },
+        "test": {
+          "case_count": 0,
+          "exact_case_matches": 0,
+          "finding_true_positive": 0,
+          "finding_false_positive": 0,
+          "finding_false_negative": 0,
+          "precision": null,
+          "recall": null,
+          "normal_case_false_positives": 0
+        }
+      },
+      "invalid_references": [],
+      "model_draft_count": 0,
+      "model_fallback_count": 0,
+      "trace": {
+        "task": "核查售后案例并整理证据及待补信息",
+        "status": "completed",
+        "cases": [
+          {
+            "case_id": "spc-promise",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-promise",
+            "order_id": "PUBLIC-ORDER-spc-promise",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "spc-handbag",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-handbag",
+            "order_id": "PUBLIC-ORDER-spc-handbag",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "spc-promotion",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-promotion",
+            "order_id": "PUBLIC-ORDER-spc-promotion",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "spc-ticket",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-ticket",
+            "order_id": "PUBLIC-ORDER-spc-ticket",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "samr-phone",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-samr-phone",
+            "order_id": "PUBLIC-ORDER-samr-phone",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "suzhou-pearl",
+            "platform": "xiaohongshu",
+            "shop_id": "PUBLIC-SHOP-suzhou-pearl",
+            "order_id": "PUBLIC-ORDER-suzhou-pearl",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          }
+        ],
+        "summary": {
+          "case_count": 6,
+          "statuses": {
+            "needs_policy": 6
+          },
+          "finding_count": 0,
+          "gap_kinds": {
+            "knowledge": 6
+          },
+          "source_records_modified": 0,
+          "payment_actions": 0
+        },
+        "events": [
+          {
+            "stage": "casebook_loaded",
+            "cases": 6,
+            "orders": 6,
+            "refunds": 0,
+            "dataset_kind": "public_case_adaptation",
+            "input_hash": "d88590d635a7429ffcb71bc5c629c9dff8ee4f54c6227f68132849cdf1d263f7",
+            "elapsed_ms": 0.026
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-promise",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 0.044
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-promise",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.054
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-promise",
+            "status": "needs_policy",
+            "elapsed_ms": 0.056
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-handbag",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 0.064
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-handbag",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.07
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-handbag",
+            "status": "needs_policy",
+            "elapsed_ms": 0.072
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-promotion",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 0.08
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-promotion",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.085
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-promotion",
+            "status": "needs_policy",
+            "elapsed_ms": 0.087
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-ticket",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 0.101
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-ticket",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.105
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-ticket",
+            "status": "needs_policy",
+            "elapsed_ms": 0.106
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "samr-phone",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 0.113
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "samr-phone",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.118
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "samr-phone",
+            "status": "needs_policy",
+            "elapsed_ms": 0.12
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "suzhou-pearl",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 0.127
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "suzhou-pearl",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.131
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "suzhou-pearl",
+            "status": "needs_policy",
+            "elapsed_ms": 0.132
+          },
+          {
+            "stage": "review_complete",
+            "status": "completed",
+            "elapsed_ms": 0.147
+          }
+        ],
+        "issues": [],
+        "input_hash": "d88590d635a7429ffcb71bc5c629c9dff8ee4f54c6227f68132849cdf1d263f7",
+        "elapsed_ms": 0.145,
+        "model_usage": {
+          "calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0
+        }
+      }
+    },
+    "full": {
+      "scores": {
+        "case_count": 6,
+        "exact_case_matches": 6,
+        "finding_true_positive": 0,
+        "finding_false_positive": 0,
+        "finding_false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "normal_case_false_positives": 0
+      },
+      "splits": {
+        "dev": {
+          "case_count": 0,
+          "exact_case_matches": 0,
+          "finding_true_positive": 0,
+          "finding_false_positive": 0,
+          "finding_false_negative": 0,
+          "precision": null,
+          "recall": null,
+          "normal_case_false_positives": 0
+        },
+        "test": {
+          "case_count": 0,
+          "exact_case_matches": 0,
+          "finding_true_positive": 0,
+          "finding_false_positive": 0,
+          "finding_false_negative": 0,
+          "precision": null,
+          "recall": null,
+          "normal_case_false_positives": 0
+        }
+      },
+      "invalid_references": [],
+      "model_draft_count": 0,
+      "model_fallback_count": 0,
+      "trace": {
+        "task": "核查售后案例并整理证据及待补信息",
+        "status": "completed",
+        "cases": [
+          {
+            "case_id": "spc-promise",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-promise",
+            "order_id": "PUBLIC-ORDER-spc-promise",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "spc-handbag",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-handbag",
+            "order_id": "PUBLIC-ORDER-spc-handbag",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "spc-promotion",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-promotion",
+            "order_id": "PUBLIC-ORDER-spc-promotion",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "spc-ticket",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-ticket",
+            "order_id": "PUBLIC-ORDER-spc-ticket",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "samr-phone",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-samr-phone",
+            "order_id": "PUBLIC-ORDER-samr-phone",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "suzhou-pearl",
+            "platform": "xiaohongshu",
+            "shop_id": "PUBLIC-SHOP-suzhou-pearl",
+            "order_id": "PUBLIC-ORDER-suzhou-pearl",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          }
+        ],
+        "summary": {
+          "case_count": 6,
+          "statuses": {
+            "needs_policy": 6
+          },
+          "finding_count": 0,
+          "gap_kinds": {
+            "knowledge": 6
+          },
+          "source_records_modified": 0,
+          "payment_actions": 0
+        },
+        "events": [
+          {
+            "stage": "casebook_loaded",
+            "cases": 6,
+            "orders": 6,
+            "refunds": 0,
+            "dataset_kind": "public_case_adaptation",
+            "input_hash": "d88590d635a7429ffcb71bc5c629c9dff8ee4f54c6227f68132849cdf1d263f7",
+            "elapsed_ms": 0.033
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-promise",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 0.057
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-promise",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.065
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-promise",
+            "status": "needs_policy",
+            "elapsed_ms": 0.066
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-handbag",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 0.075
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-handbag",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.08
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-handbag",
+            "status": "needs_policy",
+            "elapsed_ms": 0.081
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-promotion",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 0.088
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-promotion",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.093
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-promotion",
+            "status": "needs_policy",
+            "elapsed_ms": 0.094
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-ticket",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 0.103
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-ticket",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.109
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-ticket",
+            "status": "needs_policy",
+            "elapsed_ms": 0.11
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "samr-phone",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 0.135
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "samr-phone",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.139
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "samr-phone",
+            "status": "needs_policy",
+            "elapsed_ms": 0.14
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "suzhou-pearl",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 0.147
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "suzhou-pearl",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.152
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "suzhou-pearl",
+            "status": "needs_policy",
+            "elapsed_ms": 0.153
+          },
+          {
+            "stage": "review_complete",
+            "status": "completed",
+            "elapsed_ms": 0.177
+          }
+        ],
+        "issues": [],
+        "input_hash": "d88590d635a7429ffcb71bc5c629c9dff8ee4f54c6227f68132849cdf1d263f7",
+        "elapsed_ms": 0.176,
+        "model_usage": {
+          "calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0
+        }
+      }
+    }
+  }
+}

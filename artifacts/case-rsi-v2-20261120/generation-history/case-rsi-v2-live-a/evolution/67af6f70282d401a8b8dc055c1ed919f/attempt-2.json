@@ -1,0 +1,8 @@
+{
+  "attempt": 2,
+  "source": "def compute_metric(orders, refunds):\n    seen = {}\n    for row in refunds:\n        rid = row.get('refund_id')\n        if rid is not None:\n            seen[rid] = 1\n    unique_refund_events = len(seen)\n    data = {'unique_refund_events': unique_refund_events}\n    evidence = {'refund_rows': len(refunds), 'distinct_refund_ids': unique_refund_events}\n    return {'metric': unique_refund_events, 'data': data, 'evidence': evidence}\n",
+  "source_sha256": "258169894572207e63cf7cf40fd0b02a4ea774a24af4332d1211280594159eaa",
+  "status": "quarantined",
+  "critic": "install validation failed: disallowed syntax: IsNot",
+  "admission": {}
+}

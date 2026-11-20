@@ -1,0 +1,964 @@
+{
+  "schema_version": 1,
+  "dataset_kind": "synthetic",
+  "cases": [
+    {
+      "case_id": "RSI-refund_velocity-0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-0",
+      "business_scope": "platform",
+      "checks": [
+        "refund_velocity"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "window_days": 7,
+        "event_count_threshold": 2
+      }
+    },
+    {
+      "case_id": "RSI-refund_velocity-1",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-1",
+      "business_scope": "platform",
+      "checks": [
+        "refund_velocity"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "window_days": 7,
+        "event_count_threshold": 2
+      }
+    },
+    {
+      "case_id": "RSI-refund_velocity-2",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-2",
+      "business_scope": "platform",
+      "checks": [
+        "refund_velocity"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "window_days": 7,
+        "event_count_threshold": 2
+      }
+    },
+    {
+      "case_id": "RSI-refund_velocity-3",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-3",
+      "business_scope": "platform",
+      "checks": [
+        "refund_velocity"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "window_days": 7,
+        "event_count_threshold": 2
+      }
+    },
+    {
+      "case_id": "RSI-refund_velocity-4",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-4",
+      "business_scope": "platform",
+      "checks": [
+        "refund_velocity"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "window_days": 7,
+        "event_count_threshold": 2
+      }
+    },
+    {
+      "case_id": "RSI-refund_velocity-5",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-5",
+      "business_scope": "platform",
+      "checks": [
+        "refund_velocity"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "window_days": 7,
+        "event_count_threshold": 2
+      }
+    },
+    {
+      "case_id": "RSI-refund_velocity-6",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-6",
+      "business_scope": "platform",
+      "checks": [
+        "refund_velocity"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "window_days": 7,
+        "event_count_threshold": 2
+      }
+    },
+    {
+      "case_id": "RSI-refund_velocity-7",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-7",
+      "business_scope": "platform",
+      "checks": [
+        "refund_velocity"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "event_count_threshold": 2
+      }
+    },
+    {
+      "case_id": "RSI-refund_average-0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-0",
+      "business_scope": "platform",
+      "checks": [
+        "refund_average"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "average_amount_threshold": "50"
+      }
+    },
+    {
+      "case_id": "RSI-refund_average-1",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-1",
+      "business_scope": "platform",
+      "checks": [
+        "refund_average"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "average_amount_threshold": "50"
+      }
+    },
+    {
+      "case_id": "RSI-refund_average-2",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-2",
+      "business_scope": "platform",
+      "checks": [
+        "refund_average"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "average_amount_threshold": "50"
+      }
+    },
+    {
+      "case_id": "RSI-refund_average-3",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-3",
+      "business_scope": "platform",
+      "checks": [
+        "refund_average"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "average_amount_threshold": "50"
+      }
+    },
+    {
+      "case_id": "RSI-refund_average-4",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-4",
+      "business_scope": "platform",
+      "checks": [
+        "refund_average"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "average_amount_threshold": "50"
+      }
+    },
+    {
+      "case_id": "RSI-refund_average-5",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-5",
+      "business_scope": "platform",
+      "checks": [
+        "refund_average"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "average_amount_threshold": "50"
+      }
+    },
+    {
+      "case_id": "RSI-refund_average-6",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-6",
+      "business_scope": "platform",
+      "checks": [
+        "refund_average"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "average_amount_threshold": "50"
+      }
+    },
+    {
+      "case_id": "RSI-refund_average-7",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-7",
+      "business_scope": "platform",
+      "checks": [
+        "refund_average"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "average_amount_threshold": "50"
+      }
+    },
+    {
+      "case_id": "RSI-refund_replay-0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-0",
+      "business_scope": "platform",
+      "checks": [
+        "refund_replay"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "replay_rate_threshold_bps": 3000
+      }
+    },
+    {
+      "case_id": "RSI-refund_replay-1",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-1",
+      "business_scope": "platform",
+      "checks": [
+        "refund_replay"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "replay_rate_threshold_bps": 3000
+      }
+    },
+    {
+      "case_id": "RSI-refund_replay-2",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-2",
+      "business_scope": "platform",
+      "checks": [
+        "refund_replay"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "replay_rate_threshold_bps": 3000
+      }
+    },
+    {
+      "case_id": "RSI-refund_replay-3",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-3",
+      "business_scope": "platform",
+      "checks": [
+        "refund_replay"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "replay_rate_threshold_bps": 3000
+      }
+    },
+    {
+      "case_id": "RSI-refund_replay-4",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-4",
+      "business_scope": "platform",
+      "checks": [
+        "refund_replay"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "replay_rate_threshold_bps": 3000
+      }
+    },
+    {
+      "case_id": "RSI-refund_replay-5",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-5",
+      "business_scope": "platform",
+      "checks": [
+        "refund_replay"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "replay_rate_threshold_bps": 3000
+      }
+    },
+    {
+      "case_id": "RSI-refund_replay-6",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-6",
+      "business_scope": "platform",
+      "checks": [
+        "refund_replay"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {
+        "replay_rate_threshold_bps": 3000
+      }
+    },
+    {
+      "case_id": "RSI-refund_replay-7",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-7",
+      "business_scope": "platform",
+      "checks": [
+        "refund_replay"
+      ],
+      "reason": "quality",
+      "application_date": "2026-11-20",
+      "review_parameters": {}
+    }
+  ],
+  "orders": [
+    {
+      "evidence_id": "RSI-refund_velocity-0-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-0",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-1-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-1",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-2-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-2",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-3-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-3",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-4-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-4",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-5-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-5",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-6-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-6",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-7-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-7",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_average-0-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-0",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_average-1-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-1",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_average-2-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-2",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_average-3-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-3",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_average-4-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-4",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_average-5-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-5",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_average-6-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-6",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_average-7-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-7",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-0-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-0",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-1-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-1",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-2-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-2",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-3-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-3",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-4-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-4",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-5-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-5",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-6-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-6",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-7-order",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-7",
+      "paid_amount": "1000"
+    }
+  ],
+  "refunds": [
+    {
+      "evidence_id": "RSI-refund_velocity-1-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-1",
+      "refund_id": "RSI-refund_velocity-1-R0",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-2-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-2",
+      "refund_id": "RSI-refund_velocity-2-R0",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-2-E1",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-2",
+      "refund_id": "RSI-refund_velocity-2-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-3-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-3",
+      "refund_id": "RSI-refund_velocity-3-R0",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-3-E1",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-3",
+      "refund_id": "RSI-refund_velocity-3-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-3-E2",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-3",
+      "refund_id": "RSI-refund_velocity-3-R2",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-4-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-4",
+      "refund_id": "RSI-refund_velocity-4-R0",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-4-E1",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-4",
+      "refund_id": "RSI-refund_velocity-4-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-4-E2",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-4",
+      "refund_id": "RSI-refund_velocity-4-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-5-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-5",
+      "refund_id": "RSI-refund_velocity-5-R0",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-5-E1",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-5",
+      "refund_id": "RSI-refund_velocity-5-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-5-E2",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-5",
+      "refund_id": "RSI-refund_velocity-5-R2",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "requested"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-6-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-6",
+      "refund_id": "RSI-refund_velocity-6-R0",
+      "refund_amount": "20",
+      "refund_date": "2026-11-13",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-6-E1",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-6",
+      "refund_id": "RSI-refund_velocity-6-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-14",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-6-E2",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-6",
+      "refund_id": "RSI-refund_velocity-6-R2",
+      "refund_amount": "20",
+      "refund_date": "2026-11-21",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_velocity-7-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_velocity-7",
+      "refund_id": "RSI-refund_velocity-7-R0",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_average-1-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-1",
+      "refund_id": "RSI-refund_average-1-R0",
+      "refund_amount": "49.99",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_average-2-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-2",
+      "refund_id": "RSI-refund_average-2-R0",
+      "refund_amount": "50",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_average-3-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-3",
+      "refund_id": "RSI-refund_average-3-R0",
+      "refund_amount": "50.01",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_average-4-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-4",
+      "refund_id": "RSI-refund_average-4-R0",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_average-4-E1",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-4",
+      "refund_id": "RSI-refund_average-4-R1",
+      "refund_amount": "100",
+      "refund_date": "2026-11-20",
+      "status": "failed"
+    },
+    {
+      "evidence_id": "RSI-refund_average-5-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-5",
+      "refund_id": "RSI-refund_average-5-R0",
+      "refund_amount": "50",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_average-5-E1",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-5",
+      "refund_id": "RSI-refund_average-5-R0",
+      "refund_amount": "50",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_average-6-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-6",
+      "refund_id": "RSI-refund_average-6-R0",
+      "refund_amount": "49.99",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_average-6-E1",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-6",
+      "refund_id": "RSI-refund_average-6-R1",
+      "refund_amount": "50.02",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_average-7-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-7",
+      "refund_id": "RSI-refund_average-7-R0",
+      "refund_amount": "40",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_average-7-E1",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_average-7",
+      "refund_id": "RSI-refund_average-7-R0",
+      "refund_amount": "60",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-1-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-1",
+      "refund_id": "RSI-refund_replay-1-R0",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-2-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-2",
+      "refund_id": "RSI-refund_replay-2-R0",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-2-E1",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-2",
+      "refund_id": "RSI-refund_replay-2-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-3-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-3",
+      "refund_id": "RSI-refund_replay-3-R0",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-3-E1",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-3",
+      "refund_id": "RSI-refund_replay-3-R0",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-4-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-4",
+      "refund_id": "RSI-refund_replay-4-R0",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-4-E1",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-4",
+      "refund_id": "RSI-refund_replay-4-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-4-E2",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-4",
+      "refund_id": "RSI-refund_replay-4-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-5-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-5",
+      "refund_id": "RSI-refund_replay-5-R0",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "cancelled"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-5-E1",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-5",
+      "refund_id": "RSI-refund_replay-5-R0",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "cancelled"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-6-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-6",
+      "refund_id": "RSI-refund_replay-6-R0",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-6-E1",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-6",
+      "refund_id": "RSI-refund_replay-6-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-6-E2",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-6",
+      "refund_id": "RSI-refund_replay-6-R2",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-6-E3",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-6",
+      "refund_id": "RSI-refund_replay-6-R2",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "RSI-refund_replay-7-E0",
+      "platform": "tmall",
+      "shop_id": "rsi-demo",
+      "order_id": "RSI-refund_replay-7",
+      "refund_id": "RSI-refund_replay-7-R0",
+      "refund_amount": "20",
+      "refund_date": "2026-11-20",
+      "status": "succeeded"
+    }
+  ],
+  "evidence": []
+}

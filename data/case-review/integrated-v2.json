@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "dataset_kind": "synthetic",
+  "cases": [
+    {
+      "case_id": "COMBO-01-0",
+      "platform": "pinduoduo",
+      "shop_id": "demo-shop-A",
+      "order_id": "COMBO-01-0-ORDER",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount",
+        "freight",
+        "refund_velocity",
+        "refund_average",
+        "refund_replay"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "buyer",
+      "review_parameters": {
+        "window_days": 7,
+        "event_count_threshold": 2,
+        "average_amount_threshold": "40",
+        "replay_rate_threshold_bps": 3000
+      }
+    },
+    {
+      "case_id": "COMBO-02-0",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "COMBO-02-0-ORDER",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount",
+        "freight",
+        "refund_velocity",
+        "refund_average",
+        "refund_replay"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "merchant",
+      "review_parameters": {
+        "window_days": 7,
+        "event_count_threshold": 2,
+        "average_amount_threshold": "40",
+        "replay_rate_threshold_bps": 3000
+      }
+    }
+  ],
+  "orders": [
+    {
+      "evidence_id": "COMBO-01-0-order",
+      "platform": "pinduoduo",
+      "shop_id": "demo-shop-A",
+      "order_id": "COMBO-01-0-ORDER",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "COMBO-02-0-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "COMBO-02-0-ORDER",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    }
+  ],
+  "refunds": [
+    {
+      "evidence_id": "COMBO-01-0-RROW1",
+      "platform": "pinduoduo",
+      "shop_id": "demo-shop-A",
+      "order_id": "COMBO-01-0-ORDER",
+      "refund_id": "COMBO-01-0-R1",
+      "refund_amount": "100.01",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "COMBO-02-0-RROW1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "COMBO-02-0-ORDER",
+      "refund_id": "COMBO-02-0-R1",
+      "refund_amount": "50",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "COMBO-02-0-RROW2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "COMBO-02-0-ORDER",
+      "refund_id": "COMBO-02-0-R2",
+      "refund_amount": "50",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "COMBO-01-0-quality_proof",
+      "case_id": "COMBO-01-0",
+      "kind": "quality_proof",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "COMBO-01-0-platform_audit",
+      "case_id": "COMBO-01-0",
+      "kind": "platform_audit",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "COMBO-02-0-alipay_guaranteed_transaction",
+      "case_id": "COMBO-02-0",
+      "kind": "alipay_guaranteed_transaction",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    }
+  ]
+}

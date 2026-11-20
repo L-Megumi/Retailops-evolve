@@ -1,0 +1,17 @@
+{
+  "attempt": 1,
+  "source": "def compute_metric(orders, refunds):\n    total_refund_rows = len(refunds)\n    seen = {}\n    duplicate_rows = 0\n    for row in refunds:\n        refund_id = row.get('refund_id')\n        if refund_id in seen:\n            duplicate_rows = duplicate_rows + 1\n        else:\n            seen.setdefault(refund_id, 1)\n    if total_refund_rows == 0:\n        replay_rate_bps = 0\n    else:\n        replay_rate_bps = (duplicate_rows * 10000) // total_refund_rows\n    data = {\n        'total_refund_rows': total_refund_rows,\n        'duplicate_rows': duplicate_rows,\n        'replay_rate_bps': replay_rate_bps\n    }\n    evidence = {\n        'definition': 'Count later occurrences of an exact refund_id in RAW rows; floor(duplicate_rows*10000/total_refund_rows), zero for empty input.',\n        'input_view': 'raw',\n        'note': 'Record replay only; never repeated real payments.'\n    }\n    return {'metric': 'refund_replay_rate', 'data': data, 'evidence': evidence}\n",
+  "source_sha256": "c1228e3af75d9f0d16c9d638210b0254c4cb9888cc10143475b172e10cb3ceba",
+  "status": "active",
+  "critic": "",
+  "admission": {
+    "source_sha256": "c1228e3af75d9f0d16c9d638210b0254c4cb9888cc10143475b172e10cb3ceba",
+    "spec_sha256": "1907390c5e86ad7b08702330dc40f261bb711f6a20e5b60e50d5d9b3cf34fe0b",
+    "verifier_sha256": "bb9ca76ce846e869e1d14161200b1d44930e4d72c03e433d53b4c9e9dd69ba23",
+    "gate_version": "metric-gate-v1",
+    "passed": {
+      "evolution": 5,
+      "validation": 5
+    }
+  }
+}

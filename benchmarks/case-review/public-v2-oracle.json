@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "labels": [
+    {
+      "case_id": "spc-promise",
+      "family": "spc-promise",
+      "split": "public-coverage",
+      "status": "needs_policy",
+      "finding_codes": [],
+      "gap_kinds": [
+        "knowledge"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "spc-handbag",
+      "family": "spc-handbag",
+      "split": "public-coverage",
+      "status": "needs_policy",
+      "finding_codes": [],
+      "gap_kinds": [
+        "knowledge"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "spc-promotion",
+      "family": "spc-promotion",
+      "split": "public-coverage",
+      "status": "needs_policy",
+      "finding_codes": [],
+      "gap_kinds": [
+        "knowledge"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "spc-ticket",
+      "family": "spc-ticket",
+      "split": "public-coverage",
+      "status": "needs_policy",
+      "finding_codes": [],
+      "gap_kinds": [
+        "knowledge"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "samr-phone",
+      "family": "samr-phone",
+      "split": "public-coverage",
+      "status": "needs_policy",
+      "finding_codes": [],
+      "gap_kinds": [
+        "knowledge"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "suzhou-pearl",
+      "family": "suzhou-pearl",
+      "split": "public-coverage",
+      "status": "needs_policy",
+      "finding_codes": [],
+      "gap_kinds": [
+        "knowledge"
+      ],
+      "freight_party": null
+    }
+  ],
+  "split_policy": "six public-source adaptations; coverage/refusal evaluation, not complete reconstructed ledgers"
+}

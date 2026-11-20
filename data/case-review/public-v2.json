@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "dataset_kind": "public_case_adaptation",
+  "cases": [
+    {
+      "case_id": "spc-promise",
+      "platform": "undisclosed",
+      "shop_id": "PUBLIC-SHOP-spc-promise",
+      "order_id": "PUBLIC-ORDER-spc-promise",
+      "checks": [
+        "freight"
+      ],
+      "business_scope": "platform",
+      "reason": "description_mismatch",
+      "request_type": "return",
+      "public_origin": {
+        "source_url": "https://www.court.gov.cn/zixun/xiangqing/467931.html",
+        "locator": "案例1",
+        "retrieved_at": "2026-11-20",
+        "summary": "直播手串材质与承诺不符，购买价款1000元，消费者主张承诺赔偿。",
+        "unavailable_facts": [
+          "platform_identity",
+          "merchant_promise",
+          "product_identification"
+        ]
+      },
+      "adaptation_notes": [
+        "case_id, shop_id and order_id are synthetic linkage handles",
+        "freight is a review question added for coverage assessment, not a reported dispute fact",
+        "judgment and outcome are excluded from runtime input"
+      ]
+    },
+    {
+      "case_id": "spc-handbag",
+      "platform": "undisclosed",
+      "shop_id": "PUBLIC-SHOP-spc-handbag",
+      "order_id": "PUBLIC-ORDER-spc-handbag",
+      "checks": [
+        "freight"
+      ],
+      "business_scope": "platform",
+      "reason": "personal",
+      "request_type": "return",
+      "public_origin": {
+        "source_url": "https://www.court.gov.cn/zixun/xiangqing/467931.html",
+        "locator": "案例2",
+        "retrieved_at": "2026-11-20",
+        "summary": "手提包签收七日内申请退货，商家援引页面不支持退货条款拒绝。",
+        "unavailable_facts": [
+          "platform_identity",
+          "product_eligibility",
+          "return_condition"
+        ]
+      },
+      "adaptation_notes": [
+        "case_id, shop_id and order_id are synthetic linkage handles",
+        "freight is a review question added for coverage assessment, not a reported dispute fact",
+        "judgment and outcome are excluded from runtime input"
+      ]
+    },
+    {
+      "case_id": "spc-promotion",
+      "platform": "undisclosed",
+      "shop_id": "PUBLIC-SHOP-spc-promotion",
+      "order_id": "PUBLIC-ORDER-spc-promotion",
+      "checks": [
+        "freight"
+      ],
+      "business_scope": "platform",
+      "reason": "other",
+      "request_type": "return",
+      "public_origin": {
+        "source_url": "https://www.court.gov.cn/zixun/xiangqing/467931.html",
+        "locator": "案例3",
+        "retrieved_at": "2026-11-20",
+        "summary": "家具促销中提前支付定金，客服未说明时点不符；合计支付2499元。",
+        "unavailable_facts": [
+          "platform_identity",
+          "promotion_terms",
+          "customer_service_commitment"
+        ]
+      },
+      "adaptation_notes": [
+        "case_id, shop_id and order_id are synthetic linkage handles",
+        "freight is a review question added for coverage assessment, not a reported dispute fact",
+        "judgment and outcome are excluded from runtime input"
+      ]
+    },
+    {
+      "case_id": "spc-ticket",
+      "platform": "undisclosed",
+      "shop_id": "PUBLIC-SHOP-spc-ticket",
+      "order_id": "PUBLIC-ORDER-spc-ticket",
+      "checks": [
+        "freight"
+      ],
+      "business_scope": "platform",
+      "reason": "other",
+      "request_type": "return",
+      "public_origin": {
+        "source_url": "https://www.court.gov.cn/zixun/xiangqing/467931.html",
+        "locator": "案例4",
+        "retrieved_at": "2026-11-20",
+        "summary": "同次购买两张演出票，一张退票、另一张仅退八成，规则含义有争议。",
+        "unavailable_facts": [
+          "platform_identity",
+          "ticket_terms",
+          "refund_ledger"
+        ]
+      },
+      "adaptation_notes": [
+        "case_id, shop_id and order_id are synthetic linkage handles",
+        "freight is a review question added for coverage assessment, not a reported dispute fact",
+        "judgment and outcome are excluded from runtime input"
+      ]
+    },
+    {
+      "case_id": "samr-phone",
+      "platform": "undisclosed",
+      "shop_id": "PUBLIC-SHOP-samr-phone",
+      "order_id": "PUBLIC-ORDER-samr-phone",
+      "checks": [
+        "freight"
+      ],
+      "business_scope": "platform",
+      "reason": "personal",
+      "request_type": "return",
+      "public_origin": {
+        "source_url": "https://www.samr.gov.cn/zt/pgt/art/2026/art_dc27a442bba24b25a824a502209ecc7a.html",
+        "locator": "上海迪信电子通信技术有限公司案",
+        "retrieved_at": "2026-11-20",
+        "summary": "手机仅拆原厂塑料膜且未激活，消费者退货时被商家拒绝。",
+        "unavailable_facts": [
+          "platform_identity",
+          "product_eligibility",
+          "application_dates"
+        ]
+      },
+      "adaptation_notes": [
+        "case_id, shop_id and order_id are synthetic linkage handles",
+        "freight is a review question added for coverage assessment, not a reported dispute fact",
+        "judgment and outcome are excluded from runtime input"
+      ]
+    },
+    {
+      "case_id": "suzhou-pearl",
+      "platform": "xiaohongshu",
+      "shop_id": "PUBLIC-SHOP-suzhou-pearl",
+      "order_id": "PUBLIC-ORDER-suzhou-pearl",
+      "checks": [
+        "freight"
+      ],
+      "business_scope": "platform",
+      "reason": "personal",
+      "request_type": "return",
+      "public_origin": {
+        "source_url": "https://www.suzhou.gov.cn/szsrmzf/szyw/202603/f6ec3a07d4c34b5c9a8e6ccc1c1cd37a.shtml",
+        "locator": "孙某某诉某商贸公司案",
+        "retrieved_at": "2026-11-20",
+        "summary": "小红书直播购买珍珠耳钉15800元，签收次日申请退货被拒。",
+        "unavailable_facts": [
+          "unsupported_platform_policy",
+          "product_eligibility",
+          "purchase_confirmation"
+        ]
+      },
+      "adaptation_notes": [
+        "case_id, shop_id and order_id are synthetic linkage handles",
+        "freight is a review question added for coverage assessment, not a reported dispute fact",
+        "judgment and outcome are excluded from runtime input"
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "evidence_id": "spc-promise-source-facts",
+      "platform": "undisclosed",
+      "shop_id": "PUBLIC-SHOP-spc-promise",
+      "order_id": "PUBLIC-ORDER-spc-promise",
+      "paid_amount": "1000"
+    },
+    {
+      "evidence_id": "spc-handbag-source-facts",
+      "platform": "undisclosed",
+      "shop_id": "PUBLIC-SHOP-spc-handbag",
+      "order_id": "PUBLIC-ORDER-spc-handbag"
+    },
+    {
+      "evidence_id": "spc-promotion-source-facts",
+      "platform": "undisclosed",
+      "shop_id": "PUBLIC-SHOP-spc-promotion",
+      "order_id": "PUBLIC-ORDER-spc-promotion",
+      "paid_amount": "2499"
+    },
+    {
+      "evidence_id": "spc-ticket-source-facts",
+      "platform": "undisclosed",
+      "shop_id": "PUBLIC-SHOP-spc-ticket",
+      "order_id": "PUBLIC-ORDER-spc-ticket"
+    },
+    {
+      "evidence_id": "samr-phone-source-facts",
+      "platform": "undisclosed",
+      "shop_id": "PUBLIC-SHOP-samr-phone",
+      "order_id": "PUBLIC-ORDER-samr-phone"
+    },
+    {
+      "evidence_id": "suzhou-pearl-source-facts",
+      "platform": "xiaohongshu",
+      "shop_id": "PUBLIC-SHOP-suzhou-pearl",
+      "order_id": "PUBLIC-ORDER-suzhou-pearl",
+      "paid_amount": "15800"
+    }
+  ],
+  "refunds": [],
+  "evidence": [
+    {
+      "evidence_id": "spc-promise-public-summary",
+      "case_id": "spc-promise",
+      "kind": "public_source_summary",
+      "status": "present",
+      "text": "直播手串材质与承诺不符，购买价款1000元，消费者主张承诺赔偿。"
+    },
+    {
+      "evidence_id": "spc-handbag-public-summary",
+      "case_id": "spc-handbag",
+      "kind": "public_source_summary",
+      "status": "present",
+      "text": "手提包签收七日内申请退货，商家援引页面不支持退货条款拒绝。"
+    },
+    {
+      "evidence_id": "spc-promotion-public-summary",
+      "case_id": "spc-promotion",
+      "kind": "public_source_summary",
+      "status": "present",
+      "text": "家具促销中提前支付定金，客服未说明时点不符；合计支付2499元。"
+    },
+    {
+      "evidence_id": "spc-ticket-public-summary",
+      "case_id": "spc-ticket",
+      "kind": "public_source_summary",
+      "status": "present",
+      "text": "同次购买两张演出票，一张退票、另一张仅退八成，规则含义有争议。"
+    },
+    {
+      "evidence_id": "samr-phone-public-summary",
+      "case_id": "samr-phone",
+      "kind": "public_source_summary",
+      "status": "present",
+      "text": "手机仅拆原厂塑料膜且未激活，消费者退货时被商家拒绝。"
+    },
+    {
+      "evidence_id": "suzhou-pearl-public-summary",
+      "case_id": "suzhou-pearl",
+      "kind": "public_source_summary",
+      "status": "present",
+      "text": "小红书直播购买珍珠耳钉15800元，签收次日申请退货被拒。"
+    }
+  ]
+}

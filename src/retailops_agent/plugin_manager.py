@@ -717,6 +717,38 @@ class PluginManager:
         record.failure_count += 1
         record.quarantine_reason = reason[:500]
 
+    @synchronized
+    def execute_metric_rows(self, output_name: str, order_rows: list[dict], refund_rows: list[dict]) -> ToolResult:
+        """Run an exact named read-only capability for a trusted input adapter.
+
+        This shares the normal worker, verifier, quarantine and rollback paths;
+        callers cannot select arbitrary code or bypass the metric definition.
+        """
+        definition = metric_definition(output_name)
+        candidates = [r for r in self._active() if r.spec.kind == 'metric_tool' and r.spec.output_name == output_name]
+        if len(candidates) != 1:
+            raise PluginExecutionError('exact metric capability is missing or ambiguous', [])
+        record = candidates[0]
+        attempts = []
+        for _ in range(2):
+            try:
+                if record.admission.get('verifier_sha256') != definition.fingerprint:
+                    raise UnsafePluginError('metric verifier binding is stale')
+                if _sha256_text(record.source) != record.registration.source_sha256:
+                    raise UnsafePluginError('metric source identity changed')
+                return self._run_verified_metric(record, order_rows, refund_rows)
+            except (UnsafePluginError, ValueError, RuntimeError) as exc:
+                attempts.append({'plugin': record.identity(), 'error': str(exc)[:300]})
+                self._quarantine(record, f'case metric runtime validation failed: {exc}')
+                fallback = self._rollback_candidate(record.plugin_id)
+                if fallback is None:
+                    self._persist_manifest()
+                    raise PluginExecutionError('case metric failed independent verification', attempts) from exc
+                self.activate(fallback, persist=False)
+                self._persist_manifest()
+                record = fallback
+        raise PluginExecutionError('case metric rollback budget exhausted', attempts)
+
     def _rollback_candidate(self, plugin_id: str) -> ManagedPlugin | None:
         candidates = [
             record

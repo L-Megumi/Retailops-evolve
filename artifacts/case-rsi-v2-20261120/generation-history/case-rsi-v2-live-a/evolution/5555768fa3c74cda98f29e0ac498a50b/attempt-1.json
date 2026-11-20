@@ -1,0 +1,8 @@
+{
+  "attempt": 1,
+  "source": "def compute_metric(orders, refunds):\n    total_refund_rows = len(refunds)\n    seen = {}\n    duplicate_rows = 0\n    for row in refunds:\n        refund_id = row.get('refund_id')\n        if refund_id in seen:\n            duplicate_rows = duplicate_rows + 1\n        else:\n            seen.setdefault(refund_id, 1)\n    if total_refund_rows == 0:\n        replay_rate_bps = 0\n    else:\n        replay_rate_bps = (duplicate_rows * 10000) // total_refund_rows\n    data = {\n        'total_refund_rows': total_refund_rows,\n        'duplicate_rows': duplicate_rows,\n        'replay_rate_bps': replay_rate_bps\n    }\n    evidence = {\n        'metric': 'refund_replay_rate',\n        'definition': 'Count later occurrences of an exact refund_id in RAW rows; return total_refund_rows, duplicate_rows and floor(duplicate_rows*10000/total_refund_rows), or zero for empty input.',\n        'input_view': 'raw',\n        'note': 'Record replay only; never repeated real payments.'\n    }\n    return data, evidence\n",
+  "source_sha256": "eb877638b96ff63f20d431cc051ff178e470c89f8f2863a3871c25740d69f01c",
+  "status": "quarantined",
+  "critic": "install validation failed: metric plugin must return an object",
+  "admission": {}
+}

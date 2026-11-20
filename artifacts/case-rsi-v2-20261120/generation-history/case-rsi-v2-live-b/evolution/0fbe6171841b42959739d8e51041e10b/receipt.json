@@ -1,0 +1,17 @@
+{
+  "plugin_id": "generated-refund-replay-rate-v1",
+  "source_sha256": "c1228e3af75d9f0d16c9d638210b0254c4cb9888cc10143475b172e10cb3ceba",
+  "attempts": 1,
+  "admission": {
+    "source_sha256": "c1228e3af75d9f0d16c9d638210b0254c4cb9888cc10143475b172e10cb3ceba",
+    "spec_sha256": "1907390c5e86ad7b08702330dc40f261bb711f6a20e5b60e50d5d9b3cf34fe0b",
+    "verifier_sha256": "bb9ca76ce846e869e1d14161200b1d44930e4d72c03e433d53b4c9e9dd69ba23",
+    "gate_version": "metric-gate-v1",
+    "passed": {
+      "evolution": 5,
+      "validation": 5
+    }
+  },
+  "frozen_audit_cases": 5,
+  "claim": "bounded verified metric synthesis; no runtime or model self-modification"
+}

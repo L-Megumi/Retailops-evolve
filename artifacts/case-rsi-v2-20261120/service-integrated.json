@@ -1,0 +1,1078 @@
+{
+  "backend": "qdrant",
+  "job_status": "succeeded",
+  "generation_calls": 0,
+  "sse_done": true,
+  "case_statuses": {
+    "COMBO-01-0": "needs_review",
+    "COMBO-02-0": "needs_review"
+  },
+  "finding_codes": [
+    [
+      "refund_total_exceeds_paid",
+      "freight_responsibility_mismatch",
+      "refund_average_threshold_exceeded"
+    ],
+    [
+      "freight_responsibility_mismatch",
+      "refund_average_threshold_exceeded"
+    ]
+  ],
+  "task_forbade_generation": true,
+  "full_trace": {
+    "task": "核查记录、金额、运费与派生指标，不要生成插件",
+    "status": "completed",
+    "cases": [
+      {
+        "case_id": "COMBO-01-0",
+        "platform": "pinduoduo",
+        "shop_id": "demo-shop-A",
+        "order_id": "COMBO-01-0-ORDER",
+        "business_scope": "platform",
+        "checks": [
+          "records",
+          "amount",
+          "freight",
+          "refund_velocity",
+          "refund_average",
+          "refund_replay"
+        ],
+        "status": "needs_review",
+        "findings": [
+          {
+            "finding_id": "COMBO-01-0:refund_total_exceeds_paid",
+            "code": "refund_total_exceeds_paid",
+            "message": "成功状态退款记录的合计超过订单实付金额",
+            "record_evidence_ids": [
+              "COMBO-01-0-order",
+              "COMBO-01-0-RROW1"
+            ],
+            "policy_citation_ids": [],
+            "details": {
+              "paid_amount": "100",
+              "refund_total": "100.01",
+              "difference": "0.01"
+            },
+            "suggested_action": "人工核查相关记录与凭证"
+          },
+          {
+            "finding_id": "COMBO-01-0:freight_responsibility_mismatch",
+            "code": "freight_responsibility_mismatch",
+            "message": "拟定运费承担方与已匹配政策条件不一致",
+            "record_evidence_ids": [
+              "COMBO-01-0-order",
+              "COMBO-01-0-quality_proof",
+              "COMBO-01-0-platform_audit"
+            ],
+            "policy_citation_ids": [
+              "pdd-protection::pdd-protection-freight"
+            ],
+            "details": {
+              "proposed_party": "buyer",
+              "policy_party": "merchant"
+            },
+            "suggested_action": "人工核查相关记录与凭证"
+          },
+          {
+            "finding_id": "COMBO-01-0:refund_average_threshold_exceeded",
+            "code": "refund_average_threshold_exceeded",
+            "message": "成功退款平均金额超过指定核查阈值",
+            "record_evidence_ids": [
+              "COMBO-01-0-order",
+              "COMBO-01-0-RROW1"
+            ],
+            "policy_citation_ids": [],
+            "details": {
+              "average_cents": 10001,
+              "threshold_cents": 4000
+            },
+            "suggested_action": "人工核查相关记录与凭证"
+          }
+        ],
+        "facts": [
+          {
+            "fact_id": "refund_record_counts",
+            "raw_rows": 1,
+            "unique_refund_ids": 1,
+            "succeeded_refund_ids": 1,
+            "evidence_ids": [
+              "COMBO-01-0-RROW1"
+            ]
+          },
+          {
+            "fact_id": "amount_reconciliation",
+            "paid_amount": "100",
+            "succeeded_refund_total": "100.01",
+            "evidence_ids": [
+              "COMBO-01-0-order",
+              "COMBO-01-0-RROW1"
+            ],
+            "aggregation": "unique refund_id; succeeded records only"
+          },
+          {
+            "fact_id": "pdd-quality-freight:applicability",
+            "reason": "quality",
+            "request_type": "return",
+            "application_date": null,
+            "order_conditions": {},
+            "confirmed_evidence_kinds": [
+              "quality_proof",
+              "platform_audit"
+            ],
+            "verification_scope": "input records and input evidence-status fields",
+            "evidence_ids": [
+              "COMBO-01-0-order",
+              "COMBO-01-0-quality_proof",
+              "COMBO-01-0-platform_audit"
+            ]
+          },
+          {
+            "fact_id": "refund_velocity",
+            "metric": "unique_refund_events",
+            "data": {
+              "unique_refund_events": 1
+            },
+            "parameters": {
+              "window_days": 7,
+              "event_count_threshold": 2,
+              "average_amount_threshold": "40",
+              "replay_rate_threshold_bps": 3000
+            },
+            "evidence_ids": [
+              "COMBO-01-0-order",
+              "COMBO-01-0-RROW1"
+            ],
+            "computation": "sandboxed_plugin_and_independent_verifier",
+            "threshold_source": "analyst_provided_not_platform_policy"
+          },
+          {
+            "fact_id": "refund_average",
+            "metric": "average_refund_amount",
+            "data": {
+              "total_refund_rows": 1,
+              "average_refund_cents": 10001
+            },
+            "parameters": {
+              "window_days": 7,
+              "event_count_threshold": 2,
+              "average_amount_threshold": "40",
+              "replay_rate_threshold_bps": 3000
+            },
+            "evidence_ids": [
+              "COMBO-01-0-order",
+              "COMBO-01-0-RROW1"
+            ],
+            "computation": "sandboxed_plugin_and_independent_verifier",
+            "threshold_source": "analyst_provided_not_platform_policy"
+          },
+          {
+            "fact_id": "refund_replay",
+            "metric": "refund_replay_rate",
+            "data": {
+              "total_refund_rows": 1,
+              "duplicate_rows": 0,
+              "replay_rate_bps": 0
+            },
+            "parameters": {
+              "window_days": 7,
+              "event_count_threshold": 2,
+              "average_amount_threshold": "40",
+              "replay_rate_threshold_bps": 3000
+            },
+            "evidence_ids": [
+              "COMBO-01-0-order",
+              "COMBO-01-0-RROW1"
+            ],
+            "computation": "sandboxed_plugin_and_independent_verifier",
+            "threshold_source": "analyst_provided_not_platform_policy"
+          }
+        ],
+        "citations": [
+          {
+            "chunk_id": "pdd-protection::pdd-protection-freight",
+            "doc_id": "pdd-protection",
+            "title": "拼多多消费者保障计划（2026年修订）",
+            "text": "拼多多因质量问题退换货，申请页上传问题凭证且平台审核通过后，全部运费由商家承担。",
+            "platform": "pinduoduo",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.yangkeduo.com/home/customer/",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "pdd-protection-freight",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "7a794895d00def097b934e4fcf2792779be24264259ef9c51515174c370a9d44",
+            "retrieved_at": "2026-11-20",
+            "effective_from": "2026-01-18",
+            "effective_to": null,
+            "clause_title": "质量退货运费",
+            "topics": [],
+            "retrieval_mode": "hybrid",
+            "content_kind": "curated_summary"
+          }
+        ],
+        "gaps": [],
+        "guidance": [
+          {
+            "kind": "freight",
+            "party": "merchant",
+            "coverage": "both",
+            "rule_id": "pdd-quality-freight",
+            "policy_citation_ids": [
+              "pdd-protection::pdd-protection-freight"
+            ],
+            "record_evidence_ids": [
+              "COMBO-01-0-order",
+              "COMBO-01-0-quality_proof",
+              "COMBO-01-0-platform_audit"
+            ],
+            "decision_type": "review_guidance"
+          }
+        ],
+        "draft_explanation": null,
+        "policy_context": {
+          "mode": "current_snapshot",
+          "as_of": null
+        },
+        "plan": {
+          "required_checks": [
+            "records",
+            "amount",
+            "freight",
+            "refund_velocity",
+            "refund_average",
+            "refund_replay"
+          ],
+          "forbidden_checks": [],
+          "steps": [
+            {
+              "id": "link_records",
+              "depends_on": []
+            },
+            {
+              "id": "check:records",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "builtin_or_gap"
+            },
+            {
+              "id": "check:amount",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "builtin_or_gap"
+            },
+            {
+              "id": "retrieve_policy",
+              "depends_on": [
+                "link_records"
+              ]
+            },
+            {
+              "id": "check:freight",
+              "depends_on": [
+                "link_records",
+                "retrieve_policy"
+              ],
+              "capability_type": "builtin_or_gap"
+            },
+            {
+              "id": "check:refund_velocity",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "metric_adapter"
+            },
+            {
+              "id": "check:refund_average",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "metric_adapter"
+            },
+            {
+              "id": "check:refund_replay",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "metric_adapter"
+            },
+            {
+              "id": "report",
+              "depends_on": [
+                "check:records",
+                "check:amount",
+                "check:freight",
+                "check:refund_velocity",
+                "check:refund_average",
+                "check:refund_replay"
+              ]
+            }
+          ],
+          "source": "task_and_case",
+          "evolution_allowed": false
+        }
+      },
+      {
+        "case_id": "COMBO-02-0",
+        "platform": "tmall",
+        "shop_id": "demo-shop-A",
+        "order_id": "COMBO-02-0-ORDER",
+        "business_scope": "platform",
+        "checks": [
+          "records",
+          "amount",
+          "freight",
+          "refund_velocity",
+          "refund_average",
+          "refund_replay"
+        ],
+        "status": "needs_review",
+        "findings": [
+          {
+            "finding_id": "COMBO-02-0:freight_responsibility_mismatch",
+            "code": "freight_responsibility_mismatch",
+            "message": "拟定运费承担方与已匹配政策条件不一致",
+            "record_evidence_ids": [
+              "COMBO-02-0-order",
+              "COMBO-02-0-alipay_guaranteed_transaction"
+            ],
+            "policy_citation_ids": [
+              "tmall-seven::tmall-seven-freight",
+              "tmall-seven::tmall-seven-condition",
+              "tmall-seven::tmall-seven-clock"
+            ],
+            "details": {
+              "proposed_party": "merchant",
+              "policy_party": "buyer"
+            },
+            "suggested_action": "人工核查相关记录与凭证"
+          },
+          {
+            "finding_id": "COMBO-02-0:refund_average_threshold_exceeded",
+            "code": "refund_average_threshold_exceeded",
+            "message": "成功退款平均金额超过指定核查阈值",
+            "record_evidence_ids": [
+              "COMBO-02-0-order",
+              "COMBO-02-0-RROW1",
+              "COMBO-02-0-RROW2"
+            ],
+            "policy_citation_ids": [],
+            "details": {
+              "average_cents": 5000,
+              "threshold_cents": 4000
+            },
+            "suggested_action": "人工核查相关记录与凭证"
+          }
+        ],
+        "facts": [
+          {
+            "fact_id": "refund_record_counts",
+            "raw_rows": 2,
+            "unique_refund_ids": 2,
+            "succeeded_refund_ids": 2,
+            "evidence_ids": [
+              "COMBO-02-0-RROW1",
+              "COMBO-02-0-RROW2"
+            ]
+          },
+          {
+            "fact_id": "amount_reconciliation",
+            "paid_amount": "100",
+            "succeeded_refund_total": "100",
+            "evidence_ids": [
+              "COMBO-02-0-order",
+              "COMBO-02-0-RROW1",
+              "COMBO-02-0-RROW2"
+            ],
+            "aggregation": "unique refund_id; succeeded records only"
+          },
+          {
+            "fact_id": "tmall-personal-freight:applicability",
+            "reason": "personal",
+            "request_type": "return",
+            "application_date": "2026-11-20",
+            "order_conditions": {
+              "goods_condition": "intact",
+              "received_date": "2026-11-17",
+              "shipping_included": true,
+              "supports_seven_day": true
+            },
+            "confirmed_evidence_kinds": [
+              "alipay_guaranteed_transaction"
+            ],
+            "verification_scope": "input records and input evidence-status fields",
+            "evidence_ids": [
+              "COMBO-02-0-order",
+              "COMBO-02-0-alipay_guaranteed_transaction"
+            ]
+          },
+          {
+            "fact_id": "refund_velocity",
+            "metric": "unique_refund_events",
+            "data": {
+              "unique_refund_events": 2
+            },
+            "parameters": {
+              "window_days": 7,
+              "event_count_threshold": 2,
+              "average_amount_threshold": "40",
+              "replay_rate_threshold_bps": 3000
+            },
+            "evidence_ids": [
+              "COMBO-02-0-order",
+              "COMBO-02-0-RROW1",
+              "COMBO-02-0-RROW2"
+            ],
+            "computation": "sandboxed_plugin_and_independent_verifier",
+            "threshold_source": "analyst_provided_not_platform_policy"
+          },
+          {
+            "fact_id": "refund_average",
+            "metric": "average_refund_amount",
+            "data": {
+              "total_refund_rows": 2,
+              "average_refund_cents": 5000
+            },
+            "parameters": {
+              "window_days": 7,
+              "event_count_threshold": 2,
+              "average_amount_threshold": "40",
+              "replay_rate_threshold_bps": 3000
+            },
+            "evidence_ids": [
+              "COMBO-02-0-order",
+              "COMBO-02-0-RROW1",
+              "COMBO-02-0-RROW2"
+            ],
+            "computation": "sandboxed_plugin_and_independent_verifier",
+            "threshold_source": "analyst_provided_not_platform_policy"
+          },
+          {
+            "fact_id": "refund_replay",
+            "metric": "refund_replay_rate",
+            "data": {
+              "total_refund_rows": 2,
+              "duplicate_rows": 0,
+              "replay_rate_bps": 0
+            },
+            "parameters": {
+              "window_days": 7,
+              "event_count_threshold": 2,
+              "average_amount_threshold": "40",
+              "replay_rate_threshold_bps": 3000
+            },
+            "evidence_ids": [
+              "COMBO-02-0-order",
+              "COMBO-02-0-RROW1",
+              "COMBO-02-0-RROW2"
+            ],
+            "computation": "sandboxed_plugin_and_independent_verifier",
+            "threshold_source": "analyst_provided_not_platform_policy"
+          }
+        ],
+        "citations": [
+          {
+            "chunk_id": "tmall-seven::tmall-seven-freight",
+            "doc_id": "tmall-seven",
+            "title": "天猫七天无理由退换货公开服务说明",
+            "text": "天猫该服务下无理由退货或拒签通常由买家承担来回运费；包邮商品买家仅承担退回运费。",
+            "platform": "tmall",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.tmall.com/wow/seller/act/seven-day",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "tmall-seven-freight",
+            "score": 0.03278688524590164,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "2320c2ea4298bfd48e7dcc6805c54e15534dc66eb23bbc2a0f244406a4deffbf",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "主观退货运费",
+            "topics": [],
+            "retrieval_mode": "hybrid",
+            "content_kind": "curated_summary"
+          },
+          {
+            "chunk_id": "tmall-seven::tmall-seven-condition",
+            "doc_id": "tmall-seven",
+            "title": "天猫七天无理由退换货公开服务说明",
+            "text": "天猫该服务面向适用商品：支付宝担保交易签收后七天内因主观原因申请，退货须满足二次销售要求，部分商品及类目除外。",
+            "platform": "tmall",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.tmall.com/wow/seller/act/seven-day",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "tmall-seven-condition",
+            "score": 0.031009615384615385,
+            "channels": [
+              "bm25",
+              "dense"
+            ],
+            "content_hash": "a9d57ec82f0c77d568786442c9a311017daa769eaf1887874088782510c7c41a",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "申请前提",
+            "topics": [],
+            "retrieval_mode": "hybrid",
+            "content_kind": "curated_summary"
+          },
+          {
+            "chunk_id": "tmall-seven::tmall-seven-clock",
+            "doc_id": "tmall-seven",
+            "title": "天猫七天无理由退换货公开服务说明",
+            "text": "天猫该说明按物流签收次日零时开始计时，满168小时为七天，须在该期限内提出申请。",
+            "platform": "tmall",
+            "business_scope": "platform",
+            "source_type": "official_public_policy",
+            "source_url": "https://www.tmall.com/wow/seller/act/seven-day",
+            "version": "curated-2026-11-20-v2",
+            "clause_id": "tmall-seven-clock",
+            "score": 0.0,
+            "channels": [
+              "context"
+            ],
+            "content_hash": "e719e241de4d2576164c27941c0478b0b8a91f9219ba32c4895fd8c95574ac0c",
+            "retrieved_at": "2026-11-20",
+            "effective_from": null,
+            "effective_to": null,
+            "clause_title": "七天起算",
+            "topics": [],
+            "retrieval_mode": "read",
+            "content_kind": "curated_summary"
+          }
+        ],
+        "gaps": [],
+        "guidance": [
+          {
+            "kind": "freight",
+            "party": "buyer",
+            "coverage": "return",
+            "rule_id": "tmall-personal-freight",
+            "policy_citation_ids": [
+              "tmall-seven::tmall-seven-freight",
+              "tmall-seven::tmall-seven-condition",
+              "tmall-seven::tmall-seven-clock"
+            ],
+            "record_evidence_ids": [
+              "COMBO-02-0-order",
+              "COMBO-02-0-alipay_guaranteed_transaction"
+            ],
+            "decision_type": "review_guidance"
+          }
+        ],
+        "draft_explanation": null,
+        "policy_context": {
+          "mode": "current_snapshot",
+          "as_of": null
+        },
+        "plan": {
+          "required_checks": [
+            "records",
+            "amount",
+            "freight",
+            "refund_velocity",
+            "refund_average",
+            "refund_replay"
+          ],
+          "forbidden_checks": [],
+          "steps": [
+            {
+              "id": "link_records",
+              "depends_on": []
+            },
+            {
+              "id": "check:records",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "builtin_or_gap"
+            },
+            {
+              "id": "check:amount",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "builtin_or_gap"
+            },
+            {
+              "id": "retrieve_policy",
+              "depends_on": [
+                "link_records"
+              ]
+            },
+            {
+              "id": "check:freight",
+              "depends_on": [
+                "link_records",
+                "retrieve_policy"
+              ],
+              "capability_type": "builtin_or_gap"
+            },
+            {
+              "id": "check:refund_velocity",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "metric_adapter"
+            },
+            {
+              "id": "check:refund_average",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "metric_adapter"
+            },
+            {
+              "id": "check:refund_replay",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "metric_adapter"
+            },
+            {
+              "id": "report",
+              "depends_on": [
+                "check:records",
+                "check:amount",
+                "check:freight",
+                "check:refund_velocity",
+                "check:refund_average",
+                "check:refund_replay"
+              ]
+            }
+          ],
+          "source": "task_and_case",
+          "evolution_allowed": false
+        }
+      }
+    ],
+    "summary": {
+      "case_count": 2,
+      "statuses": {
+        "needs_review": 2
+      },
+      "finding_count": 5,
+      "gap_kinds": {},
+      "source_records_modified": 0,
+      "payment_actions": 0
+    },
+    "events": [
+      {
+        "stage": "casebook_loaded",
+        "cases": 2,
+        "orders": 2,
+        "refunds": 3,
+        "dataset_kind": "synthetic",
+        "input_hash": "5f23dc781bd60451217d1f91279cb81951481831c6e31e6179a707fe78f30ca8",
+        "elapsed_ms": 1.2
+      },
+      {
+        "stage": "case_plan",
+        "case_id": "COMBO-01-0",
+        "checks": [
+          "records",
+          "amount",
+          "freight",
+          "refund_velocity",
+          "refund_average",
+          "refund_replay"
+        ],
+        "plan": {
+          "required_checks": [
+            "records",
+            "amount",
+            "freight",
+            "refund_velocity",
+            "refund_average",
+            "refund_replay"
+          ],
+          "forbidden_checks": [],
+          "steps": [
+            {
+              "id": "link_records",
+              "depends_on": []
+            },
+            {
+              "id": "check:records",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "builtin_or_gap"
+            },
+            {
+              "id": "check:amount",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "builtin_or_gap"
+            },
+            {
+              "id": "retrieve_policy",
+              "depends_on": [
+                "link_records"
+              ]
+            },
+            {
+              "id": "check:freight",
+              "depends_on": [
+                "link_records",
+                "retrieve_policy"
+              ],
+              "capability_type": "builtin_or_gap"
+            },
+            {
+              "id": "check:refund_velocity",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "metric_adapter"
+            },
+            {
+              "id": "check:refund_average",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "metric_adapter"
+            },
+            {
+              "id": "check:refund_replay",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "metric_adapter"
+            },
+            {
+              "id": "report",
+              "depends_on": [
+                "check:records",
+                "check:amount",
+                "check:freight",
+                "check:refund_velocity",
+                "check:refund_average",
+                "check:refund_replay"
+              ]
+            }
+          ],
+          "source": "task_and_case",
+          "evolution_allowed": false
+        },
+        "elapsed_ms": 14.088
+      },
+      {
+        "stage": "record_tools",
+        "case_id": "COMBO-01-0",
+        "findings": [
+          "refund_total_exceeds_paid"
+        ],
+        "elapsed_ms": 21.006
+      },
+      {
+        "stage": "policy_search",
+        "case_id": "COMBO-01-0",
+        "hits": [
+          "pdd-protection::pdd-protection-freight",
+          "pdd-help::pdd-help-personal",
+          "pdd-help::pdd-help-cod",
+          "pdd-protection::pdd-protection-quality",
+          "pdd-help::pdd-help-exchange"
+        ],
+        "metadata": {
+          "requested_mode": "hybrid",
+          "effective_mode": "hybrid",
+          "eligible_chunks": 12,
+          "corpus_hash": "9964a04826d3f10a3ce2a24bb9c21bbb8da37d3984462cca59712f600df4ccd5",
+          "vector_backend": "qdrant",
+          "reranker": null,
+          "candidate_count": 12
+        },
+        "elapsed_ms": 272.679
+      },
+      {
+        "stage": "policy_applied",
+        "case_id": "COMBO-01-0",
+        "rule_id": "pdd-quality-freight",
+        "check": "freight",
+        "elapsed_ms": 286.422
+      },
+      {
+        "stage": "capability_reused",
+        "case_id": "COMBO-01-0",
+        "check": "refund_velocity",
+        "metric": "unique_refund_events",
+        "elapsed_ms": 293.015
+      },
+      {
+        "stage": "capability_executed",
+        "case_id": "COMBO-01-0",
+        "check": "refund_velocity",
+        "metric": "unique_refund_events",
+        "data": {
+          "unique_refund_events": 1
+        },
+        "elapsed_ms": 355.026
+      },
+      {
+        "stage": "capability_reused",
+        "case_id": "COMBO-01-0",
+        "check": "refund_average",
+        "metric": "average_refund_amount",
+        "elapsed_ms": 418.135
+      },
+      {
+        "stage": "capability_executed",
+        "case_id": "COMBO-01-0",
+        "check": "refund_average",
+        "metric": "average_refund_amount",
+        "data": {
+          "total_refund_rows": 1,
+          "average_refund_cents": 10001
+        },
+        "elapsed_ms": 479.302
+      },
+      {
+        "stage": "capability_reused",
+        "case_id": "COMBO-01-0",
+        "check": "refund_replay",
+        "metric": "refund_replay_rate",
+        "elapsed_ms": 487.763
+      },
+      {
+        "stage": "capability_executed",
+        "case_id": "COMBO-01-0",
+        "check": "refund_replay",
+        "metric": "refund_replay_rate",
+        "data": {
+          "total_refund_rows": 1,
+          "duplicate_rows": 0,
+          "replay_rate_bps": 0
+        },
+        "elapsed_ms": 549.268
+      },
+      {
+        "stage": "case_complete",
+        "case_id": "COMBO-01-0",
+        "status": "needs_review",
+        "elapsed_ms": 564.688
+      },
+      {
+        "stage": "case_plan",
+        "case_id": "COMBO-02-0",
+        "checks": [
+          "records",
+          "amount",
+          "freight",
+          "refund_velocity",
+          "refund_average",
+          "refund_replay"
+        ],
+        "plan": {
+          "required_checks": [
+            "records",
+            "amount",
+            "freight",
+            "refund_velocity",
+            "refund_average",
+            "refund_replay"
+          ],
+          "forbidden_checks": [],
+          "steps": [
+            {
+              "id": "link_records",
+              "depends_on": []
+            },
+            {
+              "id": "check:records",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "builtin_or_gap"
+            },
+            {
+              "id": "check:amount",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "builtin_or_gap"
+            },
+            {
+              "id": "retrieve_policy",
+              "depends_on": [
+                "link_records"
+              ]
+            },
+            {
+              "id": "check:freight",
+              "depends_on": [
+                "link_records",
+                "retrieve_policy"
+              ],
+              "capability_type": "builtin_or_gap"
+            },
+            {
+              "id": "check:refund_velocity",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "metric_adapter"
+            },
+            {
+              "id": "check:refund_average",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "metric_adapter"
+            },
+            {
+              "id": "check:refund_replay",
+              "depends_on": [
+                "link_records"
+              ],
+              "capability_type": "metric_adapter"
+            },
+            {
+              "id": "report",
+              "depends_on": [
+                "check:records",
+                "check:amount",
+                "check:freight",
+                "check:refund_velocity",
+                "check:refund_average",
+                "check:refund_replay"
+              ]
+            }
+          ],
+          "source": "task_and_case",
+          "evolution_allowed": false
+        },
+        "elapsed_ms": 571.931
+      },
+      {
+        "stage": "record_tools",
+        "case_id": "COMBO-02-0",
+        "findings": [],
+        "elapsed_ms": 580.347
+      },
+      {
+        "stage": "policy_search",
+        "case_id": "COMBO-02-0",
+        "hits": [
+          "tmall-seven::tmall-seven-freight",
+          "tmall-seven::tmall-seven-escalation",
+          "tmall-seven::tmall-seven-quality",
+          "tmall-seven::tmall-seven-condition",
+          "tmall-merchant::tmall-merchant-responsibility"
+        ],
+        "metadata": {
+          "requested_mode": "hybrid",
+          "effective_mode": "hybrid",
+          "eligible_chunks": 13,
+          "corpus_hash": "9964a04826d3f10a3ce2a24bb9c21bbb8da37d3984462cca59712f600df4ccd5",
+          "vector_backend": "qdrant",
+          "reranker": null,
+          "candidate_count": 13
+        },
+        "elapsed_ms": 605.51
+      },
+      {
+        "stage": "policy_rule_read",
+        "case_id": "COMBO-02-0",
+        "citation_id": "tmall-seven::tmall-seven-clock",
+        "found": true,
+        "elapsed_ms": 612.535
+      },
+      {
+        "stage": "policy_applied",
+        "case_id": "COMBO-02-0",
+        "rule_id": "tmall-personal-freight",
+        "check": "freight",
+        "elapsed_ms": 619.026
+      },
+      {
+        "stage": "capability_reused",
+        "case_id": "COMBO-02-0",
+        "check": "refund_velocity",
+        "metric": "unique_refund_events",
+        "elapsed_ms": 625.039
+      },
+      {
+        "stage": "capability_executed",
+        "case_id": "COMBO-02-0",
+        "check": "refund_velocity",
+        "metric": "unique_refund_events",
+        "data": {
+          "unique_refund_events": 2
+        },
+        "elapsed_ms": 684.019
+      },
+      {
+        "stage": "capability_reused",
+        "case_id": "COMBO-02-0",
+        "check": "refund_average",
+        "metric": "average_refund_amount",
+        "elapsed_ms": 711.613
+      },
+      {
+        "stage": "capability_executed",
+        "case_id": "COMBO-02-0",
+        "check": "refund_average",
+        "metric": "average_refund_amount",
+        "data": {
+          "total_refund_rows": 2,
+          "average_refund_cents": 5000
+        },
+        "elapsed_ms": 758.267
+      },
+      {
+        "stage": "capability_reused",
+        "case_id": "COMBO-02-0",
+        "check": "refund_replay",
+        "metric": "refund_replay_rate",
+        "elapsed_ms": 806.494
+      },
+      {
+        "stage": "capability_executed",
+        "case_id": "COMBO-02-0",
+        "check": "refund_replay",
+        "metric": "refund_replay_rate",
+        "data": {
+          "total_refund_rows": 2,
+          "duplicate_rows": 0,
+          "replay_rate_bps": 0
+        },
+        "elapsed_ms": 868.645
+      },
+      {
+        "stage": "case_complete",
+        "case_id": "COMBO-02-0",
+        "status": "needs_review",
+        "elapsed_ms": 929.276
+      },
+      {
+        "stage": "review_complete",
+        "status": "completed",
+        "elapsed_ms": 936.344
+      }
+    ],
+    "issues": [],
+    "input_hash": "5f23dc781bd60451217d1f91279cb81951481831c6e31e6179a707fe78f30ca8",
+    "elapsed_ms": 936.333,
+    "model_usage": {
+      "calls": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "generation_calls": 0
+    },
+    "ok": true
+  }
+}

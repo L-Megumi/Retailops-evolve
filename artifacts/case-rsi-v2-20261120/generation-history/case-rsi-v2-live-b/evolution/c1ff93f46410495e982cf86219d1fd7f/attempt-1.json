@@ -1,0 +1,17 @@
+{
+  "attempt": 1,
+  "source": "def compute_metric(orders, refunds):\n    seen = {}\n    for row in refunds:\n        rid = row.get('refund_id')\n        seen.setdefault(rid, 0)\n    count = len(seen.keys())\n    return {'metric': 'unique_refund_events', 'data': {'unique_refund_events': count}, 'evidence': {}}\n",
+  "source_sha256": "92b5984da28d04cd3f82eafcc93fb34a46a1b6f96013bd0da47714761e9093fe",
+  "status": "active",
+  "critic": "",
+  "admission": {
+    "source_sha256": "92b5984da28d04cd3f82eafcc93fb34a46a1b6f96013bd0da47714761e9093fe",
+    "spec_sha256": "566178827aa2c0f93297ced3c08ca3365bc6bcb9e5777f1e042f99c5a28712a4",
+    "verifier_sha256": "f63ae49bf2f613da60b917eac56bf05c60db083ef02b4b2956941656c51fa59d",
+    "gate_version": "metric-gate-v1",
+    "passed": {
+      "evolution": 5,
+      "validation": 5
+    }
+  }
+}

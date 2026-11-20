@@ -1,0 +1,17 @@
+{
+  "attempt": 1,
+  "source": "def compute_metric(orders, refunds):\n    total_refund_rows = len(refunds)\n    total_cents = 0\n    for refund in refunds:\n        total_cents = total_cents + refund.get('refund_cents', 0)\n    if total_refund_rows == 0:\n        average_refund_cents = 0\n    else:\n        average_refund_cents = total_cents // total_refund_rows\n    data = {'total_refund_rows': total_refund_rows, 'average_refund_cents': average_refund_cents}\n    evidence = {'total_cents': total_cents, 'refund_count': total_refund_rows}\n    return {'metric': 'average_refund_amount', 'data': data, 'evidence': evidence}\n",
+  "source_sha256": "1684de06015df0ab8205424b997faaf5bddba2e110d44734e72b860eab487e07",
+  "status": "active",
+  "critic": "",
+  "admission": {
+    "source_sha256": "1684de06015df0ab8205424b997faaf5bddba2e110d44734e72b860eab487e07",
+    "spec_sha256": "e31b8ee3010ede0bb3739f1db7a4e316dc4091e106439b01d23774e5de8dd3c6",
+    "verifier_sha256": "1bc9cc8b79184eef3991be4bba2caf62b00a2c30142e359c06a046f469bdab5c",
+    "gate_version": "metric-gate-v1",
+    "passed": {
+      "evolution": 5,
+      "validation": 5
+    }
+  }
+}

@@ -48,8 +48,8 @@ class TaskRequest(BaseModel):
         if bool(self.orders) != bool(self.refunds):
             raise ValueError("orders and refunds must be supplied together")
         if self.mode == 'case_review':
-            if not self.casebook or self.orders or self.refunds or self.platforms or self.business_scope or self.as_of or self.evolve:
-                raise ValueError('case_review requires a casebook; scope and dates belong to each case; evolution is a separate workflow')
+            if not self.casebook or self.orders or self.refunds or self.platforms or self.business_scope or self.as_of:
+                raise ValueError('case_review requires a casebook; scope and dates belong to each case')
             if any(not value or len(value) > 200 for value in self.case_ids):
                 raise ValueError('case_ids must contain 1-200 character identifiers')
         elif self.casebook or self.case_ids:
@@ -180,9 +180,14 @@ def create_app(*, data_root: Path, manifest: Path, state_path: Path,
         model = OpenAICompatibleModel.deepseek_from_env() if needs_model else None
         if request.get('mode') == 'case_review':
             from .case_review import CaseReviewAgent
+            from .case_capabilities import CaseCapabilityRuntime
             rules = case_rules_path or (knowledge_path.parent / 'review-rules.json' if knowledge_path else None)
+            registry=state_path.parent/'case-plugins/registry.json'
+            runtime=CaseCapabilityRuntime.from_path(registry,model=model,allow_evolution=request['evolve'],
+                                                   artifact_root=registry.parent/'evolution')
             return CaseReviewAgent(knowledge, rules_path=rules if rules and rules.is_file() else None,
-                                   model=model, retrieval_mode=retrieval_mode)
+                                   model=model if request['planner']=='model' else None,retrieval_mode=retrieval_mode,
+                                   capability_runtime=runtime)
         manager = PluginManager.from_manifest(manifest, semantic_model=model,
                                              cache_path=state_path.parent / "route-cache.json")
         analysis = RetailOpsAgent(ModelPlanner(model) if request["planner"] == "model" else None,

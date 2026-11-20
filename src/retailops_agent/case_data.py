@@ -67,8 +67,8 @@ class CaseBook:
     def from_dict(cls, payload):
         if not isinstance(payload, dict) or type(payload.get('schema_version')) is not int or payload['schema_version'] != 1:
             raise ValueError("casebook schema_version must be 1")
-        if payload.get('dataset_kind') not in {'synthetic', 'user_provided'}:
-            raise ValueError("dataset_kind must be synthetic or user_provided")
+        if payload.get('dataset_kind') not in {'synthetic', 'user_provided', 'public_case_adaptation'}:
+            raise ValueError("unsupported dataset_kind")
         limits = {'cases': 1000, 'orders': 10000, 'refunds': 20000, 'evidence': 10000}
         tables = {}
         evidence_ids = set()
@@ -107,6 +107,16 @@ class CaseBook:
                         raise ValueError("invalid request_type")
                     if row.get('proposed_freight_party') not in {None, 'buyer', 'merchant', 'jd'}:
                         raise ValueError('invalid proposed_freight_party')
+                    parameters = row.get('review_parameters', {})
+                    if not isinstance(parameters, dict) or set(parameters) - {'window_days','event_count_threshold','average_amount_threshold','replay_rate_threshold_bps'}:
+                        raise ValueError('invalid review_parameters')
+                    for name,value in parameters.items():
+                        if name == 'average_amount_threshold':
+                            parameters = dict(parameters)
+                            parameters[name] = str(money(value,name))
+                        elif type(value) is not int or not 0 <= value <= {'window_days':365,'event_count_threshold':20000,'replay_rate_threshold_bps':10000}[name] or (name=='window_days' and value==0):
+                            raise ValueError('invalid review parameter: '+name)
+                    row['review_parameters'] = parameters
                 else:
                     eid = row['evidence_id'] = text(row.get('evidence_id'), 'evidence_id')
                     if eid in evidence_ids:

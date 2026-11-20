@@ -1,0 +1,32 @@
+{
+  "tests": 223,
+  "public_cases": 6,
+  "new_combination_cases": 24,
+  "rsi_cases": 24,
+  "solvable_rsi_cases": 21,
+  "input_gap_cases": 3,
+  "real_generation_calls": 3,
+  "reuse_generation_calls": 0,
+  "original_regression": {
+    "seed": {
+      "unchanged_cases": 57,
+      "expected_gap_refinements": 3,
+      "finding_changes": 0,
+      "reason": "refund_velocity is now registered; three old placeholders omit required parameters and become data gaps"
+    },
+    "new_combinations": {
+      "unchanged_cases": 24
+    },
+    "public_coverage": {
+      "unchanged_cases": 6
+    },
+    "all_unexpected_changes": 0
+  },
+  "model_usage": {
+    "model": "deepseek-flash",
+    "http_requests": 3,
+    "prompt_tokens": 1366,
+    "completion_tokens": 747,
+    "total_tokens": 2113
+  }
+}

@@ -26,7 +26,9 @@ def score(rows, labels):
     return dict(case_count=len(rows),exact_case_matches=matches,finding_true_positive=tp,finding_false_positive=fp,
                 finding_false_negative=fn,precision=tp/(tp+fp) if tp+fp else None,
                 recall=tp/(tp+fn) if tp+fn else None,
-                normal_case_false_positives=sum(bool(c['findings']) for c in rows if labels[c['case_id']]['status']=='clear'))
+                normal_case_false_positives=sum(bool(c['findings']) for c in rows if labels[c['case_id']]['status']=='clear'),
+                cases_without_gaps=sum(not c['gaps'] for c in rows),
+                cases_with_gaps=sum(bool(c['gaps']) for c in rows))
 
 
 def main():

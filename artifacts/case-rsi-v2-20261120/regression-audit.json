@@ -1,0 +1,15 @@
+{
+  "seed": {
+    "unchanged_cases": 57,
+    "expected_gap_refinements": 3,
+    "finding_changes": 0,
+    "reason": "refund_velocity is now registered; three old placeholders omit required parameters and become data gaps"
+  },
+  "new_combinations": {
+    "unchanged_cases": 24
+  },
+  "public_coverage": {
+    "unchanged_cases": 6
+  },
+  "all_unexpected_changes": 0
+}

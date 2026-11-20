@@ -1,0 +1,17 @@
+{
+  "plugin_id": "generated-unique-refund-events-v1",
+  "source_sha256": "a19b2ff06c4f26bc65778ee5c710c00ac794f6957d005f7ca27ab5c151fd909b",
+  "attempts": 1,
+  "admission": {
+    "source_sha256": "a19b2ff06c4f26bc65778ee5c710c00ac794f6957d005f7ca27ab5c151fd909b",
+    "spec_sha256": "566178827aa2c0f93297ced3c08ca3365bc6bcb9e5777f1e042f99c5a28712a4",
+    "verifier_sha256": "f63ae49bf2f613da60b917eac56bf05c60db083ef02b4b2956941656c51fa59d",
+    "gate_version": "metric-gate-v1",
+    "passed": {
+      "evolution": 5,
+      "validation": 5
+    }
+  },
+  "frozen_audit_cases": 5,
+  "claim": "bounded verified metric synthesis; no runtime or model self-modification"
+}

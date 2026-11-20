@@ -53,11 +53,19 @@ class CapabilityEvolver:
                             "comprehensions, lambda or aliases of methods. Never shadow builtins. "
                             "Allowed calls: dict, enumerate, int, len, list, max, min, range, sorted, str, sum. "
                             "Allowed direct methods: append, copy, get, items, keys, setdefault, values. "
+                            "Comparisons may use ==, !=, <, <=, >, >=, in, not in; never use is or is not. "
+                            "refund_id and order_id are guaranteed strings, not null. "
                             "Return metric, data and evidence. All data fields are non-negative integers. "
+                            "The return value MUST be one dict, never a tuple: metric is the exact "
+                            "output_name STRING LITERAL, data is a dict with exactly the declared fields, "
+                            "evidence is a dict. Do not put a computed count or data dict into metric. "
                             "Do not invent a verifier or alter the trusted definition."),
                     user=json.dumps({"task": task, "output_name": output_name,
                                      "trusted_definition": definition.description,
                                      "fields": definition.fields, "input_view": definition.input_view,
+                                     "return_shape": {"metric": output_name,
+                                                      "data": {name:"non-negative integer" for name in definition.fields},
+                                                      "evidence": {}},
                                      "input_schema": {"refunds": ["refund_id", "order_id", "refund_date", "refund_cents"],
                                                       "orders": ["order_id", "gross_cents", "quantity"]},
                                      "previous_source": previous or None, "critic": critic or None}, ensure_ascii=False),

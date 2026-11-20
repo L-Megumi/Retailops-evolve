@@ -1,0 +1,2326 @@
+{
+  "created_at": "2026-11-20T06:48:19.177998+00:00",
+  "input_hash": "d88590d635a7429ffcb71bc5c629c9dff8ee4f54c6227f68132849cdf1d263f7",
+  "oracle_sha256": "94b7fae58adbd2aed08ca6a45a7c80fbcf691aec9bf3078565c08f1b235a69fe",
+  "rules_sha256": "bbca789017ca440a68549e8ee2629b83f2f2301f0dde659d86da77fdd92e2dec",
+  "approved_sources_sha256": "54b3c77471bdaeecb95af6790a2e7a778ff34c51524bce910c5b6fc401239171",
+  "corpus_hash": "9964a04826d3f10a3ce2a24bb9c21bbb8da37d3984462cca59712f600df4ccd5",
+  "dataset_kind": "public_case_adaptation",
+  "split_policy": "six public-source adaptations; coverage/refusal evaluation, not complete reconstructed ledgers",
+  "vector_backend": "qdrant",
+  "configs": {
+    "data_tools_only": {
+      "scores": {
+        "case_count": 6,
+        "exact_case_matches": 0,
+        "finding_true_positive": 0,
+        "finding_false_positive": 0,
+        "finding_false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "normal_case_false_positives": 0,
+        "cases_without_gaps": 0,
+        "cases_with_gaps": 6
+      },
+      "splits": {
+        "dev": {
+          "case_count": 0,
+          "exact_case_matches": 0,
+          "finding_true_positive": 0,
+          "finding_false_positive": 0,
+          "finding_false_negative": 0,
+          "precision": null,
+          "recall": null,
+          "normal_case_false_positives": 0,
+          "cases_without_gaps": 0,
+          "cases_with_gaps": 0
+        },
+        "test": {
+          "case_count": 0,
+          "exact_case_matches": 0,
+          "finding_true_positive": 0,
+          "finding_false_positive": 0,
+          "finding_false_negative": 0,
+          "precision": null,
+          "recall": null,
+          "normal_case_false_positives": 0,
+          "cases_without_gaps": 0,
+          "cases_with_gaps": 0
+        }
+      },
+      "invalid_references": [],
+      "model_draft_count": 0,
+      "model_fallback_count": 0,
+      "trace": {
+        "task": "核查售后案例并整理证据及待补信息",
+        "status": "completed",
+        "cases": [
+          {
+            "case_id": "spc-promise",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-promise",
+            "order_id": "PUBLIC-ORDER-spc-promise",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_tool",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "tool",
+                "name": "freight",
+                "message": "现有核查工具未覆盖 freight，需明确该检查项的定义与验证标准",
+                "next_action": "evolution_candidate_requires_spec_and_independent_validation"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            },
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            }
+          },
+          {
+            "case_id": "spc-handbag",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-handbag",
+            "order_id": "PUBLIC-ORDER-spc-handbag",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_tool",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "tool",
+                "name": "freight",
+                "message": "现有核查工具未覆盖 freight，需明确该检查项的定义与验证标准",
+                "next_action": "evolution_candidate_requires_spec_and_independent_validation"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            },
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            }
+          },
+          {
+            "case_id": "spc-promotion",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-promotion",
+            "order_id": "PUBLIC-ORDER-spc-promotion",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_tool",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "tool",
+                "name": "freight",
+                "message": "现有核查工具未覆盖 freight，需明确该检查项的定义与验证标准",
+                "next_action": "evolution_candidate_requires_spec_and_independent_validation"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            },
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            }
+          },
+          {
+            "case_id": "spc-ticket",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-ticket",
+            "order_id": "PUBLIC-ORDER-spc-ticket",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_tool",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "tool",
+                "name": "freight",
+                "message": "现有核查工具未覆盖 freight，需明确该检查项的定义与验证标准",
+                "next_action": "evolution_candidate_requires_spec_and_independent_validation"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            },
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            }
+          },
+          {
+            "case_id": "samr-phone",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-samr-phone",
+            "order_id": "PUBLIC-ORDER-samr-phone",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_tool",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "tool",
+                "name": "freight",
+                "message": "现有核查工具未覆盖 freight，需明确该检查项的定义与验证标准",
+                "next_action": "evolution_candidate_requires_spec_and_independent_validation"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            },
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            }
+          },
+          {
+            "case_id": "suzhou-pearl",
+            "platform": "xiaohongshu",
+            "shop_id": "PUBLIC-SHOP-suzhou-pearl",
+            "order_id": "PUBLIC-ORDER-suzhou-pearl",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_tool",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "tool",
+                "name": "freight",
+                "message": "现有核查工具未覆盖 freight，需明确该检查项的定义与验证标准",
+                "next_action": "evolution_candidate_requires_spec_and_independent_validation"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            },
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            }
+          }
+        ],
+        "summary": {
+          "case_count": 6,
+          "statuses": {
+            "needs_tool": 6
+          },
+          "finding_count": 0,
+          "gap_kinds": {
+            "tool": 6
+          },
+          "source_records_modified": 0,
+          "payment_actions": 0
+        },
+        "events": [
+          {
+            "stage": "casebook_loaded",
+            "cases": 6,
+            "orders": 6,
+            "refunds": 0,
+            "dataset_kind": "public_case_adaptation",
+            "input_hash": "d88590d635a7429ffcb71bc5c629c9dff8ee4f54c6227f68132849cdf1d263f7",
+            "elapsed_ms": 0.045
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-promise",
+            "checks": [
+              "freight"
+            ],
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            },
+            "elapsed_ms": 2.594
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-promise",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 2.624
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-promise",
+            "status": "needs_tool",
+            "elapsed_ms": 2.627
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-handbag",
+            "checks": [
+              "freight"
+            ],
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            },
+            "elapsed_ms": 2.732
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-handbag",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 2.748
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-handbag",
+            "status": "needs_tool",
+            "elapsed_ms": 2.75
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-promotion",
+            "checks": [
+              "freight"
+            ],
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            },
+            "elapsed_ms": 2.834
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-promotion",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 2.845
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-promotion",
+            "status": "needs_tool",
+            "elapsed_ms": 2.848
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-ticket",
+            "checks": [
+              "freight"
+            ],
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            },
+            "elapsed_ms": 2.922
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-ticket",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 2.932
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-ticket",
+            "status": "needs_tool",
+            "elapsed_ms": 2.934
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "samr-phone",
+            "checks": [
+              "freight"
+            ],
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            },
+            "elapsed_ms": 3.005
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "samr-phone",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 3.015
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "samr-phone",
+            "status": "needs_tool",
+            "elapsed_ms": 3.017
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "suzhou-pearl",
+            "checks": [
+              "freight"
+            ],
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            },
+            "elapsed_ms": 3.091
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "suzhou-pearl",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 3.101
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "suzhou-pearl",
+            "status": "needs_tool",
+            "elapsed_ms": 3.103
+          },
+          {
+            "stage": "review_complete",
+            "status": "completed",
+            "elapsed_ms": 3.219
+          }
+        ],
+        "issues": [],
+        "input_hash": "d88590d635a7429ffcb71bc5c629c9dff8ee4f54c6227f68132849cdf1d263f7",
+        "elapsed_ms": 3.216,
+        "model_usage": {
+          "calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "generation_calls": 0
+        }
+      }
+    },
+    "policy_tools_only": {
+      "scores": {
+        "case_count": 6,
+        "exact_case_matches": 6,
+        "finding_true_positive": 0,
+        "finding_false_positive": 0,
+        "finding_false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "normal_case_false_positives": 0,
+        "cases_without_gaps": 0,
+        "cases_with_gaps": 6
+      },
+      "splits": {
+        "dev": {
+          "case_count": 0,
+          "exact_case_matches": 0,
+          "finding_true_positive": 0,
+          "finding_false_positive": 0,
+          "finding_false_negative": 0,
+          "precision": null,
+          "recall": null,
+          "normal_case_false_positives": 0,
+          "cases_without_gaps": 0,
+          "cases_with_gaps": 0
+        },
+        "test": {
+          "case_count": 0,
+          "exact_case_matches": 0,
+          "finding_true_positive": 0,
+          "finding_false_positive": 0,
+          "finding_false_negative": 0,
+          "precision": null,
+          "recall": null,
+          "normal_case_false_positives": 0,
+          "cases_without_gaps": 0,
+          "cases_with_gaps": 0
+        }
+      },
+      "invalid_references": [],
+      "model_draft_count": 0,
+      "model_fallback_count": 0,
+      "trace": {
+        "task": "核查售后案例并整理证据及待补信息",
+        "status": "completed",
+        "cases": [
+          {
+            "case_id": "spc-promise",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-promise",
+            "order_id": "PUBLIC-ORDER-spc-promise",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            },
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            }
+          },
+          {
+            "case_id": "spc-handbag",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-handbag",
+            "order_id": "PUBLIC-ORDER-spc-handbag",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            },
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            }
+          },
+          {
+            "case_id": "spc-promotion",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-promotion",
+            "order_id": "PUBLIC-ORDER-spc-promotion",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            },
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            }
+          },
+          {
+            "case_id": "spc-ticket",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-ticket",
+            "order_id": "PUBLIC-ORDER-spc-ticket",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            },
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            }
+          },
+          {
+            "case_id": "samr-phone",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-samr-phone",
+            "order_id": "PUBLIC-ORDER-samr-phone",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            },
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            }
+          },
+          {
+            "case_id": "suzhou-pearl",
+            "platform": "xiaohongshu",
+            "shop_id": "PUBLIC-SHOP-suzhou-pearl",
+            "order_id": "PUBLIC-ORDER-suzhou-pearl",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            },
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            }
+          }
+        ],
+        "summary": {
+          "case_count": 6,
+          "statuses": {
+            "needs_policy": 6
+          },
+          "finding_count": 0,
+          "gap_kinds": {
+            "knowledge": 6
+          },
+          "source_records_modified": 0,
+          "payment_actions": 0
+        },
+        "events": [
+          {
+            "stage": "casebook_loaded",
+            "cases": 6,
+            "orders": 6,
+            "refunds": 0,
+            "dataset_kind": "public_case_adaptation",
+            "input_hash": "d88590d635a7429ffcb71bc5c629c9dff8ee4f54c6227f68132849cdf1d263f7",
+            "elapsed_ms": 0.033
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-promise",
+            "checks": [
+              "freight"
+            ],
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            },
+            "elapsed_ms": 0.159
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-promise",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.182
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-promise",
+            "status": "needs_policy",
+            "elapsed_ms": 0.185
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-handbag",
+            "checks": [
+              "freight"
+            ],
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            },
+            "elapsed_ms": 0.264
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-handbag",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.279
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-handbag",
+            "status": "needs_policy",
+            "elapsed_ms": 0.282
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-promotion",
+            "checks": [
+              "freight"
+            ],
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            },
+            "elapsed_ms": 0.355
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-promotion",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.37
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-promotion",
+            "status": "needs_policy",
+            "elapsed_ms": 0.373
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-ticket",
+            "checks": [
+              "freight"
+            ],
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            },
+            "elapsed_ms": 0.442
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-ticket",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.453
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-ticket",
+            "status": "needs_policy",
+            "elapsed_ms": 0.455
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "samr-phone",
+            "checks": [
+              "freight"
+            ],
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            },
+            "elapsed_ms": 0.523
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "samr-phone",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.536
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "samr-phone",
+            "status": "needs_policy",
+            "elapsed_ms": 0.538
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "suzhou-pearl",
+            "checks": [
+              "freight"
+            ],
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            },
+            "elapsed_ms": 0.608
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "suzhou-pearl",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.619
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "suzhou-pearl",
+            "status": "needs_policy",
+            "elapsed_ms": 0.621
+          },
+          {
+            "stage": "review_complete",
+            "status": "completed",
+            "elapsed_ms": 0.647
+          }
+        ],
+        "issues": [],
+        "input_hash": "d88590d635a7429ffcb71bc5c629c9dff8ee4f54c6227f68132849cdf1d263f7",
+        "elapsed_ms": 0.644,
+        "model_usage": {
+          "calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "generation_calls": 0
+        }
+      }
+    },
+    "full": {
+      "scores": {
+        "case_count": 6,
+        "exact_case_matches": 6,
+        "finding_true_positive": 0,
+        "finding_false_positive": 0,
+        "finding_false_negative": 0,
+        "precision": null,
+        "recall": null,
+        "normal_case_false_positives": 0,
+        "cases_without_gaps": 0,
+        "cases_with_gaps": 6
+      },
+      "splits": {
+        "dev": {
+          "case_count": 0,
+          "exact_case_matches": 0,
+          "finding_true_positive": 0,
+          "finding_false_positive": 0,
+          "finding_false_negative": 0,
+          "precision": null,
+          "recall": null,
+          "normal_case_false_positives": 0,
+          "cases_without_gaps": 0,
+          "cases_with_gaps": 0
+        },
+        "test": {
+          "case_count": 0,
+          "exact_case_matches": 0,
+          "finding_true_positive": 0,
+          "finding_false_positive": 0,
+          "finding_false_negative": 0,
+          "precision": null,
+          "recall": null,
+          "normal_case_false_positives": 0,
+          "cases_without_gaps": 0,
+          "cases_with_gaps": 0
+        }
+      },
+      "invalid_references": [],
+      "model_draft_count": 0,
+      "model_fallback_count": 0,
+      "trace": {
+        "task": "核查售后案例并整理证据及待补信息",
+        "status": "completed",
+        "cases": [
+          {
+            "case_id": "spc-promise",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-promise",
+            "order_id": "PUBLIC-ORDER-spc-promise",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            },
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            }
+          },
+          {
+            "case_id": "spc-handbag",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-handbag",
+            "order_id": "PUBLIC-ORDER-spc-handbag",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            },
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            }
+          },
+          {
+            "case_id": "spc-promotion",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-promotion",
+            "order_id": "PUBLIC-ORDER-spc-promotion",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            },
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            }
+          },
+          {
+            "case_id": "spc-ticket",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-spc-ticket",
+            "order_id": "PUBLIC-ORDER-spc-ticket",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            },
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            }
+          },
+          {
+            "case_id": "samr-phone",
+            "platform": "undisclosed",
+            "shop_id": "PUBLIC-SHOP-samr-phone",
+            "order_id": "PUBLIC-ORDER-samr-phone",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            },
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            }
+          },
+          {
+            "case_id": "suzhou-pearl",
+            "platform": "xiaohongshu",
+            "shop_id": "PUBLIC-SHOP-suzhou-pearl",
+            "order_id": "PUBLIC-ORDER-suzhou-pearl",
+            "business_scope": "platform",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "platform_policy",
+                "message": "尚未配置该平台可用的政策知识",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": null,
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            },
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            }
+          }
+        ],
+        "summary": {
+          "case_count": 6,
+          "statuses": {
+            "needs_policy": 6
+          },
+          "finding_count": 0,
+          "gap_kinds": {
+            "knowledge": 6
+          },
+          "source_records_modified": 0,
+          "payment_actions": 0
+        },
+        "events": [
+          {
+            "stage": "casebook_loaded",
+            "cases": 6,
+            "orders": 6,
+            "refunds": 0,
+            "dataset_kind": "public_case_adaptation",
+            "input_hash": "d88590d635a7429ffcb71bc5c629c9dff8ee4f54c6227f68132849cdf1d263f7",
+            "elapsed_ms": 0.027
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-promise",
+            "checks": [
+              "freight"
+            ],
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            },
+            "elapsed_ms": 0.149
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-promise",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.169
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-promise",
+            "status": "needs_policy",
+            "elapsed_ms": 0.172
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-handbag",
+            "checks": [
+              "freight"
+            ],
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            },
+            "elapsed_ms": 0.248
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-handbag",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.261
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-handbag",
+            "status": "needs_policy",
+            "elapsed_ms": 0.263
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-promotion",
+            "checks": [
+              "freight"
+            ],
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            },
+            "elapsed_ms": 0.333
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-promotion",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 0.343
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-promotion",
+            "status": "needs_policy",
+            "elapsed_ms": 0.349
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "spc-ticket",
+            "checks": [
+              "freight"
+            ],
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            },
+            "elapsed_ms": 1.376
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "spc-ticket",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 1.406
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "spc-ticket",
+            "status": "needs_policy",
+            "elapsed_ms": 1.409
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "samr-phone",
+            "checks": [
+              "freight"
+            ],
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            },
+            "elapsed_ms": 1.5
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "samr-phone",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 1.513
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "samr-phone",
+            "status": "needs_policy",
+            "elapsed_ms": 1.515
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "suzhou-pearl",
+            "checks": [
+              "freight"
+            ],
+            "plan": {
+              "required_checks": [
+                "freight"
+              ],
+              "forbidden_checks": [],
+              "steps": [
+                {
+                  "id": "link_records",
+                  "depends_on": []
+                },
+                {
+                  "id": "retrieve_policy",
+                  "depends_on": [
+                    "link_records"
+                  ]
+                },
+                {
+                  "id": "check:freight",
+                  "depends_on": [
+                    "link_records",
+                    "retrieve_policy"
+                  ],
+                  "capability_type": "builtin_or_gap"
+                },
+                {
+                  "id": "report",
+                  "depends_on": [
+                    "check:freight"
+                  ]
+                }
+              ],
+              "source": "task_and_case"
+            },
+            "elapsed_ms": 1.592
+          },
+          {
+            "stage": "explanation_skipped",
+            "case_id": "suzhou-pearl",
+            "reason": "structured_gap_only",
+            "elapsed_ms": 1.605
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "suzhou-pearl",
+            "status": "needs_policy",
+            "elapsed_ms": 1.607
+          },
+          {
+            "stage": "review_complete",
+            "status": "completed",
+            "elapsed_ms": 1.632
+          }
+        ],
+        "issues": [],
+        "input_hash": "d88590d635a7429ffcb71bc5c629c9dff8ee4f54c6227f68132849cdf1d263f7",
+        "elapsed_ms": 1.63,
+        "model_usage": {
+          "calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "generation_calls": 0
+        }
+      }
+    }
+  }
+}

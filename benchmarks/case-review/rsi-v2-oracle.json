@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "labels": [
+    {
+      "case_id": "RSI-refund_velocity-0",
+      "family": "refund_velocity",
+      "split": "audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_velocity-1",
+      "family": "refund_velocity",
+      "split": "audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_velocity-2",
+      "family": "refund_velocity",
+      "split": "audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_velocity-3",
+      "family": "refund_velocity",
+      "split": "audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_frequency_threshold_exceeded"
+      ],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_velocity-4",
+      "family": "refund_velocity",
+      "split": "audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_velocity-5",
+      "family": "refund_velocity",
+      "split": "audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_velocity-6",
+      "family": "refund_velocity",
+      "split": "audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_velocity-7",
+      "family": "refund_velocity",
+      "split": "audit",
+      "status": "needs_information",
+      "finding_codes": [],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_average-0",
+      "family": "refund_average",
+      "split": "audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_average-1",
+      "family": "refund_average",
+      "split": "audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_average-2",
+      "family": "refund_average",
+      "split": "audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_average-3",
+      "family": "refund_average",
+      "split": "audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_average_threshold_exceeded"
+      ],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_average-4",
+      "family": "refund_average",
+      "split": "audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_average-5",
+      "family": "refund_average",
+      "split": "audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_average-6",
+      "family": "refund_average",
+      "split": "audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_average-7",
+      "family": "refund_average",
+      "split": "audit",
+      "status": "needs_information",
+      "finding_codes": [],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_replay-0",
+      "family": "refund_replay",
+      "split": "audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_replay-1",
+      "family": "refund_replay",
+      "split": "audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_replay-2",
+      "family": "refund_replay",
+      "split": "audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_replay-3",
+      "family": "refund_replay",
+      "split": "audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_replay_threshold_exceeded"
+      ],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_replay-4",
+      "family": "refund_replay",
+      "split": "audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_replay_threshold_exceeded"
+      ],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_replay-5",
+      "family": "refund_replay",
+      "split": "audit",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_replay_threshold_exceeded"
+      ],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_replay-6",
+      "family": "refund_replay",
+      "split": "audit",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "RSI-refund_replay-7",
+      "family": "refund_replay",
+      "split": "audit",
+      "status": "needs_information",
+      "finding_codes": [],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    }
+  ],
+  "split_policy": "24 frozen adapter cases; boundary and blocked-input checks across three trusted metric definitions"
+}

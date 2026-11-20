@@ -1,0 +1,17 @@
+{
+  "plugin_id": "generated-average-refund-amount-v1",
+  "source_sha256": "1684de06015df0ab8205424b997faaf5bddba2e110d44734e72b860eab487e07",
+  "attempts": 1,
+  "admission": {
+    "source_sha256": "1684de06015df0ab8205424b997faaf5bddba2e110d44734e72b860eab487e07",
+    "spec_sha256": "e31b8ee3010ede0bb3739f1db7a4e316dc4091e106439b01d23774e5de8dd3c6",
+    "verifier_sha256": "1bc9cc8b79184eef3991be4bba2caf62b00a2c30142e359c06a046f469bdab5c",
+    "gate_version": "metric-gate-v1",
+    "passed": {
+      "evolution": 5,
+      "validation": 5
+    }
+  },
+  "frozen_audit_cases": 5,
+  "claim": "bounded verified metric synthesis; no runtime or model self-modification"
+}

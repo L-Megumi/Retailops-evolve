@@ -86,6 +86,9 @@ def build_parser() -> argparse.ArgumentParser:
     review.add_argument('--retrieval-mode', choices=('bm25', 'dense', 'hybrid'), default='hybrid')
     review.add_argument('--planner', choices=('rule', 'model'), default='rule')
     review.add_argument('--max-model-calls', type=int, default=8)
+    review.add_argument('--evolve', action='store_true', help='generate missing trusted case metrics and replan after admission')
+    review.add_argument('--case-plugin-registry',type=Path,default=Path('state/case-plugins/registry.json'))
+    review.add_argument('--max-generation-calls',type=int,default=6)
     review.add_argument('--output', type=Path)
     review.add_argument('--report', type=Path, help='write an editable human-readable report')
     for entry in (ask, serve, review):
@@ -112,8 +115,13 @@ def main() -> int:
         store = KnowledgeStore.from_path(args.knowledge, encoder=encoder, vector_index=vector,
                                         reranker=FastEmbedReranker(args.reranker_model) if args.reranker_model else None)
         model = OpenAICompatibleModel.deepseek_from_env() if args.planner == 'model' else None
+        from .case_capabilities import CaseCapabilityRuntime
+        generation_model = model or (OpenAICompatibleModel.deepseek_from_env() if args.evolve else None)
+        runtime = CaseCapabilityRuntime.from_path(args.case_plugin_registry,model=generation_model,
+                    allow_evolution=args.evolve,max_generation_calls=args.max_generation_calls,
+                    artifact_root=args.case_plugin_registry.parent/'evolution')
         trace = CaseReviewAgent(store, rules_path=args.rules, model=model, retrieval_mode=args.retrieval_mode,
-                                max_model_calls=args.max_model_calls).run(
+                                max_model_calls=args.max_model_calls,capability_runtime=runtime).run(
                                     args.task, args.casebook, required_results=tuple(args.check), case_ids=tuple(args.case_id))
         payload = asdict(trace)
         payload['ok'] = trace.ok
