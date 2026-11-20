@@ -29,7 +29,9 @@ from .task_store import TaskStore
 class TaskRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
     task: str = Field(min_length=1, max_length=10000)
-    mode: Literal["analysis", "assistant"] = "analysis"
+    mode: Literal["analysis", "assistant", "case_review"] = "analysis"
+    casebook: str | None = Field(default=None, min_length=1, max_length=240)
+    case_ids: list[str] = Field(default_factory=list, max_length=1000)
     orders: str | None = Field(default=None, min_length=1, max_length=240)
     refunds: str | None = Field(default=None, min_length=1, max_length=240)
     platforms: list[Literal["jd", "suning", "taobao", "tmall", "pinduoduo", "retailops"]] = Field(default_factory=list, max_length=6)
@@ -45,6 +47,13 @@ class TaskRequest(BaseModel):
             raise ValueError("analysis mode requires orders and refunds")
         if bool(self.orders) != bool(self.refunds):
             raise ValueError("orders and refunds must be supplied together")
+        if self.mode == 'case_review':
+            if not self.casebook or self.orders or self.refunds or self.platforms or self.business_scope or self.as_of or self.evolve:
+                raise ValueError('case_review requires a casebook; scope and dates belong to each case; evolution is a separate workflow')
+            if any(not value or len(value) > 200 for value in self.case_ids):
+                raise ValueError('case_ids must contain 1-200 character identifiers')
+        elif self.casebook or self.case_ids:
+            raise ValueError('casebook and case_ids require case_review mode')
         if self.as_of is not None:
             date.fromisoformat(self.as_of)
         return self
@@ -56,6 +65,15 @@ def _csv_path(root: Path, relative: str) -> Path:
         raise ValueError("CSV paths must remain inside the configured data root")
     if not candidate.is_file() or candidate.stat().st_size > 4 * 1024 * 1024:
         raise ValueError("CSV is missing or exceeds 4 MiB")
+    return candidate
+
+
+def _casebook_path(root: Path, relative: str) -> Path:
+    candidate = (root / relative).resolve()
+    if not candidate.is_relative_to(root.resolve()) or candidate.suffix.lower() != '.json':
+        raise ValueError('casebook path must be JSON inside the data root')
+    if not candidate.is_file() or candidate.stat().st_size > 4 * 1024 * 1024:
+        raise ValueError('casebook is missing or exceeds 4 MiB')
     return candidate
 
 
@@ -115,7 +133,11 @@ class TaskRunner:
                               business_scope=request.get("business_scope"), as_of=request.get("as_of"))
             orders = _csv_path(self.data_root, request["orders"]) if request.get("orders") else None
             refunds = _csv_path(self.data_root, request["refunds"]) if request.get("refunds") else None
-            trace = agent.run(request["task"], orders, refunds, **kwargs)
+            if request.get('mode') == 'case_review':
+                trace = agent.run(request['task'], _casebook_path(self.data_root, request['casebook']),
+                                  case_ids=tuple(request.get('case_ids', [])), **kwargs)
+            else:
+                trace = agent.run(request["task"], orders, refunds, **kwargs)
             payload = json.loads(json.dumps(asdict(trace), default=lambda value: str(value) if isinstance(value, Decimal) else value))
             payload["ok"] = trace.ok
             self.store.finish(task_id, owner, result=payload)
@@ -140,7 +162,8 @@ def create_app(*, data_root: Path, manifest: Path, state_path: Path,
                allow_evolution: bool = False, agent_factory=None, token: str | None = None,
                knowledge_path: Path | None = None, embedding_model: str | None = None,
                retrieval_mode: str = "hybrid", qdrant_url: str | None = None,
-               vector_alias: str = "retailops_policy", reranker_model: str | None = None) -> FastAPI:
+               vector_alias: str = "retailops_policy", reranker_model: str | None = None,
+               case_rules_path: Path | None = None) -> FastAPI:
     store = TaskStore(state_path)
     token = token if token is not None else os.environ.get("RETAILOPS_SERVICE_TOKEN", "")
     knowledge = None
@@ -155,6 +178,11 @@ def create_app(*, data_root: Path, manifest: Path, state_path: Path,
     def factory(request):
         needs_model = request["planner"] == "model" or request["evolve"]
         model = OpenAICompatibleModel.deepseek_from_env() if needs_model else None
+        if request.get('mode') == 'case_review':
+            from .case_review import CaseReviewAgent
+            rules = case_rules_path or (knowledge_path.parent / 'review-rules.json' if knowledge_path else None)
+            return CaseReviewAgent(knowledge, rules_path=rules if rules and rules.is_file() else None,
+                                   model=model, retrieval_mode=retrieval_mode)
         manager = PluginManager.from_manifest(manifest, semantic_model=model,
                                              cache_path=state_path.parent / "route-cache.json")
         analysis = RetailOpsAgent(ModelPlanner(model) if request["planner"] == "model" else None,
@@ -191,7 +219,7 @@ def create_app(*, data_root: Path, manifest: Path, state_path: Path,
                 "knowledge_enabled": knowledge is not None,
                 "dense_retrieval_enabled": knowledge is not None and embedding_model is not None,
                 "vector_backend": "qdrant" if knowledge is not None and qdrant_url else "memory",
-                "reranker_model": reranker_model}
+                "reranker_model": reranker_model, "case_review_enabled": True}
 
     @app.post("/tasks", status_code=202, dependencies=[Depends(authenticate)])
     def submit(body: TaskRequest):
@@ -203,6 +231,8 @@ def create_app(*, data_root: Path, manifest: Path, state_path: Path,
             if body.orders:
                 _csv_path(data_root, body.orders)
                 _csv_path(data_root, body.refunds)
+            if body.casebook:
+                _casebook_path(data_root, body.casebook)
         except ValueError as exc:
             raise HTTPException(400, str(exc)) from exc
         task_id = store.create(body.model_dump())

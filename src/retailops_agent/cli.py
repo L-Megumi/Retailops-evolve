@@ -75,7 +75,20 @@ def build_parser() -> argparse.ArgumentParser:
     ask.add_argument("--required-result", action="append", default=[])
     ask.add_argument("--evolve", action="store_true")
     ask.add_argument("--output", type=Path)
-    for entry in (ask, serve):
+    review = sub.add_parser('review', help='review shop-scoped after-sales cases with evidence')
+    review.add_argument('--casebook', type=Path, required=True)
+    review.add_argument('--task', default='核查售后案例并整理证据及待补信息')
+    review.add_argument('--case-id', action='append', default=[])
+    review.add_argument('--check', action='append', default=[], help='records, amount, freight, materials; unknown names become capability gaps')
+    review.add_argument('--knowledge', type=Path, default=Path('knowledge/retailops-policies.json'))
+    review.add_argument('--rules', type=Path, default=Path('knowledge/review-rules.json'))
+    review.add_argument('--embedding-model')
+    review.add_argument('--retrieval-mode', choices=('bm25', 'dense', 'hybrid'), default='hybrid')
+    review.add_argument('--planner', choices=('rule', 'model'), default='rule')
+    review.add_argument('--max-model-calls', type=int, default=8)
+    review.add_argument('--output', type=Path)
+    review.add_argument('--report', type=Path, help='write an editable human-readable report')
+    for entry in (ask, serve, review):
         entry.add_argument("--qdrant-url", help="attach a published persistent vector snapshot")
         entry.add_argument("--vector-alias", default="retailops_policy")
         entry.add_argument("--reranker-model", help="optional FastEmbed cross-encoder, e.g. BAAI/bge-reranker-base")
@@ -90,6 +103,31 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main() -> int:
     args = build_parser().parse_args()
+    if args.command == 'review':
+        from .case_review import CaseReviewAgent, render_case_review
+        from .knowledge import FastEmbedEncoder, FastEmbedReranker, KnowledgeStore
+        from .vector_index import QdrantVectorIndex
+        encoder = FastEmbedEncoder(args.embedding_model) if args.embedding_model else None
+        vector = QdrantVectorIndex(args.qdrant_url, alias=args.vector_alias) if args.qdrant_url else None
+        store = KnowledgeStore.from_path(args.knowledge, encoder=encoder, vector_index=vector,
+                                        reranker=FastEmbedReranker(args.reranker_model) if args.reranker_model else None)
+        model = OpenAICompatibleModel.deepseek_from_env() if args.planner == 'model' else None
+        trace = CaseReviewAgent(store, rules_path=args.rules, model=model, retrieval_mode=args.retrieval_mode,
+                                max_model_calls=args.max_model_calls).run(
+                                    args.task, args.casebook, required_results=tuple(args.check), case_ids=tuple(args.case_id))
+        payload = asdict(trace)
+        payload['ok'] = trace.ok
+        report = json.dumps(payload, ensure_ascii=False, indent=2, default=str)
+        if args.output:
+            args.output.parent.mkdir(parents=True, exist_ok=True)
+            args.output.write_text(report + '\n', encoding='utf-8')
+            print(args.output)
+        else:
+            print(report)
+        if args.report:
+            args.report.parent.mkdir(parents=True, exist_ok=True)
+            args.report.write_text(render_case_review(trace), encoding='utf-8')
+        return 0 if trace.ok else 1
     if args.command == "knowledge-index":
         from .knowledge import FastEmbedEncoder, KnowledgeStore
         from .vector_index import QdrantVectorIndex

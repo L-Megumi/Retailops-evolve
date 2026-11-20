@@ -1,0 +1,2271 @@
+{
+  "schema_version": 1,
+  "dataset_kind": "synthetic",
+  "cases": [
+    {
+      "case_id": "CASE-01-0",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-1-0",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-01-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-1-1",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-01-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-1-2",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-02-0",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-2-0",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-02-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-2-1",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-02-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-2-2",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-03-0",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-3-0",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-03-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-3-1",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-03-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-3-2",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-04-0",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-4-0",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-04-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-4-1",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-04-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-4-2",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-05-0",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-5-0",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-05-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-5-1",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-05-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-5-2",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-06-0",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-6-0",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-06-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-6-1",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-06-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-6-2",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-07-0",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-7-0",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-07-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-7-1",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-07-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-7-2",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-08-0",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-8-0",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-08-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-8-1",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-08-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-8-2",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-09-0",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-9-0",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-09-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-9-1",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-09-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-9-2",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-10-0",
+      "platform": "suning",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-10-0",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "merchant"
+    },
+    {
+      "case_id": "CASE-10-1",
+      "platform": "suning",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-10-1",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "merchant"
+    },
+    {
+      "case_id": "CASE-10-2",
+      "platform": "suning",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-10-2",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "merchant"
+    },
+    {
+      "case_id": "CASE-11-0",
+      "platform": "pinduoduo",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-11-0",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-11-1",
+      "platform": "pinduoduo",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-11-1",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-11-2",
+      "platform": "pinduoduo",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-11-2",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-12-0",
+      "platform": "pinduoduo",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-12-0",
+      "business_scope": "platform",
+      "checks": [
+        "freight",
+        "materials"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-12-1",
+      "platform": "pinduoduo",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-12-1",
+      "business_scope": "platform",
+      "checks": [
+        "freight",
+        "materials"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-12-2",
+      "platform": "pinduoduo",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-12-2",
+      "business_scope": "platform",
+      "checks": [
+        "freight",
+        "materials"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-13-0",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-13-0",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-13-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-13-1",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-13-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-13-2",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-14-0",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-14-0",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "description_mismatch",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-14-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-14-1",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "description_mismatch",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-14-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-14-2",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "description_mismatch",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-15-0",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-15-0",
+      "business_scope": "self_operated",
+      "checks": [
+        "freight"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-15-1",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-15-1",
+      "business_scope": "self_operated",
+      "checks": [
+        "freight"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-15-2",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-15-2",
+      "business_scope": "self_operated",
+      "checks": [
+        "freight"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-16-0",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-16-0",
+      "business_scope": "self_operated",
+      "checks": [
+        "freight"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-16-1",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-16-1",
+      "business_scope": "self_operated",
+      "checks": [
+        "freight"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-16-2",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-16-2",
+      "business_scope": "self_operated",
+      "checks": [
+        "freight"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-17-0",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-17-0",
+      "business_scope": "marketplace",
+      "checks": [
+        "materials"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-17-1",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-17-1",
+      "business_scope": "marketplace",
+      "checks": [
+        "materials"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-17-2",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-17-2",
+      "business_scope": "marketplace",
+      "checks": [
+        "materials"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-18-0",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-18-0",
+      "business_scope": "marketplace",
+      "checks": [
+        "materials"
+      ],
+      "reason": "quality",
+      "request_type": "exchange",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-18-1",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-18-1",
+      "business_scope": "marketplace",
+      "checks": [
+        "materials"
+      ],
+      "reason": "quality",
+      "request_type": "exchange",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-18-2",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-18-2",
+      "business_scope": "marketplace",
+      "checks": [
+        "materials"
+      ],
+      "reason": "quality",
+      "request_type": "exchange",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-19-0",
+      "platform": "taobao",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-19-0",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-19-1",
+      "platform": "taobao",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-19-1",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-19-2",
+      "platform": "taobao",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-19-2",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-20-0",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-20-0",
+      "business_scope": "platform",
+      "checks": [
+        "refund_velocity"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-20-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-20-1",
+      "business_scope": "platform",
+      "checks": [
+        "refund_velocity"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-20-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-20-2",
+      "business_scope": "platform",
+      "checks": [
+        "refund_velocity"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    }
+  ],
+  "orders": [
+    {
+      "evidence_id": "CASE-01-0-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-1-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-01-1-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-1-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-01-2-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-1-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-02-0-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-2-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-02-1-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-2-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-02-2-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-2-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-03-0-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-3-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-03-1-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-3-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-03-2-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-3-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-05-0-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-5-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-05-1-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-5-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-05-2-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-5-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-06-0-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-6-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-06-1-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-6-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-06-2-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-6-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-07-0-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-7-0",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-07-1-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-7-1",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-07-2-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-7-2",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-08-0-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-8-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-08-1-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-8-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-08-2-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-8-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-09-0-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-9-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-09-0-foreign-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-B",
+      "order_id": "O-9-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-09-1-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-9-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-09-1-foreign-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-B",
+      "order_id": "O-9-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-09-2-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-9-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-09-2-foreign-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-B",
+      "order_id": "O-9-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-10-0-order",
+      "platform": "suning",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-10-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-10-1-order",
+      "platform": "suning",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-10-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-10-2-order",
+      "platform": "suning",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-10-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-11-0-order",
+      "platform": "pinduoduo",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-11-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-11-1-order",
+      "platform": "pinduoduo",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-11-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-11-2-order",
+      "platform": "pinduoduo",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-11-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-12-0-order",
+      "platform": "pinduoduo",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-12-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-12-1-order",
+      "platform": "pinduoduo",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-12-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-12-2-order",
+      "platform": "pinduoduo",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-12-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-13-0-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-13-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-13-1-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-13-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-13-2-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-13-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-14-0-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-14-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-14-1-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-14-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-14-2-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-14-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-15-0-order",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-15-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general",
+      "fulfilled_by": "jd",
+      "membership": "regular"
+    },
+    {
+      "evidence_id": "CASE-15-1-order",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-15-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general",
+      "fulfilled_by": "jd",
+      "membership": "regular"
+    },
+    {
+      "evidence_id": "CASE-15-2-order",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-15-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general",
+      "fulfilled_by": "jd",
+      "membership": "regular"
+    },
+    {
+      "evidence_id": "CASE-16-0-order",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-16-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-16-1-order",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-16-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-16-2-order",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-16-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-17-0-order",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-17-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "office_software",
+      "has_gifts": true,
+      "has_paper_invoice": true
+    },
+    {
+      "evidence_id": "CASE-17-1-order",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-17-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "office_software",
+      "has_gifts": true,
+      "has_paper_invoice": true
+    },
+    {
+      "evidence_id": "CASE-17-2-order",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-17-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "office_software",
+      "has_gifts": true,
+      "has_paper_invoice": true
+    },
+    {
+      "evidence_id": "CASE-18-0-order",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-18-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "office_software"
+    },
+    {
+      "evidence_id": "CASE-18-1-order",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-18-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "office_software"
+    },
+    {
+      "evidence_id": "CASE-18-2-order",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-18-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "office_software"
+    },
+    {
+      "evidence_id": "CASE-19-0-order",
+      "platform": "taobao",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-19-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-19-1-order",
+      "platform": "taobao",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-19-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-19-2-order",
+      "platform": "taobao",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-19-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-20-0-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-20-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-20-1-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-20-1",
+      "paid_amount": "137",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-20-2-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-20-2",
+      "paid_amount": "174",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    }
+  ],
+  "refunds": [
+    {
+      "evidence_id": "CASE-01-0-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-1-0",
+      "refund_id": "CASE-01-0-R1",
+      "refund_amount": "33",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-01-0-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-1-0",
+      "refund_id": "CASE-01-0-R2",
+      "refund_amount": "25",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-01-1-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-1-1",
+      "refund_id": "CASE-01-1-R1",
+      "refund_amount": "45",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-01-1-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-1-1",
+      "refund_id": "CASE-01-1-R2",
+      "refund_amount": "34",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-01-2-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-1-2",
+      "refund_id": "CASE-01-2-R1",
+      "refund_amount": "58",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-01-2-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-1-2",
+      "refund_id": "CASE-01-2-R2",
+      "refund_amount": "43",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-02-0-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-2-0",
+      "refund_id": "CASE-02-0-R1",
+      "refund_amount": "33",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-02-0-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-2-0",
+      "refund_id": "CASE-02-0-R1",
+      "refund_amount": "33",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-02-1-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-2-1",
+      "refund_id": "CASE-02-1-R1",
+      "refund_amount": "45",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-02-1-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-2-1",
+      "refund_id": "CASE-02-1-R1",
+      "refund_amount": "45",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-02-2-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-2-2",
+      "refund_id": "CASE-02-2-R1",
+      "refund_amount": "58",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-02-2-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-2-2",
+      "refund_id": "CASE-02-2-R1",
+      "refund_amount": "58",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-03-0-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-3-0",
+      "refund_id": "CASE-03-0-R1",
+      "refund_amount": "30",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-03-0-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-3-0",
+      "refund_id": "CASE-03-0-R1",
+      "refund_amount": "40",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-03-1-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-3-1",
+      "refund_id": "CASE-03-1-R1",
+      "refund_amount": "30",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-03-1-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-3-1",
+      "refund_id": "CASE-03-1-R1",
+      "refund_amount": "40",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-03-2-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-3-2",
+      "refund_id": "CASE-03-2-R1",
+      "refund_amount": "30",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-03-2-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-3-2",
+      "refund_id": "CASE-03-2-R1",
+      "refund_amount": "40",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-04-0-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-4-0",
+      "refund_id": "CASE-04-0-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-04-1-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-4-1",
+      "refund_id": "CASE-04-1-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-04-2-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-4-2",
+      "refund_id": "CASE-04-2-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-05-0-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-5-0",
+      "refund_id": "CASE-05-0-R1",
+      "refund_amount": "25",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-05-0-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-5-0",
+      "refund_id": "CASE-05-0-R2",
+      "refund_amount": "200",
+      "refund_date": "2026-11-19",
+      "status": "requested"
+    },
+    {
+      "evidence_id": "CASE-05-0-refund-row-3",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-5-0",
+      "refund_id": "CASE-05-0-R3",
+      "refund_amount": "200",
+      "refund_date": "2026-11-19",
+      "status": "cancelled"
+    },
+    {
+      "evidence_id": "CASE-05-1-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-5-1",
+      "refund_id": "CASE-05-1-R1",
+      "refund_amount": "34",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-05-1-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-5-1",
+      "refund_id": "CASE-05-1-R2",
+      "refund_amount": "274",
+      "refund_date": "2026-11-19",
+      "status": "requested"
+    },
+    {
+      "evidence_id": "CASE-05-1-refund-row-3",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-5-1",
+      "refund_id": "CASE-05-1-R3",
+      "refund_amount": "274",
+      "refund_date": "2026-11-19",
+      "status": "cancelled"
+    },
+    {
+      "evidence_id": "CASE-05-2-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-5-2",
+      "refund_id": "CASE-05-2-R1",
+      "refund_amount": "43",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-05-2-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-5-2",
+      "refund_id": "CASE-05-2-R2",
+      "refund_amount": "348",
+      "refund_date": "2026-11-19",
+      "status": "requested"
+    },
+    {
+      "evidence_id": "CASE-05-2-refund-row-3",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-5-2",
+      "refund_id": "CASE-05-2-R3",
+      "refund_amount": "348",
+      "refund_date": "2026-11-19",
+      "status": "cancelled"
+    },
+    {
+      "evidence_id": "CASE-06-0-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-6-0",
+      "refund_id": "CASE-06-0-R1",
+      "refund_amount": "100",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-06-0-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-6-0",
+      "refund_id": "CASE-06-0-R2",
+      "refund_amount": "1",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-06-1-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-6-1",
+      "refund_id": "CASE-06-1-R1",
+      "refund_amount": "137",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-06-1-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-6-1",
+      "refund_id": "CASE-06-1-R2",
+      "refund_amount": "2",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-06-2-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-6-2",
+      "refund_id": "CASE-06-2-R1",
+      "refund_amount": "174",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-06-2-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-6-2",
+      "refund_id": "CASE-06-2-R2",
+      "refund_amount": "3",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-07-0-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-7-0",
+      "refund_id": "CASE-07-0-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-07-1-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-7-1",
+      "refund_id": "CASE-07-1-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-07-2-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-7-2",
+      "refund_id": "CASE-07-2-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-08-0-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-8-0",
+      "refund_id": "CASE-08-0-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-19",
+      "status": "succeeded",
+      "refund_transaction_id": "CASE-08-0-TX1"
+    },
+    {
+      "evidence_id": "CASE-08-0-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-8-0",
+      "refund_id": "CASE-08-0-R2",
+      "refund_amount": "20",
+      "refund_date": "2026-11-19",
+      "status": "succeeded",
+      "refund_transaction_id": "CASE-08-0-TX1"
+    },
+    {
+      "evidence_id": "CASE-08-1-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-8-1",
+      "refund_id": "CASE-08-1-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-19",
+      "status": "succeeded",
+      "refund_transaction_id": "CASE-08-1-TX1"
+    },
+    {
+      "evidence_id": "CASE-08-1-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-8-1",
+      "refund_id": "CASE-08-1-R2",
+      "refund_amount": "20",
+      "refund_date": "2026-11-19",
+      "status": "succeeded",
+      "refund_transaction_id": "CASE-08-1-TX1"
+    },
+    {
+      "evidence_id": "CASE-08-2-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-8-2",
+      "refund_id": "CASE-08-2-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-19",
+      "status": "succeeded",
+      "refund_transaction_id": "CASE-08-2-TX1"
+    },
+    {
+      "evidence_id": "CASE-08-2-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-8-2",
+      "refund_id": "CASE-08-2-R2",
+      "refund_amount": "20",
+      "refund_date": "2026-11-19",
+      "status": "succeeded",
+      "refund_transaction_id": "CASE-08-2-TX1"
+    },
+    {
+      "evidence_id": "CASE-09-0-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-9-0",
+      "refund_id": "CASE-09-0-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-09-0-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-B",
+      "order_id": "O-9-0",
+      "refund_id": "CASE-09-0-R1",
+      "refund_amount": "300",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-09-1-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-9-1",
+      "refund_id": "CASE-09-1-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-09-1-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-B",
+      "order_id": "O-9-1",
+      "refund_id": "CASE-09-1-R1",
+      "refund_amount": "411",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-09-2-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-9-2",
+      "refund_id": "CASE-09-2-R1",
+      "refund_amount": "20",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-09-2-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-B",
+      "order_id": "O-9-2",
+      "refund_id": "CASE-09-2-R1",
+      "refund_amount": "522",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "CASE-10-0-quality_proof",
+      "case_id": "CASE-10-0",
+      "kind": "quality_proof",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-10-0-platform_intervention",
+      "case_id": "CASE-10-0",
+      "kind": "platform_intervention",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-10-0-no_special_agreement",
+      "case_id": "CASE-10-0",
+      "kind": "no_special_agreement",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-10-1-quality_proof",
+      "case_id": "CASE-10-1",
+      "kind": "quality_proof",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-10-1-platform_intervention",
+      "case_id": "CASE-10-1",
+      "kind": "platform_intervention",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-10-1-no_special_agreement",
+      "case_id": "CASE-10-1",
+      "kind": "no_special_agreement",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-10-2-quality_proof",
+      "case_id": "CASE-10-2",
+      "kind": "quality_proof",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-10-2-platform_intervention",
+      "case_id": "CASE-10-2",
+      "kind": "platform_intervention",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-10-2-no_special_agreement",
+      "case_id": "CASE-10-2",
+      "kind": "no_special_agreement",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-11-0-quality_proof",
+      "case_id": "CASE-11-0",
+      "kind": "quality_proof",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-11-0-platform_audit",
+      "case_id": "CASE-11-0",
+      "kind": "platform_audit",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-11-1-quality_proof",
+      "case_id": "CASE-11-1",
+      "kind": "quality_proof",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-11-1-platform_audit",
+      "case_id": "CASE-11-1",
+      "kind": "platform_audit",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-11-2-quality_proof",
+      "case_id": "CASE-11-2",
+      "kind": "quality_proof",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-11-2-platform_audit",
+      "case_id": "CASE-11-2",
+      "kind": "platform_audit",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-13-0-alipay_guaranteed_transaction",
+      "case_id": "CASE-13-0",
+      "kind": "alipay_guaranteed_transaction",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-13-1-alipay_guaranteed_transaction",
+      "case_id": "CASE-13-1",
+      "kind": "alipay_guaranteed_transaction",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-13-2-alipay_guaranteed_transaction",
+      "case_id": "CASE-13-2",
+      "kind": "alipay_guaranteed_transaction",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-14-0-reason_proof",
+      "case_id": "CASE-14-0",
+      "kind": "reason_proof",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-14-1-reason_proof",
+      "case_id": "CASE-14-1",
+      "kind": "reason_proof",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-14-2-reason_proof",
+      "case_id": "CASE-14-2",
+      "kind": "reason_proof",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-17-0-detail_policy_review",
+      "case_id": "CASE-17-0",
+      "kind": "detail_policy_review",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-17-1-detail_policy_review",
+      "case_id": "CASE-17-1",
+      "kind": "detail_policy_review",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-17-2-detail_policy_review",
+      "case_id": "CASE-17-2",
+      "kind": "detail_policy_review",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-18-0-detail_policy_review",
+      "case_id": "CASE-18-0",
+      "kind": "detail_policy_review",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-18-1-detail_policy_review",
+      "case_id": "CASE-18-1",
+      "kind": "detail_policy_review",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-18-2-detail_policy_review",
+      "case_id": "CASE-18-2",
+      "kind": "detail_policy_review",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    }
+  ]
+}

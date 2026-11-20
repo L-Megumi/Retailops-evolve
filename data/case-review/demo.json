@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "dataset_kind": "synthetic",
+  "cases": [
+    {
+      "case_id": "CASE-02-0",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-2-0",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-06-0",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-6-0",
+      "business_scope": "platform",
+      "checks": [
+        "records",
+        "amount"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-10-0",
+      "platform": "suning",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-10-0",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "merchant"
+    },
+    {
+      "case_id": "CASE-11-0",
+      "platform": "pinduoduo",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-11-0",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-13-0",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-13-0",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20",
+      "proposed_freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-17-0",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-17-0",
+      "business_scope": "marketplace",
+      "checks": [
+        "materials"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-19-0",
+      "platform": "taobao",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-19-0",
+      "business_scope": "platform",
+      "checks": [
+        "freight"
+      ],
+      "reason": "personal",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    },
+    {
+      "case_id": "CASE-20-0",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-20-0",
+      "business_scope": "platform",
+      "checks": [
+        "refund_velocity"
+      ],
+      "reason": "quality",
+      "request_type": "return",
+      "application_date": "2026-11-20"
+    }
+  ],
+  "orders": [
+    {
+      "evidence_id": "CASE-02-0-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-2-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-06-0-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-6-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-10-0-order",
+      "platform": "suning",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-10-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-11-0-order",
+      "platform": "pinduoduo",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-11-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-13-0-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-13-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-17-0-order",
+      "platform": "jd",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-17-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "office_software",
+      "has_gifts": true,
+      "has_paper_invoice": true
+    },
+    {
+      "evidence_id": "CASE-19-0-order",
+      "platform": "taobao",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-19-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    },
+    {
+      "evidence_id": "CASE-20-0-order",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-20-0",
+      "paid_amount": "100",
+      "received_date": "2026-11-17",
+      "goods_condition": "intact",
+      "supports_seven_day": true,
+      "shipping_included": true,
+      "category": "general"
+    }
+  ],
+  "refunds": [
+    {
+      "evidence_id": "CASE-02-0-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-2-0",
+      "refund_id": "CASE-02-0-R1",
+      "refund_amount": "33",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-02-0-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-2-0",
+      "refund_id": "CASE-02-0-R1",
+      "refund_amount": "33",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-06-0-refund-row-1",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-6-0",
+      "refund_id": "CASE-06-0-R1",
+      "refund_amount": "100",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    },
+    {
+      "evidence_id": "CASE-06-0-refund-row-2",
+      "platform": "tmall",
+      "shop_id": "demo-shop-A",
+      "order_id": "O-6-0",
+      "refund_id": "CASE-06-0-R2",
+      "refund_amount": "1",
+      "refund_date": "2026-11-19",
+      "status": "succeeded"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "CASE-10-0-quality_proof",
+      "case_id": "CASE-10-0",
+      "kind": "quality_proof",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-10-0-platform_intervention",
+      "case_id": "CASE-10-0",
+      "kind": "platform_intervention",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-10-0-no_special_agreement",
+      "case_id": "CASE-10-0",
+      "kind": "no_special_agreement",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-11-0-quality_proof",
+      "case_id": "CASE-11-0",
+      "kind": "quality_proof",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-11-0-platform_audit",
+      "case_id": "CASE-11-0",
+      "kind": "platform_audit",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-13-0-alipay_guaranteed_transaction",
+      "case_id": "CASE-13-0",
+      "kind": "alipay_guaranteed_transaction",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    },
+    {
+      "evidence_id": "CASE-17-0-detail_policy_review",
+      "case_id": "CASE-17-0",
+      "kind": "detail_policy_review",
+      "status": "confirmed",
+      "text": "人工构造的核查凭证"
+    }
+  ]
+}

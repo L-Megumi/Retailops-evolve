@@ -1,0 +1,1005 @@
+{
+  "created_at": "2026-11-20T04:24:51.318680+00:00",
+  "input_hash": "be446844f9ba9e32ea9be43845f0387bc22d07c06430bfb5db4c4a9f572c47b0",
+  "corpus_hash": "9964a04826d3f10a3ce2a24bb9c21bbb8da37d3984462cca59712f600df4ccd5",
+  "dataset_kind": "synthetic",
+  "split_policy": "40 dev, 20 frozen parameter-boundary variants across the same 20 scenario families",
+  "vector_backend": "qdrant",
+  "configs": {
+    "full": {
+      "scores": {
+        "case_count": 8,
+        "exact_case_matches": 8,
+        "finding_true_positive": 4,
+        "finding_false_positive": 0,
+        "finding_false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "normal_case_false_positives": 0
+      },
+      "splits": {
+        "dev": {
+          "case_count": 8,
+          "exact_case_matches": 8,
+          "finding_true_positive": 4,
+          "finding_false_positive": 0,
+          "finding_false_negative": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "normal_case_false_positives": 0
+        },
+        "test": {
+          "case_count": 0,
+          "exact_case_matches": 0,
+          "finding_true_positive": 0,
+          "finding_false_positive": 0,
+          "finding_false_negative": 0,
+          "precision": null,
+          "recall": null,
+          "normal_case_false_positives": 0
+        }
+      },
+      "invalid_references": [],
+      "trace": {
+        "task": "核查售后案例并整理证据及待补信息",
+        "status": "completed",
+        "cases": [
+          {
+            "case_id": "CASE-02-0",
+            "platform": "tmall",
+            "shop_id": "demo-shop-A",
+            "order_id": "O-2-0",
+            "checks": [
+              "records",
+              "amount"
+            ],
+            "status": "needs_review",
+            "findings": [
+              {
+                "finding_id": "CASE-02-0:duplicate_refund_record",
+                "code": "duplicate_refund_record",
+                "message": "同一退款ID的记录重复",
+                "record_evidence_ids": [
+                  "CASE-02-0-refund-row-1",
+                  "CASE-02-0-refund-row-2"
+                ],
+                "policy_citation_ids": [],
+                "details": {
+                  "refund_id": "CASE-02-0-R1"
+                },
+                "suggested_action": "人工核查相关记录与凭证"
+              }
+            ],
+            "facts": [
+              {
+                "fact_id": "refund_record_counts",
+                "raw_rows": 2,
+                "unique_refund_ids": 1,
+                "succeeded_refund_ids": 1,
+                "evidence_ids": [
+                  "CASE-02-0-refund-row-1",
+                  "CASE-02-0-refund-row-2"
+                ]
+              },
+              {
+                "fact_id": "amount_reconciliation",
+                "paid_amount": "100",
+                "succeeded_refund_total": "33",
+                "evidence_ids": [
+                  "CASE-02-0-order",
+                  "CASE-02-0-refund-row-1"
+                ],
+                "aggregation": "unique refund_id; succeeded records only"
+              }
+            ],
+            "citations": [],
+            "gaps": [],
+            "guidance": [],
+            "draft_explanation": {
+              "case_id": "CASE-02-0",
+              "summary": "发现同一退款ID（CASE-02-0-R1）存在两条重复记录，涉及退款行证据两条；金额核对显示支付金额100、成功退款合计33（按唯一退款ID、仅成功记录汇总）。当前状态为需人工复核，未确认实际重复付款或根因。下一步：人工核查相关记录与凭证，确认重复记录性质及是否需要调整。",
+              "record_evidence_ids": [
+                "CASE-02-0-refund-row-1",
+                "CASE-02-0-refund-row-2",
+                "CASE-02-0-order"
+              ],
+              "policy_citation_ids": [],
+              "review_status": "draft",
+              "changes_findings": false
+            },
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "CASE-06-0",
+            "platform": "tmall",
+            "shop_id": "demo-shop-A",
+            "order_id": "O-6-0",
+            "checks": [
+              "records",
+              "amount"
+            ],
+            "status": "needs_review",
+            "findings": [
+              {
+                "finding_id": "CASE-06-0:refund_total_exceeds_paid",
+                "code": "refund_total_exceeds_paid",
+                "message": "成功状态退款记录的合计超过订单实付金额",
+                "record_evidence_ids": [
+                  "CASE-06-0-order",
+                  "CASE-06-0-refund-row-1",
+                  "CASE-06-0-refund-row-2"
+                ],
+                "policy_citation_ids": [],
+                "details": {
+                  "paid_amount": "100",
+                  "refund_total": "101",
+                  "difference": "1"
+                },
+                "suggested_action": "人工核查相关记录与凭证"
+              }
+            ],
+            "facts": [
+              {
+                "fact_id": "refund_record_counts",
+                "raw_rows": 2,
+                "unique_refund_ids": 2,
+                "succeeded_refund_ids": 2,
+                "evidence_ids": [
+                  "CASE-06-0-refund-row-1",
+                  "CASE-06-0-refund-row-2"
+                ]
+              },
+              {
+                "fact_id": "amount_reconciliation",
+                "paid_amount": "100",
+                "succeeded_refund_total": "101",
+                "evidence_ids": [
+                  "CASE-06-0-order",
+                  "CASE-06-0-refund-row-1",
+                  "CASE-06-0-refund-row-2"
+                ],
+                "aggregation": "unique refund_id; succeeded records only"
+              }
+            ],
+            "citations": [],
+            "gaps": [],
+            "guidance": [],
+            "draft_explanation": {
+              "case_id": "CASE-06-0",
+              "summary": "发现：成功状态退款记录合计101，超过订单实付金额100，差额为1；共2条退款记录，对应2个唯一退款ID，均为成功状态。下一步：建议人工核查相关记录与凭证。",
+              "record_evidence_ids": [
+                "CASE-06-0-order",
+                "CASE-06-0-refund-row-1",
+                "CASE-06-0-refund-row-2"
+              ],
+              "policy_citation_ids": [],
+              "review_status": "draft",
+              "changes_findings": false
+            },
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "CASE-10-0",
+            "platform": "suning",
+            "shop_id": "demo-shop-A",
+            "order_id": "O-10-0",
+            "checks": [
+              "freight"
+            ],
+            "status": "clear",
+            "findings": [],
+            "facts": [],
+            "citations": [
+              {
+                "chunk_id": "suning-freight-disputes::suning_quality_shipping",
+                "doc_id": "suning-freight-disputes",
+                "title": "运费争议处理规范",
+                "text": "苏宁易购介入运费争议时，商品确有质量问题的退换货运费由商家承担；双方另有约定时依约处理。",
+                "platform": "suning",
+                "business_scope": "platform",
+                "source_type": "official_public_policy",
+                "source_url": "https://rule.suning.com/ruleInfo/ruleInfoDetail/GZ100006683.htm",
+                "version": "curated-2026-11-20-v1",
+                "clause_id": "suning_quality_shipping",
+                "score": 0.032266458495966696,
+                "channels": [
+                  "bm25",
+                  "dense"
+                ],
+                "content_hash": "dfd734ae4f51ba0897996050c8ea7b9831aab3c1146577498acc55a1c87ec51a",
+                "retrieved_at": "2026-11-20T10:19:57+08:00",
+                "effective_from": null,
+                "effective_to": null,
+                "clause_title": "质量问题退换货运费",
+                "topics": [
+                  "质量问题",
+                  "退换货",
+                  "运费",
+                  "另有约定"
+                ],
+                "retrieval_mode": "hybrid",
+                "content_kind": "curated_summary"
+              }
+            ],
+            "gaps": [],
+            "guidance": [
+              {
+                "kind": "freight",
+                "party": "merchant",
+                "coverage": "both",
+                "rule_id": "suning-quality",
+                "policy_citation_ids": [
+                  "suning-freight-disputes::suning_quality_shipping"
+                ],
+                "record_evidence_ids": [
+                  "CASE-10-0-order",
+                  "CASE-10-0-quality_proof",
+                  "CASE-10-0-platform_intervention",
+                  "CASE-10-0-no_special_agreement"
+                ],
+                "decision_type": "review_guidance"
+              }
+            ],
+            "draft_explanation": {
+              "case_id": "CASE-10-0",
+              "summary": "本案例状态为已核查通过，未提供任何发现、事实或缺口。指引显示：就运费争议，若商品确有质量问题，退换货运费由商家承担；双方另有约定时依约处理。下一步可按该指引核对相关证据记录，但现有数据不足以作出进一步判断。",
+              "record_evidence_ids": [
+                "CASE-10-0-order",
+                "CASE-10-0-quality_proof",
+                "CASE-10-0-platform_intervention",
+                "CASE-10-0-no_special_agreement"
+              ],
+              "policy_citation_ids": [
+                "suning-freight-disputes::suning_quality_shipping"
+              ],
+              "review_status": "draft",
+              "changes_findings": false
+            },
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "CASE-11-0",
+            "platform": "pinduoduo",
+            "shop_id": "demo-shop-A",
+            "order_id": "O-11-0",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_review",
+            "findings": [
+              {
+                "finding_id": "CASE-11-0:freight_responsibility_mismatch",
+                "code": "freight_responsibility_mismatch",
+                "message": "拟定运费承担方与已匹配政策条件不一致",
+                "record_evidence_ids": [
+                  "CASE-11-0-order",
+                  "CASE-11-0-quality_proof",
+                  "CASE-11-0-platform_audit"
+                ],
+                "policy_citation_ids": [
+                  "pdd-protection::pdd-protection-freight"
+                ],
+                "details": {
+                  "proposed_party": "buyer",
+                  "policy_party": "merchant"
+                },
+                "suggested_action": "人工核查相关记录与凭证"
+              }
+            ],
+            "facts": [],
+            "citations": [
+              {
+                "chunk_id": "pdd-protection::pdd-protection-freight",
+                "doc_id": "pdd-protection",
+                "title": "拼多多消费者保障计划（2026年修订）",
+                "text": "拼多多因质量问题退换货，申请页上传问题凭证且平台审核通过后，全部运费由商家承担。",
+                "platform": "pinduoduo",
+                "business_scope": "platform",
+                "source_type": "official_public_policy",
+                "source_url": "https://www.yangkeduo.com/home/customer/",
+                "version": "curated-2026-11-20-v2",
+                "clause_id": "pdd-protection-freight",
+                "score": 0.03252247488101534,
+                "channels": [
+                  "bm25",
+                  "dense"
+                ],
+                "content_hash": "7a794895d00def097b934e4fcf2792779be24264259ef9c51515174c370a9d44",
+                "retrieved_at": "2026-11-20",
+                "effective_from": "2026-01-18",
+                "effective_to": null,
+                "clause_title": "质量退货运费",
+                "topics": [],
+                "retrieval_mode": "hybrid",
+                "content_kind": "curated_summary"
+              }
+            ],
+            "gaps": [],
+            "guidance": [
+              {
+                "kind": "freight",
+                "party": "merchant",
+                "coverage": "both",
+                "rule_id": "pdd-quality-freight",
+                "policy_citation_ids": [
+                  "pdd-protection::pdd-protection-freight"
+                ],
+                "record_evidence_ids": [
+                  "CASE-11-0-order",
+                  "CASE-11-0-quality_proof",
+                  "CASE-11-0-platform_audit"
+                ],
+                "decision_type": "review_guidance"
+              }
+            ],
+            "draft_explanation": {
+              "case_id": "CASE-11-0",
+              "summary": "发现运费承担方不一致：拟定承担方为买家，而已匹配政策条件指向商家承担。建议人工核查相关订单、质量凭证与平台审核记录，确认运费责任后再处理；当前状态为待复核，未作任何修改。",
+              "record_evidence_ids": [
+                "CASE-11-0-order",
+                "CASE-11-0-quality_proof",
+                "CASE-11-0-platform_audit"
+              ],
+              "policy_citation_ids": [
+                "pdd-protection::pdd-protection-freight"
+              ],
+              "review_status": "draft",
+              "changes_findings": false
+            },
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "CASE-13-0",
+            "platform": "tmall",
+            "shop_id": "demo-shop-A",
+            "order_id": "O-13-0",
+            "checks": [
+              "freight"
+            ],
+            "status": "clear",
+            "findings": [],
+            "facts": [],
+            "citations": [
+              {
+                "chunk_id": "tmall-seven::tmall-seven-freight",
+                "doc_id": "tmall-seven",
+                "title": "天猫七天无理由退换货公开服务说明",
+                "text": "天猫该服务下无理由退货或拒签通常由买家承担来回运费；包邮商品买家仅承担退回运费。",
+                "platform": "tmall",
+                "business_scope": "platform",
+                "source_type": "official_public_policy",
+                "source_url": "https://www.tmall.com/wow/seller/act/seven-day",
+                "version": "curated-2026-11-20-v2",
+                "clause_id": "tmall-seven-freight",
+                "score": 0.03177805800756621,
+                "channels": [
+                  "bm25",
+                  "dense"
+                ],
+                "content_hash": "2320c2ea4298bfd48e7dcc6805c54e15534dc66eb23bbc2a0f244406a4deffbf",
+                "retrieved_at": "2026-11-20",
+                "effective_from": null,
+                "effective_to": null,
+                "clause_title": "主观退货运费",
+                "topics": [],
+                "retrieval_mode": "hybrid",
+                "content_kind": "curated_summary"
+              },
+              {
+                "chunk_id": "tmall-seven::tmall-seven-condition",
+                "doc_id": "tmall-seven",
+                "title": "天猫七天无理由退换货公开服务说明",
+                "text": "天猫该服务面向适用商品：支付宝担保交易签收后七天内因主观原因申请，退货须满足二次销售要求，部分商品及类目除外。",
+                "platform": "tmall",
+                "business_scope": "platform",
+                "source_type": "official_public_policy",
+                "source_url": "https://www.tmall.com/wow/seller/act/seven-day",
+                "version": "curated-2026-11-20-v2",
+                "clause_id": "tmall-seven-condition",
+                "score": 0.031024531024531024,
+                "channels": [
+                  "bm25",
+                  "dense"
+                ],
+                "content_hash": "a9d57ec82f0c77d568786442c9a311017daa769eaf1887874088782510c7c41a",
+                "retrieved_at": "2026-11-20",
+                "effective_from": null,
+                "effective_to": null,
+                "clause_title": "申请前提",
+                "topics": [],
+                "retrieval_mode": "hybrid",
+                "content_kind": "curated_summary"
+              },
+              {
+                "chunk_id": "tmall-seven::tmall-seven-clock",
+                "doc_id": "tmall-seven",
+                "title": "天猫七天无理由退换货公开服务说明",
+                "text": "天猫该说明按物流签收次日零时开始计时，满168小时为七天，须在该期限内提出申请。",
+                "platform": "tmall",
+                "business_scope": "platform",
+                "source_type": "official_public_policy",
+                "source_url": "https://www.tmall.com/wow/seller/act/seven-day",
+                "version": "curated-2026-11-20-v2",
+                "clause_id": "tmall-seven-clock",
+                "score": 0.030309988518943745,
+                "channels": [
+                  "bm25",
+                  "dense"
+                ],
+                "content_hash": "e719e241de4d2576164c27941c0478b0b8a91f9219ba32c4895fd8c95574ac0c",
+                "retrieved_at": "2026-11-20",
+                "effective_from": null,
+                "effective_to": null,
+                "clause_title": "七天起算",
+                "topics": [],
+                "retrieval_mode": "hybrid",
+                "content_kind": "curated_summary"
+              }
+            ],
+            "gaps": [],
+            "guidance": [
+              {
+                "kind": "freight",
+                "party": "buyer",
+                "coverage": "return",
+                "rule_id": "tmall-personal-freight",
+                "policy_citation_ids": [
+                  "tmall-seven::tmall-seven-freight",
+                  "tmall-seven::tmall-seven-condition",
+                  "tmall-seven::tmall-seven-clock"
+                ],
+                "record_evidence_ids": [
+                  "CASE-13-0-order",
+                  "CASE-13-0-alipay_guaranteed_transaction"
+                ],
+                "decision_type": "review_guidance"
+              }
+            ],
+            "draft_explanation": {
+              "case_id": "CASE-13-0",
+              "summary": "本案例状态为 clear，未提供任何发现、事实或缺口。指引仅涉及天猫七天无理由退换货的运费承担、申请前提与七天起算规则，供复核参考；下一步需依据该指引核对订单签收时间、退货申请时限及运费承担方，现有数据不足以作出进一步判断。",
+              "record_evidence_ids": [
+                "CASE-13-0-order",
+                "CASE-13-0-alipay_guaranteed_transaction"
+              ],
+              "policy_citation_ids": [
+                "tmall-seven::tmall-seven-freight",
+                "tmall-seven::tmall-seven-condition",
+                "tmall-seven::tmall-seven-clock"
+              ],
+              "review_status": "draft",
+              "changes_findings": false
+            },
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "CASE-17-0",
+            "platform": "jd",
+            "shop_id": "demo-shop-A",
+            "order_id": "O-17-0",
+            "checks": [
+              "materials"
+            ],
+            "status": "needs_review",
+            "findings": [
+              {
+                "finding_id": "CASE-17-0:required_materials_missing",
+                "code": "required_materials_missing",
+                "message": "本次核查所需材料或适用信息尚未齐全",
+                "record_evidence_ids": [
+                  "CASE-17-0-order",
+                  "CASE-17-0-detail_policy_review"
+                ],
+                "policy_citation_ids": [
+                  "jd-marketplace-office::jd_office_return_materials"
+                ],
+                "details": {
+                  "missing": [
+                    "gift_return",
+                    "invoice_return"
+                  ],
+                  "requirements_basis": "policy_condition"
+                },
+                "suggested_action": "人工核查相关记录与凭证"
+              }
+            ],
+            "facts": [],
+            "citations": [
+              {
+                "chunk_id": "jd-marketplace-office::jd_office_return_materials",
+                "doc_id": "jd-marketplace-office",
+                "title": "软件、电脑办公类商品售后服务细则（三方）",
+                "text": "京东第三方软件、电脑办公类商品退货需寄回已有赠品和发票，缺失可能影响全额退款；质量问题换货无需寄回这些材料。与商品详情页不一致时按详情页。",
+                "platform": "jd",
+                "business_scope": "marketplace",
+                "source_type": "official_public_policy",
+                "source_url": "https://help.jd.com/user/issue/289-936.html",
+                "version": "curated-2026-11-20-v1",
+                "clause_id": "jd_office_return_materials",
+                "score": 0.03278688524590164,
+                "channels": [
+                  "bm25",
+                  "dense"
+                ],
+                "content_hash": "f33f7a1eb4625140c1d54f1f77fd1434dbfd58ac8d52e7c2a671d97a4ff41eb0",
+                "retrieved_at": "2026-11-20T10:19:57+08:00",
+                "effective_from": null,
+                "effective_to": null,
+                "clause_title": "电脑办公类退货材料",
+                "topics": [
+                  "赠品",
+                  "发票",
+                  "材料",
+                  "电脑办公",
+                  "退货"
+                ],
+                "retrieval_mode": "hybrid",
+                "content_kind": "curated_summary"
+              }
+            ],
+            "gaps": [
+              {
+                "kind": "data",
+                "name": "gift_return",
+                "message": "需要补充或核对已有赠品的寄回凭证",
+                "next_action": "request_information"
+              },
+              {
+                "kind": "data",
+                "name": "invoice_return",
+                "message": "需要补充或核对已有纸质发票的寄回凭证",
+                "next_action": "request_information"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": {
+              "case_id": "CASE-17-0",
+              "summary": "本次核查发现所需材料或适用信息尚未齐全，缺少赠品寄回凭证和纸质发票寄回凭证，依据退货材料政策条件需人工核查相关记录与凭证。下一步应请求补充或核对赠品及发票的寄回凭证。",
+              "record_evidence_ids": [
+                "CASE-17-0-order",
+                "CASE-17-0-detail_policy_review"
+              ],
+              "policy_citation_ids": [
+                "jd-marketplace-office::jd_office_return_materials"
+              ],
+              "review_status": "draft",
+              "changes_findings": false
+            },
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "CASE-19-0",
+            "platform": "taobao",
+            "shop_id": "demo-shop-A",
+            "order_id": "O-19-0",
+            "checks": [
+              "freight"
+            ],
+            "status": "needs_policy",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "knowledge",
+                "name": "freight_rule",
+                "message": "当前没有已核对适用条件的该类核查规则",
+                "next_action": "curate_policy"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": {
+              "case_id": "CASE-19-0",
+              "summary": "本案例当前状态为 needs_policy，尚未提供任何发现、事实或指引。主要缺口是缺少已核对适用条件的运费核查规则（freight_rule），因此无法继续核查。下一步应整理并补充该政策规则（curate_policy），再重新评估。",
+              "record_evidence_ids": [],
+              "policy_citation_ids": [],
+              "review_status": "draft",
+              "changes_findings": false
+            },
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          },
+          {
+            "case_id": "CASE-20-0",
+            "platform": "tmall",
+            "shop_id": "demo-shop-A",
+            "order_id": "O-20-0",
+            "checks": [
+              "refund_velocity"
+            ],
+            "status": "needs_tool",
+            "findings": [],
+            "facts": [],
+            "citations": [],
+            "gaps": [
+              {
+                "kind": "tool",
+                "name": "refund_velocity",
+                "message": "现有核查工具未覆盖该检查项",
+                "next_action": "evolution_candidate_requires_spec_and_independent_validation"
+              }
+            ],
+            "guidance": [],
+            "draft_explanation": {
+              "case_id": "CASE-20-0",
+              "summary": "本案例当前状态为 needs_tool，尚未产生任何发现、事实或结论。缺口是现有核查工具未覆盖 refund_velocity 检查项，下一步需按 evolution_candidate_requires_spec_and_independent_validation 处理，即补充规格并进行独立验证；在此之前无法完成该项核查。",
+              "record_evidence_ids": [],
+              "policy_citation_ids": [],
+              "review_status": "draft",
+              "changes_findings": false
+            },
+            "policy_context": {
+              "mode": "current_snapshot",
+              "as_of": null
+            }
+          }
+        ],
+        "summary": {
+          "case_count": 8,
+          "statuses": {
+            "needs_review": 4,
+            "clear": 2,
+            "needs_policy": 1,
+            "needs_tool": 1
+          },
+          "finding_count": 4,
+          "gap_kinds": {
+            "data": 2,
+            "knowledge": 1,
+            "tool": 1
+          },
+          "source_records_modified": 0,
+          "payment_actions": 0
+        },
+        "events": [
+          {
+            "stage": "casebook_loaded",
+            "cases": 8,
+            "orders": 8,
+            "refunds": 4,
+            "dataset_kind": "synthetic",
+            "input_hash": "be446844f9ba9e32ea9be43845f0387bc22d07c06430bfb5db4c4a9f572c47b0",
+            "elapsed_ms": 0.119
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "CASE-02-0",
+            "checks": [
+              "records",
+              "amount"
+            ],
+            "elapsed_ms": 3.335
+          },
+          {
+            "stage": "record_tools",
+            "case_id": "CASE-02-0",
+            "findings": [
+              "duplicate_refund_record"
+            ],
+            "elapsed_ms": 3.564
+          },
+          {
+            "stage": "case_explained",
+            "case_id": "CASE-02-0",
+            "elapsed_ms": 1575.28
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "CASE-02-0",
+            "status": "needs_review",
+            "elapsed_ms": 1575.331
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "CASE-06-0",
+            "checks": [
+              "records",
+              "amount"
+            ],
+            "elapsed_ms": 1575.431
+          },
+          {
+            "stage": "record_tools",
+            "case_id": "CASE-06-0",
+            "findings": [
+              "refund_total_exceeds_paid"
+            ],
+            "elapsed_ms": 1575.691
+          },
+          {
+            "stage": "case_explained",
+            "case_id": "CASE-06-0",
+            "elapsed_ms": 2523.298
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "CASE-06-0",
+            "status": "needs_review",
+            "elapsed_ms": 2523.342
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "CASE-10-0",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 2523.435
+          },
+          {
+            "stage": "policy_search",
+            "case_id": "CASE-10-0",
+            "hits": [
+              "suning-freight-disputes::suning_quality_shipping",
+              "suning-seven::suning-seven-freight",
+              "suning-freight-disputes::suning_shipping_evidence",
+              "suning-seven::suning-seven-clock",
+              "suning-seven::suning-seven-promise"
+            ],
+            "metadata": {
+              "requested_mode": "hybrid",
+              "effective_mode": "hybrid",
+              "eligible_chunks": 7,
+              "corpus_hash": "9964a04826d3f10a3ce2a24bb9c21bbb8da37d3984462cca59712f600df4ccd5",
+              "vector_backend": "qdrant",
+              "reranker": null,
+              "candidate_count": 7
+            },
+            "elapsed_ms": 2816.91
+          },
+          {
+            "stage": "policy_applied",
+            "case_id": "CASE-10-0",
+            "rule_id": "suning-quality",
+            "check": "freight",
+            "elapsed_ms": 2816.995
+          },
+          {
+            "stage": "case_explained",
+            "case_id": "CASE-10-0",
+            "elapsed_ms": 3997.211
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "CASE-10-0",
+            "status": "clear",
+            "elapsed_ms": 3997.253
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "CASE-11-0",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 3997.343
+          },
+          {
+            "stage": "policy_search",
+            "case_id": "CASE-11-0",
+            "hits": [
+              "pdd-help::pdd-help-personal",
+              "pdd-protection::pdd-protection-freight",
+              "pdd-help::pdd-help-cod",
+              "pdd-help::pdd-help-amount",
+              "pdd-protection::pdd-protection-delivery"
+            ],
+            "metadata": {
+              "requested_mode": "hybrid",
+              "effective_mode": "hybrid",
+              "eligible_chunks": 12,
+              "corpus_hash": "9964a04826d3f10a3ce2a24bb9c21bbb8da37d3984462cca59712f600df4ccd5",
+              "vector_backend": "qdrant",
+              "reranker": null,
+              "candidate_count": 12
+            },
+            "elapsed_ms": 4019.153
+          },
+          {
+            "stage": "policy_applied",
+            "case_id": "CASE-11-0",
+            "rule_id": "pdd-quality-freight",
+            "check": "freight",
+            "elapsed_ms": 4019.293
+          },
+          {
+            "stage": "case_explained",
+            "case_id": "CASE-11-0",
+            "elapsed_ms": 5403.301
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "CASE-11-0",
+            "status": "needs_review",
+            "elapsed_ms": 5403.34
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "CASE-13-0",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 5403.43
+          },
+          {
+            "stage": "policy_search",
+            "case_id": "CASE-13-0",
+            "hits": [
+              "tmall-seven::tmall-seven-freight",
+              "tmall-seven::tmall-seven-condition",
+              "tmall-seven::tmall-seven-escalation",
+              "tmall-merchant::tmall-merchant-category-fee",
+              "tmall-seven::tmall-seven-clock"
+            ],
+            "metadata": {
+              "requested_mode": "hybrid",
+              "effective_mode": "hybrid",
+              "eligible_chunks": 13,
+              "corpus_hash": "9964a04826d3f10a3ce2a24bb9c21bbb8da37d3984462cca59712f600df4ccd5",
+              "vector_backend": "qdrant",
+              "reranker": null,
+              "candidate_count": 13
+            },
+            "elapsed_ms": 5424.092
+          },
+          {
+            "stage": "policy_applied",
+            "case_id": "CASE-13-0",
+            "rule_id": "tmall-personal-freight",
+            "check": "freight",
+            "elapsed_ms": 5424.274
+          },
+          {
+            "stage": "case_explained",
+            "case_id": "CASE-13-0",
+            "elapsed_ms": 7388.853
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "CASE-13-0",
+            "status": "clear",
+            "elapsed_ms": 7388.89
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "CASE-17-0",
+            "checks": [
+              "materials"
+            ],
+            "elapsed_ms": 7388.974
+          },
+          {
+            "stage": "policy_search",
+            "case_id": "CASE-17-0",
+            "hits": [
+              "jd-marketplace-office::jd_office_return_materials",
+              "jd-building::jd-building-quality",
+              "jd-marketplace-shipping::jd_marketplace_nonbuyer_shipping",
+              "jd-marketplace-shipping::jd_marketplace_no_reason_shipping",
+              "jd-building::jd-building-description"
+            ],
+            "metadata": {
+              "requested_mode": "hybrid",
+              "effective_mode": "hybrid",
+              "eligible_chunks": 14,
+              "corpus_hash": "9964a04826d3f10a3ce2a24bb9c21bbb8da37d3984462cca59712f600df4ccd5",
+              "vector_backend": "qdrant",
+              "reranker": null,
+              "candidate_count": 14
+            },
+            "elapsed_ms": 7409.749
+          },
+          {
+            "stage": "case_explained",
+            "case_id": "CASE-17-0",
+            "elapsed_ms": 8507.869
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "CASE-17-0",
+            "status": "needs_review",
+            "elapsed_ms": 8507.908
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "CASE-19-0",
+            "checks": [
+              "freight"
+            ],
+            "elapsed_ms": 8507.998
+          },
+          {
+            "stage": "policy_search",
+            "case_id": "CASE-19-0",
+            "hits": [
+              "taobao-consumer::taobao-consumer-address",
+              "taobao-consumer::taobao-consumer-return",
+              "taobao-consumer::taobao-consumer-promise",
+              "taobao-seller::taobao-seller-closure",
+              "taobao-seller::taobao-seller-orders"
+            ],
+            "metadata": {
+              "requested_mode": "hybrid",
+              "effective_mode": "hybrid",
+              "eligible_chunks": 7,
+              "corpus_hash": "9964a04826d3f10a3ce2a24bb9c21bbb8da37d3984462cca59712f600df4ccd5",
+              "vector_backend": "qdrant",
+              "reranker": null,
+              "candidate_count": 7
+            },
+            "elapsed_ms": 8529.332
+          },
+          {
+            "stage": "case_explained",
+            "case_id": "CASE-19-0",
+            "elapsed_ms": 9809.847
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "CASE-19-0",
+            "status": "needs_policy",
+            "elapsed_ms": 9809.884
+          },
+          {
+            "stage": "case_plan",
+            "case_id": "CASE-20-0",
+            "checks": [
+              "refund_velocity"
+            ],
+            "elapsed_ms": 9809.97
+          },
+          {
+            "stage": "case_explained",
+            "case_id": "CASE-20-0",
+            "elapsed_ms": 10881.144
+          },
+          {
+            "stage": "case_complete",
+            "case_id": "CASE-20-0",
+            "status": "needs_tool",
+            "elapsed_ms": 10881.184
+          },
+          {
+            "stage": "review_complete",
+            "status": "completed",
+            "elapsed_ms": 10881.492
+          }
+        ],
+        "issues": [],
+        "input_hash": "be446844f9ba9e32ea9be43845f0387bc22d07c06430bfb5db4c4a9f572c47b0",
+        "elapsed_ms": 10881.483,
+        "model_usage": {
+          "calls": 8,
+          "prompt_tokens": 4317,
+          "completion_tokens": 952,
+          "total_tokens": 5269
+        }
+      }
+    }
+  },
+  "model_usage": {
+    "model": "deepseek-flash",
+    "http_requests": 8,
+    "prompt_tokens": 4317,
+    "completion_tokens": 952,
+    "total_tokens": 5269
+  }
+}

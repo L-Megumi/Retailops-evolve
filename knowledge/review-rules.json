@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "rule_kind": "review_guidance",
+  "rules": [
+    {
+      "id": "pdd-quality-freight",
+      "check": "freight",
+      "platform": "pinduoduo",
+      "business_scope": "platform",
+      "reasons": [
+        "quality"
+      ],
+      "source_bindings": {
+        "pdd-protection::pdd-protection-freight": {
+          "content_hash": "7a794895d00def097b934e4fcf2792779be24264259ef9c51515174c370a9d44",
+          "source_type": "official_public_policy",
+          "source_url": "https://www.yangkeduo.com/home/customer/",
+          "version": "curated-2026-11-20-v2",
+          "platform": "pinduoduo",
+          "business_scope": "platform"
+        }
+      },
+      "party": "merchant",
+      "coverage": "both",
+      "requirements": [
+        "evidence:quality_proof",
+        "evidence:platform_audit"
+      ]
+    },
+    {
+      "id": "pdd-quality-materials",
+      "check": "materials",
+      "platform": "pinduoduo",
+      "business_scope": "platform",
+      "reasons": [
+        "quality"
+      ],
+      "source_bindings": {
+        "pdd-protection::pdd-protection-freight": {
+          "content_hash": "7a794895d00def097b934e4fcf2792779be24264259ef9c51515174c370a9d44",
+          "source_type": "official_public_policy",
+          "source_url": "https://www.yangkeduo.com/home/customer/",
+          "version": "curated-2026-11-20-v2",
+          "platform": "pinduoduo",
+          "business_scope": "platform"
+        }
+      },
+      "requirements": [
+        "evidence:quality_proof",
+        "evidence:platform_audit"
+      ]
+    },
+    {
+      "id": "pdd-personal-freight",
+      "check": "freight",
+      "platform": "pinduoduo",
+      "business_scope": "platform",
+      "reasons": [
+        "personal"
+      ],
+      "source_bindings": {
+        "pdd-help::pdd-help-personal": {
+          "content_hash": "8ce86af22d701fdb4be601d2944a5de2ce0a30f6a904c7a30b489d78f43172fc",
+          "source_type": "official_public_policy",
+          "source_url": "https://www.yangkeduo.com/home/help/",
+          "version": "curated-2026-11-20-v2",
+          "platform": "pinduoduo",
+          "business_scope": "platform"
+        },
+        "pdd-protection::pdd-protection-seven": {
+          "content_hash": "33bafed4a573e8607294d9022313a30748be2d9864d10771456de33debf412a1",
+          "source_type": "official_public_policy",
+          "source_url": "https://www.yangkeduo.com/home/customer/",
+          "version": "curated-2026-11-20-v2",
+          "platform": "pinduoduo",
+          "business_scope": "platform"
+        }
+      },
+      "party": "buyer",
+      "coverage": "return",
+      "seven_day": true,
+      "requirements": [
+        "order:supports_seven_day",
+        "order:goods_condition"
+      ]
+    },
+    {
+      "id": "tmall-quality-freight",
+      "check": "freight",
+      "platform": "tmall",
+      "business_scope": "platform",
+      "reasons": [
+        "quality"
+      ],
+      "source_bindings": {
+        "tmall-seven::tmall-seven-quality": {
+          "content_hash": "ab1e4450392cd4f4c2bd264757d42442889c4cda57016a72208368c1249856de",
+          "source_type": "official_public_policy",
+          "source_url": "https://www.tmall.com/wow/seller/act/seven-day",
+          "version": "curated-2026-11-20-v2",
+          "platform": "tmall",
+          "business_scope": "platform"
+        }
+      },
+      "party": "merchant",
+      "coverage": "return",
+      "requirements": [
+        "evidence:reason_proof"
+      ],
+      "requirements_basis": "review_evidence_requirement; policy specifies liability, not a mandatory document list"
+    },
+    {
+      "id": "tmall-description_mismatch-freight",
+      "check": "freight",
+      "platform": "tmall",
+      "business_scope": "platform",
+      "reasons": [
+        "description_mismatch"
+      ],
+      "source_bindings": {
+        "tmall-seven::tmall-seven-quality": {
+          "content_hash": "ab1e4450392cd4f4c2bd264757d42442889c4cda57016a72208368c1249856de",
+          "source_type": "official_public_policy",
+          "source_url": "https://www.tmall.com/wow/seller/act/seven-day",
+          "version": "curated-2026-11-20-v2",
+          "platform": "tmall",
+          "business_scope": "platform"
+        }
+      },
+      "party": "merchant",
+      "coverage": "return",
+      "requirements": [
+        "evidence:reason_proof"
+      ],
+      "requirements_basis": "review_evidence_requirement; policy specifies liability, not a mandatory document list"
+    },
+    {
+      "id": "tmall-personal-freight",
+      "check": "freight",
+      "platform": "tmall",
+      "business_scope": "platform",
+      "reasons": [
+        "personal"
+      ],
+      "source_bindings": {
+        "tmall-seven::tmall-seven-freight": {
+          "content_hash": "2320c2ea4298bfd48e7dcc6805c54e15534dc66eb23bbc2a0f244406a4deffbf",
+          "source_type": "official_public_policy",
+          "source_url": "https://www.tmall.com/wow/seller/act/seven-day",
+          "version": "curated-2026-11-20-v2",
+          "platform": "tmall",
+          "business_scope": "platform"
+        },
+        "tmall-seven::tmall-seven-condition": {
+          "content_hash": "a9d57ec82f0c77d568786442c9a311017daa769eaf1887874088782510c7c41a",
+          "source_type": "official_public_policy",
+          "source_url": "https://www.tmall.com/wow/seller/act/seven-day",
+          "version": "curated-2026-11-20-v2",
+          "platform": "tmall",
+          "business_scope": "platform"
+        },
+        "tmall-seven::tmall-seven-clock": {
+          "content_hash": "e719e241de4d2576164c27941c0478b0b8a91f9219ba32c4895fd8c95574ac0c",
+          "source_type": "official_public_policy",
+          "source_url": "https://www.tmall.com/wow/seller/act/seven-day",
+          "version": "curated-2026-11-20-v2",
+          "platform": "tmall",
+          "business_scope": "platform"
+        }
+      },
+      "party": "buyer",
+      "coverage": "by_shipping",
+      "seven_day": true,
+      "requirements": [
+        "order:supports_seven_day",
+        "order:goods_condition",
+        "evidence:alipay_guaranteed_transaction"
+      ]
+    },
+    {
+      "id": "jd-marketplace-personal",
+      "check": "freight",
+      "platform": "jd",
+      "business_scope": "marketplace",
+      "reasons": [
+        "personal"
+      ],
+      "source_bindings": {
+        "jd-marketplace-shipping::jd_marketplace_no_reason_shipping": {
+          "content_hash": "818266c79ebd5d7a24cd6e055b90385554c2dd2a2d98903276537536bc662f43",
+          "source_type": "official_public_policy",
+          "source_url": "https://help.jd.com/user/issue/410-2968.html",
+          "version": "curated-2026-11-20-v1",
+          "platform": "jd",
+          "business_scope": "marketplace"
+        }
+      },
+      "party": "buyer",
+      "coverage": "by_shipping",
+      "seven_day": true,
+      "requirements": [
+        "order:supports_seven_day",
+        "order:goods_condition"
+      ]
+    },
+    {
+      "id": "jd-marketplace-quality",
+      "check": "freight",
+      "platform": "jd",
+      "business_scope": "marketplace",
+      "reasons": [
+        "quality",
+        "description_mismatch",
+        "wrong_item"
+      ],
+      "source_bindings": {
+        "jd-marketplace-shipping::jd_marketplace_nonbuyer_shipping": {
+          "content_hash": "1e1d081f1faa1cee6c4bf666a68968f06d44d6d1b666ac6dbe9e90255ea267a9",
+          "source_type": "official_public_policy",
+          "source_url": "https://help.jd.com/user/issue/410-2968.html",
+          "version": "curated-2026-11-20-v1",
+          "platform": "jd",
+          "business_scope": "marketplace"
+        }
+      },
+      "party": "merchant",
+      "coverage": "by_shipping",
+      "seven_day": true,
+      "requirements": [
+        "evidence:reason_proof"
+      ]
+    },
+    {
+      "id": "jd-self-personal",
+      "check": "freight",
+      "platform": "jd",
+      "business_scope": "self_operated",
+      "reasons": [
+        "personal"
+      ],
+      "source_bindings": {
+        "jd-self-operated-shipping::jd_self_operated_shipping_membership": {
+          "content_hash": "4605800cf8942cf7afe8eb21b3103eb0d016ff91fe0982135e089ce27ff32e73",
+          "source_type": "official_public_policy",
+          "source_url": "https://help.jd.com/user/issue/131-496.html",
+          "version": "curated-2026-11-20-v1",
+          "platform": "jd",
+          "business_scope": "self_operated"
+        }
+      },
+      "party": "membership",
+      "coverage": "return",
+      "requirements": [
+        "order:fulfilled_by"
+      ]
+    },
+    {
+      "id": "jd-self-quality",
+      "check": "freight",
+      "platform": "jd",
+      "business_scope": "self_operated",
+      "reasons": [
+        "quality"
+      ],
+      "source_bindings": {
+        "jd-self-operated-shipping::jd_self_operated_shipping_membership": {
+          "content_hash": "4605800cf8942cf7afe8eb21b3103eb0d016ff91fe0982135e089ce27ff32e73",
+          "source_type": "official_public_policy",
+          "source_url": "https://help.jd.com/user/issue/131-496.html",
+          "version": "curated-2026-11-20-v1",
+          "platform": "jd",
+          "business_scope": "self_operated"
+        }
+      },
+      "party": "jd",
+      "coverage": "return",
+      "requirements": [
+        "order:fulfilled_by",
+        "evidence:reason_proof"
+      ]
+    },
+    {
+      "id": "suning-quality",
+      "check": "freight",
+      "platform": "suning",
+      "business_scope": "platform",
+      "reasons": [
+        "quality"
+      ],
+      "source_bindings": {
+        "suning-freight-disputes::suning_quality_shipping": {
+          "content_hash": "dfd734ae4f51ba0897996050c8ea7b9831aab3c1146577498acc55a1c87ec51a",
+          "source_type": "official_public_policy",
+          "source_url": "https://rule.suning.com/ruleInfo/ruleInfoDetail/GZ100006683.htm",
+          "version": "curated-2026-11-20-v1",
+          "platform": "suning",
+          "business_scope": "platform"
+        }
+      },
+      "party": "merchant",
+      "coverage": "both",
+      "requirements": [
+        "evidence:quality_proof",
+        "evidence:platform_intervention",
+        "evidence:no_special_agreement"
+      ]
+    },
+    {
+      "id": "jd-office-return",
+      "check": "materials",
+      "platform": "jd",
+      "business_scope": "marketplace",
+      "reasons": [
+        "personal",
+        "quality",
+        "description_mismatch"
+      ],
+      "source_bindings": {
+        "jd-marketplace-office::jd_office_return_materials": {
+          "content_hash": "f33f7a1eb4625140c1d54f1f77fd1434dbfd58ac8d52e7c2a671d97a4ff41eb0",
+          "source_type": "official_public_policy",
+          "source_url": "https://help.jd.com/user/issue/289-936.html",
+          "version": "curated-2026-11-20-v1",
+          "platform": "jd",
+          "business_scope": "marketplace"
+        }
+      },
+      "category": "office_software",
+      "request_types": [
+        "return"
+      ],
+      "requirements": [
+        "evidence:detail_policy_review",
+        "if_evidence:has_gifts:gift_return",
+        "if_evidence:has_paper_invoice:invoice_return"
+      ]
+    },
+    {
+      "id": "jd-office-quality-exchange",
+      "check": "materials",
+      "platform": "jd",
+      "business_scope": "marketplace",
+      "reasons": [
+        "quality"
+      ],
+      "source_bindings": {
+        "jd-marketplace-office::jd_office_return_materials": {
+          "content_hash": "f33f7a1eb4625140c1d54f1f77fd1434dbfd58ac8d52e7c2a671d97a4ff41eb0",
+          "source_type": "official_public_policy",
+          "source_url": "https://help.jd.com/user/issue/289-936.html",
+          "version": "curated-2026-11-20-v1",
+          "platform": "jd",
+          "business_scope": "marketplace"
+        }
+      },
+      "category": "office_software",
+      "request_types": [
+        "exchange"
+      ],
+      "requirements": [
+        "evidence:detail_policy_review"
+      ]
+    }
+  ]
+}

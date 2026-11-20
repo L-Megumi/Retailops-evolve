@@ -1,0 +1,26 @@
+{
+  "reviewed_draft_case_ids": [
+    "CASE-02-0",
+    "CASE-06-0",
+    "CASE-10-0",
+    "CASE-11-0",
+    "CASE-13-0",
+    "CASE-17-0"
+  ],
+  "checks": [
+    "amounts and refund IDs match deterministic facts",
+    "only successful records included in computed totals",
+    "platform and policy references match",
+    "no claim of actual repeated payment or an executed refund",
+    "no normal decision substituted for missing knowledge or tools"
+  ],
+  "finding": "Final six accepted drafts reviewed; monetary facts and policy references matched the structured report. Draft wording remains subject to human review.",
+  "gap_only_cases": [
+    "CASE-19-0",
+    "CASE-20-0"
+  ],
+  "gap_only_behavior": "structured explanation, no model call",
+  "synthetic_inputs_only": true,
+  "payment_actions": 0,
+  "source_records_modified": 0
+}

@@ -1,0 +1,35 @@
+{
+  "health": {
+    "status": "ok",
+    "sandbox": "linux-seccomp",
+    "evolution_enabled": false,
+    "knowledge_enabled": true,
+    "dense_retrieval_enabled": true,
+    "vector_backend": "qdrant",
+    "reranker_model": null,
+    "case_review_enabled": true
+  },
+  "job_status": "succeeded",
+  "case_statuses": {
+    "CASE-06-0": "needs_review",
+    "CASE-11-0": "needs_review",
+    "CASE-19-0": "needs_policy",
+    "CASE-20-0": "needs_tool"
+  },
+  "sse_done": true,
+  "summary": {
+    "case_count": 4,
+    "statuses": {
+      "needs_review": 2,
+      "needs_policy": 1,
+      "needs_tool": 1
+    },
+    "finding_count": 2,
+    "gap_kinds": {
+      "knowledge": 1,
+      "tool": 1
+    },
+    "source_records_modified": 0,
+    "payment_actions": 0
+  }
+}

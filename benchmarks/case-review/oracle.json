@@ -1,0 +1,655 @@
+{
+  "schema_version": 1,
+  "dataset_kind": "synthetic",
+  "split_policy": "40 dev, 20 frozen parameter-boundary variants across the same 20 scenario families",
+  "labels": [
+    {
+      "case_id": "CASE-01-0",
+      "family": 1,
+      "split": "dev",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-01-1",
+      "family": 1,
+      "split": "dev",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-01-2",
+      "family": 1,
+      "split": "test",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-02-0",
+      "family": 2,
+      "split": "dev",
+      "status": "needs_review",
+      "finding_codes": [
+        "duplicate_refund_record"
+      ],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-02-1",
+      "family": 2,
+      "split": "dev",
+      "status": "needs_review",
+      "finding_codes": [
+        "duplicate_refund_record"
+      ],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-02-2",
+      "family": 2,
+      "split": "test",
+      "status": "needs_review",
+      "finding_codes": [
+        "duplicate_refund_record"
+      ],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-03-0",
+      "family": 3,
+      "split": "dev",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_record_conflict"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-03-1",
+      "family": 3,
+      "split": "dev",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_record_conflict"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-03-2",
+      "family": 3,
+      "split": "test",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_record_conflict"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-04-0",
+      "family": 4,
+      "split": "dev",
+      "status": "needs_review",
+      "finding_codes": [
+        "orphan_refund"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-04-1",
+      "family": 4,
+      "split": "dev",
+      "status": "needs_review",
+      "finding_codes": [
+        "orphan_refund"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-04-2",
+      "family": 4,
+      "split": "test",
+      "status": "needs_review",
+      "finding_codes": [
+        "orphan_refund"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-05-0",
+      "family": 5,
+      "split": "dev",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-05-1",
+      "family": 5,
+      "split": "dev",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-05-2",
+      "family": 5,
+      "split": "test",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-06-0",
+      "family": 6,
+      "split": "dev",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_total_exceeds_paid"
+      ],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-06-1",
+      "family": 6,
+      "split": "dev",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_total_exceeds_paid"
+      ],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-06-2",
+      "family": 6,
+      "split": "test",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_total_exceeds_paid"
+      ],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-07-0",
+      "family": 7,
+      "split": "dev",
+      "status": "needs_information",
+      "finding_codes": [],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-07-1",
+      "family": 7,
+      "split": "dev",
+      "status": "needs_information",
+      "finding_codes": [],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-07-2",
+      "family": 7,
+      "split": "test",
+      "status": "needs_information",
+      "finding_codes": [],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-08-0",
+      "family": 8,
+      "split": "dev",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_transaction_reused"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-08-1",
+      "family": 8,
+      "split": "dev",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_transaction_reused"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-08-2",
+      "family": 8,
+      "split": "test",
+      "status": "needs_review",
+      "finding_codes": [
+        "refund_transaction_reused"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-09-0",
+      "family": 9,
+      "split": "dev",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-09-1",
+      "family": 9,
+      "split": "dev",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-09-2",
+      "family": 9,
+      "split": "test",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-10-0",
+      "family": 10,
+      "split": "dev",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": "merchant"
+    },
+    {
+      "case_id": "CASE-10-1",
+      "family": 10,
+      "split": "dev",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": "merchant"
+    },
+    {
+      "case_id": "CASE-10-2",
+      "family": 10,
+      "split": "test",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": "merchant"
+    },
+    {
+      "case_id": "CASE-11-0",
+      "family": 11,
+      "split": "dev",
+      "status": "needs_review",
+      "finding_codes": [
+        "freight_responsibility_mismatch"
+      ],
+      "gap_kinds": [],
+      "freight_party": "merchant"
+    },
+    {
+      "case_id": "CASE-11-1",
+      "family": 11,
+      "split": "dev",
+      "status": "needs_review",
+      "finding_codes": [
+        "freight_responsibility_mismatch"
+      ],
+      "gap_kinds": [],
+      "freight_party": "merchant"
+    },
+    {
+      "case_id": "CASE-11-2",
+      "family": 11,
+      "split": "test",
+      "status": "needs_review",
+      "finding_codes": [
+        "freight_responsibility_mismatch"
+      ],
+      "gap_kinds": [],
+      "freight_party": "merchant"
+    },
+    {
+      "case_id": "CASE-12-0",
+      "family": 12,
+      "split": "dev",
+      "status": "needs_review",
+      "finding_codes": [
+        "required_materials_missing"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-12-1",
+      "family": 12,
+      "split": "dev",
+      "status": "needs_review",
+      "finding_codes": [
+        "required_materials_missing"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-12-2",
+      "family": 12,
+      "split": "test",
+      "status": "needs_review",
+      "finding_codes": [
+        "required_materials_missing"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-13-0",
+      "family": 13,
+      "split": "dev",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-13-1",
+      "family": 13,
+      "split": "dev",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-13-2",
+      "family": 13,
+      "split": "test",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-14-0",
+      "family": 14,
+      "split": "dev",
+      "status": "needs_review",
+      "finding_codes": [
+        "freight_responsibility_mismatch"
+      ],
+      "gap_kinds": [],
+      "freight_party": "merchant"
+    },
+    {
+      "case_id": "CASE-14-1",
+      "family": 14,
+      "split": "dev",
+      "status": "needs_review",
+      "finding_codes": [
+        "freight_responsibility_mismatch"
+      ],
+      "gap_kinds": [],
+      "freight_party": "merchant"
+    },
+    {
+      "case_id": "CASE-14-2",
+      "family": 14,
+      "split": "test",
+      "status": "needs_review",
+      "finding_codes": [
+        "freight_responsibility_mismatch"
+      ],
+      "gap_kinds": [],
+      "freight_party": "merchant"
+    },
+    {
+      "case_id": "CASE-15-0",
+      "family": 15,
+      "split": "dev",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-15-1",
+      "family": 15,
+      "split": "dev",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-15-2",
+      "family": 15,
+      "split": "test",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": "buyer"
+    },
+    {
+      "case_id": "CASE-16-0",
+      "family": 16,
+      "split": "dev",
+      "status": "needs_information",
+      "finding_codes": [],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-16-1",
+      "family": 16,
+      "split": "dev",
+      "status": "needs_information",
+      "finding_codes": [],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-16-2",
+      "family": 16,
+      "split": "test",
+      "status": "needs_information",
+      "finding_codes": [],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-17-0",
+      "family": 17,
+      "split": "dev",
+      "status": "needs_review",
+      "finding_codes": [
+        "required_materials_missing"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-17-1",
+      "family": 17,
+      "split": "dev",
+      "status": "needs_review",
+      "finding_codes": [
+        "required_materials_missing"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-17-2",
+      "family": 17,
+      "split": "test",
+      "status": "needs_review",
+      "finding_codes": [
+        "required_materials_missing"
+      ],
+      "gap_kinds": [
+        "data"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-18-0",
+      "family": 18,
+      "split": "dev",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-18-1",
+      "family": 18,
+      "split": "dev",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-18-2",
+      "family": 18,
+      "split": "test",
+      "status": "clear",
+      "finding_codes": [],
+      "gap_kinds": [],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-19-0",
+      "family": 19,
+      "split": "dev",
+      "status": "needs_policy",
+      "finding_codes": [],
+      "gap_kinds": [
+        "knowledge"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-19-1",
+      "family": 19,
+      "split": "dev",
+      "status": "needs_policy",
+      "finding_codes": [],
+      "gap_kinds": [
+        "knowledge"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-19-2",
+      "family": 19,
+      "split": "test",
+      "status": "needs_policy",
+      "finding_codes": [],
+      "gap_kinds": [
+        "knowledge"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-20-0",
+      "family": 20,
+      "split": "dev",
+      "status": "needs_tool",
+      "finding_codes": [],
+      "gap_kinds": [
+        "tool"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-20-1",
+      "family": 20,
+      "split": "dev",
+      "status": "needs_tool",
+      "finding_codes": [],
+      "gap_kinds": [
+        "tool"
+      ],
+      "freight_party": null
+    },
+    {
+      "case_id": "CASE-20-2",
+      "family": 20,
+      "split": "test",
+      "status": "needs_tool",
+      "finding_codes": [],
+      "gap_kinds": [
+        "tool"
+      ],
+      "freight_party": null
+    }
+  ]
+}
